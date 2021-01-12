@@ -1,16 +1,31 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@tailwind base;
+
+/* Write your own custom base styles here */
+h1 {
+    @apply text-4xl lg:text-6xl font-primary font-bold;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h2 {
+    @apply text-2xl lg:text-5xl font-primary font-bold;
 }
 
-* {
-  box-sizing: border-box;
+h3 {
+    @apply text-xl lg:text-4xl font-primary font-bold;
 }
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+.btn-blue {
+    @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
