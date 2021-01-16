@@ -1,4 +1,4 @@
-This is a NextJs and Tailwind starter file project created by [Theodorus Clarence](https://github.com/theodorusclarence/nextjs-tailwind-starter).
+This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/nextjs-tailwind-starter).
 
 ## Getting Started
 
