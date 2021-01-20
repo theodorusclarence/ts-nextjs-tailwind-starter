@@ -4,15 +4,29 @@
 
 /* Write your own custom base styles here */
 h1 {
-    @apply text-4xl lg:text-6xl font-primary font-bold;
+    @apply text-3xl font-bold md:text-5xl font-primary;
 }
 
 h2 {
-    @apply text-2xl lg:text-5xl font-primary font-bold;
+    @apply text-2xl font-bold md:text-4xl font-primary;
 }
 
 h3 {
-    @apply text-xl lg:text-4xl font-primary font-bold;
+    @apply text-xl font-bold md:text-3xl font-primary;
+}
+
+h4 {
+    @apply text-lg font-bold font-primary;
+}
+
+body {
+    @apply font-primary;
+}
+
+.layout {
+    /* 750px */
+    max-width: 43.75rem;
+    @apply w-11/12 mx-auto;
 }
 
 /* Start purging... */

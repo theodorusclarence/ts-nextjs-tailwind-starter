@@ -24,3 +24,4 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 This starter file has a opinionated styling for heading with responsive size and Montserrat font imported from the google fonts.
 
 There is also Seo Component to customize page title and opengraph meta tags.
+SEO is using next-seo packages, make sure you configure next-seo.config.js to your preferred
