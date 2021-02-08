@@ -7,6 +7,10 @@ To use this starter, you can use create-next-app to do it by:
 npx create-next-app -e https://github.com/theodorusclarence/nextjs-tailwind-starter project-name
 ```
 
+or
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fnextjs-tailwind-starter)
+
 First, run the development server:
 
 ```bash

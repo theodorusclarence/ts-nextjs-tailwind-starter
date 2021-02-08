@@ -1,6 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 @tailwind base;
+
+/* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local('Inter'),
+        url('/fonts/inter-regular-webfont.woff2') format('woff2'),
+        url('/fonts/inter-regular-webfont.woff') format('woff');
+}
+
+/* inter-500 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: optional;
+    src: local('Inter'),
+        url('/fonts/inter-medium-webfont.woff2') format('woff2'),
+        url('/fonts/inter-medium-webfont.woff') format('woff');
+}
+
+/* inter-700 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: optional;
+    src: local('Inter'), url('/fonts/inter-bold-webfont.woff2') format('woff2'),
+        url('/fonts/inter-bold-webfont.woff') format('woff');
+}
 
 /* Write your own custom base styles here */
 h1 {
@@ -25,7 +55,10 @@ body {
 
 .layout {
     /* 750px */
-    max-width: 43.75rem;
+    /* max-width: 43.75rem; */
+
+    /* 1100px */
+    max-width: 68.75rem;
     @apply w-11/12 mx-auto;
 }
 
@@ -34,9 +67,6 @@ body {
 /* Stop purging. */
 
 /* Write your own custom component styles here */
-.btn-blue {
-    @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
-}
 
 /* Start purging... */
 @tailwind utilities;
