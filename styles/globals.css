@@ -1,75 +1,68 @@
 @tailwind base;
-
-/* inter-regular - latin */
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-display: optional;
-    src: local('Inter'),
-        url('/fonts/inter-regular-webfont.woff2') format('woff2'),
-        url('/fonts/inter-regular-webfont.woff') format('woff');
-}
-
-/* inter-500 - latin */
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-display: optional;
-    src: local('Inter'),
-        url('/fonts/inter-medium-webfont.woff2') format('woff2'),
-        url('/fonts/inter-medium-webfont.woff') format('woff');
-}
-
-/* inter-700 - latin */
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-display: optional;
-    src: local('Inter'), url('/fonts/inter-bold-webfont.woff2') format('woff2'),
-        url('/fonts/inter-bold-webfont.woff') format('woff');
-}
-
-/* Write your own custom base styles here */
-h1 {
-    @apply text-3xl font-bold md:text-5xl font-primary;
-}
-
-h2 {
-    @apply text-2xl font-bold md:text-4xl font-primary;
-}
-
-h3 {
-    @apply text-xl font-bold md:text-3xl font-primary;
-}
-
-h4 {
-    @apply text-lg font-bold font-primary;
-}
-
-body {
-    @apply font-primary;
-}
-
-.layout {
-    /* 750px */
-    /* max-width: 43.75rem; */
-
-    /* 1100px */
-    max-width: 68.75rem;
-    @apply w-11/12 mx-auto;
-}
-
-/* Start purging... */
 @tailwind components;
-/* Stop purging. */
-
-/* Write your own custom component styles here */
-
-/* Start purging... */
 @tailwind utilities;
-/* Stop purging. */
 
-/* Your own custom utilities */
+@layer base {
+    /* inter-regular - latin */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+        src: local('Inter'),
+            url('/fonts/inter-regular-webfont.woff2') format('woff2'),
+            url('/fonts/inter-regular-webfont.woff') format('woff');
+    }
+
+    /* inter-500 - latin */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+        src: local('Inter'),
+            url('/fonts/inter-medium-webfont.woff2') format('woff2'),
+            url('/fonts/inter-medium-webfont.woff') format('woff');
+    }
+
+    /* inter-700 - latin */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-display: optional;
+        src: local('Inter'),
+            url('/fonts/inter-bold-webfont.woff2') format('woff2'),
+            url('/fonts/inter-bold-webfont.woff') format('woff');
+    }
+
+    /* Write your own custom base styles here */
+    h1 {
+        @apply text-3xl font-bold md:text-5xl font-primary;
+    }
+
+    h2 {
+        @apply text-2xl font-bold md:text-4xl font-primary;
+    }
+
+    h3 {
+        @apply text-xl font-bold md:text-3xl font-primary;
+    }
+
+    h4 {
+        @apply text-lg font-bold font-primary;
+    }
+
+    body {
+        @apply text-sm font-primary md:text-base;
+    }
+
+    .layout {
+        /* 750px */
+        /* max-width: 43.75rem; */
+
+        /* 1100px */
+        max-width: 68.75rem;
+        @apply w-11/12 mx-auto;
+    }
+}
