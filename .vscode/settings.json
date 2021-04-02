@@ -1,4 +1,6 @@
 {
     "css.validate": false,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "prettier.tabWidth": 2
 }
