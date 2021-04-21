@@ -23,6 +23,9 @@ export default function Home() {
             <CustomLink href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fnextjs-tailwind-starter'>
               <img src='https://vercel.com/button' alt='Deploy with Vercel' />
             </CustomLink>
+            <div className='mt-8 text-dark'>
+              <p className='text-[#ffe347]'>JIT is on</p>
+            </div>
             <footer className='absolute text-gray-300 bottom-2'>
               © {new Date().getFullYear()}
             </footer>
