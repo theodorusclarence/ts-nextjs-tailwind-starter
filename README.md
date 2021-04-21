@@ -31,11 +31,10 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ### Inter Fonts
 
-Inter fonts is self hosted. The default weights are `400, 600, 700`
+Inter fonts is self hosted. The default weights are `400, 600, 700`. To add more, use fontsquirrel.
 
 ### UnstyledLink Component
-Used as a component for Next.js Link. Will render out Next/Link if the href started with `/` or `#`, else will render `a` tag with `target='_blank'`.
-
+Used as a component for Next.js Link. Will render out Next/Link if the href started with `/` or `#`, else will render an `a` tag with `target='_blank'`.
 ### CustomLink Component
 An extension of UnstyledLink Component, you can add your default styling for a button/link.
 ```jsx
@@ -66,12 +65,13 @@ const description = 'your description';
 const url = 'https://theodorusclarence.com';
 
 <NextSeo
-title={title}
-description={description}
-canonical={url}
-openGraph={{
-    url,
-    title,
-    description,
-}}
+  title={title}
+  description={description}
+  canonical={url}
+  openGraph={{
+      url,
+      title,
+      description,
+  }}
+/>
 ```
