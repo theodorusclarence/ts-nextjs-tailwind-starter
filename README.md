@@ -1,5 +1,9 @@
 This is a NextJs and Tailwind project bootstrapped using nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/nextjs-tailwind-starter).
 
+See the deployment on [https://nextjs-tailwind-starter.theodorusclarence.com/](https://nextjs-tailwind-starter.theodorusclarence.com/)
+
+![Screenshots](https://www.site-shot.com/cached_image/3aslTKJcEeuO5AJCrBEAAg)
+
 ## Getting Started
 
 To use this starter, you can use create-next-app to do it by:
@@ -25,7 +29,49 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## What's Inside
 
-This starter file has a opinionated styling for heading with responsive size and Montserrat font imported from the google fonts.
+### Inter Fonts
 
-There is also Seo Component to customize page title and opengraph meta tags.
-SEO is using next-seo packages, make sure you configure next-seo.config.js to your preferred
+Inter fonts is self hosted. The default weights are `400, 600, 700`
+
+### UnstyledLink Component
+Used as a component for Next.js Link. Will render out Next/Link if the href started with `/` or `#`, else will render `a` tag with `target='_blank'`.
+
+### CustomLink Component
+An extension of UnstyledLink Component, you can add your default styling for a button/link.
+```jsx
+<UnstyledLink
+      className={`${props.className} inline-flex items-center font-bold hover:text-primary-400`}
+      {...props}
+    >
+  {props.children}
+</UnstyledLink>
+```
+
+### Default Favicon Declaration
+Use [Favicon Generator](https://www.favicon-generator.org/) and then overwrite the files in `/public/favicon`
+
+### Just-In-Time Tailwindcss
+Defaulted to true, you can uncomment the `mode='jit'` in `/tailwind.config.js`
+
+### Default Styles
+There are default styles for responsive heading sizes, and `.layout` to support a max-width for larger screen size.
+
+### NextSeo from `next-seo`
+Configure the default in `/next-seo.config.js`. If you want to use the default, just add `<NextSeo />` on top of your page.
+
+You can also customize it per page by declaring the title, description, and the url
+```jsx
+const title = 'Next.js Tailwind Starter';
+const description = 'your description';
+const url = 'https://theodorusclarence.com';
+
+<NextSeo
+title={title}
+description={description}
+canonical={url}
+openGraph={{
+    url,
+    title,
+    description,
+}}
+```
