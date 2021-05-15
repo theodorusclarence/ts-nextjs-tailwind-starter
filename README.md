@@ -55,23 +55,14 @@ Defaulted to true, you can uncomment the `mode='jit'` in `/tailwind.config.js`
 ### Default Styles
 There are default styles for responsive heading sizes, and `.layout` to support a max-width for larger screen size.
 
-### NextSeo from `next-seo`
-Configure the default in `/next-seo.config.js`. If you want to use the default, just add `<NextSeo />` on top of your page.
+### Seo Component
+Configure the default in `/components/Seo.jsx`. If you want to use the default, just add `<Seo />` on top of your page. 
 
-You can also customize it per page by declaring the title, description, and the url
+You can also customize it per page by overriding the title, description as props
+
 ```jsx
-const title = 'Next.js Tailwind Starter';
-const description = 'your description';
-const url = 'https://theodorusclarence.com';
-
-<NextSeo
-  title={title}
-  description={description}
-  canonical={url}
-  openGraph={{
-      url,
-      title,
-      description,
-  }}
+<Seo
+  title='Next.js Tailwind Starter'
+  description='your description'
 />
 ```
