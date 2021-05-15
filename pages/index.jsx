@@ -1,10 +1,10 @@
-import { NextSeo } from 'next-seo';
+import Seo from '@/components/Seo';
 import CustomLink from '@/components/CustomLink';
 
 export default function Home() {
   return (
     <>
-      <NextSeo />
+      <Seo />
 
       <main>
         <section className='bg-dark'>
