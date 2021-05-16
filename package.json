@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install"
   },
   "dependencies": {
     "autoprefixer": "^10.2.1",
@@ -14,5 +15,10 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "tailwindcss": "^2.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "husky": "^6.0.0"
   }
 }
