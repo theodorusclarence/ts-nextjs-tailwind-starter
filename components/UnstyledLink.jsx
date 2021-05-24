@@ -1,27 +1,15 @@
 import Link from 'next/link';
 
-export default function UnstyledLink(props) {
-  const href = props.href;
+export default function UnstyledLink({ href, ...rest }) {
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
 
   if (isInternalLink) {
     return (
       <Link href={href}>
-        <a {...props} className={`${props?.className}`}>
-          {props.children}
-        </a>
+        <a {...rest} />
       </Link>
     );
   }
 
-  return (
-    <a
-      className={`${props?.className}`}
-      target='_blank'
-      rel='noopener noreferrer'
-      {...props}
-    >
-      {props.children}
-    </a>
-  );
+  return <a target='_blank' rel='noopener noreferrer' {...rest} />;
 }
