@@ -11,5 +11,5 @@ export default function UnstyledLink({ href, ...rest }) {
     );
   }
 
-  return <a target='_blank' rel='noopener noreferrer' {...rest} />;
+  return <a target='_blank' rel='noopener noreferrer' href={href} {...rest} />;
 }
