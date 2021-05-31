@@ -45,3 +45,18 @@
     @apply w-11/12 mx-auto;
   }
 }
+
+@layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(to right, #00e0f3, #00c4fd);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+  }
+  .animated-underline:hover,
+  .animated-underline:focus {
+    background-size: 0 2px, 100% 2px;
+  }
+}
