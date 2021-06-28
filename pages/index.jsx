@@ -17,9 +17,10 @@ export default function Home() {
             <p className='mb-4'></p>
             <a
               target='_blank'
-              rel='noopener noreferer'
+              rel='noopener noreferrer'
               href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fnextjs-tailwind-starter'
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src='https://vercel.com/button' alt='Deploy with Vercel' />
             </a>
             <div className='mt-8 text-dark'>
