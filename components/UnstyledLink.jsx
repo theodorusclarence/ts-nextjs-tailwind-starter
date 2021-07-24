@@ -2,10 +2,19 @@ import Link from 'next/link';
 
 import { classNames } from '@/lib/helper';
 
-export default function UnstyledLink({ children, href, className, ...rest }) {
-  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
+export default function UnstyledLink({
+  children,
+  href,
+  openNewTab = undefined,
+  className,
+  ...rest
+}) {
+  const isNewTab =
+    openNewTab !== undefined
+      ? openNewTab
+      : href && (href.startsWith('/') || href.startsWith('#'));
 
-  if (isInternalLink) {
+  if (!isNewTab) {
     return (
       <Link href={href}>
         <a {...rest} className={className}>
