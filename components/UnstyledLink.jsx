@@ -12,7 +12,7 @@ export default function UnstyledLink({
   const isNewTab =
     openNewTab !== undefined
       ? openNewTab
-      : href && (href.startsWith('/') || href.startsWith('#'));
+      : href && !href.startsWith('/') && !href.startsWith('#');
 
   if (!isNewTab) {
     return (
