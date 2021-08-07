@@ -1,4 +1,4 @@
-import { classNames } from '@/lib/helper';
+import clsx from 'clsx';
 import UnstyledLink from './UnstyledLink';
 
 export default function CustomLink({
@@ -11,7 +11,7 @@ export default function CustomLink({
     <UnstyledLink
       {...rest}
       openNewTab={openNewTab}
-      className={classNames(
+      className={clsx(
         'inline-flex items-center font-bold hover:text-primary-400 animated-underline',
         className
       )}

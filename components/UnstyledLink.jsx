@@ -1,6 +1,5 @@
+import clsx from 'clsx';
 import Link from 'next/link';
-
-import { classNames } from '@/lib/helper';
 
 export default function UnstyledLink({
   children,
@@ -30,7 +29,7 @@ export default function UnstyledLink({
       rel='noopener noreferrer'
       href={href}
       {...rest}
-      className={classNames(className, 'cursor-[ne-resize]')}
+      className={clsx(className, 'cursor-[ne-resize]')}
     >
       {children}
     </a>
