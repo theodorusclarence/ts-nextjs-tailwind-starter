@@ -20,12 +20,12 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "eslint": "^7.31.0",
+    "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1",
     "husky": "^6.0.0",
-    "lint-staged": "^11.1.0",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.0",
-    "tailwindcss": "^2.2.6"
+    "tailwindcss": "^2.2.7"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
