@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import UnstyledLink from './UnstyledLink';
 
 const links = [
   { href: '/', label: 'Route' },
@@ -17,9 +18,12 @@ export default function Nav() {
         <ul className='flex items-center justify-between space-x-4'>
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
-              <Link href={href}>
-                <a className='text-white hover:text-green-400'>{label}</a>
-              </Link>
+              <UnstyledLink
+                href={href}
+                className='text-white hover:text-green-400'
+              >
+                {label}
+              </UnstyledLink>
             </li>
           ))}
         </ul>
