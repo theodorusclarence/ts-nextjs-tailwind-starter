@@ -5,7 +5,9 @@ export default function Seo(props) {
   const router = useRouter();
   const meta = {
     title: 'Next.js Tailwind Starter',
+    site_name: 'Next.js Tailwind Starter',
     description: 'A template for Next.js and Tailwindcss by Theodorus Clarence',
+    url: 'https://theodorusclarence.com',
     image: 'https://theodorusclarence.com/favicon/large-og.jpg',
     type: 'website',
     robots: 'follow, index',
@@ -17,17 +19,11 @@ export default function Seo(props) {
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />
-      <meta
-        property='og:url'
-        content={`https://theodorusclarence.com${router.asPath}`}
-      />
-      <link
-        rel='canonical'
-        href={`https://theodorusclarence.com${router.asPath}`}
-      />
+      <meta property='og:url' content={`${meta.url}${router.asPath}`} />
+      <link rel='canonical' href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}
       <meta property='og:type' content={meta.type} />
-      <meta property='og:site_name' content='Theodorus Clarence' />
+      <meta property='og:site_name' content={meta.site_name} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta name='image' property='og:image' content={meta.image} />
