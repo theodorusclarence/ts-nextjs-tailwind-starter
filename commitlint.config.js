@@ -9,7 +9,6 @@ module.exports = {
       [
         'feat',
         'fix',
-        'BREAKING CHANGE',
         'docs',
         'chore',
         'style',
