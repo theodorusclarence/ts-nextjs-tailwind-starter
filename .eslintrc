@@ -4,10 +4,17 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "next"],
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "no-unused-vars": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   "globals": {
     "React": true,

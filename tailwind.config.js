@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
