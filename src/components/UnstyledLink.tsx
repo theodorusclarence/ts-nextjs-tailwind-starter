@@ -12,7 +12,7 @@ export type UnstyledLinkProps = {
 export default function UnstyledLink({
   children,
   href,
-  openNewTab = undefined,
+  openNewTab,
   className,
   ...rest
 }: UnstyledLinkProps) {
