@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 type ButtonProps = {
-  children: React.ReactChild | string;
+  children: React.ReactNode;
   className?: string;
   variant?: 'primary' | 'secondary';
 } & React.ComponentPropsWithoutRef<'button'>;
