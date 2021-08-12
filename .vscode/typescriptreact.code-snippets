@@ -1,0 +1,62 @@
+{
+  "import React": {
+    "prefix": "ir",
+    "body": ["import * as React from 'react';"]
+  },
+  "React.useState": {
+    "prefix": "us",
+    "body": [
+      "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
+    ]
+  },
+  "React.useEffect": {
+    "prefix": "uf",
+    "body": ["React.useEffect(() => {", "  $0", "}, []);"]
+  },
+  "React.useReducer": {
+    "prefix": "ur",
+    "body": [
+      "const [state, dispatch] = React.useReducer(${0:someReducer}, {",
+      "  ",
+      "})"
+    ]
+  },
+  "React.useRef": {
+    "prefix": "urf",
+    "body": ["const ${1:someRef} = React.useRef($0)"]
+  },
+  "React Functional Component": {
+    "prefix": "rc",
+    "body": [
+      "import * as React from 'react';\n",
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  )",
+      "}"
+    ]
+  },
+  "Next Pages": {
+    "prefix": "np",
+    "body": [
+      "import * as React from 'react';\n",
+      "import Seo from '@/components/Seo';\n",
+      "export default function ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page() {",
+      "  return (",
+      "    <>",
+      "      <Seo templateTitle='${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}' />\n",
+      "      <main>\n",
+      "        <section className=''>",
+      "          <div className='layout'>",
+      "            $0",
+      "          </div>",
+      "        </section>",
+      "      </main>",
+      "    </>",
+      "  )",
+      "}"
+    ]
+  }
+}
