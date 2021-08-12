@@ -34,7 +34,7 @@
     "typescript": "^4.3.5"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}": [
       "yarn prettier --write"
     ]
   }
