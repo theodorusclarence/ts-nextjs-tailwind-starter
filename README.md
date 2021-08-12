@@ -2,11 +2,9 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/badge/main)](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/overview/main)
 
-This is a Next.js, Tailwind CSS, and Typescript project bootstrapped using ts-nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter).
+This is a Next.js, Tailwind CSS, and Typescript project bootstrapped using [ts-nextjs-tailwind-starter](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter) created by [Theodorus Clarence](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter).
 
-See the deployment on [https://clarence.link/ts-next](https://clarence.link/ts-next)
-
-![Screenshot](https://user-images.githubusercontent.com/55318172/128602240-5e1faa71-450b-4f93-b08a-68bfa95c37f4.png)
+![ts-nextjs-tailwind-starter](https://socialify.git.ci/theodorusclarence/ts-nextjs-tailwind-starter/image?description=1&descriptionEditable=A%20starter%20for%20Next.js%2C%20Tailwind%20CSS%2C%20and%20Typescript%20with%20Absolute%20Import%2C%20Seo%2C%20Link%20component%2C%20pre-configured%20with%20Husky.&language=1&owner=1&pattern=Charlie%20Brown&stargazers=1&theme=Dark)
 
 ## Getting Started
 
