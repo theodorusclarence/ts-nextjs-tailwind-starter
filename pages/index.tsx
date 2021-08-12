@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import Seo from '@/components/Seo';
 import CustomLink from '@/components/CustomLink';
 
