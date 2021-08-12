@@ -1,4 +1,7 @@
 # Next.js + Tailwind CSS + TypeScript Starter
+
+[![CodeFactor](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/badge/main)](https://www.codefactor.io/repository/github/theodorusclarence/ts-nextjs-tailwind-starter/overview/main)
+
 This is a Next.js, Tailwind CSS, and Typescript project bootstrapped using ts-nextjs-tailwind-starter created by [Theodorus Clarence](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter).
 
 See the deployment on [https://clarence.link/ts-next](https://clarence.link/ts-next)
