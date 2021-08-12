@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "prepare": "husky install",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
@@ -29,6 +30,7 @@
     "eslint-config-next": "^11.0.1",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.2",
+    "next-sitemap": "^1.6.148",
     "prettier": "^2.3.0",
     "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5"
