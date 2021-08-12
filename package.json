@@ -35,6 +35,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}": [
+      "yarn eslint src --max-warnings=0",
       "yarn prettier --write"
     ]
   }
