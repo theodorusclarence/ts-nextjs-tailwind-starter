@@ -2,9 +2,10 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 const defaultMeta = {
-  title: 'Next.js Tailwind Starter',
-  site_name: 'Next.js Tailwind Starter',
-  description: 'A template for Next.js and Tailwindcss by Theodorus Clarence',
+  title: 'Next.js + Tailwind CSS + TypeScript Starter',
+  site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
+  description:
+    ' A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
   url: 'https://theodorusclarence.com',
   image: 'https://theodorusclarence.com/favicon/large-og.jpg',
   type: 'website',

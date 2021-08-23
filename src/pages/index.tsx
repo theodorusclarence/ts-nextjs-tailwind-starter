@@ -1,9 +1,11 @@
 import * as React from 'react';
 
 import Seo from '@/components/Seo';
-import CustomLink from '@/components/CustomLink';
+import CustomLink from '@/components/links/CustomLink';
+import ButtonLink from '@/components/links/ButtonLink';
+import UnstyledLink from '@/components/links/UnstyledLink';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Seo templateTitle='Home' />
@@ -11,23 +13,37 @@ export default function Home() {
       <main>
         <section className='bg-dark'>
           <div className='flex flex-col items-center justify-center min-h-screen text-center text-white layout'>
-            <h1>
+            <h1 className='text-2xl md:text-4xl'>
               <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-                Typescript NextJS Tailwind Starter
+                Next.js + Tailwind CSS + TypeScript Starter
               </CustomLink>
             </h1>
-            <p className='mb-4'></p>
-            <a
-              target='_blank'
-              rel='noopener noreferrer'
+            <p className='mt-2 text-sm text-gray-300'>
+              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
+              Import, Seo, Link component, pre-configured with Husky{' '}
+            </p>
+
+            <ButtonLink
+              className='mt-4'
+              href='/components'
+              variants='secondary'
+            >
+              See all components
+            </ButtonLink>
+
+            <UnstyledLink
               href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
+              className='mt-4'
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src='https://vercel.com/button' alt='Deploy with Vercel' />
-            </a>
-            <div className='mt-8 text-dark'>
-              <p className='text-[#ffe347]'>JIT is on</p>
-            </div>
+              <img
+                width='92'
+                height='32'
+                src='https://vercel.com/button'
+                alt='Deploy with Vercel'
+              />
+            </UnstyledLink>
+
             <footer className='absolute text-gray-500 bottom-2'>
               © {new Date().getFullYear()} By{' '}
               <CustomLink href='https://theodorusclarence.com?ref=tsnextstarter'>

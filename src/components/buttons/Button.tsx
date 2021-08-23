@@ -3,13 +3,13 @@ import clsx from 'clsx';
 type ButtonProps = {
   children: React.ReactNode;
   className?: string;
-  variant?: 'primary' | 'secondary';
+  variants?: 'primary' | 'secondary';
 } & React.ComponentPropsWithoutRef<'button'>;
 
 export default function Button({
   children,
   className = '',
-  variant = 'primary',
+  variants = 'primary',
   ...rest
 }: ButtonProps) {
   return (
@@ -19,9 +19,9 @@ export default function Button({
         'py-2 px-4 rounded font-bold hover:text-primary-400 animated-underline',
         'border border-gray-600',
         {
-          'bg-dark text-white': variant === 'primary',
+          'bg-dark text-white': variants === 'primary',
           'bg-white text-dark hover:bg-gray-200 hover:text-dark transition-colors':
-            variant === 'secondary',
+            variants === 'secondary',
         },
         className
       )}
