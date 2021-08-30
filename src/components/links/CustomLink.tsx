@@ -11,6 +11,7 @@ export default function CustomLink({
       {...rest}
       className={clsx(
         'inline-flex items-center font-bold hover:text-primary-400 animated-underline',
+        'focus:outline-none focus-visible:text-primary-400 ',
         className
       )}
     >
