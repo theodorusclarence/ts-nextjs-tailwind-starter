@@ -54,6 +54,13 @@ Used as a component for Next.js Link. Will render out Next/Link if the href star
 
 ![customlink](https://user-images.githubusercontent.com/55318172/129183546-4e8c2059-0493-4459-a1e9-755fbd32fe39.gif)
 
+**All Components Demo:**
+
+Check it out yourself on [the deployment](https://ts-nextjs-tailwind-starter.theodorusclarence.com/components).
+
+![component-ts-next](https://user-images.githubusercontent.com/55318172/132181279-efb97b83-3265-4b85-87d5-0e11b757f0e4.gif)
+
+
 ### 4. Absolute Import
 
 You can import without using relative path
