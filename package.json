@@ -8,8 +8,10 @@
     "start": "next start",
     "prepare": "husky install",
     "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "format": "prettier --write src",
     "release": "standard-version",
-    "format": "prettier --write .",
+    "push-release": "git push --follow-tags origin main",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
@@ -31,6 +33,8 @@
     "@typescript-eslint/parser": "^4.30.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "next-sitemap": "^1.6.164",
@@ -40,9 +44,12 @@
     "typescript": "^4.4.2"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}": [
-      "yarn eslint src --max-warnings=0",
-      "yarn prettier --write"
+    "src/**/*.{js,jsx,ts,tsx,}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
     ]
   }
 }
