@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import UnstyledLink from './links/UnstyledLink';
 
 const links = [
