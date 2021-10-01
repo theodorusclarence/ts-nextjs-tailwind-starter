@@ -255,3 +255,5 @@ Snippets: `reg`
 //#region  //*============== FORM SUBMIT
 //#endregion  //*============== FORM SUBMIT
 ```
+
+You should also use [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) extension.
