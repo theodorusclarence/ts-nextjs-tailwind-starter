@@ -11,33 +11,33 @@ This is a Next.js, Tailwind CSS, and Typescript project bootstrapped using [ts-n
 
 ## Getting Started
 
-To use this template you can use one of the three ways:
+### 1. To use this template you can use one of the three ways:
 
-### 1. Using `create-next-app`
+1. Using `create-next-app`
 
 ```bash
 npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
 ```
 
-### 2. Use this repository as template
+2. Use this repository as template
 
 ![image](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
 
-### 3. Deploy to Vercel
+3. Deploy to Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
 
-Then, run the development server:
+### 2. Run the development server
+
+It is encouraged to use yarn so the husky hooks can work properly.
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`. The page auto-updates as you edit the file.
 
-You can start editing the page by modifying `src/pages/index.tsx`. The page auto-updates as you edit the file.
+### 3. Refer to the [usage guide](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter#usage-guide)
 
 ## What's Inside
 
@@ -112,3 +112,146 @@ There are default styles for responsive heading sizes, and `.layout` to support 
 ### 11. Preloaded & Self Hosted Inter Fonts
 
 Inter fonts is a variable fonts that is self hosted and preloaded.
+
+## Usage Guide
+
+### 1. Change defaults
+There are some things you need to change including title, urls, favicons, etc. Here are the list
+
+#### `components/Seo.tsx`
+
+Change title, sitename, url, and opengraph image
+```tsx
+const defaultMeta = {
+  title: 'Next.js + Tailwind CSS + TypeScript Starter',
+  site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
+  description:
+    ' A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+  url: 'https://theodorusclarence.com',
+  image: 'https://theodorusclarence.com/favicon/large-og.jpg',
+  type: 'website',
+  robots: 'follow, index',
+};
+```
+
+#### `next-sitemap.js`
+
+Change the siteUrl to generate sitemap correctly
+
+```js
+module.exports = {
+  siteUrl: 'https://ts-nextjs-tailwind-starter.theodorusclarence.com/',
+  generateRobotsTxt: true,
+  robotsTxtOptions: {
+    policies: [{ userAgent: '*', allow: '/' }],
+  },
+};
+```
+
+#### `package.json`
+
+Change the package name to your project name.
+
+#### `public/favicon`
+
+Favicon are generated from [favicon-generator site](https://favicon-generator.org), generate a new favicon and replace all of favicons inside.
+
+### 2. Commit Message Convention
+
+This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
+
+## Snippets
+
+This starter is equipped with workspace-snippets, it is encouraged to use it, especially the `np` and `rc`
+
+### Next.js Page
+
+File inside `src/pages` will be the webpage route, there are 2 things that need to be added in Next.js page:
+
+1. Seo component
+2. Layout class to give constraint to viewport width. [Read more about layout class](https://theodorusclarence.com/blog/tailwindcss-best-practice#1-using-layout-class-or-container).
+
+Snippets: `np`
+
+```tsx
+import * as React from 'react';
+import Seo from '@/components/Seo';
+export default function TestPage() {
+  return (
+    <>
+      <Seo templateTitle='Test' />
+      <main>
+        <section className=''>
+          <div className='layout'>
+            
+          </div>
+        </section>
+      </main>
+    </>
+  )
+}
+```
+
+### React Components
+
+To make a new component, It is encouraged to use `export default function`. Because when we need to rename it, we only need to do it once.
+
+Snippets: `rc`
+
+```tsx
+import * as React from 'react'
+export default function Component() {
+  return <div></div>
+}
+```
+
+### Import React
+
+Snippets: `ir`
+
+```tsx
+import * as React from 'react'
+```
+
+### useState Hook
+
+Snippets: `us`
+
+```tsx
+const [state, setState] = React.useState(initialState)
+```
+
+### useEffect Hook
+
+Snippets: `uf`
+
+```tsx
+React.useEffect(() => {}, [])
+```
+
+### useReducer Hook
+
+Snippets: `ur`
+
+```tsx
+const [state, dispatch] = React.useReducer(someReducer, {})
+```
+
+### useRef Hook
+
+Snippets: `urf`
+
+```tsx
+const someRef = React.useRef()
+```
+
+### Region Comment
+
+It is really useful when we need to group code. It is also collapsible in VSCode
+
+Snippets: `reg`
+
+```tsx
+//#region  //*============== FORM SUBMIT
+//#endregion  //*============== FORM SUBMIT
+```
