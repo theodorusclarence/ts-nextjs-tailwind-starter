@@ -6,7 +6,7 @@ const defaultMeta = {
   site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
   description:
     ' A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
-  url: 'https://theodorusclarence.com',
+  url: 'https://tsnext-tw.thcl.dev',
   image: 'https://theodorusclarence.com/favicon/large-og.jpg',
   type: 'website',
   robots: 'follow, index',

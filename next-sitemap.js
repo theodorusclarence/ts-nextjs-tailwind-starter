@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://ts-nextjs-tailwind-starter.theodorusclarence.com/',
+  siteUrl: 'https://tsnext-tw.thcl.dev/',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],
