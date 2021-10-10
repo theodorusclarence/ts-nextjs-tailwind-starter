@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+import { openGraph } from '@/lib/helper';
+
 const defaultMeta = {
   title: 'Next.js + Tailwind CSS + TypeScript Starter',
   site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
@@ -11,6 +13,7 @@ const defaultMeta = {
   type: 'website',
   robots: 'follow, index',
 };
+defaultMeta.image = openGraph(defaultMeta.title, defaultMeta.description);
 
 type SeoProps = {
   date?: string;
