@@ -132,7 +132,7 @@ export default function ComponentsPage() {
                     onClick={() => alert('button clicked')}
                     variant='light'
                   >
-                    Secondary Variant
+                    Light Variant
                   </Button>
                 </div>
                 <div className='flex flex-wrap gap-2'>
