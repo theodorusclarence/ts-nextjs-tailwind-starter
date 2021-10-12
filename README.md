@@ -58,8 +58,7 @@ Used as a component for Next.js Link. Will render out Next/Link if the href star
 
 Check it out yourself on [the deployment](https://ts-nextjs-tailwind-starter.theodorusclarence.com/components).
 
-![component-ts-next](https://user-images.githubusercontent.com/55318172/132181279-efb97b83-3265-4b85-87d5-0e11b757f0e4.gif)
-
+https://user-images.githubusercontent.com/55318172/136921766-470eba67-6f5e-4066-9f37-a6ea825d6cd4.mov
 
 ### 4. Absolute Import
 
