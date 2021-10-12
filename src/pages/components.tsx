@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import * as React from 'react';
 
 import Button from '@/components/buttons/Button';
@@ -7,21 +8,42 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 
 export default function ComponentsPage() {
+  const [mode, setMode] = React.useState('dark');
+  function toggleMode() {
+    return mode === 'dark' ? setMode('light') : setMode('dark');
+  }
+
+  const textColor = mode === 'dark' ? 'text-gray-300' : 'text-gray-600';
   return (
     <>
       <Seo templateTitle='Components' />
 
       <main>
-        <section className='bg-dark'>
-          <div className='min-h-screen py-20 text-white layout'>
+        <section className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-gray-50')}>
+          <div
+            className={clsx(
+              'min-h-screen py-20 layout',
+              mode === 'dark' ? 'text-white' : 'text-black'
+            )}
+          >
             <h1>Built-in Components</h1>
             <CustomLink className='mt-2' href='/'>
               ← Back to Home
             </CustomLink>
+
+            <div className='mt-8'>
+              <Button
+                onClick={toggleMode}
+                variant={mode === 'dark' ? 'light' : 'dark'}
+              >
+                Set to {mode === 'dark' ? 'light' : 'dark'}
+              </Button>
+            </div>
+
             <ol className='mt-8 space-y-6'>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>UnstyledLink</h2>
-                <p className='text-sm text-gray-300 !mt-1'>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   No style applied, differentiate internal and outside links,
                   give custom cursor for outside links.
                 </p>
@@ -34,7 +56,7 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>CustomLink</h2>
-                <p className='text-sm text-gray-300 !mt-1'>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Add styling on top of UnstyledLink, giving a dotted and
                   animated underline.
                 </p>
@@ -47,42 +69,105 @@ export default function ComponentsPage() {
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>ButtonLink</h2>
-                <p className='text-sm text-gray-300 !mt-1'>
-                  Button styled link with 2 variants.
+                <p className={clsx('text-sm !mt-1', textColor)}>
+                  Button styled link with 3 variants.
                 </p>
                 <div className='flex flex-wrap gap-2'>
-                  <ButtonLink href='/'>Internal Links</ButtonLink>
-                  <ButtonLink href='https://theodorusclarence.com'>
-                    Outside Links
-                  </ButtonLink>
                   <ButtonLink
-                    variants='secondary'
+                    variant='primary'
                     href='https://theodorusclarence.com'
                   >
-                    Secondary Variant
+                    Primary Variant
+                  </ButtonLink>
+                  <ButtonLink
+                    variant='dark'
+                    href='https://theodorusclarence.com'
+                  >
+                    Dark Variant
+                  </ButtonLink>
+                  <ButtonLink
+                    variant='light'
+                    href='https://theodorusclarence.com'
+                  >
+                    Light Variant
                   </ButtonLink>
                 </div>
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>Button</h2>
-                <p className='text-sm text-gray-300 !mt-1'>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Ordinary button with style.
                 </p>
                 <div className='flex flex-wrap gap-2'>
-                  <Button onClick={() => alert('button clicked')}>
+                  <Button
+                    onClick={() => alert('button clicked')}
+                    variant='primary'
+                  >
                     Primary Variant
                   </Button>
                   <Button
+                    variant='dark'
                     onClick={() => alert('button clicked')}
-                    variants='secondary'
+                  >
+                    Dark Variant
+                  </Button>
+                  <Button
+                    onClick={() => alert('button clicked')}
+                    variant='light'
                   >
                     Secondary Variant
+                  </Button>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  <Button
+                    disabled
+                    onClick={() => alert('button clicked')}
+                    variant='primary'
+                  >
+                    Disabled
+                  </Button>
+                  <Button
+                    disabled
+                    variant='dark'
+                    onClick={() => alert('button clicked')}
+                  >
+                    Disabled
+                  </Button>
+                  <Button
+                    disabled
+                    onClick={() => alert('button clicked')}
+                    variant='light'
+                  >
+                    Disabled
+                  </Button>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  <Button
+                    isLoading
+                    onClick={() => alert('button clicked')}
+                    variant='primary'
+                  >
+                    Disabled
+                  </Button>
+                  <Button
+                    isLoading
+                    variant='dark'
+                    onClick={() => alert('button clicked')}
+                  >
+                    Disabled
+                  </Button>
+                  <Button
+                    isLoading
+                    onClick={() => alert('button clicked')}
+                    variant='light'
+                  >
+                    Disabled
                   </Button>
                 </div>
               </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>Custom 404 Page</h2>
-                <p className='text-sm text-gray-300 !mt-1'>
+                <p className={clsx('text-sm !mt-1', textColor)}>
                   Styled 404 page with some animation.
                 </p>
                 <div className='flex flex-wrap gap-2'>
