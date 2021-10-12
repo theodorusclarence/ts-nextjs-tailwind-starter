@@ -13,6 +13,22 @@ export default function ComponentsPage() {
     return mode === 'dark' ? setMode('light') : setMode('dark');
   }
 
+  //#region  //*=========== THEME ===========
+  function randomize() {
+    const r = Math.random() * 170 + 80;
+    const g = Math.random() * 170 + 80;
+    const b = Math.random() * 170 + 80;
+    document.documentElement.style.setProperty(
+      '--tw-clr-primary-400',
+      `${r},${g},${b}`
+    );
+    document.documentElement.style.setProperty(
+      '--tw-clr-primary-500',
+      `${r - 20},${g - 20},${b - 20}`
+    );
+  }
+  //#endregion  //*======== THEME ===========
+
   const textColor = mode === 'dark' ? 'text-gray-300' : 'text-gray-600';
   return (
     <>
@@ -31,13 +47,14 @@ export default function ComponentsPage() {
               ← Back to Home
             </CustomLink>
 
-            <div className='mt-8'>
+            <div className='flex flex-wrap gap-2 mt-8'>
               <Button
                 onClick={toggleMode}
                 variant={mode === 'dark' ? 'light' : 'dark'}
               >
                 Set to {mode === 'dark' ? 'light' : 'dark'}
               </Button>
+              <Button onClick={randomize}>Randomize CSS Variable</Button>
             </div>
 
             <ol className='mt-8 space-y-6'>
