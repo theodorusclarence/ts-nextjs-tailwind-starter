@@ -13,7 +13,6 @@ const defaultMeta = {
   type: 'website',
   robots: 'follow, index',
 };
-defaultMeta.image = openGraph(defaultMeta.title, defaultMeta.description);
 
 type SeoProps = {
   date?: string;
@@ -29,6 +28,7 @@ export default function Seo(props: SeoProps) {
   meta['title'] = props.templateTitle
     ? `${props.templateTitle} | ${meta.site_name}`
     : meta.title;
+  meta.image = openGraph(meta.title, meta.description);
 
   return (
     <Head>
