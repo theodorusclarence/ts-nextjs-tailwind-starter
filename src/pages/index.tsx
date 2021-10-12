@@ -13,18 +13,19 @@ export default function HomePage() {
       <main>
         <section className='bg-dark'>
           <div className='flex flex-col items-center justify-center min-h-screen text-center text-white layout'>
-            <h1 className='text-2xl md:text-4xl'>
-              <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-                Next.js + Tailwind CSS + TypeScript Starter
-              </CustomLink>
-            </h1>
+            <h1>Next.js + Tailwind CSS + TypeScript Starter</h1>
             <p className='mt-2 text-sm text-gray-300'>
               A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
               Import, Seo, Link component, pre-configured with Husky{' '}
             </p>
+            <p className='mt-2 text-sm text-gray-200'>
+              <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
+                See the repository
+              </CustomLink>
+            </p>
 
             <ButtonLink
-              className='mt-4'
+              className='mt-6'
               href='/components'
               variants='secondary'
             >
@@ -56,3 +57,12 @@ export default function HomePage() {
     </>
   );
 }
+
+/**
+ * Default info that you should change:
+ * components/Seo.tsx
+ * next-sitemap.js
+ * public/favicon
+ *
+ * Please refer to the README.md
+ */

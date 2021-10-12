@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --clr-primary-400: #00e0f3;
+  --clr-primary-500: #00c4fd;
+}
+
 @layer base {
   /* inter var - latin */
   @font-face {
@@ -17,19 +22,19 @@
 
   /* Write your own custom base styles here */
   h1 {
-    @apply text-3xl font-bold md:text-5xl font-primary;
-  }
-
-  h2 {
     @apply text-2xl font-bold md:text-4xl font-primary;
   }
 
-  h3 {
+  h2 {
     @apply text-xl font-bold md:text-3xl font-primary;
   }
 
+  h3 {
+    @apply text-lg font-bold md:text-2xl font-primary;
+  }
+
   h4 {
-    @apply text-lg font-bold font-primary;
+    @apply text-base font-bold md:text-lg font-primary;
   }
 
   body {
@@ -44,19 +49,24 @@
     max-width: 68.75rem;
     @apply w-11/12 mx-auto;
   }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
 }
 
 @layer utilities {
   .animated-underline {
     background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(to right, #00e0f3, #00c4fd);
+      linear-gradient(to right, var(--clr-primary-400), var(--clr-primary-500));
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.3s ease;
+    transition: 0.3s ease;
+    transition-property: background-size, color, background-color, border-color;
   }
   .animated-underline:hover,
-  .animated-underline:focus {
+  .animated-underline:focus-visible {
     background-size: 0 2px, 100% 2px;
   }
 }

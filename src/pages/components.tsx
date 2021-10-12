@@ -35,8 +35,8 @@ export default function ComponentsPage() {
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>CustomLink</h2>
                 <p className='text-sm text-gray-300 !mt-1'>
-                  Add styling on top of UnstyledLink, giving an animated
-                  underline and hover color.
+                  Add styling on top of UnstyledLink, giving a dotted and
+                  animated underline.
                 </p>
                 <div className='space-x-2'>
                   <CustomLink href='/'>Internal Links</CustomLink>
