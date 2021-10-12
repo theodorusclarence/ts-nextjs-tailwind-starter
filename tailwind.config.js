@@ -1,6 +1,15 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+}
+
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
   mode: 'jit',
@@ -13,8 +22,9 @@ module.exports = {
       },
       colors: {
         primary: {
-          400: 'var(--clr-primary-400)',
-          500: 'var(--clr-primary-500)',
+          // Customize it on globals.css :root
+          400: withOpacity('--tw-clr-primary-400'),
+          500: withOpacity('--tw-clr-primary-500'),
         },
         dark: '#222222',
       },
