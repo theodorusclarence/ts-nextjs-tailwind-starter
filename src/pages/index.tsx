@@ -24,11 +24,7 @@ export default function HomePage() {
               </CustomLink>
             </p>
 
-            <ButtonLink
-              className='mt-6'
-              href='/components'
-              variants='secondary'
-            >
+            <ButtonLink className='mt-6' href='/components' variant='light'>
               See all components
             </ButtonLink>
 
