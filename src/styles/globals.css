@@ -25,6 +25,10 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, ne-resize;
+  }
+
   /* Write your own custom base styles here */
   h1 {
     @apply text-2xl font-bold md:text-4xl font-primary;
