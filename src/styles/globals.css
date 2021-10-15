@@ -26,7 +26,7 @@
   }
 
   .cursor-newtab {
-    cursor: url('/images/new-tab.png') 10 10, ne-resize;
+    cursor: url('/images/new-tab.png') 10 10, pointer;
   }
 
   /* Write your own custom base styles here */
