@@ -27,7 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
-    "@types/react": "^17.0.27",
+    "@types/react": "^17.0.30",
     "@types/tailwindcss": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
@@ -36,12 +36,12 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.2",
-    "lint-staged": "^11.2.0",
-    "next-sitemap": "^1.6.179",
+    "lint-staged": "^11.2.3",
+    "next-sitemap": "^1.6.184",
     "prettier": "^2.4.1",
     "standard-version": "^9.3.1",
-    "tailwindcss": "^2.2.16",
-    "typescript": "^4.4.3"
+    "tailwindcss": "^2.2.17",
+    "typescript": "^4.4.4"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,}": [
