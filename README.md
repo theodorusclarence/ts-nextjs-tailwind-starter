@@ -108,18 +108,29 @@ Use [Favicon Generator](https://www.favicon-generator.org/) and then overwrite t
 
 There are default styles for responsive heading sizes, and `.layout` to support a max-width for larger screen size. Find more about it on [my blog post](https://theodorusclarence.com/blog/tailwindcss-best-practice#1-using-layout-class-or-container)
 
-### 11. Preloaded & Self Hosted Inter Fonts
+### 11. Open Graph Generator
+
+| ![image](https://user-images.githubusercontent.com/55318172/137617070-806a0509-84bd-4cae-a900-2ab17e418d8d.png) | ![image](https://user-images.githubusercontent.com/55318172/137617090-c24f684a-bfe5-41b6-8ba9-fa99bae5cadf.png) |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+
+Open Graph is generated using [og.thcl.dev](https://og.thcl.dev), but please fork and self-host if your website is going to have a lot of traffic.
+
+Check out the [repository](https://github.com/theodorusclarence/og) to see the API parameters.
+
+### 12. Preloaded & Self Hosted Inter Fonts
 
 Inter fonts is a variable fonts that is self hosted and preloaded.
 
 ## Usage Guide
 
 ### 1. Change defaults
+
 There are some things you need to change including title, urls, favicons, etc. Here are the list
 
 #### `components/Seo.tsx`
 
 Change title, sitename, url, and opengraph image
+
 ```tsx
 const defaultMeta = {
   title: 'Next.js + Tailwind CSS + TypeScript Starter',
@@ -181,13 +192,11 @@ export default function TestPage() {
       <Seo templateTitle='Test' />
       <main>
         <section className=''>
-          <div className='layout'>
-            
-          </div>
+          <div className='layout'></div>
         </section>
       </main>
     </>
-  )
+  );
 }
 ```
 
@@ -198,9 +207,9 @@ To make a new component, It is encouraged to use `export default function`. Beca
 Snippets: `rc`
 
 ```tsx
-import * as React from 'react'
+import * as React from 'react';
 export default function Component() {
-  return <div></div>
+  return <div></div>;
 }
 ```
 
@@ -209,7 +218,7 @@ export default function Component() {
 Snippets: `ir`
 
 ```tsx
-import * as React from 'react'
+import * as React from 'react';
 ```
 
 ### useState Hook
@@ -217,7 +226,7 @@ import * as React from 'react'
 Snippets: `us`
 
 ```tsx
-const [state, setState] = React.useState(initialState)
+const [state, setState] = React.useState(initialState);
 ```
 
 ### useEffect Hook
@@ -225,7 +234,7 @@ const [state, setState] = React.useState(initialState)
 Snippets: `uf`
 
 ```tsx
-React.useEffect(() => {}, [])
+React.useEffect(() => {}, []);
 ```
 
 ### useReducer Hook
@@ -233,7 +242,7 @@ React.useEffect(() => {}, [])
 Snippets: `ur`
 
 ```tsx
-const [state, dispatch] = React.useReducer(someReducer, {})
+const [state, dispatch] = React.useReducer(someReducer, {});
 ```
 
 ### useRef Hook
@@ -241,7 +250,7 @@ const [state, dispatch] = React.useReducer(someReducer, {})
 Snippets: `urf`
 
 ```tsx
-const someRef = React.useRef()
+const someRef = React.useRef();
 ```
 
 ### Region Comment
