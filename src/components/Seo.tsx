@@ -5,7 +5,7 @@ import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
   title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
+  siteName: 'Next.js + Tailwind CSS + TypeScript Starter',
   description:
     ' A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
   url: 'https://tsnext-tw.thcl.dev',
@@ -26,9 +26,13 @@ export default function Seo(props: SeoProps) {
     ...props,
   };
   meta['title'] = props.templateTitle
-    ? `${props.templateTitle} | ${meta.site_name}`
+    ? `${props.templateTitle} | ${meta.siteName}`
     : meta.title;
-  meta.image = openGraph(meta.title, meta.description);
+  meta.image = openGraph({
+    siteName: defaultMeta.siteName,
+    description: defaultMeta.description,
+    templateTitle: props.templateTitle,
+  });
 
   return (
     <Head>
@@ -39,7 +43,7 @@ export default function Seo(props: SeoProps) {
       <link rel='canonical' href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}
       <meta property='og:type' content={meta.type} />
-      <meta property='og:site_name' content={meta.site_name} />
+      <meta property='og:site_name' content={meta.siteName} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
       <meta name='image' property='og:image' content={meta.image} />

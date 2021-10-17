@@ -8,7 +8,8 @@ import Seo from '@/components/Seo';
 export default function HomePage() {
   return (
     <>
-      <Seo templateTitle='Home' />
+      {/* <Seo templateTitle='Home' /> */}
+      <Seo />
 
       <main>
         <section className='bg-dark'>
