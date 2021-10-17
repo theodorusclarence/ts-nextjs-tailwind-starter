@@ -6,13 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prepare": "husky install",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && yarn format",
-    "format": "prettier --write src",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "tsc": "tsc",
+    "prettier:check": "prettier -c src",
+    "format": "prettier -w src",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4",
