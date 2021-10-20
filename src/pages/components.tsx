@@ -5,6 +5,7 @@ import Button from '@/components/buttons/Button';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
+import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
 export default function ComponentsPage() {
@@ -190,6 +191,20 @@ export default function ComponentsPage() {
                 <div className='flex flex-wrap gap-2'>
                   <ButtonLink href='/404'>Visit the 404 page</ButtonLink>
                 </div>
+              </li>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>Next Image</h2>
+                <p className={clsx('text-sm !mt-1', textColor)}>
+                  Next Image with default props and skeleton animation
+                </p>
+                <NextImage
+                  useSkeleton
+                  className='w-32 md:w-40'
+                  src='/favicon/apple-icon-180x180.png'
+                  width='180'
+                  height='180'
+                  alt='Icon'
+                />
               </li>
             </ol>
           </div>
