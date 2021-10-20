@@ -45,7 +45,8 @@
   "Region": {
     "prefix": "reg",
     "body": [
-      "//#region  //*=========== ${1} ===========\n",
+      "//#region  //*=========== ${1} ===========",
+      "$0",
       "//#endregion  //*======== ${1} ==========="
     ]
   },
@@ -56,19 +57,20 @@
     "prefix": "np",
     "body": [
       "import * as React from 'react';\n",
+      "import Layout from '@/components/layout/Layout';",
       "import Seo from '@/components/Seo';\n",
       "export default function ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page() {",
       "  return (",
-      "    <>",
+      "    <Layout>",
       "      <Seo templateTitle='${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}' />\n",
       "      <main>\n",
       "        <section className=''>",
-      "          <div className='layout'>",
+      "          <div className='layout py-20 min-h-screen'>",
       "            $0",
       "          </div>",
       "        </section>",
       "      </main>",
-      "    </>",
+      "    </Layout>",
       "  )",
       "}"
     ]
@@ -89,7 +91,7 @@
   "Get Static Props": {
     "prefix": "gsp",
     "body": [
-      "export const getServerSideProps: GetServerSideProps = async (context) => {",
+      "export const getStaticProps: GetStaticProps = async (context) => {",
       "  return {",
       "    props: {}",
       "  };",
