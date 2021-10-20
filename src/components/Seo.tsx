@@ -29,8 +29,8 @@ export default function Seo(props: SeoProps) {
     ? `${props.templateTitle} | ${meta.siteName}`
     : meta.title;
   meta.image = openGraph({
-    siteName: defaultMeta.siteName,
-    description: defaultMeta.description,
+    siteName: meta.siteName,
+    description: meta.description,
     templateTitle: props.templateTitle,
   });
 
