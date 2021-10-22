@@ -221,6 +221,22 @@ Snippets: `ir`
 import * as React from 'react';
 ```
 
+### Import Next Image
+
+Snippets: `imimg`
+
+```tsx
+import Image from 'next/image';
+```
+
+### Import Next Link
+
+Snippets: `iml`
+
+```tsx
+import Link from 'next/link';
+```
+
 ### useState Hook
 
 Snippets: `us`
