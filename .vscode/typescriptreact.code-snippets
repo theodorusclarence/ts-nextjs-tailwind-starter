@@ -128,6 +128,10 @@
   "Import Next Image": {
     "prefix": "imimg",
     "body": ["import Image from 'next/image';"]
+  },
+  "Import Next Link": {
+    "prefix": "iml",
+    "body": ["import Link from 'next/link';"]
   }
   //#endregion  //*======== Nextjs ===========
 }
