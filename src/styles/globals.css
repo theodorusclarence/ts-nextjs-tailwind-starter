@@ -3,13 +3,30 @@
 @tailwind utilities;
 
 :root {
-  /* Customize these variable */
-  /* https://github.com/adamwathan/tailwind-css-variable-text-opacity-demo */
-  --tw-clr-primary-400: 0, 224, 243;
-  --tw-clr-primary-500: 0, 196, 253;
-
-  --clr-primary-400: rgb(var(--tw-clr-primary-400)); /* #00e0f3 */
-  --clr-primary-500: rgb(var(--tw-clr-primary-500)); /* #00c4fd */
+  /* #region  /**=========== Primary Color =========== */
+  /* Before you change color, remove css include on _app.tsx (for demo purposes) */
+  /* Customize these variable, check /styles/colors.css for list of colors */
+  --tw-clr-primary-50: 240, 249, 255;
+  --tw-clr-primary-100: 224, 242, 254;
+  --tw-clr-primary-200: 186, 230, 253;
+  --tw-clr-primary-300: 125, 211, 252;
+  --tw-clr-primary-400: 56, 189, 248;
+  --tw-clr-primary-500: 14, 165, 233;
+  --tw-clr-primary-600: 2, 132, 199;
+  --tw-clr-primary-700: 3, 105, 161;
+  --tw-clr-primary-800: 7, 89, 133;
+  --tw-clr-primary-900: 12, 74, 110;
+  --clr-primary-50: rgb(var(--tw-clr-primary-50)); /* #f0f9ff */
+  --clr-primary-100: rgb(var(--tw-clr-primary-100)); /* #e0f2fe */
+  --clr-primary-200: rgb(var(--tw-clr-primary-200)); /* #bae6fd */
+  --clr-primary-300: rgb(var(--tw-clr-primary-300)); /* #7dd3fc */
+  --clr-primary-400: rgb(var(--tw-clr-primary-400)); /* #38bdf8 */
+  --clr-primary-500: rgb(var(--tw-clr-primary-500)); /* #0ea5e9 */
+  --clr-primary-600: rgb(var(--tw-clr-primary-600)); /* #0284c7 */
+  --clr-primary-700: rgb(var(--tw-clr-primary-700)); /* #0369a1 */
+  --clr-primary-800: rgb(var(--tw-clr-primary-800)); /* #075985 */
+  --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #0c4a6e */
+  /* #endregion  /**======== Primary Color =========== */
 }
 
 @layer base {
@@ -29,7 +46,7 @@
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
 
-  /* Write your own custom base styles here */
+  /* #region  /**=========== Typography =========== */
   h1 {
     @apply text-2xl font-bold md:text-4xl font-primary;
   }
@@ -49,11 +66,9 @@
   body {
     @apply text-sm font-primary md:text-base;
   }
+  /* #endregion  /**======== Typography =========== */
 
   .layout {
-    /* 750px */
-    /* max-width: 43.75rem; */
-
     /* 1100px */
     max-width: 68.75rem;
     @apply w-11/12 mx-auto;

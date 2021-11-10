@@ -9,27 +9,14 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
+type Color = typeof colorList[number];
+
 export default function ComponentsPage() {
-  const [mode, setMode] = React.useState('dark');
+  const [mode, setMode] = React.useState<'dark' | 'light'>('dark');
+  const [color, setColor] = React.useState<Color>();
   function toggleMode() {
     return mode === 'dark' ? setMode('light') : setMode('dark');
   }
-
-  //#region  //*=========== THEME ===========
-  function randomize() {
-    const r = Math.random() * 170 + 80;
-    const g = Math.random() * 170 + 80;
-    const b = Math.random() * 170 + 80;
-    document.documentElement.style.setProperty(
-      '--tw-clr-primary-400',
-      `${r},${g},${b}`
-    );
-    document.documentElement.style.setProperty(
-      '--tw-clr-primary-500',
-      `${r - 20},${g - 20},${b - 20}`
-    );
-  }
-  //#endregion  //*======== THEME ===========
 
   const textColor = mode === 'dark' ? 'text-gray-300' : 'text-gray-600';
   return (
@@ -40,7 +27,9 @@ export default function ComponentsPage() {
       />
 
       <main>
-        <section className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-gray-50')}>
+        <section
+          className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-gray-50', color)}
+        >
           <div
             className={clsx(
               'min-h-screen py-20 layout',
@@ -59,10 +48,73 @@ export default function ComponentsPage() {
               >
                 Set to {mode === 'dark' ? 'light' : 'dark'}
               </Button>
-              <Button onClick={randomize}>Randomize CSS Variable</Button>
+              {/* <Button onClick={randomize}>Randomize CSS Variable</Button> */}
             </div>
 
             <ol className='mt-8 space-y-6'>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>Customize Colors</h2>
+                <p className={clsx('text-sm !mt-1', textColor)}>
+                  You can change primary color to any Tailwind CSS colors. See
+                  globals.css to change your color.
+                </p>
+                <div className='flex flex-wrap gap-2'>
+                  <select
+                    name='color'
+                    id='color'
+                    value={color}
+                    className={clsx(
+                      'block max-w-xs rounded',
+                      mode === 'dark'
+                        ? 'bg-dark border border-gray-600'
+                        : 'bg-white border-gray-300',
+                      'focus:outline-none focus:ring focus:ring-primary-400 focus:border-primary-400'
+                    )}
+                    onChange={(e) => setColor(e.target.value as Color)}
+                  >
+                    {colorList.map((c) => (
+                      <option key={c} value={c}>
+                        {c}
+                      </option>
+                    ))}
+                  </select>
+                  <ButtonLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/src/styles/colors.css'>
+                    Check list of colors
+                  </ButtonLink>
+                </div>
+                <div className='flex flex-wrap gap-2 text-xs font-medium'>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-50'>
+                    50
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-100'>
+                    100
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-200'>
+                    200
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-300'>
+                    300
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-400'>
+                    400
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-500'>
+                    500
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-600'>
+                    600
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-700'>
+                    700
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-800'>
+                    800
+                  </div>
+                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-900'>
+                    900
+                  </div>
+                </div>
+              </li>
               <li className='space-y-2'>
                 <h2 className='text-lg md:text-xl'>UnstyledLink</h2>
                 <p className={clsx('text-sm !mt-1', textColor)}>
@@ -217,3 +269,28 @@ export default function ComponentsPage() {
     </Layout>
   );
 }
+
+const colorList = [
+  'rose',
+  'pink',
+  'fuchsia',
+  'purple',
+  'violet',
+  'indigo',
+  'blue',
+  'sky',
+  'cyan',
+  'teal',
+  'emerald',
+  'green',
+  'lime',
+  'yellow',
+  'amber',
+  'orange',
+  'red',
+  'warmGray',
+  'trueGray',
+  'gray',
+  'coolGray',
+  'blueGray',
+] as const;
