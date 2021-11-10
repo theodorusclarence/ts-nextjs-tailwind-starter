@@ -125,46 +125,11 @@ Inter fonts is a variable fonts that is self hosted and preloaded.
 
 ### 1. Change defaults
 
-There are some things you need to change including title, urls, favicons, etc. Here are the list
+There are some things you need to change including title, urls, favicons, etc.
 
-#### `components/Seo.tsx`
+Find all comments with !STARTERCONF, then follow the guide.
 
-Change title, sitename, url, and opengraph image
-
-```tsx
-const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  site_name: 'Next.js + Tailwind CSS + TypeScript Starter',
-  description:
-    ' A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
-  url: 'https://theodorusclarence.com',
-  image: 'https://theodorusclarence.com/favicon/large-og.jpg',
-  type: 'website',
-  robots: 'follow, index',
-};
-```
-
-#### `next-sitemap.js`
-
-Change the siteUrl to generate sitemap correctly
-
-```js
-module.exports = {
-  siteUrl: 'https://ts-nextjs-tailwind-starter.theodorusclarence.com/',
-  generateRobotsTxt: true,
-  robotsTxtOptions: {
-    policies: [{ userAgent: '*', allow: '/' }],
-  },
-};
-```
-
-#### `package.json`
-
-Change the package name to your project name.
-
-#### `public/favicon`
-
-Favicon are generated from [favicon-generator site](https://favicon-generator.org), generate a new favicon and replace all of favicons inside.
+Don't forget to change the package name in package.json
 
 ### 2. Commit Message Convention
 
