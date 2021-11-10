@@ -4,8 +4,7 @@
 
 :root {
   /* #region  /**=========== Primary Color =========== */
-  /* Before you change color, remove css include on _app.tsx (for demo purposes) */
-  /* Customize these variable, check /styles/colors.css for list of colors */
+  /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
   --tw-clr-primary-50: 240, 249, 255;
   --tw-clr-primary-100: 224, 242, 254;
   --tw-clr-primary-200: 186, 230, 253;

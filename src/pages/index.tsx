@@ -6,6 +6,10 @@ import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 
+// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
+// Before you begin editing, follow all comments with `STARTERCONF`,
+// to customize the default configuration.
+
 export default function HomePage() {
   return (
     <Layout>
@@ -55,12 +59,3 @@ export default function HomePage() {
     </Layout>
   );
 }
-
-/**
- * Default info that you should change:
- * components/Seo.tsx
- * next-sitemap.js
- * public/favicon
- *
- * Please refer to the README.md
- */

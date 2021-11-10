@@ -1,3 +1,4 @@
+// !STARTERCONF You can delete this page
 import clsx from 'clsx';
 import * as React from 'react';
 
