@@ -38,7 +38,7 @@ jobs:
           node-version: '14'
           cache: 'yarn'
       - run: yarn
-      - run: yarn prettier:check
+      - run: yarn format:check
 
   test:
     name: Run Test
