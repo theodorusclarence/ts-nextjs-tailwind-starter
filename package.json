@@ -22,7 +22,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4",
     "clsx": "^1.1.1",
-    "next": "^12.0.3",
+    "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1"
@@ -32,7 +32,7 @@
     "@commitlint/config-conventional": "^13.2.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
-    "@types/react": "^17.0.34",
+    "@types/react": "^17.0.35",
     "@types/tailwindcss": "^2.2.4",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
@@ -52,7 +52,7 @@
     "react-test-renderer": "^17.0.2",
     "standard-version": "^9.3.2",
     "tailwindcss": "^2.2.19",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,}": [
