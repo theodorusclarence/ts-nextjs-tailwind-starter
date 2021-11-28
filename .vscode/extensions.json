@@ -1,7 +1,5 @@
 {
   "recommendations": [
-    // Sort Tailwind CSS class
-    "heybourn.headwind",
     // Tailwind CSS Intellisense
     "bradlc.vscode-tailwindcss",
     "esbenp.prettier-vscode",
