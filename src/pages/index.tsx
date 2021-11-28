@@ -18,7 +18,7 @@ export default function HomePage() {
 
       <main>
         <section className='bg-dark'>
-          <div className='flex flex-col items-center justify-center min-h-screen text-center text-white layout'>
+          <div className='layout flex flex-col justify-center items-center min-h-screen text-center text-white'>
             <h1>Next.js + Tailwind CSS + TypeScript Starter</h1>
             <p className='mt-2 text-sm text-gray-300'>
               A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
@@ -47,7 +47,7 @@ export default function HomePage() {
               />
             </UnstyledLink>
 
-            <footer className='absolute text-gray-500 bottom-2'>
+            <footer className='absolute bottom-2 text-gray-500'>
               © {new Date().getFullYear()} By{' '}
               <CustomLink href='https://theodorusclarence.com?ref=tsnextstarter'>
                 Theodorus Clarence
