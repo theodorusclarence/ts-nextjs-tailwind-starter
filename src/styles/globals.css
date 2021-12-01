@@ -47,34 +47,34 @@
 
   /* #region  /**=========== Typography =========== */
   h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
+    @apply text-2xl font-bold md:text-4xl font-primary;
   }
 
   h2 {
-    @apply font-primary text-xl font-bold md:text-3xl;
+    @apply text-xl font-bold md:text-3xl font-primary;
   }
 
   h3 {
-    @apply font-primary text-lg font-bold md:text-2xl;
+    @apply text-lg font-bold md:text-2xl font-primary;
   }
 
   h4 {
-    @apply font-primary text-base font-bold md:text-lg;
+    @apply text-base font-bold md:text-lg font-primary;
   }
 
   body {
-    @apply font-primary text-sm md:text-base;
+    @apply text-sm font-primary md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
 
   .layout {
     /* 1100px */
     max-width: 68.75rem;
-    @apply mx-auto w-11/12;
+    @apply w-11/12 mx-auto;
   }
 
   .bg-dark a.custom-link {
-    @apply hover:border-gray-200/0 border-gray-200;
+    @apply border-gray-200 hover:border-gray-200/0;
   }
 
   /* Class to adjust with sticky footer */

@@ -12,10 +12,10 @@ export default function NotFoundPage() {
 
       <main>
         <section className='bg-dark'>
-          <div className='layout flex flex-col justify-center items-center min-h-screen text-center text-white'>
+          <div className='flex flex-col items-center justify-center min-h-screen text-center text-white layout'>
             <RiAlarmWarningFill
               size={60}
-              className='animate-flicker drop-shadow-glow text-yellow-300'
+              className='text-yellow-300 animate-flicker drop-shadow-glow'
             />
             <h1 className='mt-8'>Page Not Found</h1>
             <CustomLink className='mt-4' href='/'>
