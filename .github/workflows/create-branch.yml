@@ -12,8 +12,8 @@ jobs:
         uses: robvanderleek/create-issue-branch@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  branches:
-    - label: epic
-      skip: true
-    - label: debt
-      skip: true
+    branches:
+      - label: epic
+        skip: true
+      - label: debt
+        skip: true
