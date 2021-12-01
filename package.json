@@ -59,10 +59,12 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,}": [
       "eslint --max-warnings=0",
-      "prettier -w"
+      "prettier -w",
+      "rustywind --write"
     ],
     "src/**/*.{json,css,scss,md}": [
-      "prettier -w"
+      "prettier -w",
+      "rustywind --write"
     ]
   }
 }
