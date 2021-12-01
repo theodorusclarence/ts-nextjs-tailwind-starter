@@ -84,34 +84,34 @@ export default function ComponentsPage() {
                   </ButtonLink>
                 </div>
                 <div className='flex flex-wrap gap-2 text-xs font-medium'>
-                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-50'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black rounded bg-primary-50'>
                     50
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-100'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black rounded bg-primary-100'>
                     100
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-200'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black rounded bg-primary-200'>
                     200
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-300'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black rounded bg-primary-300'>
                     300
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-400'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black rounded bg-primary-400'>
                     400
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-black rounded bg-primary-500'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black rounded bg-primary-500'>
                     500
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-600'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white rounded bg-primary-600'>
                     600
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-700'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white rounded bg-primary-700'>
                     700
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-800'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white rounded bg-primary-800'>
                     800
                   </div>
-                  <div className='flex items-center justify-center w-10 h-10 text-white rounded bg-primary-900'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white rounded bg-primary-900'>
                     900
                   </div>
                 </div>
