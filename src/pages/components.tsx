@@ -69,7 +69,7 @@ export default function ComponentsPage() {
                       mode === 'dark'
                         ? 'bg-dark border border-gray-600'
                         : 'bg-white border-gray-300',
-                      'focus:border-primary-400 focus:outline-none focus:ring focus:ring-primary-400'
+                      'focus:border-primary-400 focus:ring focus:ring-primary-400 focus:outline-none'
                     )}
                     onChange={(e) => setColor(e.target.value as Color)}
                   >

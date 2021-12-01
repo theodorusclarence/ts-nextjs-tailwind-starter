@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className='sticky top-0 z-50 bg-white'>
       <div className='layout flex justify-between items-center h-14'>
-        <UnstyledLink href='/' className='hover:text-gray-600 font-bold'>
+        <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
           Home
         </UnstyledLink>
         <nav>

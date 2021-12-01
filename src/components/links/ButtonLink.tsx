@@ -24,9 +24,9 @@ export default function ButtonLink({
     <UnstyledLink
       {...rest}
       className={clsx(
-        'animated-underline hover:text-primary-400 inline-block px-4 py-2 font-bold rounded',
+        'animated-underline inline-block px-4 py-2 font-bold rounded hover:text-primary-400',
         'border border-gray-600 shadow-sm',
-        'focus-visible:text-primary-400 focus:outline-none',
+        'focus:outline-none focus-visible:text-primary-400',
         {
           'bg-dark text-white': variant === 'dark',
           'bg-white text-dark hover:bg-gray-200 hover:text-dark focus-visible:text-dark border-gray-400':

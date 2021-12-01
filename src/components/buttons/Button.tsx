@@ -28,9 +28,9 @@ export default function Button({
       {...rest}
       disabled={disabled}
       className={clsx(
-        'hover:text-primary-400 px-4 py-2 font-bold rounded',
+        'px-4 py-2 font-bold rounded hover:text-primary-400',
         'border border-gray-600 shadow-sm',
-        'focus-visible:text-primary-400 focus:outline-none',
+        'focus:outline-none focus-visible:text-primary-400',
         {
           'bg-dark disabled:bg-gray-700 text-white disabled:hover:text-white':
             variant === 'dark',
