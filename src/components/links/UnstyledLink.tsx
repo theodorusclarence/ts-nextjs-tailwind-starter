@@ -6,14 +6,15 @@ export type UnstyledLinkProps = {
   children: React.ReactNode;
   openNewTab?: boolean;
   className?: string;
-} & React.ComponentPropsWithoutRef<'a'> &
-  LinkProps;
+  nextLinkProps?: Omit<LinkProps, 'href'>;
+} & React.ComponentPropsWithoutRef<'a'>;
 
 export default function UnstyledLink({
   children,
   href,
   openNewTab,
   className,
+  nextLinkProps,
   ...rest
 }: UnstyledLinkProps) {
   const isNewTab =
@@ -23,7 +24,7 @@ export default function UnstyledLink({
 
   if (!isNewTab) {
     return (
-      <Link href={href}>
+      <Link href={href} {...nextLinkProps}>
         <a {...rest} className={className}>
           {children}
         </a>
