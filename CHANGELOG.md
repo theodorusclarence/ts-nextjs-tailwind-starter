@@ -4,9 +4,24 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.2.0 - 2021-11-10
+
+### Features
+
+#### Jest
+
+Jest is configured and will be run every push on Github Actions
+
+#### Lint Github Action
+
+1. **ESLint** - will fail if there are any warning and error.
+2. **Type Check** - will fail on `tsc` error.
+3. **Prettier Check** - will fail if there are any formatting error.
+4. **Test** - will fail if there are any test failure.
+
 ## 0.1.0
 
-### Features 
+### Features
 
 #### Installed Packages
 
