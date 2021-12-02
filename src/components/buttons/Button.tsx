@@ -3,13 +3,16 @@ import * as React from 'react';
 import { ImSpinner2 } from 'react-icons/im';
 
 enum ButtonVariant {
-  'dark',
-  'light',
   'primary',
+  'outline',
+  'ghost',
+  'light',
+  'dark',
 }
 
 type ButtonProps = {
   isLoading?: boolean;
+  isDarkBg?: boolean;
   variant?: keyof typeof ButtonVariant;
 } & React.ComponentPropsWithoutRef<'button'>;
 
@@ -18,7 +21,8 @@ export default function Button({
   className,
   disabled: buttonDisabled,
   isLoading,
-  variant = 'dark',
+  variant = 'primary',
+  isDarkBg = false,
   ...rest
 }: ButtonProps) {
   const disabled = isLoading || buttonDisabled;
@@ -28,37 +32,59 @@ export default function Button({
       {...rest}
       disabled={disabled}
       className={clsx(
-        'px-4 py-2 font-bold rounded hover:text-primary-400',
-        'border border-gray-600 shadow-sm',
-        'focus:outline-none focus-visible:text-primary-400',
-        {
-          'bg-dark disabled:bg-gray-700 text-white disabled:hover:text-white':
-            variant === 'dark',
-          'bg-white disabled:bg-gray-200 text-dark hover:bg-gray-200 hover:text-dark focus-visible:text-dark border-gray-400 disabled:hover:text-dark':
-            variant === 'light',
-          'bg-primary-400 text-black hover:bg-primary-400/90 hover:text-black border-primary-500 disabled:hover:bg-primary-400 disabled:brightness-75  focus-visible:text-dark':
-            variant === 'primary',
-        },
+        className,
+        'inline-flex px-4 py-2 font-semibold rounded',
+        'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+        'shadow-sm',
+        'transition-colors duration-75',
+        [
+          variant === 'primary' && [
+            'bg-primary-400 text-white',
+            'border border-primary-500',
+            'hover:bg-primary-500 hover:text-white',
+            'active:bg-primary-600',
+            'disabled:bg-primary-600 disabled:hover:bg-primary-600',
+          ],
+          variant === 'outline' && [
+            'text-primary-500',
+            'border border-primary-500',
+            isDarkBg
+              ? 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800'
+              : 'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+          ],
+          variant === 'ghost' && [
+            'text-primary-500',
+            'shadow-none',
+            isDarkBg
+              ? 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800'
+              : 'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+          ],
+          variant === 'light' && [
+            'bg-white text-dark ',
+            'border border-gray-300',
+            'hover:text-dark hover:bg-gray-100',
+            'active:bg-white/80 disabled:bg-gray-200',
+          ],
+          variant === 'dark' && [
+            'bg-gray-900 text-white',
+            'border border-gray-600',
+            'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+          ],
+        ],
         'disabled:cursor-not-allowed',
-        !disabled && 'animated-underline',
         isLoading &&
-          'relative text-transparent hover:!text-transparent !cursor-wait transition-none',
-        className
+          'relative !text-transparent hover:!text-transparent !cursor-wait !transition-none'
       )}
-      style={
-        variant === 'primary'
-          ? ({
-              '--clr-primary-400': 'white',
-              '--clr-primary-500': 'white',
-            } as React.CSSProperties)
-          : undefined
-      }
     >
       {isLoading && (
         <div
           className={clsx(
             'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
-            variant !== 'dark' ? 'text-black' : 'text-white'
+            {
+              'text-white': variant === 'dark' || variant === 'primary',
+              'text-black': variant === 'light',
+              'text-primary-500': variant === 'outline' || variant === 'ghost',
+            }
           )}
         >
           <ImSpinner2 className='animate-spin' />
