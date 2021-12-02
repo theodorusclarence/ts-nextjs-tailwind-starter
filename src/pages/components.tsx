@@ -150,11 +150,26 @@ export default function ComponentsPage() {
                   Useful for indicating navigation, I use this quite a lot, so
                   why not build a component with some whimsy touch?
                 </p>
-                <div className='space-x-2'>
+                <div className='flex flex-wrap gap-4 items-center'>
                   <ArrowLink href='/' direction='left'>
                     Direction Left
                   </ArrowLink>
                   <ArrowLink href='/'>Direction Right</ArrowLink>
+                  <ArrowLink
+                    as={UnstyledLink}
+                    className='inline-flex items-center'
+                    href='/'
+                  >
+                    Polymorphic
+                  </ArrowLink>
+                  <ArrowLink
+                    as={ButtonLink}
+                    variant='light'
+                    className='inline-flex items-center'
+                    href='/'
+                  >
+                    Polymorphic
+                  </ArrowLink>
                 </div>
               </li>
               <li className='space-y-2'>
