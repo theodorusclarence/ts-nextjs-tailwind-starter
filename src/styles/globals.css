@@ -90,8 +90,13 @@
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
-    transition: 0.3s ease;
-    transition-property: background-size, color, background-color, border-color;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animated-underline {
+      transition: 0.3s ease;
+      transition-property: background-size, color, background-color,
+        border-color;
+    }
   }
   .animated-underline:hover,
   .animated-underline:focus-visible {
