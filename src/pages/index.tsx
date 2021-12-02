@@ -17,14 +17,14 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className='bg-dark'>
-          <div className='layout flex flex-col justify-center items-center min-h-screen text-center text-white'>
+        <section className='bg-white'>
+          <div className='layout flex flex-col justify-center items-center min-h-screen text-center'>
             <h1>Next.js + Tailwind CSS + TypeScript Starter</h1>
-            <p className='mt-2 text-sm text-gray-300'>
+            <p className='mt-2 text-sm text-gray-800'>
               A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
               Import, Seo, Link component, pre-configured with Husky{' '}
             </p>
-            <p className='mt-2 text-sm text-gray-200'>
+            <p className='mt-2 text-sm text-gray-700'>
               <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
                 See the repository
               </CustomLink>
@@ -47,7 +47,7 @@ export default function HomePage() {
               />
             </UnstyledLink>
 
-            <footer className='absolute bottom-2 text-gray-500'>
+            <footer className='absolute bottom-2 text-gray-700'>
               © {new Date().getFullYear()} By{' '}
               <CustomLink href='https://theodorusclarence.com?ref=tsnextstarter'>
                 Theodorus Clarence
