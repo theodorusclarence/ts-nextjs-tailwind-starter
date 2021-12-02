@@ -13,13 +13,14 @@ import Seo from '@/components/Seo';
 type Color = typeof colorList[number];
 
 export default function ComponentsPage() {
-  const [mode, setMode] = React.useState<'dark' | 'light'>('dark');
+  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
   const [color, setColor] = React.useState<Color>();
   function toggleMode() {
     return mode === 'dark' ? setMode('light') : setMode('dark');
   }
 
   const textColor = mode === 'dark' ? 'text-gray-300' : 'text-gray-600';
+
   return (
     <Layout>
       <Seo
@@ -155,6 +156,20 @@ export default function ComponentsPage() {
                     Primary Variant
                   </ButtonLink>
                   <ButtonLink
+                    variant='outline'
+                    isDarkBg={mode === 'dark'}
+                    href='https://theodorusclarence.com'
+                  >
+                    Outline Variant
+                  </ButtonLink>
+                  <ButtonLink
+                    variant='ghost'
+                    isDarkBg={mode === 'dark'}
+                    href='https://theodorusclarence.com'
+                  >
+                    Ghost Variant
+                  </ButtonLink>
+                  <ButtonLink
                     variant='dark'
                     href='https://theodorusclarence.com'
                   >
@@ -174,68 +189,51 @@ export default function ComponentsPage() {
                   Ordinary button with style.
                 </p>
                 <div className='flex flex-wrap gap-2'>
-                  <Button
-                    onClick={() => alert('button clicked')}
-                    variant='primary'
-                  >
-                    Primary Variant
+                  <Button variant='primary'>Primary Variant</Button>
+                  <Button variant='outline' isDarkBg={mode === 'dark'}>
+                    Outline Variant
                   </Button>
-                  <Button
-                    variant='dark'
-                    onClick={() => alert('button clicked')}
-                  >
-                    Dark Variant
+                  <Button variant='ghost' isDarkBg={mode === 'dark'}>
+                    Ghost Variant
                   </Button>
-                  <Button
-                    onClick={() => alert('button clicked')}
-                    variant='light'
-                  >
-                    Light Variant
-                  </Button>
+                  <Button variant='dark'>Dark Variant</Button>
+                  <Button variant='light'>Light Variant</Button>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <Button
-                    disabled
-                    onClick={() => alert('button clicked')}
-                    variant='primary'
-                  >
+                  <Button disabled variant='primary'>
                     Disabled
                   </Button>
-                  <Button
-                    disabled
-                    variant='dark'
-                    onClick={() => alert('button clicked')}
-                  >
+                  <Button disabled variant='outline' isDarkBg={mode === 'dark'}>
                     Disabled
                   </Button>
-                  <Button
-                    disabled
-                    onClick={() => alert('button clicked')}
-                    variant='light'
-                  >
+                  <Button disabled variant='ghost' isDarkBg={mode === 'dark'}>
+                    Disabled
+                  </Button>
+                  <Button disabled variant='dark'>
+                    Disabled
+                  </Button>
+                  <Button disabled variant='light'>
                     Disabled
                   </Button>
                 </div>
                 <div className='flex flex-wrap gap-2'>
-                  <Button
-                    isLoading
-                    onClick={() => alert('button clicked')}
-                    variant='primary'
-                  >
+                  <Button isLoading variant='primary'>
                     Disabled
                   </Button>
                   <Button
                     isLoading
-                    variant='dark'
-                    onClick={() => alert('button clicked')}
+                    variant='outline'
+                    isDarkBg={mode === 'dark'}
                   >
                     Disabled
                   </Button>
-                  <Button
-                    isLoading
-                    onClick={() => alert('button clicked')}
-                    variant='light'
-                  >
+                  <Button isLoading variant='ghost' isDarkBg={mode === 'dark'}>
+                    Disabled
+                  </Button>
+                  <Button isLoading variant='dark'>
+                    Disabled
+                  </Button>
+                  <Button isLoading variant='light'>
                     Disabled
                   </Button>
                 </div>
