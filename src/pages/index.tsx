@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
+import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -25,9 +26,9 @@ export default function HomePage() {
               Import, Seo, Link component, pre-configured with Husky{' '}
             </p>
             <p className='mt-2 text-sm text-gray-700'>
-              <CustomLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
+              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
                 See the repository
-              </CustomLink>
+              </ArrowLink>
             </p>
 
             <ButtonLink className='mt-6' href='/components' variant='light'>

@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
+import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -14,7 +15,7 @@ type Color = typeof colorList[number];
 
 export default function ComponentsPage() {
   const [mode, setMode] = React.useState<'dark' | 'light'>('light');
-  const [color, setColor] = React.useState<Color>();
+  const [color, setColor] = React.useState<Color>('sky');
   function toggleMode() {
     return mode === 'dark' ? setMode('light') : setMode('dark');
   }
@@ -39,9 +40,9 @@ export default function ComponentsPage() {
             )}
           >
             <h1>Built-in Components</h1>
-            <CustomLink className='mt-2' href='/'>
-              ← Back to Home
-            </CustomLink>
+            <ArrowLink direction='left' className='mt-2' href='/'>
+              Back to Home
+            </ArrowLink>
 
             <div className='flex flex-wrap gap-2 mt-8'>
               <Button
@@ -141,6 +142,19 @@ export default function ComponentsPage() {
                   <CustomLink href='https://theodorusclarence.com'>
                     Outside Links
                   </CustomLink>
+                </div>
+              </li>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>ArrowLink</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Useful for indicating navigation, I use this quite a lot, so
+                  why not build a component with some whimsy touch?
+                </p>
+                <div className='space-x-2'>
+                  <ArrowLink href='/' direction='left'>
+                    Direction Left
+                  </ArrowLink>
+                  <ArrowLink href='/'>Direction Right</ArrowLink>
                 </div>
               </li>
               <li className='space-y-2'>
