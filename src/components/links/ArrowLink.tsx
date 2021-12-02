@@ -4,18 +4,23 @@ import * as React from 'react';
 import CustomLink from '@/components/links/CustomLink';
 import { UnstyledLinkProps } from '@/components/links/UnstyledLink';
 
-type ArrowLinkProps = {
+type ArrowLinkProps<C extends React.ElementType> = {
+  as?: C;
   direction?: 'left' | 'right';
-} & UnstyledLinkProps;
+} & UnstyledLinkProps &
+  React.ComponentProps<C>;
 
-export default function ArrowLink({
+export default function ArrowLink<C extends React.ElementType>({
   children,
   className,
   direction = 'right',
+  as,
   ...rest
-}: ArrowLinkProps) {
+}: ArrowLinkProps<C>) {
+  const Component = as || CustomLink;
+
   return (
-    <CustomLink
+    <Component
       {...rest}
       className={clsx(
         className,
@@ -44,7 +49,7 @@ export default function ArrowLink({
         <path
           stroke='currentColor'
           d='M1.75 8H11'
-          strokeWidth='1'
+          strokeWidth='1.5'
           strokeLinecap='round'
           className={clsx(
             'transition-all duration-200 origin-left',
@@ -53,6 +58,6 @@ export default function ArrowLink({
           )}
         />
       </svg>
-    </CustomLink>
+    </Component>
   );
 }
