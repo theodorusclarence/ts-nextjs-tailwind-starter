@@ -4,6 +4,63 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.4.0 - 2021-12-02
+
+### New Features
+
+#### Button & ButtonLink Variants
+
+- New Variant: **Outline** and **Ghost**, you can also add `isDarkBg` prop if you are using these variants with dark background.
+- Animated Underline style on **Primary**, **Dark**, **Light** is removed
+- Added `ring-primary-500` on `focus-visible`
+
+![Button Variants](https://user-images.githubusercontent.com/55318172/144385213-632b3e1f-9a0e-4184-82e0-7905ee3318b4.gif)
+
+#### ArrowLink
+
+
+Adds an animated arrow, this component is Polymorphic, the default element is `CustomLink`, you can extend it with `as` prop.
+
+```tsx
+<ArrowLink
+  as={ButtonLink}
+  variant='light'
+  href='/'
+>
+  Register now
+</ArrowLink>
+```
+
+![Arrow Link Feature](https://user-images.githubusercontent.com/55318172/144385991-f3521d52-e0a8-49c5-8e87-409231fdd5b6.gif)
+
+#### Change default theme to white
+
+| ![Home Page](https://user-images.githubusercontent.com/55318172/144386763-00e6c3fd-ee2e-4c9e-87f8-18b036bdc2e1.png) | ![404](https://user-images.githubusercontent.com/55318172/144386764-0e4b4fb0-35a8-4725-a795-f998b06543a1.png) |
+| - | - |
+
+### Improvements & Bug Fixes
+
+#### Split Next.js Link Props Type
+
+Now, to add props to Next.js `<Link>` component, you can use `nextLinkProps`.
+
+```tsx
+<UnstyledLink 
+  href='/'
+  nextLinkProps={{
+    shallow: true,
+  }}
+>
+  Link
+</UnstyledLink>
+```
+
+The rest of `<a>` props can be directly added as a prop.
+
+#### Add Motion Safe to Animations
+
+All components animation respect user preference about motion.
+
 ## 0.3.0 - 2021-12-01
 
 ### New Features
@@ -16,6 +73,12 @@ This changelog is manually generated and not accurate with the package.json, onl
 You have to install the app for your organization/account/repository from the [GitHub Marketplace](https://github.com/marketplace/create-issue-branch) for this to work.
 
 The branch will be created on **assign** with format `i${number}-${issue_title_lowercase}`.
+
+#### Custom Tailwind CSS Class Sorter
+
+Classes are sorted using [prettier-plugin-sort-class-names](https://github.com/PutziSan/prettier-plugin-sort-class-names) with custom class order on [this file](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/prettier-plugin-sort-class-names-order) and custom variant order on [prettierrc](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/.prettierrc.js)
+
+With this plugin, we can now safely check the order of the classes using the preconfigured lint action.
 
 ## 0.2.0 - 2021-11-10
 
