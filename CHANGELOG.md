@@ -4,9 +4,22 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.3.0 - 2021-12-01
+
+### New Features
+
+#### Create Branch & Auto Resolve Issue Actions
+
+| ![Create Branch Actions](https://user-images.githubusercontent.com/55318172/144379834-8c3e4d4f-d584-4253-9ad8-b9f1d468ed01.gif) <br> Auto Create Branch | ![Auto Resolve](https://user-images.githubusercontent.com/55318172/144382044-0132e755-9cd5-4805-a756-4086f67b3282.gif) <br> Auto Resolve  |
+| :--: | :--: |
+
+You have to install the app for your organization/account/repository from the [GitHub Marketplace](https://github.com/marketplace/create-issue-branch) for this to work.
+
+The branch will be created on **assign** with format `i${number}-${issue_title_lowercase}`.
+
 ## 0.2.0 - 2021-11-10
 
-### Features
+### New Features
 
 #### Jest
 
@@ -21,7 +34,7 @@ Jest is configured and will be run every push on Github Actions
 
 ## 0.1.0
 
-### Features
+### New Features
 
 #### Installed Packages
 
@@ -102,3 +115,116 @@ Check out the [repository](https://github.com/theodorusclarence/og) to see the A
 #### Preloaded & Self Hosted Inter Fonts
 
 Inter fonts is a variable fonts that is self hosted and preloaded.
+
+## Snippets
+
+This starter is equipped with workspace-snippets, it is encouraged to use it, especially the `np` and `rc`
+
+### Next.js Page
+
+File inside `src/pages` will be the webpage route, there are 2 things that need to be added in Next.js page:
+
+1. Seo component
+2. Layout class to give constraint to viewport width. [Read more about layout class](https://theodorusclarence.com/blog/tailwindcss-best-practice#1-using-layout-class-or-container).
+
+Snippets: `np`
+
+```tsx
+import * as React from 'react';
+import Seo from '@/components/Seo';
+export default function TestPage() {
+  return (
+    <>
+      <Seo templateTitle='Test' />
+      <main>
+        <section className=''>
+          <div className='layout'></div>
+        </section>
+      </main>
+    </>
+  );
+}
+```
+
+### React Components
+
+To make a new component, It is encouraged to use `export default function`. Because when we need to rename it, we only need to do it once.
+
+Snippets: `rc`
+
+```tsx
+import * as React from 'react';
+export default function Component() {
+  return <div></div>;
+}
+```
+
+#### Import React
+
+Snippets: `ir`
+
+```tsx
+import * as React from 'react';
+```
+
+#### Import Next Image
+
+Snippets: `imimg`
+
+```tsx
+import Image from 'next/image';
+```
+
+#### Import Next Link
+
+Snippets: `iml`
+
+```tsx
+import Link from 'next/link';
+```
+
+#### useState Hook
+
+Snippets: `us`
+
+```tsx
+const [state, setState] = React.useState(initialState);
+```
+
+#### useEffect Hook
+
+Snippets: `uf`
+
+```tsx
+React.useEffect(() => {}, []);
+```
+
+#### useReducer Hook
+
+Snippets: `ur`
+
+```tsx
+const [state, dispatch] = React.useReducer(someReducer, {});
+```
+
+#### useRef Hook
+
+Snippets: `urf`
+
+```tsx
+const someRef = React.useRef();
+```
+
+#### Region Comment
+
+It is really useful when we need to group code. It is also collapsible in VSCode
+
+Snippets: `reg`
+
+```tsx
+//#region  //*============== FORM SUBMIT
+//#endregion  //*============== FORM SUBMIT
+```
+
+You should also use [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) extension.
+
