@@ -389,7 +389,7 @@
   --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #7f1d1d */
 }
 
-.warmGray {
+.stone {
   --tw-clr-primary-50: 250, 250, 249;
   --tw-clr-primary-100: 245, 245, 244;
   --tw-clr-primary-200: 231, 229, 228;
@@ -412,7 +412,7 @@
   --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #1c1917 */
 }
 
-.trueGray {
+.neutral {
   --tw-clr-primary-50: 250, 250, 250;
   --tw-clr-primary-100: 245, 245, 245;
   --tw-clr-primary-200: 229, 229, 229;
@@ -435,7 +435,7 @@
   --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #171717 */
 }
 
-.gray {
+.zinc {
   --tw-clr-primary-50: 250, 250, 250;
   --tw-clr-primary-100: 244, 244, 245;
   --tw-clr-primary-200: 228, 228, 231;
@@ -458,7 +458,7 @@
   --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #18181b */
 }
 
-.coolGray {
+.gray {
   --tw-clr-primary-50: 249, 250, 251;
   --tw-clr-primary-100: 243, 244, 246;
   --tw-clr-primary-200: 229, 231, 235;
@@ -481,7 +481,7 @@
   --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #111827 */
 }
 
-.blueGray {
+.slate {
   --tw-clr-primary-50: 248, 250, 252;
   --tw-clr-primary-100: 241, 245, 249;
   --tw-clr-primary-200: 226, 232, 240;
