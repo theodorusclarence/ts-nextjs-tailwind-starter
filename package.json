@@ -20,7 +20,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.3.4",
     "clsx": "^1.1.1",
     "next": "^12.0.7",
     "react": "^17.0.2",
@@ -30,6 +29,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "@tailwindcss/forms": "^0.4.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/react": "^17.0.37",
@@ -52,7 +52,7 @@
     "prettier-plugin-sort-class-names": "^3.0.1",
     "react-test-renderer": "^17.0.2",
     "standard-version": "^9.3.2",
-    "tailwindcss": "^2.2.19",
+    "tailwindcss": "^3.0.1",
     "typescript": "^4.5.3"
   },
   "lint-staged": {
