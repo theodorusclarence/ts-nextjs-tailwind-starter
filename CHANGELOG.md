@@ -4,6 +4,14 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.4.1 - 2021-12-12
+
+### New Features
+
+- #### Tailwind CSS v3
+    
+    The color palette configuration is also updated accordingly. 
+
 ## 0.4.0 - 2021-12-02
 
 ### New Features

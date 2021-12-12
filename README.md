@@ -20,7 +20,7 @@ This repository is 🔋 battery packed with:
 - ⚡️ Next.js 12
 - ⚛️ React 17
 - ✨ TypeScript
-- 💨 Tailwind CSS 2 with JIT — Configured with CSS Variables to extend the **primary** color
+- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
 - 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
 - 🃏 Jest — Configured for unit testing
 - 📈 Absolute Import and Path Alias — Import components using `@/` prefix
