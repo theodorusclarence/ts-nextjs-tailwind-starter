@@ -316,9 +316,9 @@ const colorList = [
   'amber',
   'orange',
   'red',
-  'warmGray',
-  'trueGray',
+  'slate',
   'gray',
-  'coolGray',
-  'blueGray',
+  'zinc',
+  'neutral',
+  'stone',
 ] as const;
