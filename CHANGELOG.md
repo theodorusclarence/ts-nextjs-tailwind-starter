@@ -4,6 +4,28 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.5.0 - 2021-12-21
+
+### New Features
+
+- #### Expansion Pack
+    You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
+
+    https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
+
+    Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
+
+### Improvements & Bug Fixes
+
+- #### Can't Use Layout Fill on NextImage
+
+    Using layout fill will make the width and height optional
+
+- #### Vertically center Button & ButtonLink
+
+    Adds `items-center` to make the button vertically centered
+
+
 ## 0.4.1 - 2021-12-12
 
 ### New Features
