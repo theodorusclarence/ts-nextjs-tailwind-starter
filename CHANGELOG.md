@@ -4,6 +4,17 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.5.1 - 2021-12-26
+
+### New Features
+
+- #### New Snippets Wrap: clsx and fragment `<></>`
+    
+    You can select text then wrap it with clsx or React.Fragment shorthand.
+    
+    https://user-images.githubusercontent.com/55318172/147401848-3db5dba0-ef71-4f25-9f47-c7908beba69e.mp4
+
+
 ## 0.5.0 - 2021-12-21
 
 ### New Features
