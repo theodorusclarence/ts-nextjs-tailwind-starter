@@ -132,6 +132,17 @@
   "Import Next Link": {
     "prefix": "iml",
     "body": ["import Link from 'next/link';"]
-  }
+  },
   //#endregion  //*======== Nextjs ===========
+
+  //#region  //*=========== Snippet Wrap ===========
+  "Wrap with Fragment": {
+    "prefix": "ff",
+    "body": ["<>", "\t${TM_SELECTED_TEXT}", "</>"]
+  },
+  "Wrap with clsx": {
+    "prefix": "cx",
+    "body": ["{clsx(${TM_SELECTED_TEXT})}"]
+  }
+  //#endregion  //*======== Snippet Wrap ===========
 }
