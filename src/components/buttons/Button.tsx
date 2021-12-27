@@ -29,7 +29,7 @@ export default function Button({
 
   return (
     <button
-      {...rest}
+      type='button'
       disabled={disabled}
       className={clsx(
         className,
@@ -75,6 +75,7 @@ export default function Button({
         isLoading &&
           'relative !text-transparent hover:!text-transparent !cursor-wait !transition-none'
       )}
+      {...rest}
     >
       {isLoading && (
         <div
