@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import clsxm from '@/lib/tailwind-merge';
 
 import UnstyledLink, {
   UnstyledLinkProps,
@@ -12,7 +12,7 @@ export default function CustomLink({
   return (
     <UnstyledLink
       {...rest}
-      className={clsx(
+      className={clsxm(
         'animated-underline custom-link inline-flex items-center font-semibold',
         'focus:outline-none focus-visible:rounded focus-visible:ring focus-visible:ring-primary-500',
         'border-dark border-b border-dotted hover:border-black/0',

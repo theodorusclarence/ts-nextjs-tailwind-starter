@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import Link, { LinkProps } from 'next/link';
+
+import clsxm from '@/lib/tailwind-merge';
 
 export type UnstyledLinkProps = {
   href: string;
@@ -38,7 +39,7 @@ export default function UnstyledLink({
       rel='noopener noreferrer'
       href={href}
       {...rest}
-      className={clsx(className, 'cursor-newtab')}
+      className={clsxm('cursor-newtab', className)}
     >
       {children}
     </a>
