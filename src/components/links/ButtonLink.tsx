@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import * as React from 'react';
+
+import clsxm from '@/lib/tailwind-merge';
 
 import UnstyledLink, {
   UnstyledLinkProps,
@@ -28,8 +29,7 @@ export default function ButtonLink({
   return (
     <UnstyledLink
       {...rest}
-      className={clsx(
-        className,
+      className={clsxm(
         'inline-flex items-center px-4 py-2 font-semibold rounded',
         'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
         'shadow-sm',
@@ -68,7 +68,8 @@ export default function ButtonLink({
             'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
           ],
         ],
-        'disabled:cursor-not-allowed'
+        'disabled:cursor-not-allowed',
+        className
       )}
     >
       {children}

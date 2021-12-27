@@ -1,6 +1,7 @@
-import clsx from 'clsx';
 import Image, { ImageProps } from 'next/image';
 import * as React from 'react';
+
+import clsxm from '@/lib/tailwind-merge';
 
 type NextImageProps = {
   useSkeleton?: boolean;
@@ -41,9 +42,9 @@ export default function NextImage({
       className={className}
     >
       <Image
-        className={clsx(
+        className={clsxm(
           imgClassName,
-          status === 'loading' && clsx('animate-pulse', blurClassName)
+          status === 'loading' && clsxm('animate-pulse', blurClassName)
         )}
         src={src}
         width={width}
