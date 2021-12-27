@@ -3454,6 +3454,11 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+hashlru@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/hashlru/-/hashlru-2.3.0.tgz#5dc15928b3f6961a2056416bb3a4910216fdfb51"
+  integrity sha512-0cMsjjIC8I+D3M44pOQdsy0OHXGLVz6Z0beRuufhKa0KfaD2wGwAev6jILzXsd3/vpnNQJmWyZtIILqM1N+n5A==
+
 he@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
@@ -6293,6 +6298,13 @@ table@^6.0.9:
     slice-ansi "^4.0.0"
     string-width "^4.2.0"
     strip-ansi "^6.0.0"
+
+tailwind-merge@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.1.1.tgz#a87bef312d9105429e756071f19025e58c63796f"
+  integrity sha512-NlTHB8rq3oU/mHyPhueMJN9kOJWfKwVskPRHng/cyODeUSV8a15kLcO2dwDajzJqfs/TMCGPsMIgv7lDqIhkFw==
+  dependencies:
+    hashlru "^2.3.0"
 
 tailwindcss@^3.0.7:
   version "3.0.7"
