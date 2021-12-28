@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ImSpinner2 } from 'react-icons/im';
 
-import clsxm from '@/lib/tailwind-merge';
+import clsxm from '@/lib/clsxm';
 
 enum ButtonVariant {
   'primary',

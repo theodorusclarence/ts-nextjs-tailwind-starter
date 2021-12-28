@@ -1,6 +1,6 @@
 import Link, { LinkProps } from 'next/link';
 
-import clsxm from '@/lib/tailwind-merge';
+import clsxm from '@/lib/clsxm';
 
 export type UnstyledLinkProps = {
   href: string;
