@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import clsxm from '@/lib/tailwind-merge';
+import clsxm from '@/lib/clsxm';
 
 import CustomLink from '@/components/links/CustomLink';
 import { UnstyledLinkProps } from '@/components/links/UnstyledLink';
