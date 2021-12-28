@@ -32,7 +32,9 @@ module.exports = {
           // static data
           ['^@/data'],
           // components
-          ['^@/components'],
+          ['^@/components', '^@/container'],
+          // zustand store
+          ['^@/store'],
           // Other imports
           ['^@/'],
           // relative paths up until 3 level
