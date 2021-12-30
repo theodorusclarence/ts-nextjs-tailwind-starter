@@ -4,6 +4,29 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.5.2 - 2021-12-30
+
+### New Features
+
+- #### New Component: PrimaryLink
+
+    Add a link component with accent color on top of UnstyledLink.
+
+### Improvements & Bug Fixes
+
+- #### Unused Import ESlint Autofix
+
+    Unused import will automatically be removed by the ESlint autofix.
+
+- #### Renamed CustomLink to UnderlineLink
+
+    This is to compensate the new PrimaryLink component
+
+- #### Primary Button & ButtonLink Shade
+
+    The shade of the button is now using the `500` instead of `400`.
+
+
 ## 0.5.1 - 2021-12-26
 
 ### New Features
