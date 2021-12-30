@@ -39,11 +39,11 @@ export default function Button({
         'transition-colors duration-75',
         [
           variant === 'primary' && [
-            'bg-primary-400 text-white',
-            'border border-primary-500',
-            'hover:bg-primary-500 hover:text-white',
-            'active:bg-primary-600',
-            'disabled:bg-primary-600 disabled:hover:bg-primary-600',
+            'bg-primary-500 text-white',
+            'border border-primary-600',
+            'hover:bg-primary-600 hover:text-white',
+            'active:bg-primary-500',
+            'disabled:bg-primary-400 disabled:hover:bg-primary-400',
           ],
           variant === 'outline' && [
             'text-primary-500',
