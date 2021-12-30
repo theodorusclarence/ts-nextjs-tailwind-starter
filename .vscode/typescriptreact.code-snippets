@@ -44,9 +44,10 @@
   //#region  //*=========== Commons ===========
   "Region": {
     "prefix": "reg",
+    "scope": "javascript, typescript, javascriptreact, typescriptreact",
     "body": [
       "//#region  //*=========== ${1} ===========",
-      "$0",
+      "${TM_SELECTED_TEXT}$0",
       "//#endregion  //*======== ${1} ==========="
     ]
   },
