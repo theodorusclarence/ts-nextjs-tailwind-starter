@@ -6,7 +6,8 @@ import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
-import CustomLink from '@/components/links/CustomLink';
+import PrimaryLink from '@/components/links/PrimaryLink';
+import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
@@ -132,16 +133,29 @@ export default function ComponentsPage() {
                 </div>
               </li>
               <li className='space-y-2'>
-                <h2 className='text-lg md:text-xl'>CustomLink</h2>
+                <h2 className='text-lg md:text-xl'>PrimaryLink</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Add styling on top of UnstyledLink, giving a primary color to
+                  the link.
+                </p>
+                <div className='space-x-2'>
+                  <PrimaryLink href='/'>Internal Links</PrimaryLink>
+                  <PrimaryLink href='https://theodorusclarence.com'>
+                    Outside Links
+                  </PrimaryLink>
+                </div>
+              </li>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>UnderlineLink</h2>
                 <p className={clsx('!mt-1 text-sm', textColor)}>
                   Add styling on top of UnstyledLink, giving a dotted and
                   animated underline.
                 </p>
                 <div className='space-x-2'>
-                  <CustomLink href='/'>Internal Links</CustomLink>
-                  <CustomLink href='https://theodorusclarence.com'>
+                  <UnderlineLink href='/'>Internal Links</UnderlineLink>
+                  <UnderlineLink href='https://theodorusclarence.com'>
                     Outside Links
-                  </CustomLink>
+                  </UnderlineLink>
                 </div>
               </li>
               <li className='space-y-2'>
