@@ -38,6 +38,10 @@ This repository is 🔋 battery packed with:
 
 See the 👉 [feature details and changelog](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/CHANGELOG.md) 👈 for more.
 
+You can also check all of the **details and demos** on my blog post:
+
+- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
+
 ## Getting Started
 
 ### 1. Clone this template using one of the three ways:
