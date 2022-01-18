@@ -69,6 +69,7 @@
   },
   "Region CSS": {
     "prefix": "regc",
+    "scope": "css, scss",
     "body": [
       "/* #region  /**=========== ${1} =========== */",
       "${TM_SELECTED_TEXT}$0",
