@@ -7,7 +7,7 @@
   "React.useState": {
     "prefix": "us",
     "body": [
-      "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState<$1>(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
+      "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState<$3>(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
     ]
   },
   "React.useEffect": {
@@ -39,6 +39,22 @@
       "}"
     ]
   },
+  "React Functional Component with Props": {
+    "prefix": "rcp",
+    "body": [
+      "import * as React from 'react';\n",
+      "import clsxm from '@/lib/clsxm';\n",
+      "type ${1:${TM_FILENAME_BASE}}Props= {\n",
+      "} & React.ComponentPropsWithoutRef<'div'>\n",
+      "export default function ${1:${TM_FILENAME_BASE}}({className, ...rest}: ${1:${TM_FILENAME_BASE}}Props) {",
+      "  return (",
+      "    <div className={clsxm('', className)} {...rest}>",
+      "      $0",
+      "    </div>",
+      "  )",
+      "}"
+    ]
+  },
   //#endregion  //*======== React ===========
 
   //#region  //*=========== Commons ===========
@@ -49,6 +65,14 @@
       "//#region  //*=========== ${1} ===========",
       "${TM_SELECTED_TEXT}$0",
       "//#endregion  //*======== ${1} ==========="
+    ]
+  },
+  "Region CSS": {
+    "prefix": "regc",
+    "body": [
+      "/* #region  /**=========== ${1} =========== */",
+      "${TM_SELECTED_TEXT}$0",
+      "/* #endregion  /**======== ${1} =========== */"
     ]
   },
   //#endregion  //*======== Commons ===========
@@ -80,7 +104,7 @@
     "prefix": "napi",
     "body": [
       "import { NextApiRequest, NextApiResponse } from 'next';\n",
-      "export default function ${1:${TM_FILENAME_BASE}}(req: NextApiRequest, res: NextApiResponse) {",
+      "export default async function ${1:${TM_FILENAME_BASE}}(req: NextApiRequest, res: NextApiResponse) {",
       "  if (req.method === 'GET') {",
       "    res.status(200).json({ name: 'Bambang' });",
       "  } else {",
@@ -92,7 +116,7 @@
   "Get Static Props": {
     "prefix": "gsp",
     "body": [
-      "export const getStaticProps: GetStaticProps = async (context) => {",
+      "export const getStaticProps = async (context: GetStaticPropsContext) => {",
       "  return {",
       "    props: {}",
       "  };",
@@ -115,12 +139,20 @@
   "Get Server Side Props": {
     "prefix": "gssp",
     "body": [
-      "export const getServerSideProps: GetServerSideProps = async (context) => {",
+      "export const getServerSideProps = async (context: GetServerSidePropsContext) => {",
       "  return {",
       "    props: {}",
       "  };",
       "}"
     ]
+  },
+  "Infer Get Static Props": {
+    "prefix": "igsp",
+    "body": "InferGetStaticPropsType<typeof getStaticProps>"
+  },
+  "Infer Get Server Side Props": {
+    "prefix": "igssp",
+    "body": "InferGetServerSidePropsType<typeof getServerSideProps>"
   },
   "Import useRouter": {
     "prefix": "imust",
@@ -143,7 +175,11 @@
   },
   "Wrap with clsx": {
     "prefix": "cx",
-    "body": ["{clsx(${TM_SELECTED_TEXT})}"]
+    "body": ["{clsx(${TM_SELECTED_TEXT}$0)}"]
+  },
+  "Wrap with clsxm": {
+    "prefix": "cxm",
+    "body": ["{clsxm(${TM_SELECTED_TEXT}$0, className)}"]
   }
   //#endregion  //*======== Snippet Wrap ===========
 }
