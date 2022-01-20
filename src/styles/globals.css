@@ -5,26 +5,26 @@
 :root {
   /* #region  /**=========== Primary Color =========== */
   /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
-  --tw-clr-primary-50: 240, 249, 255;
-  --tw-clr-primary-100: 224, 242, 254;
-  --tw-clr-primary-200: 186, 230, 253;
-  --tw-clr-primary-300: 125, 211, 252;
-  --tw-clr-primary-400: 56, 189, 248;
-  --tw-clr-primary-500: 14, 165, 233;
-  --tw-clr-primary-600: 2, 132, 199;
-  --tw-clr-primary-700: 3, 105, 161;
-  --tw-clr-primary-800: 7, 89, 133;
-  --tw-clr-primary-900: 12, 74, 110;
-  --clr-primary-50: rgb(var(--tw-clr-primary-50)); /* #f0f9ff */
-  --clr-primary-100: rgb(var(--tw-clr-primary-100)); /* #e0f2fe */
-  --clr-primary-200: rgb(var(--tw-clr-primary-200)); /* #bae6fd */
-  --clr-primary-300: rgb(var(--tw-clr-primary-300)); /* #7dd3fc */
-  --clr-primary-400: rgb(var(--tw-clr-primary-400)); /* #38bdf8 */
-  --clr-primary-500: rgb(var(--tw-clr-primary-500)); /* #0ea5e9 */
-  --clr-primary-600: rgb(var(--tw-clr-primary-600)); /* #0284c7 */
-  --clr-primary-700: rgb(var(--tw-clr-primary-700)); /* #0369a1 */
-  --clr-primary-800: rgb(var(--tw-clr-primary-800)); /* #075985 */
-  --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #0c4a6e */
+  --tw-color-primary-50: 240 249 255;
+  --tw-color-primary-100: 224 242 254;
+  --tw-color-primary-200: 186 230 253;
+  --tw-color-primary-300: 125 211 252;
+  --tw-color-primary-400: 56 189 248;
+  --tw-color-primary-500: 14 165 233;
+  --tw-color-primary-600: 2 132 199;
+  --tw-color-primary-700: 3 105 161;
+  --tw-color-primary-800: 7 89 133;
+  --tw-color-primary-900: 12 74 110;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f0f9ff */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #e0f2fe */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bae6fd */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #7dd3fc */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #38bdf8 */
+  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #0ea5e9 */
+  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #0284c7 */
+  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #0369a1 */
+  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #075985 */
+  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0c4a6e */
   /* #endregion  /**======== Primary Color =========== */
 }
 
@@ -95,7 +95,11 @@
 @layer utilities {
   .animated-underline {
     background-image: linear-gradient(#33333300, #33333300),
-      linear-gradient(to right, var(--clr-primary-400), var(--clr-primary-500));
+      linear-gradient(
+        to right,
+        var(--color-primary-400),
+        var(--color-primary-500)
+      );
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;

@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
-function withOpacity(variableName) {
+function withOpacityValue(variable) {
   return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`;
+    if (opacityValue === undefined) {
+      return `rgb(var(${variable}))`;
     }
-    return `rgb(var(${variableName}))`;
+    return `rgb(var(${variable}) / ${opacityValue})`;
   };
 }
 
@@ -21,16 +21,16 @@ module.exports = {
       colors: {
         primary: {
           // Customize it on globals.css :root
-          50: withOpacity('--tw-clr-primary-50'),
-          100: withOpacity('--tw-clr-primary-100'),
-          200: withOpacity('--tw-clr-primary-200'),
-          300: withOpacity('--tw-clr-primary-300'),
-          400: withOpacity('--tw-clr-primary-400'),
-          500: withOpacity('--tw-clr-primary-500'),
-          600: withOpacity('--tw-clr-primary-600'),
-          700: withOpacity('--tw-clr-primary-700'),
-          800: withOpacity('--tw-clr-primary-800'),
-          900: withOpacity('--tw-clr-primary-900'),
+          50: withOpacityValue('--tw-color-primary-50'),
+          100: withOpacityValue('--tw-color-primary-100'),
+          200: withOpacityValue('--tw-color-primary-200'),
+          300: withOpacityValue('--tw-color-primary-300'),
+          400: withOpacityValue('--tw-color-primary-400'),
+          500: withOpacityValue('--tw-color-primary-500'),
+          600: withOpacityValue('--tw-color-primary-600'),
+          700: withOpacityValue('--tw-color-primary-700'),
+          800: withOpacityValue('--tw-color-primary-800'),
+          900: withOpacityValue('--tw-color-primary-900'),
         },
         dark: '#222222',
       },
