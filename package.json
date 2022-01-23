@@ -49,14 +49,14 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.7",
     "lint-staged": "^11.2.6",
-    "next-sitemap": "^1.9.9",
+    "next-sitemap": "^1.9.12",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prettier-plugin-sort-class-names": "^3.0.1",
     "react-test-renderer": "^17.0.2",
     "standard-version": "^9.3.2",
     "tailwindcss": "^3.0.15",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.5"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,}": [
