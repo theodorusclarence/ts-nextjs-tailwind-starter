@@ -29,7 +29,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         ref={ref}
         {...rest}
         className={clsxm(
-          'inline-flex items-center px-4 py-2 font-semibold rounded',
+          'inline-flex items-center rounded px-4 py-2 font-semibold',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
           'transition-colors duration-75',
@@ -59,7 +59,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             variant === 'light' && [
               'bg-white text-dark ',
               'border border-gray-300',
-              'hover:text-dark hover:bg-gray-100',
+              'hover:bg-gray-100 hover:text-dark',
               'active:bg-white/80 disabled:bg-gray-200',
             ],
             variant === 'dark' && [
