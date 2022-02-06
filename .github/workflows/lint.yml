@@ -29,16 +29,13 @@ jobs:
       - run: yarn typecheck
 
   prettier:
-    name: Run Prettier Check
+    name: Run Prettify Code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: creyD/prettier_action@v4.2
         with:
-          node-version: '14'
-          cache: 'yarn'
-      - run: yarn
-      - run: yarn format:check
+          prettier_options: --write .
+          same_commit: true
 
   test:
     name: Run Test
