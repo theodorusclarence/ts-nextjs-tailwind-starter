@@ -20,7 +20,7 @@
     "baseUrl": "./src",
     "paths": {
       "~/*": [
-        "./public/*"
+        "../public/*"
       ]
     },
     "incremental": true
