@@ -19,7 +19,7 @@ module.exports = {
       '<rootDir>/__mocks__/fileMock.js',
 
     // Handle absolute import and module path alias
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^(.*)$': '<rootDir>/src/$1',
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   testEnvironment: 'jsdom',
