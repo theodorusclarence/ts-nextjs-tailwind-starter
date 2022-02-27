@@ -4,6 +4,53 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.5.3 - 2022-02-27
+
+### New Features
+
+- #### Shimmer for NextImage and Skeleton
+    
+    Addition of shimmer & blur placeholder for NextImage, and new Skeleton Component with shimmer effect.
+
+    https://user-images.githubusercontent.com/55318172/155867729-8c3176ad-ede4-4443-b42b-780517615e5a.mp4
+
+
+- #### Support for SVGR
+
+    You can directly import SVG like
+
+    ```tsx
+    import Vercel from '~/svg/Vercel.svg';
+
+    <Vercel className='text-5xl' />
+    ```
+
+- #### Public Folder Path Mapping
+
+    Easily access public folder with `~/` prefix.
+
+- #### Tailwind CSS Prettier Sorter
+
+    ts-nextjs-tailwind-starter now use first-party plugin `prettier-plugin-tailwindcss`
+
+### Improvements & Bug Fixes
+
+- #### Layout Declared Twice
+
+    Fix issue where adding elements to Layout ends up rendering them twice
+
+- #### ESLint Curly Brace Rule
+
+    New autofixable rule
+    
+    ```tsx
+    props={'hi'}
+
+    will become
+
+    props='hi'
+    ```
+
 ## 0.5.2 - 2021-12-30
 
 ### New Features
