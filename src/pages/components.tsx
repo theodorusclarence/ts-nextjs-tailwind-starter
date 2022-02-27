@@ -11,6 +11,7 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
+import Skeleton from '@/components/Skeleton';
 
 type Color = typeof colorList[number];
 
@@ -303,6 +304,13 @@ export default function ComponentsPage() {
                   height='180'
                   alt='Icon'
                 />
+              </li>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>Skeleton</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Skeleton with shimmer effect
+                </p>
+                <Skeleton className='h-72 w-72' />
               </li>
             </ol>
           </div>

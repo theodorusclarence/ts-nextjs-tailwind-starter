@@ -46,9 +46,18 @@ module.exports = {
             filter: 'none',
           },
         },
+        shimmer: {
+          '0%': {
+            backgroundPosition: '-700px 0',
+          },
+          '100%': {
+            backgroundPosition: '700px 0',
+          },
+        },
       },
       animation: {
         flicker: 'flicker 3s linear infinite',
+        shimmer: 'shimmer 1.3s linear infinite',
       },
     },
   },
