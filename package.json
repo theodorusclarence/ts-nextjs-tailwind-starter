@@ -47,7 +47,7 @@
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.4.0",
-    "next-sitemap": "^1.9.12",
+    "next-sitemap": "^2.5.20",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.8",
