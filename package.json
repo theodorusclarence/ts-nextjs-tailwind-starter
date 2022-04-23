@@ -28,8 +28,8 @@
     "tailwind-merge": "^1.2.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/forms": "^0.4.1",
     "@testing-library/jest-dom": "^5.16.4",
