@@ -16,11 +16,12 @@
     "format:check": "prettier -c .",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
-    "postbuild": "next-sitemap",
+    "postbuild": "cross-env next-sitemap --config next-sitemap.js",
     "prepare": "husky install"
   },
   "dependencies": {
     "clsx": "^1.1.1",
+    "cross-env": "^7.0.3",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
