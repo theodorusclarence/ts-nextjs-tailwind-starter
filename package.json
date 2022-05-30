@@ -16,7 +16,7 @@
     "format:check": "prettier -c .",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "prepare": "husky install"
   },
   "dependencies": {
