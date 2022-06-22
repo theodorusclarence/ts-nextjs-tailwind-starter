@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import { openGraph } from '@/lib/helper';
-
 // !STARTERCONF Change these default meta
 const defaultMeta = {
   title: 'Next.js + Tailwind CSS + TypeScript Starter',
@@ -13,8 +11,11 @@ const defaultMeta = {
   url: 'https://tsnext-tw.thcl.dev',
   type: 'website',
   robots: 'follow, index',
-  /** No need to be filled, will be populated with openGraph function */
-  image: '',
+  /**
+   * No need to be filled, will be populated with openGraph function
+   * If you wish to use a normal image, just specify the path below
+   */
+  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
 };
 
 type SeoProps = {
@@ -34,11 +35,13 @@ export default function Seo(props: SeoProps) {
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
-  meta['image'] = openGraph({
-    description: meta.description,
-    siteName: props.templateTitle ? meta.siteName : meta.title,
-    templateTitle: props.templateTitle,
-  });
+  // !STARTERCONF Follow config for opengraph, by deploying one on https://github.com/theodorusclarence/og
+  // ? Uncomment code below if you want to use default open graph
+  // meta['image'] = openGraph({
+  //   description: meta.description,
+  //   siteName: props.templateTitle ? meta.siteName : meta.title,
+  //   templateTitle: props.templateTitle,
+  // });
 
   return (
     <Head>

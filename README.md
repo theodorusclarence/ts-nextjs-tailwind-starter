@@ -32,7 +32,7 @@ This repository is 🔋 battery packed with:
 - 👷 Github Actions — Lint your code on PR
 - 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
 - 🔥 Snippets — A collection of useful snippets
-- 👀 Default Open Graph — Awesome open graph generated using [og.thcl.dev](https://github.com/theodorusclarence/og), fork it and deploy!
+- 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
 - 🗺 Site Map — Automatically generate sitemap.xml
 - 📦 Expansion Pack — Easily install common libraries, additional components, and configs
 
