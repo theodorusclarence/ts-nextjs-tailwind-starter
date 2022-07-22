@@ -28,7 +28,7 @@ This repository is 🔋 battery packed with:
 - 💖 Prettier — Format your code consistently
 - 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
 - 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
-- ⏰ Standard Version Changelog — Generate your changelog using `yarn release`
+- ⏰ Release Please — Generate your changelog by activating the `release-please` workflow
 - 👷 Github Actions — Lint your code on PR
 - 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
 - 🔥 Snippets — A collection of useful snippets

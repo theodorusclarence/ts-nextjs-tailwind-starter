@@ -4,6 +4,20 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 0.5.4 - 2022-07-22
+
+### New Features
+
+- #### Release Please
+
+    Standard Version is now deprecated, and ts-nextjs-tailwind-starter is now using release please. Activate them on `.github/workflows/release-please`
+
+### Improvements & Bug Fixes
+
+- #### More Efficient Lint Actions
+    
+    Lint workflow is now cached and will cancel previous run if there are 2 concurrent runs.
+
 ## 0.5.3 - 2022-02-27
 
 ### New Features
