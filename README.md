@@ -94,6 +94,19 @@ Don't forget to change the package name in package.json
 
 This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
 
+## Projects using ts-nextjs-tailwind-starter
+
+<!--
+TEMPLATE
+- [sitename](https://sitelink.com) ([Source](https://github.com/githublink))
+- [sitename](https://sitelink.com)
+-->
+
+- [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
+- [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
+
+Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
+
 ## Expansion Pack 📦
 
 This starter is now equipped with an [expansion pack](https://github.com/theodorusclarence/expansion-pack).
