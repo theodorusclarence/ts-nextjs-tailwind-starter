@@ -181,6 +181,13 @@
   "Wrap with clsxm": {
     "prefix": "cxm",
     "body": ["{clsxm(${TM_SELECTED_TEXT}$0, className)}"]
-  }
+  },
   //#endregion  //*======== Snippet Wrap ===========
+
+  "Logger": {
+    "prefix": "lg",
+    "body": [
+      "logger({ ${1:${CLIPBOARD}} }, '${TM_FILENAME} line ${TM_LINE_NUMBER}')"
+    ]
+  }
 }
