@@ -54,10 +54,10 @@ You can also check all of the **details and demos** on my blog post:
 
    ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
 
-2. Using `create-next-app`
+2. Using `degit`
 
    ```bash
-   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
+   npx degit theodorusclarence/ts-nextjs-tailwind-starter YOUR_APP_NAME
    ```
 
 3. Deploy to Vercel
