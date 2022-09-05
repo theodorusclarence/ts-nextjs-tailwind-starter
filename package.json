@@ -12,8 +12,8 @@
     "typecheck": "tsc --noEmit --incremental false",
     "test:watch": "jest --watch",
     "test": "jest",
-    "format": "prettier -w .",
-    "format:check": "prettier -c .",
+    "format": "prettier -w src",
+    "format:check": "prettier -c src",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "prepare": "husky install"
   },
