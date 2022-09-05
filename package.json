@@ -52,11 +52,11 @@
     "typescript": "^4.8.2"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
+    "**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings=0",
       "prettier -w"
     ],
-    "src/**/*.{json,css,scss,md}": [
+    "**/*.{json,css,scss,md}": [
       "prettier -w"
     ]
   }
