@@ -7,7 +7,7 @@ module.exports = {
   reactStrictMode: true,
 
   images: {
-    domains: ['tailwindui.com'],
+    domains: ['tailwindui.com', 'flowbite.s3.amazonaws.com'],
     dangerouslyAllowSVG: true,
   },
 
