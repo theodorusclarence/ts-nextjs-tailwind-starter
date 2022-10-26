@@ -1,3 +1,5 @@
+'use client';
+
 import { usePathname } from 'next/navigation';
 
 // !STARTERCONF Change these default meta
@@ -44,6 +46,8 @@ export default function Meta(props: MetaProps) {
 
   return (
     <>
+      <meta charSet='utf-8' />
+      <meta name='viewport' content='width=device-width' />
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />
