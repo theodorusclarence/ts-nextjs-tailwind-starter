@@ -1,5 +1,3 @@
-'use client';
-
 import { usePathname } from 'next/navigation';
 
 // !STARTERCONF Change these default meta
