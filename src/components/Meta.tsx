@@ -1,5 +1,4 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
@@ -18,13 +17,13 @@ const defaultMeta = {
   image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
 };
 
-type SeoProps = {
+type MetaProps = {
   date?: string;
   templateTitle?: string;
 } & Partial<typeof defaultMeta>;
 
-export default function Seo(props: SeoProps) {
-  const router = useRouter();
+export default function Meta(props: MetaProps) {
+  const pathname = usePathname();
   const meta = {
     ...defaultMeta,
     ...props,
@@ -44,12 +43,12 @@ export default function Seo(props: SeoProps) {
   // });
 
   return (
-    <Head>
+    <>
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />
-      <meta property='og:url' content={`${meta.url}${router.asPath}`} />
-      <link rel='canonical' href={`${meta.url}${router.asPath}`} />
+      <meta property='og:url' content={`${meta.url}${pathname}`} />
+      <link rel='canonical' href={`${meta.url}${pathname}`} />
       {/* Open Graph */}
       <meta property='og:type' content={meta.type} />
       <meta property='og:site_name' content={meta.siteName} />
@@ -82,13 +81,20 @@ export default function Seo(props: SeoProps) {
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
+      <link
+        rel='preload'
+        href='/fonts/inter-var-latin.woff2'
+        as='font'
+        type='font/woff2'
+        crossOrigin='anonymous'
+      />
       <meta name='msapplication-TileColor' content='#ffffff' />
       <meta
         name='msapplication-TileImage'
         content='/favicon/ms-icon-144x144.png'
       />
       <meta name='theme-color' content='#ffffff' />
-    </Head>
+    </>
   );
 }
 

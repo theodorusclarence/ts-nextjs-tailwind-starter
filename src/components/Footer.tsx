@@ -1,4 +1,4 @@
-import NextImage from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 
 const navigation = {
@@ -91,7 +91,7 @@ const navigation = {
   ],
 };
 
-export default function Example() {
+export default function Footer() {
   return (
     <footer className='bg-white' aria-labelledby='footer-heading'>
       <h2 id='footer-heading' className='sr-only'>
@@ -100,7 +100,7 @@ export default function Example() {
       <div className='mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
           <div className='space-y-8 xl:col-span-1'>
-            <NextImage
+            <Image
               className='h-10'
               src='https://tailwindui.com/img/logos/mark.svg?color=gray&shade=300'
               alt='tailwind'
