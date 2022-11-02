@@ -17,7 +17,7 @@
 
 This repository is 🔋 battery packed with:
 
-- ⚡️ Next.js 12
+- ⚡️ Next.js 13
 - ⚛️ React 18
 - ✨ TypeScript
 - 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
