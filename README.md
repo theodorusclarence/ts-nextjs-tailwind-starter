@@ -1,5 +1,7 @@
+# Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
+
 <div align="center">
-  <h1>🔋 ts-nextjs-tailwind-starter</h1>
+  <h2>🔋 ts-nextjs-tailwind-starter</h2>
   <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
   <p>Made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
   
