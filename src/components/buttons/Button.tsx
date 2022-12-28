@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
 
 import clsxm from '@/lib/clsxm';
@@ -11,10 +12,20 @@ enum ButtonVariant {
   'dark',
 }
 
+enum ButtonSize {
+  'sm',
+  'base',
+}
+
 type ButtonProps = {
   isLoading?: boolean;
   isDarkBg?: boolean;
   variant?: keyof typeof ButtonVariant;
+  size?: keyof typeof ButtonSize;
+  leftIcon?: IconType;
+  rightIcon?: IconType;
+  leftIconClassName?: string;
+  rightIconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -25,7 +36,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       disabled: buttonDisabled,
       isLoading,
       variant = 'primary',
+      size = 'base',
       isDarkBg = false,
+      leftIcon: LeftIcon,
+      rightIcon: RightIcon,
+      leftIconClassName,
+      rightIconClassName,
       ...rest
     },
     ref
@@ -38,18 +54,24 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded px-4 py-2 font-medium',
+          'inline-flex items-center rounded font-medium',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
           'transition-colors duration-75',
+          //#region  //*=========== Size ===========
+          [
+            size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
+            size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+          ],
+          //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
               'bg-primary-500 text-white',
               'border border-primary-600',
               'hover:bg-primary-600 hover:text-white',
-              'active:bg-primary-500',
-              'disabled:bg-primary-400 disabled:hover:bg-primary-400',
+              'active:bg-primary-700',
+              'disabled:bg-primary-700',
             ],
             variant === 'outline' && [
               'text-primary-500',
@@ -66,7 +88,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'light' && [
-              'bg-white text-dark ',
+              'bg-white text-gray-700',
               'border border-gray-300',
               'hover:bg-gray-100 hover:text-dark',
               'active:bg-white/80 disabled:bg-gray-200',
@@ -99,7 +121,43 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             <ImSpinner2 className='animate-spin' />
           </div>
         )}
+        {LeftIcon && (
+          <div
+            className={clsxm([
+              size === 'base' && 'mr-1',
+              size === 'sm' && 'mr-1.5',
+            ])}
+          >
+            <LeftIcon
+              className={clsxm(
+                [
+                  size === 'base' && 'md:text-md text-md',
+                  size === 'sm' && 'md:text-md text-sm',
+                ],
+                leftIconClassName
+              )}
+            />
+          </div>
+        )}
         {children}
+        {RightIcon && (
+          <div
+            className={clsxm([
+              size === 'base' && 'ml-1',
+              size === 'sm' && 'ml-1.5',
+            ])}
+          >
+            <RightIcon
+              className={clsxm(
+                [
+                  size === 'base' && 'text-md md:text-md',
+                  size === 'sm' && 'md:text-md text-sm',
+                ],
+                rightIconClassName
+              )}
+            />
+          </div>
+        )}
       </button>
     );
   }
