@@ -1,8 +1,18 @@
 // !STARTERCONF You can delete this page
 import clsx from 'clsx';
 import * as React from 'react';
+import {
+  HiArrowRight,
+  HiOutlineCreditCard,
+  HiOutlineDesktopComputer,
+  HiOutlineDeviceMobile,
+  HiOutlineShieldCheck,
+  HiPlus,
+} from 'react-icons/hi';
 
 import Button from '@/components/buttons/Button';
+import IconButton from '@/components/buttons/IconButton';
+import TextButton from '@/components/buttons/TextButton';
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
@@ -33,7 +43,7 @@ export default function ComponentsPage() {
 
       <main>
         <section
-          className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-gray-50', color)}
+          className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-white', color)}
         >
           <div
             className={clsx(
@@ -244,6 +254,112 @@ export default function ComponentsPage() {
                   <Button variant='light'>Light Variant</Button>
                 </div>
                 <div className='flex flex-wrap gap-2'>
+                  <Button
+                    variant='primary'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='outline'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                    isDarkBg={mode === 'dark'}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='ghost'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                    isDarkBg={mode === 'dark'}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='dark'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    variant='light'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                </div>
+                <div className='!mt-4 flex flex-wrap gap-2'>
+                  <Button size='sm' variant='primary'>
+                    Small Size
+                  </Button>
+                  <Button
+                    size='sm'
+                    variant='outline'
+                    isDarkBg={mode === 'dark'}
+                  >
+                    Small Size
+                  </Button>
+                  <Button size='sm' variant='ghost' isDarkBg={mode === 'dark'}>
+                    Small Size
+                  </Button>
+                  <Button size='sm' variant='dark'>
+                    Small Size
+                  </Button>
+                  <Button size='sm' variant='light'>
+                    Small Size
+                  </Button>
+                </div>
+                <div className='flex flex-wrap gap-2'>
+                  <Button
+                    size='sm'
+                    variant='primary'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    size='sm'
+                    variant='outline'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                    isDarkBg={mode === 'dark'}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    size='sm'
+                    variant='ghost'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                    isDarkBg={mode === 'dark'}
+                  >
+                    Icon
+                  </Button>
+
+                  <Button
+                    size='sm'
+                    variant='dark'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                  <Button
+                    size='sm'
+                    variant='light'
+                    leftIcon={HiPlus}
+                    rightIcon={HiArrowRight}
+                  >
+                    Icon
+                  </Button>
+                </div>
+
+                <div className='!mt-4 flex flex-wrap gap-2'>
                   <Button disabled variant='primary'>
                     Disabled
                   </Button>
@@ -280,6 +396,32 @@ export default function ComponentsPage() {
                   <Button isLoading variant='light'>
                     Disabled
                   </Button>
+                </div>
+              </li>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>TextButton</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Button with a text style
+                </p>
+                <div className='space-x-2'>
+                  <TextButton>Primary Variant</TextButton>
+                  <TextButton variant='basic'>Basic Variant</TextButton>
+                </div>
+              </li>
+              <li className='space-y-2'>
+                <h2 className='text-lg md:text-xl'>IconButton</h2>
+                <p className={clsx('!mt-1 text-sm', textColor)}>
+                  Button with only icon inside
+                </p>
+                <div className='space-x-2'>
+                  <IconButton icon={HiPlus} />
+                  <IconButton
+                    variant='outline'
+                    icon={HiOutlineDesktopComputer}
+                  />
+                  <IconButton variant='ghost' icon={HiOutlineDeviceMobile} />
+                  <IconButton variant='dark' icon={HiOutlineShieldCheck} />
+                  <IconButton variant='light' icon={HiOutlineCreditCard} />
                 </div>
               </li>
               <li className='space-y-2'>
