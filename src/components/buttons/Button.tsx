@@ -4,24 +4,14 @@ import { ImSpinner2 } from 'react-icons/im';
 
 import clsxm from '@/lib/clsxm';
 
-enum ButtonVariant {
-  'primary',
-  'outline',
-  'ghost',
-  'light',
-  'dark',
-}
-
-enum ButtonSize {
-  'sm',
-  'base',
-}
+const ButtonVariant = ['primary', 'outline', 'ghost', 'light', 'dark'] as const;
+const ButtonSize = ['sm', 'base'] as const;
 
 type ButtonProps = {
   isLoading?: boolean;
   isDarkBg?: boolean;
-  variant?: keyof typeof ButtonVariant;
-  size?: keyof typeof ButtonSize;
+  variant?: typeof ButtonVariant[number];
+  size?: typeof ButtonSize[number];
   leftIcon?: IconType;
   rightIcon?: IconType;
   leftIconClassName?: string;
