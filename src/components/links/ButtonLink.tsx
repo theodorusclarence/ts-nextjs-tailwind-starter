@@ -7,23 +7,19 @@ import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
 
-enum ButtonLinkVariant {
+const ButtonLinkVariant = [
   'primary',
   'outline',
   'ghost',
   'light',
   'dark',
-}
-
-enum ButtonLinkSize {
-  'sm',
-  'base',
-}
+] as const;
+const ButtonLinkSize = ['sm', 'base'] as const;
 
 type ButtonLinkProps = {
   isDarkBg?: boolean;
-  variant?: keyof typeof ButtonLinkVariant;
-  size?: keyof typeof ButtonLinkSize;
+  variant?: typeof ButtonLinkVariant[number];
+  size?: typeof ButtonLinkSize[number];
   leftIcon?: IconType;
   rightIcon?: IconType;
   leftIconClassName?: string;

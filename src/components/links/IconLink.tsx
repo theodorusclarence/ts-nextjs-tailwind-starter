@@ -7,17 +7,17 @@ import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
 
-enum IconLinkVariant {
+const IconLinkVariant = [
   'primary',
   'outline',
   'ghost',
   'light',
   'dark',
-}
+] as const;
 
 type IconLinkProps = {
   isDarkBg?: boolean;
-  variant?: keyof typeof IconLinkVariant;
+  variant?: typeof IconLinkVariant[number];
   icon?: IconType;
   iconClassName?: string;
 } & Omit<UnstyledLinkProps, 'children'>;
