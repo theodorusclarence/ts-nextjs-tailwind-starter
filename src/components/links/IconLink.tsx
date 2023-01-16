@@ -17,7 +17,7 @@ const IconLinkVariant = [
 
 type IconLinkProps = {
   isDarkBg?: boolean;
-  variant?: typeof IconLinkVariant[number];
+  variant?: (typeof IconLinkVariant)[number];
   icon?: IconType;
   iconClassName?: string;
 } & Omit<UnstyledLinkProps, 'children'>;

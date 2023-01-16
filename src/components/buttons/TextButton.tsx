@@ -5,7 +5,7 @@ import clsxm from '@/lib/clsxm';
 const TextButtonVariant = ['primary', 'basic'] as const;
 
 type TextButtonProps = {
-  variant?: typeof TextButtonVariant[number];
+  variant?: (typeof TextButtonVariant)[number];
 } & React.ComponentPropsWithRef<'button'>;
 
 const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(

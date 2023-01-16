@@ -15,7 +15,7 @@ const IconButtonVariant = [
 type IconButtonProps = {
   isLoading?: boolean;
   isDarkBg?: boolean;
-  variant?: typeof IconButtonVariant[number];
+  variant?: (typeof IconButtonVariant)[number];
   icon?: IconType;
   iconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
