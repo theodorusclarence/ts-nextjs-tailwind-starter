@@ -14,4 +14,3 @@ jobs:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
           branch-prefix: 'i'
           resolve: 'true'
-          link-style: 'comment'
