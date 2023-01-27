@@ -67,9 +67,11 @@ jobs:
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
 
+      - name: 🔎 run prettier
+        run: yarn format
+
       - name: 🔎 Type check
         run: yarn format:check
-
   test:
     name: 🃏 Test
     runs-on: ubuntu-latest
