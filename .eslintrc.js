@@ -4,13 +4,19 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+  plugins: [
+    '@typescript-eslint',
+    'simple-import-sort',
+    'unused-imports',
+    'tailwindcss',
+  ],
   extends: [
     'eslint:recommended',
     'next',
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
     'prettier',
+    'plugin:tailwindcss/recommended',
   ],
   rules: {
     'no-unused-vars': 'off',
@@ -23,6 +29,8 @@ module.exports = {
       'warn',
       { props: 'never', children: 'never' },
     ],
+
+    'tailwindcss/no-custom-classname': 'off',
 
     //#region  //*=========== Unused Import ===========
     '@typescript-eslint/no-unused-vars': 'off',
@@ -80,5 +88,10 @@ module.exports = {
   globals: {
     React: true,
     JSX: true,
+  },
+  settings: {
+    tailwindcss: {
+      callees: ['classnames', 'clsx', 'clsxm'],
+    },
   },
 };
