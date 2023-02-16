@@ -40,3 +40,6 @@ next-env.d.ts
 robots.txt
 sitemap.xml
 sitemap-*.xml
+
+# turbo
+.turbo
