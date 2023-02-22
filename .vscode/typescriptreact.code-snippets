@@ -48,7 +48,7 @@
       "} & React.ComponentPropsWithoutRef<'div'>\n",
       "export default function ${1:${TM_FILENAME_BASE}}({className, ...rest}: ${1:${TM_FILENAME_BASE}}Props) {",
       "  return (",
-      "    <div className={clsxm('', className)} {...rest}>",
+      "    <div className={clsxm(['', className])} {...rest}>",
       "      $0",
       "    </div>",
       "  )",
@@ -78,7 +78,7 @@
   },
   //#endregion  //*======== Commons ===========
 
-  //#region  //*=========== Nextjs ===========
+  //#region  //*=========== Next.js ===========
   "Next Pages": {
     "prefix": "np",
     "body": [
@@ -167,7 +167,7 @@
     "prefix": "iml",
     "body": ["import Link from 'next/link';"]
   },
-  //#endregion  //*======== Nextjs ===========
+  //#endregion  //*======== Next.js ===========
 
   //#region  //*=========== Snippet Wrap ===========
   "Wrap with Fragment": {
@@ -176,11 +176,11 @@
   },
   "Wrap with clsx": {
     "prefix": "cx",
-    "body": ["{clsx(${TM_SELECTED_TEXT}$0)}"]
+    "body": ["{clsx([${TM_SELECTED_TEXT}$0])}"]
   },
   "Wrap with clsxm": {
     "prefix": "cxm",
-    "body": ["{clsxm(${TM_SELECTED_TEXT}$0, className)}"]
+    "body": ["{clsxm([${TM_SELECTED_TEXT}$0, className])}"]
   },
   //#endregion  //*======== Snippet Wrap ===========
 
