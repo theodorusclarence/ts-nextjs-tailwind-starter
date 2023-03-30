@@ -45,7 +45,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         className={clsxm(
           'inline-flex items-center rounded font-medium',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Size ===========
@@ -58,14 +58,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           [
             variant === 'primary' && [
               'bg-primary-500 text-white',
-              'border border-primary-600',
+              'border-primary-600 border',
               'hover:bg-primary-600 hover:text-white',
               'active:bg-primary-700',
               'disabled:bg-primary-700',
             ],
             variant === 'outline' && [
               'text-primary-500',
-              'border border-primary-500',
+              'border-primary-500 border',
               'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
@@ -80,7 +80,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             variant === 'light' && [
               'bg-white text-gray-700',
               'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
+              'hover:text-dark hover:bg-gray-100',
               'active:bg-white/80 disabled:bg-gray-200',
             ],
             variant === 'dark' && [
@@ -100,7 +100,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {isLoading && (
           <div
             className={clsxm(
-              'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+              'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
               {
                 'text-white': ['primary', 'dark'].includes(variant),
                 'text-black': ['light'].includes(variant),

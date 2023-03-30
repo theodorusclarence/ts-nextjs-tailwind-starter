@@ -81,9 +81,9 @@ export default function ComponentsPage() {
                     className={clsx(
                       'block max-w-xs rounded',
                       mode === 'dark'
-                        ? 'border border-gray-600 bg-dark'
+                        ? 'bg-dark border border-gray-600'
                         : 'border-gray-300 bg-white',
-                      'focus:border-primary-400 focus:outline-none focus:ring focus:ring-primary-400'
+                      'focus:border-primary-400 focus:ring-primary-400 focus:outline-none focus:ring'
                     )}
                     onChange={(e) => setColor(e.target.value as Color)}
                   >
@@ -98,35 +98,38 @@ export default function ComponentsPage() {
                   </ButtonLink>
                 </div>
                 <div className='flex flex-wrap gap-2 text-xs font-medium'>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-50 text-black'>
+                  <div className='bg-primary-50 flex h-10 w-10 items-center justify-center rounded text-black'>
                     50
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-100 text-black'>
+                  <div className='bg-primary-100 flex h-10 w-10 items-center justify-center rounded text-black'>
                     100
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-200 text-black'>
+                  <div className='bg-primary-200 flex h-10 w-10 items-center justify-center rounded text-black'>
                     200
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-300 text-black'>
+                  <div className='bg-primary-300 flex h-10 w-10 items-center justify-center rounded text-black'>
                     300
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-400 text-black'>
+                  <div className='bg-primary-400 flex h-10 w-10 items-center justify-center rounded text-black'>
                     400
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-500 text-black'>
+                  <div className='bg-primary-500 flex h-10 w-10 items-center justify-center rounded text-black'>
                     500
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-600 text-white'>
+                  <div className='bg-primary-600 flex h-10 w-10 items-center justify-center rounded text-white'>
                     600
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-700 text-white'>
+                  <div className='bg-primary-700 flex h-10 w-10 items-center justify-center rounded text-white'>
                     700
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-800 text-white'>
+                  <div className='bg-primary-800 flex h-10 w-10 items-center justify-center rounded text-white'>
                     800
                   </div>
-                  <div className='flex h-10 w-10 items-center justify-center rounded bg-primary-900 text-white'>
+                  <div className='bg-primary-900 flex h-10 w-10 items-center justify-center rounded text-white'>
                     900
+                  </div>
+                  <div className='bg-primary-950 flex h-10 w-10 items-center justify-center rounded text-white'>
+                    950
                   </div>
                 </div>
               </li>
@@ -463,26 +466,26 @@ export default function ComponentsPage() {
 }
 
 const colorList = [
-  'rose',
-  'pink',
-  'fuchsia',
-  'purple',
-  'violet',
-  'indigo',
-  'blue',
-  'sky',
-  'cyan',
-  'teal',
-  'emerald',
-  'green',
-  'lime',
-  'yellow',
-  'amber',
-  'orange',
-  'red',
   'slate',
   'gray',
   'zinc',
   'neutral',
   'stone',
+  'red',
+  'orange',
+  'amber',
+  'yellow',
+  'lime',
+  'green',
+  'emerald',
+  'teal',
+  'cyan',
+  'sky',
+  'blue',
+  'indigo',
+  'violet',
+  'purple',
+  'fuchsia',
+  'pink',
+  'rose',
 ] as const;
