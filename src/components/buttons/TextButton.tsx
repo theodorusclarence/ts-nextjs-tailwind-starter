@@ -26,7 +26,7 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
         disabled={buttonDisabled}
         className={clsxm(
           'button inline-flex items-center justify-center font-semibold',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'transition duration-100',
           //#region  //*=========== Variant ===========
           variant === 'primary' && [
