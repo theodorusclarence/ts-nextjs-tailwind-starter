@@ -19,11 +19,11 @@
   },
   "dependencies": {
     "clsx": "^1.2.1",
-    "next": "^13.4.4",
+    "next": "^13.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
-    "tailwind-merge": "^1.13.0"
+    "tailwind-merge": "^1.13.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",
@@ -32,12 +32,12 @@
     "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@types/react": "^18.2.8",
-    "@typescript-eslint/eslint-plugin": "^5.59.9",
-    "@typescript-eslint/parser": "^5.59.9",
+    "@types/react": "^18.2.12",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.42.0",
-    "eslint-config-next": "^13.4.4",
+    "eslint": "^8.43.0",
+    "eslint-config-next": "^13.4.6",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
