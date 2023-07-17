@@ -18,7 +18,9 @@ type IconButtonProps = {
   isDarkBg?: boolean;
   variant?: (typeof IconButtonVariant)[number];
   icon?: IconType | LucideIcon;
-  iconClassName?: string;
+  classNames?: {
+    icon?: string;
+  };
 } & React.ComponentPropsWithRef<'button'>;
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
@@ -30,7 +32,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       variant = 'primary',
       isDarkBg = false,
       icon: Icon,
-      iconClassName,
+      classNames,
       ...rest
     },
     ref
@@ -105,7 +107,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
             <ImSpinner2 className='animate-spin' />
           </div>
         )}
-        {Icon && <Icon size='1em' className={cn(iconClassName)} />}
+        {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
       </button>
     );
   }

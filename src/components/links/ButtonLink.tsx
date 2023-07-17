@@ -23,8 +23,10 @@ type ButtonLinkProps = {
   size?: (typeof ButtonLinkSize)[number];
   leftIcon?: IconType | LucideIcon;
   rightIcon?: IconType | LucideIcon;
-  leftIconClassName?: string;
-  rightIconClassName?: string;
+  classNames?: {
+    leftIcon?: string;
+    rightIcon?: string;
+  };
 } & UnstyledLinkProps;
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
@@ -37,8 +39,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       isDarkBg = false,
       leftIcon: LeftIcon,
       rightIcon: RightIcon,
-      leftIconClassName,
-      rightIconClassName,
+      classNames,
       ...rest
     },
     ref
@@ -112,7 +113,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                   size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
                 ],
-                leftIconClassName
+                classNames?.leftIcon
               )}
             />
           </div>
@@ -132,7 +133,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                   size === 'base' && 'text-md md:text-md',
                   size === 'sm' && 'md:text-md text-sm',
                 ],
-                rightIconClassName
+                classNames?.rightIcon
               )}
             />
           </div>
