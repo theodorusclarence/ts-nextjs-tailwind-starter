@@ -1,3 +1,4 @@
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';
 
@@ -20,8 +21,8 @@ type ButtonLinkProps = {
   isDarkBg?: boolean;
   variant?: (typeof ButtonLinkVariant)[number];
   size?: (typeof ButtonLinkSize)[number];
-  leftIcon?: IconType;
-  rightIcon?: IconType;
+  leftIcon?: IconType | LucideIcon;
+  rightIcon?: IconType | LucideIcon;
   leftIconClassName?: string;
   rightIconClassName?: string;
 } & UnstyledLinkProps;
@@ -105,6 +106,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             ])}
           >
             <LeftIcon
+              size='1em'
               className={cn(
                 [
                   size === 'base' && 'md:text-md text-md',
@@ -124,6 +126,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             ])}
           >
             <RightIcon
+              size='1em'
               className={cn(
                 [
                   size === 'base' && 'text-md md:text-md',

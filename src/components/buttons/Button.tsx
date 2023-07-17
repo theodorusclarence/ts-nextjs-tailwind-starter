@@ -1,3 +1,4 @@
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
@@ -12,8 +13,8 @@ type ButtonProps = {
   isDarkBg?: boolean;
   variant?: (typeof ButtonVariant)[number];
   size?: (typeof ButtonSize)[number];
-  leftIcon?: IconType;
-  rightIcon?: IconType;
+  leftIcon?: IconType | LucideIcon;
+  rightIcon?: IconType | LucideIcon;
   leftIconClassName?: string;
   rightIconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
@@ -119,6 +120,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             ])}
           >
             <LeftIcon
+              size='1em'
               className={cn(
                 [
                   size === 'base' && 'md:text-md text-md',
@@ -138,6 +140,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             ])}
           >
             <RightIcon
+              size='1em'
               className={cn(
                 [
                   size === 'base' && 'text-md md:text-md',
