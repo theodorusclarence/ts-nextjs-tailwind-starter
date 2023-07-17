@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
 
-import clsxm from '@/lib/clsxm';
+import { cn } from '@/lib/utils';
 
 const IconButtonVariant = [
   'primary',
@@ -41,7 +41,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         ref={ref}
         type='button'
         disabled={disabled}
-        className={clsxm(
+        className={cn(
           'inline-flex items-center justify-center rounded font-medium',
           'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'shadow-sm',
@@ -92,7 +92,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       >
         {isLoading && (
           <div
-            className={clsxm(
+            className={cn(
               'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
               {
                 'text-white': ['primary', 'dark'].includes(variant),
@@ -104,7 +104,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
             <ImSpinner2 className='animate-spin' />
           </div>
         )}
-        {Icon && <Icon className={clsxm(iconClassName)} />}
+        {Icon && <Icon className={cn(iconClassName)} />}
       </button>
     );
   }
