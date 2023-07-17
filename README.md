@@ -58,6 +58,12 @@ You can also check all of the **details and demos** on my blog post:
    npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
    ```
 
+   If you still want to use **pages directory** (_is not actively maintained_) you can use this command
+
+   ```bash
+   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/tree/pages-directory project-name
+   ```
+
 3. Using `degit`
 
    ```bash
