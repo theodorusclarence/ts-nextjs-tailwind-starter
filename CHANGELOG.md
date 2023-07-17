@@ -4,6 +4,24 @@
 
 This changelog is manually generated and not accurate with the package.json, only to show the changes since the last release.
 
+## 1.0.0 - 2023-07-17
+
+### New Features
+
+- #### Next.js App Router
+
+    Now uses the new app directory structure.
+
+### Improvements & Bug Fixes
+
+- #### Rename `clsxm` to `cn`
+
+    For better support with shadcn/ui
+
+- #### Faster Lint Actions
+  
+    Lint jobs is now merged into one for faster performance, also updated the concurrency rule
+
 ## 0.5.4 - 2022-07-22
 
 ### New Features
