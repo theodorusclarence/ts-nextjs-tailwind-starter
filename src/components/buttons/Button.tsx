@@ -15,8 +15,10 @@ type ButtonProps = {
   size?: (typeof ButtonSize)[number];
   leftIcon?: IconType | LucideIcon;
   rightIcon?: IconType | LucideIcon;
-  leftIconClassName?: string;
-  rightIconClassName?: string;
+  classNames?: {
+    leftIcon?: string;
+    rightIcon?: string;
+  };
 } & React.ComponentPropsWithRef<'button'>;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -31,8 +33,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       isDarkBg = false,
       leftIcon: LeftIcon,
       rightIcon: RightIcon,
-      leftIconClassName,
-      rightIconClassName,
+      classNames,
       ...rest
     },
     ref
@@ -126,7 +127,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                   size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
                 ],
-                leftIconClassName
+                classNames?.leftIcon
               )}
             />
           </div>
@@ -146,7 +147,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                   size === 'base' && 'text-md md:text-md',
                   size === 'sm' && 'md:text-md text-sm',
                 ],
-                rightIconClassName
+                classNames?.rightIcon
               )}
             />
           </div>

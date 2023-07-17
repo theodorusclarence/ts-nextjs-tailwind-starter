@@ -20,7 +20,9 @@ type IconLinkProps = {
   isDarkBg?: boolean;
   variant?: (typeof IconLinkVariant)[number];
   icon?: IconType | LucideIcon;
-  iconClassName?: string;
+  classNames?: {
+    icon?: string;
+  };
 } & Omit<UnstyledLinkProps, 'children'>;
 
 const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
@@ -30,7 +32,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
       icon: Icon,
       variant = 'outline',
       isDarkBg = false,
-      iconClassName,
+      classNames,
       ...rest
     },
     ref
@@ -86,7 +88,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
         )}
         {...rest}
       >
-        {Icon && <Icon size='1em' className={cn(iconClassName)} />}
+        {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
       </UnstyledLink>
     );
   }
