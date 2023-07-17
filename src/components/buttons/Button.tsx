@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
 
-import clsxm from '@/lib/clsxm';
+import { cn } from '@/lib/utils';
 
 const ButtonVariant = ['primary', 'outline', 'ghost', 'light', 'dark'] as const;
 const ButtonSize = ['sm', 'base'] as const;
@@ -43,7 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         type='button'
         disabled={disabled}
-        className={clsxm(
+        className={cn(
           'inline-flex items-center rounded font-medium',
           'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'shadow-sm',
@@ -99,7 +99,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {isLoading && (
           <div
-            className={clsxm(
+            className={cn(
               'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
               {
                 'text-white': ['primary', 'dark'].includes(variant),
@@ -113,13 +113,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {LeftIcon && (
           <div
-            className={clsxm([
+            className={cn([
               size === 'base' && 'mr-1',
               size === 'sm' && 'mr-1.5',
             ])}
           >
             <LeftIcon
-              className={clsxm(
+              className={cn(
                 [
                   size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
@@ -132,13 +132,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {children}
         {RightIcon && (
           <div
-            className={clsxm([
+            className={cn([
               size === 'base' && 'ml-1',
               size === 'sm' && 'ml-1.5',
             ])}
           >
             <RightIcon
-              className={clsxm(
+              className={cn(
                 [
                   size === 'base' && 'text-md md:text-md',
                   size === 'sm' && 'md:text-md text-sm',
