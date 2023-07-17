@@ -1,15 +1,15 @@
 'use client';
 
 import clsx from 'clsx';
-import React from 'react';
 import {
-  HiArrowRight,
-  HiOutlineCreditCard,
-  HiOutlineDesktopComputer,
-  HiOutlineDeviceMobile,
-  HiOutlineShieldCheck,
-  HiPlus,
-} from 'react-icons/hi';
+  ArrowRight,
+  CreditCard,
+  Laptop,
+  Phone,
+  Plus,
+  Shield,
+} from 'lucide-react';
+import React from 'react';
 
 import Button from '@/components/buttons/Button';
 import IconButton from '@/components/buttons/IconButton';
@@ -249,39 +249,31 @@ export default function ComponentPage() {
               <div className='flex flex-wrap gap-2'>
                 <Button
                   variant='primary'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Icon
                 </Button>
                 <Button
                   variant='outline'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isDarkBg={mode === 'dark'}
                 >
                   Icon
                 </Button>
                 <Button
                   variant='ghost'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isDarkBg={mode === 'dark'}
                 >
                   Icon
                 </Button>
-                <Button
-                  variant='dark'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
-                >
+                <Button variant='dark' leftIcon={Plus} rightIcon={ArrowRight}>
                   Icon
                 </Button>
-                <Button
-                  variant='light'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
-                >
+                <Button variant='light' leftIcon={Plus} rightIcon={ArrowRight}>
                   Icon
                 </Button>
               </div>
@@ -306,16 +298,16 @@ export default function ComponentPage() {
                 <Button
                   size='sm'
                   variant='primary'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Icon
                 </Button>
                 <Button
                   size='sm'
                   variant='outline'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isDarkBg={mode === 'dark'}
                 >
                   Icon
@@ -323,8 +315,8 @@ export default function ComponentPage() {
                 <Button
                   size='sm'
                   variant='ghost'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isDarkBg={mode === 'dark'}
                 >
                   Icon
@@ -333,16 +325,16 @@ export default function ComponentPage() {
                 <Button
                   size='sm'
                   variant='dark'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Icon
                 </Button>
                 <Button
                   size='sm'
                   variant='light'
-                  leftIcon={HiPlus}
-                  rightIcon={HiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Icon
                 </Button>
@@ -399,11 +391,11 @@ export default function ComponentPage() {
                 Button with only icon inside
               </p>
               <div className='space-x-2'>
-                <IconButton icon={HiPlus} />
-                <IconButton variant='outline' icon={HiOutlineDesktopComputer} />
-                <IconButton variant='ghost' icon={HiOutlineDeviceMobile} />
-                <IconButton variant='dark' icon={HiOutlineShieldCheck} />
-                <IconButton variant='light' icon={HiOutlineCreditCard} />
+                <IconButton icon={Plus} />
+                <IconButton variant='outline' icon={Laptop} />
+                <IconButton variant='ghost' icon={Phone} />
+                <IconButton variant='dark' icon={Shield} />
+                <IconButton variant='light' icon={CreditCard} />
               </div>
             </li>
             <li className='space-y-2'>
