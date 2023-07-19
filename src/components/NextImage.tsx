@@ -1,12 +1,14 @@
 import Image, { ImageProps } from 'next/image';
 import * as React from 'react';
 
-import clsxm from '@/lib/clsxm';
+import { cn } from '@/lib/utils';
 
 type NextImageProps = {
   useSkeleton?: boolean;
-  imgClassName?: string;
-  blurClassName?: string;
+  classNames?: {
+    image?: string;
+    blur?: string;
+  };
   alt: string;
 } & (
   | { width: string | number; height: string | number }
@@ -26,8 +28,7 @@ export default function NextImage({
   height,
   alt,
   className,
-  imgClassName,
-  blurClassName,
+  classNames,
   ...rest
 }: NextImageProps) {
   const [status, setStatus] = React.useState(
@@ -41,9 +42,9 @@ export default function NextImage({
       className={className}
     >
       <Image
-        className={clsxm(
-          imgClassName,
-          status === 'loading' && clsxm('animate-pulse', blurClassName)
+        className={cn(
+          classNames?.image,
+          status === 'loading' && cn('animate-pulse', classNames?.blur)
         )}
         src={src}
         width={width}
