@@ -42,7 +42,7 @@ You can also check all of the **details and demos** on my blog post:
 
 ## Getting Started
 
-### 1. Clone this template using one of the three ways:
+### 1. Clone this template using one of the three ways
 
 1. Use this repository as template
 
@@ -114,6 +114,7 @@ TEMPLATE
 
 - [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
 - [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
+- [NextJs + Materia UI + Typescript](https://github.com/AlexStack/nextjs-materia-mui-typescript-hook-form-scaffold-boilerplate-starter)
 
 Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
 
@@ -123,7 +124,7 @@ This starter is now equipped with an [expansion pack](https://github.com/theodor
 
 You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
 
-https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
+<https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4>
 
 Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
 
