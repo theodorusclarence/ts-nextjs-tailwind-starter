@@ -3,7 +3,7 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   // Tailwind CSS Autocomplete, add more if used in projects
   "tailwindCSS.classAttributes": [
