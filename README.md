@@ -15,7 +15,7 @@
 
 This repository is 🔋 battery packed with:
 
-- ⚡️ Next.js 13 with App Router
+- ⚡️ Next.js 14 with App Router
 - ⚛️ React 18
 - ✨ TypeScript
 - 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
