@@ -1,4 +1,4 @@
-# Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
+a # Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
 
 <div align="center">
   <h2>🔋 ts-nextjs-tailwind-starter</h2>
