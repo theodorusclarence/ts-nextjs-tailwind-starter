@@ -40,10 +40,6 @@ You can also check all of the **details and demos** on my blog post:
 
 - [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
 
-## Sponsors ❤️
-
-<a href="https://www.questlabs.ai/?utm_source=ts-nextjs-tailwind-starter" target="_blank"><img src="https://uploads-ssl.webflow.com/64f77a831b9d50c279dc926c/657c990e7259207969cf70bb_AI%20powered%20user%20engagement%20components.png" width="400" /></a>
-
 ## Getting Started
 
 ### 1. Clone this template using one of the three ways
