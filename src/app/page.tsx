@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import * as React from 'react';
+import '@/lib/env';
 
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
