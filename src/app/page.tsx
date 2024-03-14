@@ -5,6 +5,7 @@ import Link from 'next/link';
 import * as React from 'react';
 import '@/lib/env';
 
+import Card from '@/components/Card';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import ArrowLink from '@/components/links/ArrowLink';
@@ -35,6 +36,7 @@ const HomePage = () => {
       <BombSection />
       <ExplodeSection />
       <BioSection />
+      <BeTheChangeSection />
       <Footer />
     </div>
   );
@@ -104,10 +106,40 @@ const ExplodeSection = () => {
 const BioSection = () => {
   return (
     <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
-      <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
-      <div>
+      <section className='hero-section relative container mx-auto px-8 py-16 pt-16 lg:self-center '>
+        <div className='mt-16 lg:mt-8'>
+          <div className='grid gap-6 lg:grid-cols-[2fr_3fr_3fr]'>
+            <Card>
+              <div className='flex min-h-[300px] flex-col'>
+                <img className='h-3/4 w-3/4' src='/images/biodiversity/biologistsfe1.png' alt='' />
+                <div className="bg-orange2 text-white text-xs">
+                  <p>Biologists fear repeat of 2002 salmon kill in Klamath River.</p>  
+                </div>
+              </div>
+            </Card>
 
-      </div>
+            <Card>
+              <div className='flex min-h-[300px] flex-col'>
+                <img className='h-3/4 w-3/4' src='/images/biodiversity/biodiv_poux.png' alt='' />
+                <div className="bg-orange2 text-white text-xs">
+                  <p>L'élevage intensif de saumon a des répercussions significatives sur la biodiversité marine, 
+                    avec des échappées, une pollution de l'eau par les rejets, des parasites affectant les populations
+                     sauvages, et une pression accrue sur les stocks de poissons sauvages due à la demande de farine 
+                     de poisson, contribuant ainsi à la surexploitation et à la diminution de la biodiversité..</p>  
+                </div>
+              </div>
+            </Card>
+
+            <Card>
+              <div className='flex min-h-[300px] flex-col'>
+                <img className='w-3/4' src='/images/biodiversity/biodiv_fonde.png' alt='' />
+                <div className="bg-orange2 text-white text-xs">
+                  <p>Sea floor beneath a salmon farm, Scotland.</p>  
+                </div>
+              </div>
+            </Card>
+          </div> 
+        </div>
       </section>
       <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
         <h2 className='mb-12 text-4xl font-bold lg:text-6xl'>
@@ -133,3 +165,21 @@ const BioSection = () => {
     </div>
   );
 };
+
+const BeTheChangeSection = () => {
+  return (
+    <main>
+      <Head>
+        <title>Hi</title>
+      </Head>
+      <section className='bg-fuschia1'>
+        <div className='relative flex w-full items-end bg-contain bg-fuschia1 bg-center bg-no-repeat lg:min-h-screen'
+        style={{
+          backgroundImage: "url('/svg/page_8.svg')",
+        }}
+        >
+        </div>
+      </section>
+    </main>
+  );
+}
