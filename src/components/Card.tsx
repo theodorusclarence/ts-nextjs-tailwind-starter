@@ -9,7 +9,7 @@ const Card = ({
   children: ReactNode;
 }) => {
   return (
-    <div className={clsx('rounded-xl bg-white p-6', className)}>{children}</div>
+    <div className={clsx('rounded-xl bg-transparent p-3', className)}>{children}</div>
   );
 };
 
