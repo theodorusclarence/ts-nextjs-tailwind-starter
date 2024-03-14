@@ -9,6 +9,12 @@ export default {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        violet1: '#8390f2',
+        rose1: '#fda4af',
+        orange1: '#fdba74',
+        orange2: '#ff3636',
+        purple1: '#3b0764',
+        fuschia1: "#001E3A",
         primary: {
           // Customize it on globals.css :root
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
