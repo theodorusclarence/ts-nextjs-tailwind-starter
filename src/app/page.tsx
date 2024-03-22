@@ -36,6 +36,9 @@ const HomePage = () => {
       <BombSection />
       <ExplodeSection />
       <BioSection />
+      <HealthSection />
+      <ClimateSection />
+      <SocialSection />
       <BeTheChangeSection />
       <Footer />
     </div>
@@ -108,37 +111,9 @@ const BioSection = () => {
     <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
       <section className='hero-section relative container mx-auto px-8 py-16 pt-16 lg:self-center '>
         <div className='mt-16 lg:mt-8'>
-          <div className='grid gap-6 lg:grid-cols-[2fr_3fr_3fr]'>
-            <Card>
-              <div className='flex min-h-[300px] flex-col'>
-                <img className='h-3/4 w-3/4' src='/images/biodiversity/biologistsfe1.png' alt='' />
-                <div className="bg-orange2 text-white text-xs">
-                  <p>Biologists fear repeat of 2002 salmon kill in Klamath River.</p>  
-                </div>
-              </div>
-            </Card>
-
-            <Card>
-              <div className='flex min-h-[300px] flex-col'>
-                <img className='h-3/4 w-3/4' src='/images/biodiversity/biodiv_poux.png' alt='' />
-                <div className="bg-orange2 text-white text-xs">
-                  <p>L'élevage intensif de saumon a des répercussions significatives sur la biodiversité marine, 
-                    avec des échappées, une pollution de l'eau par les rejets, des parasites affectant les populations
-                     sauvages, et une pression accrue sur les stocks de poissons sauvages due à la demande de farine 
-                     de poisson, contribuant ainsi à la surexploitation et à la diminution de la biodiversité..</p>  
-                </div>
-              </div>
-            </Card>
-
-            <Card>
-              <div className='flex min-h-[300px] flex-col'>
-                <img className='w-3/4' src='/images/biodiversity/biodiv_fonde.png' alt='' />
-                <div className="bg-orange2 text-white text-xs">
-                  <p>Sea floor beneath a salmon farm, Scotland.</p>  
-                </div>
-              </div>
-            </Card>
-          </div> 
+          <Card>
+            <img className='h-3/4 w-3/4' src='/svg/mosaics/biodiversity_mosaic.svg' alt='' />
+          </Card>
         </div>
       </section>
       <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
@@ -159,6 +134,108 @@ const BioSection = () => {
             >
             <b>EN SAVOIR PLUS</b>
           </Link>
+        </div>
+      </section>
+      
+    </div>
+  );
+};
+
+const HealthSection = () => {
+  return (
+    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
+      <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
+        <h2 className='mb-12 text-4xl font-bold lg:text-6xl'>
+          SANTE
+        </h2>
+
+        <div className='flex flex-col gap-8 lg:gap-2 w-3/5'>
+          <p>
+          La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, 
+          nécessitant l'utilisation d'agents pathogènes ou de médicaments, ce qui peut avoir des conséquences 
+          sur la santé humaine. 
+          De plus, la présence croissante de microplastiques dans le saumon soulève des préoccupations 
+          pour la santé humaine.
+          </p>
+          <Link
+            className='block border-2 bg-fuschia1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
+            href="/"
+            >
+            <b>EN SAVOIR PLUS</b>
+          </Link>
+        </div>
+      </section>
+      <section className='hero-section relative container mx-auto px-8 py-16 pt-16 lg:self-center '>
+        <div className='mt-16 lg:mt-8'>
+          <Card>
+            <img className='h-3/4 w-3/4' src='/svg/mosaics/health_mosaic.svg' alt='' />
+          </Card>
+        </div>
+      </section>
+      
+    </div>
+  );
+};
+
+const ClimateSection = () => {
+  return (
+    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
+      <section className='hero-section relative container mx-auto px-8 py-16 pt-16 lg:self-center '>
+        <div className='mt-16 lg:mt-8'>
+          <Card>
+            <img className='h-3/4 w-3/4' src='/svg/mosaics/climate_mosaic.svg' alt='' />
+          </Card>
+        </div>
+      </section>
+      <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
+        <h2 className='mb-12 text-4xl font-bold lg:text-6xl'>
+          CLIMAT
+        </h2>
+
+        <div className='flex flex-col gap-8 lg:gap-2 w-3/5'>
+          <p>
+          L'élevage intensif de saumon génère des émissions de gaz à effet de serre, principalement du dioxyde de carbone (CO2)
+           provenant de l'énergie utilisée dans les installations, de la production d'aliments et du transport, ainsi que du 
+           méthane résultant de la décomposition des déchets organiques.
+          </p>
+          <Link
+            className='block border-2 bg-fuschia1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
+            href="/"
+            >
+            <b>EN SAVOIR PLUS</b>
+          </Link>
+        </div>
+      </section>   
+    </div>
+  );
+};
+
+const SocialSection = () => {
+  return (
+    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
+      <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
+        <h2 className='mb-12 text-4xl font-bold lg:text-6xl'>
+          SOCIAL
+        </h2>
+
+        <div className='flex flex-col gap-8 lg:gap-2 w-3/5'>
+          <p>
+          Chaque année 500 000+ tonnes de poissons sauvages sont prélevés aux larges des côtes de l'Afrique de l'Ouest 
+          pour nourrir des poissons d'élevage mettant en péril la sécurité alimentaire des communautés locales.
+          </p>
+          <Link
+            className='block border-2 bg-fuschia1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
+            href="/"
+            >
+            <b>EN SAVOIR PLUS</b>
+          </Link>
+        </div>
+      </section>
+      <section className='hero-section relative container mx-auto px-8 py-16 pt-16 lg:self-center '>
+        <div className='mt-16 lg:mt-8'>
+          <Card>
+            <img className='h-3/4 w-3/4' src='/svg/mosaics/social_mosaic.svg' alt='' />
+          </Card>
         </div>
       </section>
       
