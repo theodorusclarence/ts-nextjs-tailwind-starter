@@ -35,7 +35,7 @@ const Footer = () => (
       </div>
       <div className='seastemik-section flex flex-col items-center'>
         <div>
-          <img className='mb-4' src='/images/d4g-logo.png' alt='' />
+          <img className='mb-4 h-16' src='/images/seastemik-logo.png' alt='' />
         </div>
         <p className='mb-4 text-2xl'>
           <b>Seastemik</b>
