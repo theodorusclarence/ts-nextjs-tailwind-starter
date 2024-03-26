@@ -30,18 +30,20 @@ import TextButton from '@/components/buttons/TextButton';
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <IntroSection />
-      <BombSection />
-      <ExplodeSection />
-      <BioSection />
-      <HealthSection />
-      <ClimateSection />
-      <SocialSection />
-      <BeTheChangeSection />
+      <main>
+        <IntroSection />
+        <BombSection />
+        <ExplodeSection />
+        <BioSection />
+        <HealthSection />
+        <ClimateSection />
+        <SocialSection />
+        <BeTheChangeSection />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
