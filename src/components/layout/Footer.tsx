@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className='bg-orange2'>
     <div className='p-5'>
       
-      <h1 className='space-y-5 text-left text-7xl lg:px-20 bg-orange2 text-fuschia1'>
+      <h1 className='space-y-5 text-left text-7xl lg:px-20 bg-orange2 text-darkblue1'>
             <b>PARLONS - EN !</b>
       </h1>
     </div>

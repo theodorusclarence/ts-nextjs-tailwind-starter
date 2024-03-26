@@ -15,7 +15,7 @@ export default {
         orange1: '#ff3636',
         orange2: '#FF7E36',
         purple1: '#3b0764',
-        fuschia1: "#001E3A",
+        darkblue1: "#001E3A",
         primary: {
           // Customize it on globals.css :root
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',

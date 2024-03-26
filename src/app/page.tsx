@@ -14,7 +14,6 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
-import Logo from '~/svg/Logo.svg';
 import TextButton from '@/components/buttons/TextButton';
 
 /**
@@ -35,10 +34,10 @@ const HomePage = () => {
       <Navbar />
       <main>
         <IntroSection />
-
-        {/*
         <BombSection />
         <ExplodeSection />
+
+        {/*
         <BioSection />
         <HealthSection />
         <ClimateSection />
@@ -54,62 +53,53 @@ const HomePage = () => {
 
 export default HomePage;
 
-const IntroSection = () => (
-  <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 bg-rose2'>
-    <Image
-      src='/svg/fish.svg'
-      alt=''
-      width={490}
-      height={203}
-      className='row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]'
-    />
-    <h1 className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl items-left font-bold text-orange2 uppercase'>
-      Le saumon que vous mangez, vendez, produisez...
-    </h1>
-  </section>
-);
+const IntroSection = () => {
+  return (
+    <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange2 bg-rose2'>
+      <Image
+        src='/svg/fish.svg'
+        alt=''
+        width={490}
+        height={203}
+        className='row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]'
+      />
+      <h1 className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight items-left font-bold uppercase'>
+        Le saumon que vous mangez, vendez, produisez...
+      </h1>
+    </section>
+  )
+};
 
 const BombSection = () => {
   return (
-    <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
-      <section className='bg-fuschia1'>
-        <div className='relative flex w-full items-end ps-10 pb-20 bg-cover bg-center bg-no-repeat lg:min-h-screen'
-        style={{
-          backgroundImage: "url('/svg/page_2.svg')",
-        }}
-        >
-          <div className="text-7xl items-left font-bold text-orange2 w-1/2 md:w-full lg:w-1/2">
-            TUE AFFAME ET CONTAMINE.
-          </div>
-        </div>
-      </section>
-    </main>
+    <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange1 bg-darkblue1'>
+      <Image
+        src='/svg/bomb.svg'
+        alt=''
+        width={207}
+        height={467}
+        className='row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[207px] max-h-full object-contain'
+      />
+      <p className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight lg:max-w-[45rem] items-left font-bold uppercase'>
+        Tue, affame et contamine.
+      </p>
+    </section>
   );
 }
 
 const ExplodeSection = () => {
   return (
-    <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
-      <section className='bg-fuschia1'>
-        <div className='relative flex w-full items-end bg-contain bg-fuschia1 bg-center bg-no-repeat lg:min-h-screen'
-        style={{
-          backgroundImage: "url('/svg/page_3.svg')",
-        }}
-        >
-        </div>
-      </section>
-    </main>
+    <section className='text-orange1 bg-darkblue1 min-h-screen'>
+      <ul className='list-none'>
+        <li>Toto</li>
+      </ul>
+    </section>
   );
-}
+};
+
 const BioSection = () => {
   return (
-    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
+    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-darkblue1 text-orange2'>
       <section className='hero-section relative container mx-auto px-8 py-16 pt-16 lg:self-center '>
         <div className='mt-16 lg:mt-8'>
           <Card>
@@ -130,7 +120,7 @@ const BioSection = () => {
             contribuant ainsi à la surexploitation et à la diminution de la biodiversité.
           </p>
           <Link
-            className='block border-2 bg-fuschia1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
+            className='block border-2 bg-darkblue1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
             href="/"
             >
             <b>EN SAVOIR PLUS</b>
@@ -144,7 +134,7 @@ const BioSection = () => {
 
 const HealthSection = () => {
   return (
-    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
+    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-darkblue1 text-orange2'>
       <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
         <h2 className='mb-12 text-4xl font-bold lg:text-6xl'>
           SANTE
@@ -159,7 +149,7 @@ const HealthSection = () => {
           pour la santé humaine.
           </p>
           <Link
-            className='block border-2 bg-fuschia1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
+            className='block border-2 bg-darkblue1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
             href="/"
             >
             <b>EN SAVOIR PLUS</b>
@@ -180,7 +170,7 @@ const HealthSection = () => {
 
 const ClimateSection = () => {
   return (
-    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
+    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-darkblue1 text-orange2'>
       <section className='hero-section relative container mx-auto px-8 py-16 pt-16 lg:self-center '>
         <div className='mt-16 lg:mt-8'>
           <Card>
@@ -200,7 +190,7 @@ const ClimateSection = () => {
            méthane résultant de la décomposition des déchets organiques.
           </p>
           <Link
-            className='block border-2 bg-fuschia1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
+            className='block border-2 bg-darkblue1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
             href="/"
             >
             <b>EN SAVOIR PLUS</b>
@@ -213,7 +203,7 @@ const ClimateSection = () => {
 
 const SocialSection = () => {
   return (
-    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-fuschia1 text-orange2'>
+    <div className='grid grid-cols-1 lg:min-h-screen lg:grid-cols-2 bg-darkblue1 text-orange2'>
       <section className='hero-section lg:px-30 container mx-auto px-8 py-16 pt-24 lg:self-center lg:px-20 lg:pt-16'>
         <h2 className='mb-12 text-4xl font-bold lg:text-6xl'>
           SOCIAL
@@ -225,7 +215,7 @@ const SocialSection = () => {
           pour nourrir des poissons d'élevage mettant en péril la sécurité alimentaire des communautés locales.
           </p>
           <Link
-            className='block border-2 bg-fuschia1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
+            className='block border-2 bg-darkblue1 px-4 py-2 text-center text-xl text-orange2 border-orange2 transition duration-50 hover:text-orange1 lg:inline-block'
             href="/"
             >
             <b>EN SAVOIR PLUS</b>
@@ -250,8 +240,8 @@ const BeTheChangeSection = () => {
       <Head>
         <title>Hi</title>
       </Head>
-      <section className='bg-fuschia1'>
-        <div className='relative flex w-full items-end bg-contain bg-fuschia1 bg-center bg-no-repeat lg:min-h-screen'
+      <section className='bg-darkblue1'>
+        <div className='relative flex w-full items-end bg-contain bg-darkblue1 bg-center bg-no-repeat lg:min-h-screen'
         style={{
           backgroundImage: "url('/svg/page_8.svg')",
         }}
