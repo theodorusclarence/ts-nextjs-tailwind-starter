@@ -3,6 +3,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import * as React from 'react';
+import Image from 'next/image';
 import '@/lib/env';
 
 import Card from '@/components/Card';
@@ -34,6 +35,8 @@ const HomePage = () => {
       <Navbar />
       <main>
         <IntroSection />
+
+        {/*
         <BombSection />
         <ExplodeSection />
         <BioSection />
@@ -41,34 +44,30 @@ const HomePage = () => {
         <ClimateSection />
         <SocialSection />
         <BeTheChangeSection />
+        */}
       </main>
-      <Footer />
+      
+      {/*<Footer />*/}
     </>
   );
 }
 
 export default HomePage;
 
-const IntroSection = () => {
-  return (
-    <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
-      <section className='bg-rose1'>
-        <div className='relative flex w-full items-end ps-10 pb-20 bg-cover bg-center bg-no-repeat lg:min-h-screen'
-        style={{
-          backgroundImage: "url('/svg/page_1.svg')",
-        }}
-        >
-          <div className="text-7xl items-left font-bold text-orange2 w-3/4 md:w-full lg:w-3/4">
-            LE SAUMON QUE VOUS MANGEZ, VENDEZ, PRODUISEZ ...
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
+const IntroSection = () => (
+  <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 bg-rose2'>
+    <Image
+      src='/svg/fish.svg'
+      alt=''
+      width={490}
+      height={203}
+      className='row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]'
+    />
+    <h1 className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl items-left font-bold text-orange2 uppercase'>
+      Le saumon que vous mangez, vendez, produisez...
+    </h1>
+  </section>
+);
 
 const BombSection = () => {
   return (

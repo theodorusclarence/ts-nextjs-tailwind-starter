@@ -11,6 +11,7 @@ export default {
       colors: {
         violet1: '#8390f2',
         rose1: '#fda4af',
+        rose2: '#ffd5d5',
         orange1: '#ff3636',
         orange2: '#FF7E36',
         purple1: '#3b0764',
