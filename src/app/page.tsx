@@ -46,7 +46,7 @@ const HomePage = () => {
         */}
       </main>
       
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 }
