@@ -1,0 +1,40 @@
+.grid {
+  --gap: 2em;
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 2px;
+  --line-color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow: hidden;
+  gap: var(--gap);
+}
+
+
+.grid__item {
+  position: relative;
+}
+
+.grid__item::before, 
+.grid__item::after {
+   content: '';
+   position: absolute;
+   background-color: var(--line-color);
+   z-index: 1;
+}
+
+.grid__item::after {
+  inline-size: 100vw;
+  block-size: var(--line-thickness);
+  inset-inline-start: 0;
+  inset-block-start: calc(var(--line-offset) * -1);
+}
+
+.grid__item::before {
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--line-offset) * -1);
+}

@@ -16,6 +16,8 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 
 import TextButton from '@/components/buttons/TextButton';
 
+import './page.css';
+
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -42,8 +44,9 @@ const HomePage = () => {
         <HealthSection />
         <ClimateSection />
         <SocialSection />
-        <BeTheChangeSection />
         */}
+        <BeTheChangeSection />
+
       </main>
       
       <Footer />
@@ -236,18 +239,24 @@ const SocialSection = () => {
 
 const BeTheChangeSection = () => {
   return (
-    <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
-      <section className='bg-darkblue1'>
-        <div className='relative flex w-full items-end bg-contain bg-darkblue1 bg-center bg-no-repeat lg:min-h-screen'
-        style={{
-          backgroundImage: "url('/svg/page_8.svg')",
-        }}
-        >
+      <div className='bg-darkblue1 text-white flex flex-col items-center '>
+        <h1>BE THE CHANGE.</h1>
+
+        <div className='grid w-9/12 mb-10'>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
+          <div className="grid__item"></div>
         </div>
-      </section>
-    </main>
+
+      </div>
   );
 }
