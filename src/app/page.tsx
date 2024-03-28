@@ -5,6 +5,7 @@ import Link from 'next/link';
 import * as React from 'react';
 import Image from 'next/image';
 import '@/lib/env';
+import clsx from 'clsx';
 
 import Card from '@/components/Card';
 import Footer from '@/components/layout/Footer';
@@ -16,7 +17,7 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 
 import TextButton from '@/components/buttons/TextButton';
 
-import './page.css';
+import '../styles/page.css';
 
 /**
  * SVGR Support
@@ -46,6 +47,7 @@ const HomePage = () => {
         <SocialSection />
         */}
         <BeTheChangeSection />
+        <ActionSection />
 
       </main>
       
@@ -258,5 +260,41 @@ const BeTheChangeSection = () => {
         </div>
 
       </div>
+  );
+}
+
+const ActionSection = () => {
+  return (
+    <div className='bg-orange2 px-6 md:px-12 py-6 md:py-7'>
+      <div>
+      <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1'>
+              <p className='text-4xl md:text-6xl uppercase font-bold mb-10'>Parlons - en !</p>
+        </h2>
+      </div>
+      <div className='flex justify-center px-6 md:px-12 py-3 md:py-7'>
+        <img src='/svg/fish_eye.svg' alt='' />
+      </div>
+      <div className='flex flex-col px-8 md:px-20 pb-20 pt-16'>
+        <div className='flex flex-col gap-5'>
+          <p className='text-center md:text-left '>
+            Description de Seastemik et Data4Good
+          </p>
+          <div className={clsx('footer__cta-wrapper', 'flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 md:gap-32' )}>
+            <Link
+              className='block rounded bg-black px-4 py-2 text-center text-white transition duration-100 hover:bg-gray-700 md:col-start-1 uppercase font-bold'
+              href="/"
+            >
+              <p>Action 1</p>
+            </Link>
+            <Link
+              className='block rounded bg-black px-4 py-2 text-center text-white transition duration-100 hover:bg-gray-700 md:col-start-2 uppercase font-bold'
+              href="/"
+            >
+              <p>Action 2</p>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
