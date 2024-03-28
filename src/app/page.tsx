@@ -16,6 +16,7 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 import TextButton from '@/components/buttons/TextButton';
+import wave from '../../public/svg/wave.svg'
 
 import '../styles/page.css';
 
@@ -239,27 +240,47 @@ const SocialSection = () => {
   );
 };
 
+
+
 const BeTheChangeSection = () => {
   return (
-      <div className='bg-darkblue1 text-white flex flex-col items-center '>
-        <h1>BE THE CHANGE.</h1>
-
-        <div className='grid w-9/12 mb-10'>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-          <div className="grid__item"></div>
-        </div>
-
+    <div className="bg-darkblue1 text-white flex flex-col items-center">
+      <div className="bg-[url('/public/svg/wave.svg)]">coucou ici la vague
+        <h2 lang='en' className='uppercase font-bold'>Be the change.</h2>
       </div>
+
+      <table className=''>
+        <thead className=''>
+          {/* pas sure de l'utilité de la balise thead étant donné que le tableau est à double entrée */}
+          <td></td>
+          <td className='top_cell'>Valeur 1</td>
+          <td className='top_cell'>Valeur 2</td>
+          <td className='top_cell'>Valeur 3</td>
+          <td className='top_cell'>Valeur 4</td>
+        </thead>
+        <tbody>
+          <td className='left_cell'>Alternative 1</td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+        </tbody>
+        <tbody>
+          <td className='left_cell'>Alternative 2</td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+        </tbody>
+        <tbody>
+          <td className='left_cell'>Alternative 3</td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+          <td className='table_cell'></td>
+        </tbody>
+      </table>
+    </div>
   );
 }
 
