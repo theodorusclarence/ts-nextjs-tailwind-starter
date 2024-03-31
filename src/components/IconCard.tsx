@@ -18,10 +18,10 @@ const IconCard = ({
   content: string;
 }) => {
   return (
-    <div className={clsx('space-y-6 max-w-96', className)}>
+    <div className={clsx('space-y-6 max-w-72', className)}>
       <Image src={icon.src} width={icon.width} height={icon.height} alt='' />
-      <p className='text-4xl lg:text-5xl uppercase font-bold'>{title}</p>
-      <p className='lg:text-xl font-secondary'>{content}</p>
+      <p className='text-4xl 2xl:text-5xl uppercase font-bold'>{title}</p>
+      <p className='2xl:text-xl font-secondary'>{content}</p>
     </div>
   );
 };

@@ -10,7 +10,6 @@ import Card from '@/components/Card';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import IconCard from '@/components/IconCard';
-import wave from '../../public/svg/wave.svg'
 
 import '../styles/page.css';
 
@@ -89,32 +88,38 @@ const BombSection = () => {
 
 const ExplodeSection = () => {
   return (
-    <section className='text-orange1 bg-darkblue1 min-h-screen'>
-      <ul className='list-none'>
-        <li>
+    <section className='flex items-center justify-center py-12 text-orange1 bg-darkblue1 min-h-screen'>
+    <ul className='
+        relative grid grid-cols-1 sm:grid-cols-2 gap-8 list-none bg-no-repeat bg-center 
+        sm:bg-[url(/svg/explose-small.svg)] sm:bg-[length:438px_320px]
+        lg:bg-[url(/svg/explose.svg)]
+        lg:w-[969px] lg:h-[829px] lg:bg-[length:727px_662px]
+        2xl:w-[1515px] 2xl:h-[1190px] 2xl:bg-[length:969px_829px]
+      '>
+        <li className='lg:absolute lg:-left-[9px] lg:top-[280px] 2xl:left-[112px] 2xl:top-[430px]'>
             <IconCard 
             icon={{src: '/svg/people.svg', width: 130, height:114}}
             title='Social'
             content='Détourne la nourriture des communautés d’Afrique de l’Ouest'
           />
         </li>
-        <li>
+        <li className='lg:absolute lg:left-[92px] lg:-bottom-[40px] 2xl:left-[242px] 2xl:bottom-0'>
             <IconCard 
-            icon={{src: '/svg/climat.svg', width: 100, height:114}}
+            icon={{src: '/svg/climat.svg', width: 94, height:153}}
             title='Climat'
             content='Génère une empreinte carbone équivalente à celle de 10 000 habitants'
           />
         </li>
-        <li>
+        <li className='lg:absolute lg:-right-[95px] lg:top-[116px] 2xl:-right-5 2xl:top-[236px]'>
             <IconCard 
-            icon={{src: '/svg/hearth.svg', width: 90, height:114}}
+            icon={{src: '/svg/hearth.svg', width: 108, height:99}}
             title='Santé'
             content='Inquiète la santé humaine à cause des maladies nécessitant des médicaments et le microplastiques'
           />
         </li>
-        <li>
+        <li className='lg:absolute lg:right-[20px] lg:bottom-[90px] 2xl:right-[90px] 2xl:bottom-[220px]'>
             <IconCard 
-            icon={{src: '/svg/butterfly.svg', width: 130, height:114}}
+            icon={{src: '/svg/butterfly.svg', width: 164, height:116}}
             title='Biodiversité'
             content='Dégrade la biodiversité marine incluant échappées, pollution, parasites et surexploitation des stocks sauvages'
           />
