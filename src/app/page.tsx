@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import Link from 'next/link';
 import * as React from 'react';
 import Image from 'next/image';
@@ -10,12 +9,7 @@ import clsx from 'clsx';
 import Card from '@/components/Card';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
-
-import TextButton from '@/components/buttons/TextButton';
+import IconCard from '@/components/IconCard';
 import wave from '../../public/svg/wave.svg'
 
 import '../styles/page.css';
@@ -97,7 +91,34 @@ const ExplodeSection = () => {
   return (
     <section className='text-orange1 bg-darkblue1 min-h-screen'>
       <ul className='list-none'>
-        <li>Toto</li>
+        <li>
+            <IconCard 
+            icon={{src: '/svg/people.svg', width: 130, height:114}}
+            title='Social'
+            content='Détourne la nourriture des communautés d’Afrique de l’Ouest'
+          />
+        </li>
+        <li>
+            <IconCard 
+            icon={{src: '/svg/climat.svg', width: 100, height:114}}
+            title='Climat'
+            content='Génère une empreinte carbone équivalente à celle de 10 000 habitants'
+          />
+        </li>
+        <li>
+            <IconCard 
+            icon={{src: '/svg/hearth.svg', width: 90, height:114}}
+            title='Santé'
+            content='Inquiète la santé humaine à cause des maladies nécessitant des médicaments et le microplastiques'
+          />
+        </li>
+        <li>
+            <IconCard 
+            icon={{src: '/svg/butterfly.svg', width: 130, height:114}}
+            title='Biodiversité'
+            content='Dégrade la biodiversité marine incluant échappées, pollution, parasites et surexploitation des stocks sauvages'
+          />
+        </li>
       </ul>
     </section>
   );

@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        secondary: ['Georgia', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         violet1: '#8390f2',
