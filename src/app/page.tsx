@@ -270,49 +270,18 @@ const SocialSection = () => {
 
 const BeTheChangeSection = () => {
   return (
-    <div className="bg-darkblue1 text-white flex flex-col items-center">
-      <div className="bg-[url('/public/svg/wave.svg)]">coucou ici la vague
-        <h2 lang='en' className='uppercase font-bold'>Be the change.</h2>
-      </div>
-
-      <table className=''>
-        <thead className=''>
-          {/* pas sure de l'utilité de la balise thead étant donné que le tableau est à double entrée */}
-          <td></td>
-          <td className='top_cell'>Valeur 1</td>
-          <td className='top_cell'>Valeur 2</td>
-          <td className='top_cell'>Valeur 3</td>
-          <td className='top_cell'>Valeur 4</td>
-        </thead>
-        <tbody>
-          <td className='left_cell'>Alternative 1</td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-        </tbody>
-        <tbody>
-          <td className='left_cell'>Alternative 2</td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-        </tbody>
-        <tbody>
-          <td className='left_cell'>Alternative 3</td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-          <td className='table_cell'></td>
-        </tbody>
-      </table>
-    </div>
+    <ul className= 'relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-32'>
+      <li className='relative pb-6 md:pb-16 z-10 mix-blend-difference'><h2 lang='en' className='uppercase text-2xl md:text-6xl lg:text-7xl'>Be the change .</h2></li>
+      <li className='relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-end md:right-52 '><p className='max-w-60 md:max-w-96 md:text-xl lg:text-2xl font-secondary'>Il existe des alternatives au saumon dans notre manière de manger, de vendre et de produire.</p></li>
+      <li className='relative justify-self-center z-10'><img src='/images/saumon.jpg' alt='' className='max-w-64 md:max-w-2xl'></img></li>
+      <li className='absolute z-0'><img src='/svg/wave.svg' alt=''></img></li>
+    </ul>
   );
-}
+  }
 
 const ActionSection = () => {
   return (
-    <div className='bg-orange2 px-6 md:px-12 py-6 md:py-7'>
+    <div className='relative z-10 bg-orange2 px-6 md:px-12 py-6 md:py-7'>
       <div>
       <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1'>
               <p className='text-4xl md:text-6xl uppercase font-bold mb-10'>Parlons - en !</p>
