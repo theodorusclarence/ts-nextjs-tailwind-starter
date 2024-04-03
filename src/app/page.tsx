@@ -328,13 +328,13 @@ const ActionSection = () => {
           </p>
           <div className={clsx('footer__cta-wrapper', 'flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 md:gap-32' )}>
             <Link
-              className='block rounded bg-black px-4 py-2 text-center text-white transition duration-100 hover:bg-gray-700 md:col-start-1 uppercase font-bold'
+              className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-1 uppercase font-bold'
               href="/"
             >
               <p>Action 1</p>
             </Link>
             <Link
-              className='block rounded bg-black px-4 py-2 text-center text-white transition duration-100 hover:bg-gray-700 md:col-start-2 uppercase font-bold'
+              className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-2 uppercase font-bold'
               href="/"
             >
               <p>Action 2</p>
