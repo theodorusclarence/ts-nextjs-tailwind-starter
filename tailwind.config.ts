@@ -35,6 +35,7 @@ export default {
         dark: '#222222',
       },
       screens: {
+        'xs': '500px',
         '2xl': '1515px',
       },
       keyframes: {
