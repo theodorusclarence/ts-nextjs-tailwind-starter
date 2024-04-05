@@ -7,14 +7,17 @@ export default {
     extend: {
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        secondary: ['Georgia', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         violet1: '#8390f2',
         rose1: '#fda4af',
+        rose2: '#ffd5d5',
         orange1: '#ff3636',
         orange2: '#FF7E36',
         purple1: '#3b0764',
-        fuschia1: "#001E3A",
+        darkblue1: "#001E3A",
+        lightblue1: "#A7F6F6",
         primary: {
           // Customize it on globals.css :root
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
@@ -30,6 +33,10 @@ export default {
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
         dark: '#222222',
+      },
+      screens: {
+        'xs': '500px',
+        '2xl': '1515px',
       },
       keyframes: {
         flicker: {

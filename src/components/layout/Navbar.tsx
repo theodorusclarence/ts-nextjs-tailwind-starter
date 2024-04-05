@@ -18,13 +18,6 @@ type Link =
       links: Link[];
     };
 
-const LINKS: Link[] = [
-  {
-    label: 'Download Data',
-    type: 'button',
-    href: 'https://github.com/dataforgoodfr/CarbonBombs/raw/main/data_cleaned/carbon_bombs_all_datasets.xlsx',
-  },
-];
 
 const getLinkComponent = (
   link: Link,
@@ -121,27 +114,23 @@ const getLinkComponent = (
 const Navbar = () => {
 
   return (
-    <nav className='absolute left-0 top-0 z-[9999] flex w-full flex-wrap items-center justify-between bg-transparent p-3 px-6'>
-      <div className='mr-6 flex flex-shrink-0 items-center justify-center text-black'>
-
-        <Link
-          href="/" // TODO make dynamic through function
-          className='flex items-center text-xl font-semibold tracking-tight'
-        >
-        
+    <header className='absolute left-0 top-0 z-[9999] w-full'>
+      <nav className='flex flex-wrap items-center justify-between px-6 lg:px-9 py-3 lg:py-6' aria-label='Navigation principale'>
+        <Link href="/">
           <Image
-          src='/svg/pinkbombs-logo.svg'
-          alt='PinkBombs Logo'
-          width={250}
-          height={100}
-        />
+            src='/svg/pinkbombs-logo.svg'
+            alt='PinkBombs'
+            width={190}
+            height={38}
+            className='w-24 md:w-36 lg:w-48'
+          />
         </Link>
-      </div>
-      <div className='pr-12 lg:flex lg:items-center lg:gap-4'>
-        <a className="block hover:text-gray-500 lg:inline-block" href="/"><b>L'HISTOIRE</b></a>
-        <a className="block hover:text-gray-500 lg:inline-block" href="/"><b>LES CHIFFRES</b></a>
-      </div>
-    </nav>
+        <div className='flex gap-4 lg:gap-16'>
+          <Link className="uppercase font-bold hover:underline focus:underline lg:text-[1.4rem]" href="/">L'histoire</Link>
+          <Link className="uppercase font-bold hover:underline focus:underline lg:text-[1.4rem]" href="/">Les chiffres</Link>
+        </div>
+      </nav>
+    </header>
   );
 };
 

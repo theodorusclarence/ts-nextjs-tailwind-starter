@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   // !STARTERCONF this is the default favicon, you can generate your own from https://realfavicongenerator.net/
   // ! copy to /favicon folder
   icons: {
-    icon: '/images/d4g-logo.png',
-    shortcut: '/images/d4g-logo.png',
-    apple: '/images/d4g-logo.png',
+    icon: '/favicon/favicon.ico',
+    shortcut: '/favicon/favicon.ico',
+    apple: '/favicon/apple-touch-icon.png',
   },
   manifest: `/favicon/site.webmanifest`,
   openGraph: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.title,
     images: [`${siteConfig.url}/images/og.jpg`],
     type: 'website',
-    locale: 'en_US',
+    locale: 'fr',
   },
   twitter: {
     card: 'summary_large_image',
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang='fr'>
       <body>{children}</body>
     </html>
   );
