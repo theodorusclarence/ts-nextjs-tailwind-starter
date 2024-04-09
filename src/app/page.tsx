@@ -6,9 +6,6 @@ import Image from 'next/image';
 import '@/lib/env';
 import clsx from 'clsx';
 
-import Card from '@/components/Card';
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
 import IconCard from '@/components/IconCard';
 import Edito from '@/components/Edito';
 
@@ -29,8 +26,6 @@ import '../styles/page.css';
 const HomePage = () => {
   return (
     <>
-      <Navbar />
-      <main>
         <IntroSection />
         <BombSection />
         <ExplodeSection />
@@ -40,10 +35,6 @@ const HomePage = () => {
         <SocialSection />
         <BeTheChangeSection />
         <ActionSection />
-
-      </main>
-      
-      <Footer />
     </>
   );
 }
@@ -60,7 +51,7 @@ const IntroSection = () => {
         height={203}
         className='row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]'
       />
-      <h1 className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight items-left font-bold uppercase'>
+      <h1 className={clsx('h1', 'row-start-3 self-end items-left')}>
         Le saumon que vous mangez, vendez, produisez...
         <span className='sr-only'>tue, affame et contamine.</span>
       </h1>
@@ -89,35 +80,35 @@ const ExplodeSection = () => {
   return (
     <section className='flex items-center justify-center p-6 lg:p-12 text-orange1 bg-darkblue1 min-h-screen'>
     <ul className='
-        relative grid grid-cols-1 xs:grid-cols-2 gap-8 list-none bg-no-repeat bg-center 
+        relative grid grid-cols-1 xs:grid-cols-2 gap-8 list-none bg-no-repeat bg-center
         xs:bg-[url(/svg/explose-small.svg)] xs:bg-[length:438px_320px]
         lg:bg-[url(/svg/explose.svg)]
         lg:w-[969px] lg:h-[829px] lg:bg-[length:727px_662px]
         2xl:w-[1515px] 2xl:h-[1190px] 2xl:bg-[length:969px_829px]
       '>
         <li className='lg:absolute lg:-left-[9px] lg:top-[280px] 2xl:left-[112px] 2xl:top-[430px]'>
-            <IconCard 
+            <IconCard
             icon={{src: '/svg/people.svg', width: 130, height:114}}
             title='Social'
             content='Détourne la nourriture des communautés d’Afrique de l’Ouest'
           />
         </li>
         <li className='lg:absolute lg:left-[92px] lg:-bottom-[40px] 2xl:left-[242px] 2xl:bottom-0'>
-            <IconCard 
+            <IconCard
             icon={{src: '/svg/climat.svg', width: 94, height:153}}
             title='Climat'
             content='Génère une empreinte carbone équivalente à celle de 10 000 habitants'
           />
         </li>
         <li className='lg:absolute lg:-right-[95px] lg:top-[116px] 2xl:-right-5 2xl:top-[236px]'>
-            <IconCard 
+            <IconCard
             icon={{src: '/svg/hearth.svg', width: 108, height:99}}
             title='Santé'
             content='Inquiète la santé humaine à cause des maladies nécessitant des médicaments et le microplastiques'
           />
         </li>
         <li className='lg:absolute lg:right-[20px] lg:bottom-[90px] 2xl:right-[90px] 2xl:bottom-[220px]'>
-            <IconCard 
+            <IconCard
             icon={{src: '/svg/butterfly.svg', width: 164, height:116}}
             title='Biodiversité'
             content='Dégrade la biodiversité marine incluant échappées, pollution, parasites et surexploitation des stocks sauvages'

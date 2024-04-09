@@ -11,7 +11,7 @@ COPY yarn.lock /usr/src/app
 # Production use node instead of root
 # USER node
 
-RUN yarn install --production --frozen-lockfile 
+RUN yarn install --production --frozen-lockfile
 
 COPY . /usr/src/app
 
