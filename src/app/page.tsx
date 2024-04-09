@@ -191,8 +191,8 @@ const ActionSection = () => {
   return (
     <div className='relative z-10 bg-orange2 px-6 md:px-12 py-6 md:py-7'>
       <div>
-      <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1'>
-              <p className='text-4xl md:text-6xl uppercase font-bold mb-10'>Parlons - en !</p>
+      <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1 text-4xl md:text-6xl uppercase font-bold mb-10'>
+              Parlons - en !
         </h2>
       </div>
       <div className='flex justify-center px-6 md:px-12 py-3 md:py-7'>
@@ -208,13 +208,13 @@ const ActionSection = () => {
               className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-1 uppercase font-bold'
               href="/"
             >
-              <p>Action 1</p>
+              Action 1
             </Link>
             <Link
               className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-2 uppercase font-bold'
               href="/"
             >
-              <p>Action 2</p>
+              Action 2
             </Link>
           </div>
         </div>
