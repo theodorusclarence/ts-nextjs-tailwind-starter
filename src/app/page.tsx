@@ -1,15 +1,15 @@
 'use client';
 
+import clsx from 'clsx';
+import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
-import Image from 'next/image';
 import '@/lib/env';
-import clsx from 'clsx';
-
-import IconCard from '@/components/IconCard';
-import Edito from '@/components/Edito';
 
 import '../styles/page.css';
+
+import Edito from '@/components/Edito';
+import IconCard from '@/components/IconCard';
 
 /**
  * SVGR Support
@@ -169,10 +169,12 @@ const SocialSection = () => {
 
 const BeTheChangeSection = () => {
   return (
-    <div className= 'relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-32'>
-      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference'><h2 lang='en' className='uppercase text-2xl md:text-6xl lg:text-7xl'>Be the change .</h2></div>
-      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-end md:right-52 '><p className='max-w-60 md:max-w-96 md:text-xl lg:text-2xl font-secondary'>Il existe des alternatives au saumon dans notre manière de manger, de vendre et de produire.</p></div>
-      <div className='relative justify-self-center z-10'><img src='/images/saumon.jpg' alt='' className='max-w-64 md:max-w-2xl'></img></div>
+    <div className= 'relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-8 lg:pt-28 2xl:pt-[10rem]'>
+      <div className='relative pt-10 pl-10 pb-12 md:py-18 md:pl-36 md:pt-2 2xl:pt-10 z-10 mix-blend-difference'>
+        <h2 lang='en' className='uppercase text-2xl md:text-6xl lg:text-7xl'>Be the change .</h2>
+        </div>
+      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-center md:right-52 '><p className='max-w-64 md:max-w-[30rem] md:text-xl lg:text-2xl font-secondary'>Il existe des alternatives au saumon dans notre manière de manger, de vendre et de produire.</p></div>
+      <div className='relative justify-self-center z-10'><img src='/images/saumon.jpg' alt='' className='max-w-64 md:max-w-[68rem]'></img></div>
       <div className='absolute z-0'><img src='/svg/wave.svg' alt=''></img></div>
     </div>
   );
