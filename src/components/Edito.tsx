@@ -27,7 +27,7 @@ const IconCard = ({
           className='inline-flex px-5 py-4 mt-3 border-solid border border-orange1 uppercase text-orange1 hover:bg-orange1 hover:text-white transition duration-100'
           href='/'
         >
-          En savoir plus
+          Learn more
         </Link>
       </div>
       <Image loading='lazy' src={image} width={776} height={901} alt='' className={(imagePosition === "right" ? 'md:-order-1' : '')} />

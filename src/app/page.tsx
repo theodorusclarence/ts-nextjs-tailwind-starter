@@ -52,8 +52,8 @@ const IntroSection = () => {
         className='row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]'
       />
       <h1 className={clsx('h1', 'row-start-3 self-end items-left')}>
-        Le saumon que vous mangez, vendez, produisez...
-        <span className='sr-only'>tue, affame et contamine.</span>
+        The salmon you eat, sell, produce...
+        <span className='sr-only'>kills wild salmon, starves people, contaminates food.</span>
       </h1>
     </section>
   )
@@ -70,7 +70,7 @@ const BombSection = () => {
         className='row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[207px] max-h-full object-contain'
       />
       <p className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight lg:max-w-[45rem] items-left font-bold uppercase' aria-hidden='true'>
-        Tue, affame et contamine.
+      kills wild salmon, starves people, contaminates food.
       </p>
     </section>
   );
@@ -90,28 +90,28 @@ const ExplodeSection = () => {
             <IconCard
             icon={{src: '/svg/people.svg', width: 130, height:114}}
             title='Social'
-            content='Détourne la nourriture des communautés d’Afrique de l’Ouest'
+            content='Diverts food from West African communities'
           />
         </li>
         <li className='lg:absolute lg:left-[92px] lg:-bottom-[40px] 2xl:left-[242px] 2xl:bottom-0'>
             <IconCard
             icon={{src: '/svg/climat.svg', width: 94, height:153}}
-            title='Climat'
-            content='Génère une empreinte carbone équivalente à celle de 10 000 habitants'
+            title='Climate'
+            content='Generates a carbon footprint equivalent to that of 10,000 inhabitants'
           />
         </li>
         <li className='lg:absolute lg:-right-[95px] lg:top-[116px] 2xl:-right-5 2xl:top-[236px]'>
             <IconCard
             icon={{src: '/svg/hearth.svg', width: 108, height:99}}
-            title='Santé'
-            content='Inquiète la santé humaine à cause des maladies nécessitant des médicaments et le microplastiques'
+            title='Health'
+            content='Raises concerns about human health due to diseases requiring medication and microplastics'
           />
         </li>
         <li className='lg:absolute lg:right-[20px] lg:bottom-[90px] 2xl:right-[90px] 2xl:bottom-[220px]'>
             <IconCard
             icon={{src: '/svg/butterfly.svg', width: 164, height:116}}
-            title='Biodiversité'
-            content='Dégrade la biodiversité marine incluant échappées, pollution, parasites et surexploitation des stocks sauvages'
+            title='Biodiversity'
+            content='Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks'
           />
         </li>
       </ul>
@@ -122,8 +122,8 @@ const ExplodeSection = () => {
 const BioSection = () => {
   return (
     <Edito
-      title='Biodiversité'
-      content='L’élevage intensif de saumon a des répercussions significatives sur la biodiversité marine, avec des échappées, une pollution de l’eau par les rejets, des parasites affectant les populations sauvages, et une pression accrue sur les stocks de poissons sauvages due à la demande de farine de poisson, contribuant ainsi à la surexploitation et à la diminution de la biodiversité.'
+      title='Biodiversity'
+      content='Intensive salmon farming has significant impacts on marine biodiversity, including escapees, water pollution from waste discharge, parasites affecting wild populations, and increased pressure on wild fish stocks due to the demand for fishmeal, thereby contributing to overexploitation and declining biodiversity.'
       link='/'
       image='/images/mosaic-biodiversite.jpg'
       imagePosition='right'
@@ -134,8 +134,8 @@ const BioSection = () => {
 const HealthSection = () => {
   return (
     <Edito
-      title='Santé'
-      content='La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, nécessitant l’utilisation d’agents pathogènes ou de médicaments, ce qui peut avoir des conséquences sur la santé humaine. De plus, la présence croissante de microplastiques dans le saumon soulève des préoccupations pour la santé humaine.'
+      title='Health'
+      content='The high concentration of fish in aquaculture farms promotes the spread of diseases, necessitating the use of pathogens or medications, which can have consequences for human health. Additionally, the increasing presence of microplastics in salmon raises concerns for human health.'
       link='/'
       image='/images/mosaic-sante.jpg'
     />
@@ -145,8 +145,8 @@ const HealthSection = () => {
 const ClimateSection = () => {
   return (
     <Edito
-      title='Climat'
-      content='L’élevage intensif de saumon génère des émissions de gaz à effet de serre, principalement du dioxyde de carbone (CO2) provenant de l’énergie utilisée dans les installations, de la production d’aliments et du transport, ainsi que du méthane résultant de la décomposition des déchets organiques.'
+      title='Climate'
+      content='Intensive salmon farming generates greenhouse gas emissions, primarily carbon dioxide (CO2) from energy used in facilities, feed production, and transportation, as well as methane resulting from the decomposition of organic waste.'
       link='/'
       image='/images/mosaic-climat.jpg'
       imagePosition='right'
@@ -158,7 +158,7 @@ const SocialSection = () => {
   return (
     <Edito
       title='Social'
-      content='Chaque année 500 000+ tonnes de poissons sauvages sont prélevés aux larges des côtes de l’Afrique de l’Ouest pour nourrir des poissons d’élevage mettant en péril la sécurité alimentaire des communautés locales.'
+      content='Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities.'
       link='/'
       image='/images/mosaic-social.jpg'
     />
@@ -170,8 +170,8 @@ const SocialSection = () => {
 const BeTheChangeSection = () => {
   return (
     <div className= 'relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-32'>
-      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference'><h2 lang='en' className='uppercase text-2xl md:text-6xl lg:text-7xl'>Be the change .</h2></div>
-      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-end md:right-52 '><p className='max-w-60 md:max-w-96 md:text-xl lg:text-2xl font-secondary'>Il existe des alternatives au saumon dans notre manière de manger, de vendre et de produire.</p></div>
+      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference'><h2 className='uppercase text-2xl md:text-6xl lg:text-7xl'>Be the change .</h2></div>
+      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-end md:right-52 '><p className='max-w-60 md:max-w-96 md:text-xl lg:text-2xl font-secondary'>There are alternatives to salmon in our way of eating, selling, and producing.</p></div>
       <div className='relative justify-self-center z-10'><img src='/images/saumon.jpg' alt='' className='max-w-64 md:max-w-2xl'></img></div>
       <div className='absolute z-0'><img src='/svg/wave.svg' alt=''></img></div>
     </div>
@@ -182,8 +182,8 @@ const ActionSection = () => {
   return (
     <div className='relative z-10 bg-orange2 px-6 md:px-12 py-6 md:py-7'>
       <div>
-      <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1 text-4xl md:text-6xl uppercase font-bold mb-10'>
-              Parlons - en !
+        <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1 text-4xl md:text-6xl uppercase font-bold mb-10'>
+          Let's talk!
         </h2>
       </div>
       <div className='flex justify-center px-6 md:px-12 py-3 md:py-7'>

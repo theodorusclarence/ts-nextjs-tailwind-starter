@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.title,
     images: [`${siteConfig.url}/images/og.jpg`],
     type: 'website',
-    locale: 'fr',
+    locale: 'en',
   },
   twitter: {
     card: 'summary_large_image',
@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='fr'>
+    <html lang='en'>
       <body>
         <Navbar />
         <main>
