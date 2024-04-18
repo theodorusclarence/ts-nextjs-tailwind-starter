@@ -1,4 +1,4 @@
-FROM arm64v8/node:20-alpine3.19
+FROM node:20-alpine3.19
 
 ENV PORT 3000
 ENV YARN_CACHE_FOLDER=/dev/shm/yarn_cache

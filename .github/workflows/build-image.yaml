@@ -1,0 +1,56 @@
+name: Build & Deploy to Scaleway
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Login to Scaleway Container Registry
+      uses: docker/login-action@v3
+      with:
+        username: nologin
+        password: ${{ secrets.SCALEWAY_SECRET_KEY }}
+        registry: ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}
+    - name: Build the Docker image
+      run: docker build . -t ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest
+      # run: docker build -t ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest --shm-size=2G .
+    - name: Push the Docker Image
+      run: docker push ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy on Scaleway Containers
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get Scaleway CLI image
+        id: pull
+        run: docker pull scaleway/cli:2.28
+      - name: Get Container ID
+        id: list
+        uses: jawher/action-scw@v2.24.0
+        env:
+          SCW_ACCESS_KEY: ${{ secrets.SCALEWAY_ACCESS_KEY }}
+          SCW_SECRET_KEY: ${{ secrets.SCALEWAY_SECRET_KEY }}
+          SCW_ORGANIZATION_ID: ${{ secrets.SCALEWAY_ORGANIZATION_ID }}
+          SCW_ZONE: fr-par-1
+        with:
+          args: container container list name=${{ secrets.CONTAINER_NAME }} --output json
+      - name: Get CONTAINER_ID env var
+        run: echo "CONTAINER_ID=$(cat "${GITHUB_WORKSPACE}/scw.output" | jq -r '.[0].id')"  >> $GITHUB_ENV
+      - name: Update Container
+        id: update
+        run: |
+          docker run -i --rm \
+          -e SCW_ACCESS_KEY=${{ secrets.SCALEWAY_ACCESS_KEY }} \
+          -e SCW_SECRET_KEY=${{ secrets.SCALEWAY_SECRET_KEY }} \
+          -e SCW_DEFAULT_ORGANIZATION_ID=${{ secrets.SCALEWAY_ORGANIZATION_ID }} \
+          scaleway/cli:latest container container update ${{ env.CONTAINER_ID }} \
+          registry-image=${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest
