@@ -13,7 +13,10 @@ COPY yarn.lock /usr/src/app
 
 RUN yarn install --production --frozen-lockfile
 
-COPY . /usr/src/app
+COPY ./public ./public
+COPY ./src ./src
+COPY ./tsconfig.json ./tsconfig.json
+# COPY . /usr/src/app/
 
 RUN yarn build
 
