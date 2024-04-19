@@ -18,6 +18,7 @@ export default {
         purple1: '#3b0764',
         darkblue1: "#001E3A",
         lightblue1: "#A7F6F6",
+        lightblue2: "#D6E0EA",
         primary: {
           // Customize it on globals.css :root
           50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
