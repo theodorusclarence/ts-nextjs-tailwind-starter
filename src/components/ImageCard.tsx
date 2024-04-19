@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import React, { ReactNode } from 'react'
+import clsx from "clsx";
+import React, { ReactNode } from "react";
 
 const ImageCard = ({
   className,
@@ -9,7 +9,9 @@ const ImageCard = ({
   children: ReactNode;
 }) => {
   return (
-    <div className={clsx('rounded-xl bg-transparent', className)}>{children}</div>
+    <div className={clsx("rounded-xl bg-transparent", className)}>
+      {children}
+    </div>
   );
 };
-export default ImageCard
+export default ImageCard;

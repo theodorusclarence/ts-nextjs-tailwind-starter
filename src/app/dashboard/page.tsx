@@ -42,7 +42,6 @@ const IntroSection = () => {
   );
 };
 
-
 const GlobalTrendSection = () => {
   return (
     <section className="grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7"></section>
@@ -99,7 +98,7 @@ const TopCountriesSection = () => {
     fetchGraphData();
   }, [mapData]);
 
-  if(!mapData) {
+  if (!mapData) {
     return <></>;
   }
 
@@ -166,7 +165,13 @@ const LandPlantsSection = () => {
           water conditions and a fire at a plant in Denmark.
         </p>
       </div>
-      <iframe title='Land plants map' src='/iframes/map-land-plan.html' width={1000} height={900} className='w-full'></iframe>
+      <iframe
+        title="Land plants map"
+        src="/iframes/map-land-plan.html"
+        width={1000}
+        height={900}
+        className="w-full"
+      ></iframe>
     </section>
   );
 };

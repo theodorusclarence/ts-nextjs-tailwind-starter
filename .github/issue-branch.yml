@@ -1,7 +1,7 @@
 # https://github.com/robvanderleek/create-issue-branch#option-2-configure-github-action
 
 # ex: i4-lower_camel_upper
-branchName: 'i${issue.number}-${issue.title,}'
+branchName: "i${issue.number}-${issue.title,}"
 branches:
   - label: epic
     skip: true

@@ -37,8 +37,8 @@ const DashboardSection = ({
     fetchGraphData();
   }, [chartData, id]);
 
-  if(!chartData || !id) {
-    return <></>
+  if (!chartData || !id) {
+    return <></>;
   }
 
   return (

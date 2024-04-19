@@ -1,4 +1,4 @@
-name: 'Issue Autolink'
+name: "Issue Autolink"
 on:
   pull_request:
     types: [opened]
@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: tkt-actions/add-issue-links@v1.8.1
         with:
-          repo-token: '${{ secrets.GITHUB_TOKEN }}'
-          branch-prefix: 'i'
-          resolve: 'true'
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          branch-prefix: "i"
+          resolve: "true"

@@ -1,12 +1,12 @@
-import { Metadata } from 'next';
-import * as React from 'react';
+import { Metadata } from "next";
+import * as React from "react";
 
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 
-import { siteConfig } from '@/constant/config';
+import { siteConfig } from "@/constant/config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   robots: { index: true, follow: true },
   icons: {
-    icon: '/favicon/favicon.ico',
-    shortcut: '/favicon/favicon.ico',
-    apple: '/favicon/apple-touch-icon.png',
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
   },
   manifest: `/favicon/site.webmanifest`,
   openGraph: {
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.title,
     images: [`${siteConfig.url}/images/og.jpg`],
-    type: 'website',
-    locale: 'en',
+    type: "website",
+    locale: "en",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.jpg`],
@@ -45,12 +45,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         <Navbar />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

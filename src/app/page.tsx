@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -6,7 +6,7 @@ import Link from 'next/link';
 import * as React from 'react';
 import '@/lib/env';
 
-import '../styles/page.css';
+import "../styles/page.css";
 
 import Edito from '@/components/Edito';
 import IconCard from '@/components/IconCard';
@@ -26,60 +26,61 @@ import IconCard from '@/components/IconCard';
 const HomePage = () => {
   return (
     <>
-        <IntroSection />
-        <BombSection />
-        <ExplodeSection />
-        <BioSection />
-        <HealthSection />
-        <ClimateSection />
-        <SocialSection />
-        <BeTheChangeSection />
-        <ActionSection />
+      <IntroSection />
+      <BombSection />
+      <ExplodeSection />
+      <BioSection />
+      <HealthSection />
+      <ClimateSection />
+      <SocialSection />
+      <BeTheChangeSection />
+      <ActionSection />
     </>
   );
-}
+};
 
 export default HomePage;
 
 const IntroSection = () => {
   return (
-    <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange2 bg-rose2'>
+    <section className="grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange2 bg-rose2">
       <Image
-        src='/svg/fish.svg'
-        alt=''
+        src="/svg/fish.svg"
+        alt=""
         width={490}
         height={203}
-        className='row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]'
+        className="row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]"
       />
       <h1 className={clsx('h1', 'row-start-3 self-end items-left')}>
         The salmon you eat, sell, produce...
         <span className='sr-only'>kills wild salmon, starves people, contaminates food.</span>
       </h1>
     </section>
-  )
+  );
 };
 
 const BombSection = () => {
   return (
-    <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange1 bg-darkblue1'>
+    <section className="grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange1 bg-darkblue1">
       <Image
-        src='/svg/bomb.svg'
-        alt=''
+        src="/svg/bomb.svg"
+        alt=""
         width={207}
         height={467}
-        className='row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[207px] max-h-full object-contain'
+        className="row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[207px] max-h-full object-contain"
       />
       <p className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight lg:max-w-[45rem] items-left font-bold uppercase' aria-hidden='true'>
       kills wild salmon, starves people, contaminates food.
       </p>
     </section>
   );
-}
+};
 
 const ExplodeSection = () => {
   return (
-    <section className='flex items-center justify-center p-6 lg:p-12 text-orange1 bg-darkblue1 min-h-screen'>
-    <ul className='
+    <section className="flex items-center justify-center p-6 lg:p-12 text-orange1 bg-darkblue1 min-h-screen">
+      <ul
+        className="
         relative grid grid-cols-1 xs:grid-cols-2 gap-8 list-none bg-no-repeat bg-center
         xs:bg-[url(/svg/explose-small.svg)] xs:bg-[length:438px_320px]
         lg:bg-[url(/svg/explose.svg)]
@@ -165,8 +166,6 @@ const SocialSection = () => {
   );
 };
 
-
-
 const BeTheChangeSection = () => {
   return (
     <div className= 'relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-8 lg:pt-28 2xl:pt-[10rem]'>
@@ -178,33 +177,38 @@ const BeTheChangeSection = () => {
       <div className='absolute z-0'><img src='/svg/wave.svg' alt=''></img></div>
     </div>
   );
-  }
+};
 
 const ActionSection = () => {
   return (
-    <div className='relative z-10 bg-orange2 px-6 md:px-12 py-6 md:py-7'>
+    <div className="relative z-10 bg-orange2 px-6 md:px-12 py-6 md:py-7">
       <div>
         <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1 text-4xl md:text-6xl uppercase font-bold mb-10'>
           Let's talk!
         </h2>
       </div>
-      <div className='flex justify-center px-6 md:px-12 py-3 md:py-7'>
-        <img src='/svg/fish_eye.svg' alt='' />
+      <div className="flex justify-center px-6 md:px-12 py-3 md:py-7">
+        <img src="/svg/fish_eye.svg" alt="" />
       </div>
-      <div className='flex flex-col px-8 md:px-20 pb-20 pt-16'>
-        <div className='flex flex-col gap-5'>
-          <p className='text-center md:text-left '>
+      <div className="flex flex-col px-8 md:px-20 pb-20 pt-16">
+        <div className="flex flex-col gap-5">
+          <p className="text-center md:text-left ">
             Description de Seastemik et Data4Good
           </p>
-          <div className={clsx('footer__cta-wrapper', 'flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 md:gap-32' )}>
+          <div
+            className={clsx(
+              "footer__cta-wrapper",
+              "flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 md:gap-32",
+            )}
+          >
             <Link
-              className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-1 uppercase font-bold'
+              className="block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-1 uppercase font-bold"
               href="/"
             >
               Action 1
             </Link>
             <Link
-              className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-2 uppercase font-bold'
+              className="block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-2 uppercase font-bold"
               href="/"
             >
               Action 2
@@ -214,4 +218,4 @@ const ActionSection = () => {
       </div>
     </div>
   );
-}
+};

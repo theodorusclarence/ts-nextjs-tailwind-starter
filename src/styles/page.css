@@ -1,11 +1,11 @@
 .table_cell {
-  @apply border-2 
+  @apply border-2;
 }
 
 .top_cell {
-  @apply border-2 border-t-0
+  @apply border-2 border-t-0;
 }
 
 .left_cell {
-  @apply border-2 border-l-0
+  @apply border-2 border-l-0;
 }
