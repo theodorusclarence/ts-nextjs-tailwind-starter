@@ -42,6 +42,7 @@ const IntroSection = () => {
   );
 };
 
+
 const GlobalTrendSection = () => {
   return (
     <section className="grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7"></section>

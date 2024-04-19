@@ -1,23 +1,21 @@
-import Plotly from "plotly.js-dist-min";
-import React, { useEffect } from "react";
+import { Data } from "plotly.js-dist-min";
+import React from "react";
+import Plot from 'react-plotly.js';
 
 const DashboardChart = ({
   data,
   layout,
   id,
 }: {
-  data: object[] | undefined;
-  layout: object | undefined;
-  id: string | undefined;
+  data: Data[];
+  layout: object;
+  id: string;
 }) => {
-  useEffect(() => {
-    Plotly.newPlot(id, data, layout, {
-      responsive: true,
-      displayModeBar: false,
-    });
-  }, [data, layout, id]);
-
-  return <div id={id} />;
+  return <Plot
+    divId={id}
+    data={data}
+    layout={layout}
+  />
 };
 
 export default DashboardChart;

@@ -1,11 +1,10 @@
 import clsx from "clsx";
-import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import { ReactNode } from "react";
+import dynamic from "next/dynamic";
 
 import { fetchData } from "@/pages/api/chart";
-
-const DashboardChart = dynamic(() => import("./DashboardChart"), {
+const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
   ssr: false,
 });
 
@@ -21,7 +20,7 @@ const DashboardSection = ({
   textOrder?: string | undefined;
   title?: string | undefined;
   content?: string | undefined;
-  id?: string;
+  id: string;
   cta?: ReactNode | undefined;
 }) => {
   const [chartData, setChartData] = useState({
@@ -37,6 +36,10 @@ const DashboardSection = ({
     };
     fetchGraphData();
   }, [chartData, id]);
+
+  if(!chartData || !id) {
+    return <></>
+  }
 
   return (
     <div className="h-full items-center">
