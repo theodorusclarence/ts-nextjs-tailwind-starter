@@ -4,23 +4,23 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Login to Scaleway Container Registry
-      uses: docker/login-action@v3
-      with:
-        username: nologin
-        password: ${{ secrets.SCALEWAY_SECRET_KEY }}
-        registry: ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}
-    - name: Build the Docker image
-      run: docker build -t ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest --shm-size=2G .
-    - name: Push the Docker Image
-      run: docker push ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest
+      - uses: actions/checkout@v4
+      - name: Login to Scaleway Container Registry
+        uses: docker/login-action@v3
+        with:
+          username: nologin
+          password: ${{ secrets.SCALEWAY_SECRET_KEY }}
+          registry: ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}
+      - name: Build the Docker image
+        run: docker build -t ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest --shm-size=2G .
+      - name: Push the Docker Image
+        run: docker push ${{ secrets.SCALEWAY_CONTAINER_REGISTRY_ENDPOINT }}/webapp:latest
 
   deploy:
     runs-on: ubuntu-latest

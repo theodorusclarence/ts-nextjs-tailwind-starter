@@ -49,7 +49,7 @@ const Footer = () => (
     </div>
 
     <p className="w-full text-center">
-      All rights reserved <br/> © {currentYear} Seastemik et Data for Good
+      All rights reserved <br /> © {currentYear} Seastemik et Data for Good
     </p>
   </footer>
 );

@@ -1,15 +1,15 @@
 "use client";
 
-import clsx from 'clsx';
-import Image from 'next/image';
-import Link from 'next/link';
-import * as React from 'react';
-import '@/lib/env';
+import clsx from "clsx";
+import Image from "next/image";
+import Link from "next/link";
+import * as React from "react";
+import "@/lib/env";
 
 import "../styles/page.css";
 
-import Edito from '@/components/Edito';
-import IconCard from '@/components/IconCard';
+import Edito from "@/components/Edito";
+import IconCard from "@/components/IconCard";
 
 /**
  * SVGR Support
@@ -51,9 +51,11 @@ const IntroSection = () => {
         height={203}
         className="row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]"
       />
-      <h1 className={clsx('h1', 'row-start-3 self-end items-left')}>
+      <h1 className={clsx("h1", "row-start-3 self-end items-left")}>
         The salmon you eat, sell, produce...
-        <span className='sr-only'>kills wild salmon, starves people, contaminates food.</span>
+        <span className="sr-only">
+          kills wild salmon, starves people, contaminates food.
+        </span>
       </h1>
     </section>
   );
@@ -69,8 +71,11 @@ const BombSection = () => {
         height={467}
         className="row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[207px] max-h-full object-contain"
       />
-      <p className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight lg:max-w-[45rem] items-left font-bold uppercase' aria-hidden='true'>
-      kills wild salmon, starves people, contaminates food.
+      <p
+        className="row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight lg:max-w-[45rem] items-left font-bold uppercase"
+        aria-hidden="true"
+      >
+        kills wild salmon, starves people, contaminates food.
       </p>
     </section>
   );
@@ -86,33 +91,34 @@ const ExplodeSection = () => {
         lg:bg-[url(/svg/explose.svg)]
         lg:w-[969px] lg:h-[829px] lg:bg-[length:727px_662px]
         2xl:w-[1515px] 2xl:h-[1190px] 2xl:bg-[length:969px_829px]
-      '>
-        <li className='lg:absolute lg:-left-[9px] lg:top-[280px] 2xl:left-[112px] 2xl:top-[430px]'>
-            <IconCard
-            icon={{src: '/svg/people.svg', width: 130, height:114}}
-            title='Social'
-            content='Diverts food from West African communities'
+      "
+      >
+        <li className="lg:absolute lg:-left-[9px] lg:top-[280px] 2xl:left-[112px] 2xl:top-[430px]">
+          <IconCard
+            icon={{ src: "/svg/people.svg", width: 130, height: 114 }}
+            title="Social"
+            content="Diverts food from West African communities"
           />
         </li>
-        <li className='lg:absolute lg:left-[92px] lg:-bottom-[40px] 2xl:left-[242px] 2xl:bottom-0'>
-            <IconCard
-            icon={{src: '/svg/climat.svg', width: 94, height:153}}
-            title='Climate'
-            content='Generates a carbon footprint equivalent to that of 10,000 inhabitants'
+        <li className="lg:absolute lg:left-[92px] lg:-bottom-[40px] 2xl:left-[242px] 2xl:bottom-0">
+          <IconCard
+            icon={{ src: "/svg/climat.svg", width: 94, height: 153 }}
+            title="Climate"
+            content="Generates a carbon footprint equivalent to that of 10,000 inhabitants"
           />
         </li>
-        <li className='lg:absolute lg:-right-[95px] lg:top-[116px] 2xl:-right-5 2xl:top-[236px]'>
-            <IconCard
-            icon={{src: '/svg/hearth.svg', width: 108, height:99}}
-            title='Health'
-            content='Raises concerns about human health due to diseases requiring medication and microplastics'
+        <li className="lg:absolute lg:-right-[95px] lg:top-[116px] 2xl:-right-5 2xl:top-[236px]">
+          <IconCard
+            icon={{ src: "/svg/hearth.svg", width: 108, height: 99 }}
+            title="Health"
+            content="Raises concerns about human health due to diseases requiring medication and microplastics"
           />
         </li>
-        <li className='lg:absolute lg:right-[20px] lg:bottom-[90px] 2xl:right-[90px] 2xl:bottom-[220px]'>
-            <IconCard
-            icon={{src: '/svg/butterfly.svg', width: 164, height:116}}
-            title='Biodiversity'
-            content='Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks'
+        <li className="lg:absolute lg:right-[20px] lg:bottom-[90px] 2xl:right-[90px] 2xl:bottom-[220px]">
+          <IconCard
+            icon={{ src: "/svg/butterfly.svg", width: 164, height: 116 }}
+            title="Biodiversity"
+            content="Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks"
           />
         </li>
       </ul>
@@ -123,11 +129,11 @@ const ExplodeSection = () => {
 const BioSection = () => {
   return (
     <Edito
-      title='Biodiversity'
-      content='Intensive salmon farming has significant impacts on marine biodiversity, including escapees, water pollution from waste discharge, parasites affecting wild populations, and increased pressure on wild fish stocks due to the demand for fishmeal, thereby contributing to overexploitation and declining biodiversity.'
-      link='/'
-      image='/images/mosaic-biodiversite.jpg'
-      imagePosition='right'
+      title="Biodiversity"
+      content="Intensive salmon farming has significant impacts on marine biodiversity, including escapees, water pollution from waste discharge, parasites affecting wild populations, and increased pressure on wild fish stocks due to the demand for fishmeal, thereby contributing to overexploitation and declining biodiversity."
+      link="/"
+      image="/images/mosaic-biodiversite.jpg"
+      imagePosition="right"
     />
   );
 };
@@ -135,10 +141,10 @@ const BioSection = () => {
 const HealthSection = () => {
   return (
     <Edito
-      title='Health'
-      content='The high concentration of fish in aquaculture farms promotes the spread of diseases, necessitating the use of pathogens or medications, which can have consequences for human health. Additionally, the increasing presence of microplastics in salmon raises concerns for human health.'
-      link='/'
-      image='/images/mosaic-sante.jpg'
+      title="Health"
+      content="The high concentration of fish in aquaculture farms promotes the spread of diseases, necessitating the use of pathogens or medications, which can have consequences for human health. Additionally, the increasing presence of microplastics in salmon raises concerns for human health."
+      link="/"
+      image="/images/mosaic-sante.jpg"
     />
   );
 };
@@ -146,11 +152,11 @@ const HealthSection = () => {
 const ClimateSection = () => {
   return (
     <Edito
-      title='Climate'
-      content='Intensive salmon farming generates greenhouse gas emissions, primarily carbon dioxide (CO2) from energy used in facilities, feed production, and transportation, as well as methane resulting from the decomposition of organic waste.'
-      link='/'
-      image='/images/mosaic-climat.jpg'
-      imagePosition='right'
+      title="Climate"
+      content="Intensive salmon farming generates greenhouse gas emissions, primarily carbon dioxide (CO2) from energy used in facilities, feed production, and transportation, as well as methane resulting from the decomposition of organic waste."
+      link="/"
+      image="/images/mosaic-climat.jpg"
+      imagePosition="right"
     />
   );
 };
@@ -158,23 +164,38 @@ const ClimateSection = () => {
 const SocialSection = () => {
   return (
     <Edito
-      title='Social'
-      content='Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities.'
-      link='/'
-      image='/images/mosaic-social.jpg'
+      title="Social"
+      content="Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities."
+      link="/"
+      image="/images/mosaic-social.jpg"
     />
   );
 };
 
 const BeTheChangeSection = () => {
   return (
-    <div className= 'relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-8 lg:pt-28 2xl:pt-[10rem]'>
-      <div className='relative pt-10 pl-10 pb-12 md:py-18 md:pl-36 md:pt-2 2xl:pt-10 z-10 mix-blend-difference'>
-        <h2 className='uppercase text-2xl md:text-6xl lg:text-7xl'>Be the change .</h2>
-        </div>
-      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-center md:right-52 '><p className='max-w-64 md:max-w-[30rem] md:text-xl lg:text-2xl font-secondary'>There are alternatives to salmon in our way of eating, selling, and producing.</p></div>
-      <div className='relative justify-self-center z-10'><img src='/images/saumon.jpg' alt='' className='max-w-64 md:max-w-[68rem]'></img></div>
-      <div className='absolute z-0'><img src='/svg/wave.svg' alt=''></img></div>
+    <div className="relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-8 lg:pt-28 2xl:pt-[10rem]">
+      <div className="relative pt-10 pl-10 pb-12 md:py-18 md:pl-36 md:pt-2 2xl:pt-10 z-10 mix-blend-difference">
+        <h2 className="uppercase text-2xl md:text-6xl lg:text-7xl">
+          Be the change .
+        </h2>
+      </div>
+      <div className="relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-center md:right-52 ">
+        <p className="max-w-64 md:max-w-[30rem] md:text-xl lg:text-2xl font-secondary">
+          There are alternatives to salmon in our way of eating, selling, and
+          producing.
+        </p>
+      </div>
+      <div className="relative justify-self-center z-10">
+        <img
+          src="/images/saumon.jpg"
+          alt=""
+          className="max-w-64 md:max-w-[68rem]"
+        ></img>
+      </div>
+      <div className="absolute z-0">
+        <img src="/svg/wave.svg" alt=""></img>
+      </div>
     </div>
   );
 };
@@ -183,7 +204,7 @@ const ActionSection = () => {
   return (
     <div className="relative z-10 bg-orange2 px-6 md:px-12 py-6 md:py-7">
       <div>
-        <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1 text-4xl md:text-6xl uppercase font-bold mb-10'>
+        <h2 className="flex justify-center md:justify-start bg-orange2 text-darkblue1 text-4xl md:text-6xl uppercase font-bold mb-10">
           Let's talk!
         </h2>
       </div>

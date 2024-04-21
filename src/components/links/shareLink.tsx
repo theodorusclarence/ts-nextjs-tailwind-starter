@@ -12,8 +12,8 @@ const social: Record<string, { name: string; icon: string }> = {
     icon: "linkedin-logo",
   },
   website: {
-    name: 'Website',
-    icon: 'globe',
+    name: "Website",
+    icon: "globe",
   },
 };
 
