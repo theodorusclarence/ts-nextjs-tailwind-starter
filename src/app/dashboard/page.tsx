@@ -26,6 +26,8 @@ const DashboardPage = () => {
       <div className="text-3xl font-semibold">Compagnies</div>
       <MainProductionSection />
       <LandPlantsSection />
+      <div className="text-3xl font-semibold">Santé humaine</div>
+      <AntibioticSection />
     </>
   );
 };
@@ -172,6 +174,20 @@ const LandPlantsSection = () => {
         height={900}
         className="w-full"
       ></iframe>
+    </section>
+  );
+};
+
+const AntibioticSection = () => {
+  return (
+    <section className="grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7">
+      <DashboardSection
+        title="The new threat: on land plants"
+        chartOrder="order-1"
+        id="antibiotic-conso"
+        textOrder="order-2"
+        content="If Norway is claiming to have less than 99% of its aquaculture antibiotics-free, other countries are not as vertuous. In Chile, the use of antibiotics has increased by 1/3 since covid-crisis.  In Chile: 421 tonnes of atb used for the 17 major producers, i.e. 0.04% (tonnes of atb /tonne of fish produced) on average. Rates diminished in 2018, but because of the covid crisis, they have risen again in 2021 to reach a rate of tonnes atb/tonnes fish i.e., 1/3 higher than in 2018."
+      />
     </section>
   );
 };
