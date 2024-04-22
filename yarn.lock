@@ -6986,6 +6986,11 @@ plotly.js@^2.31.1:
     webgl-context "^2.2.0"
     world-calendars "^1.0.3"
 
+pnpm@^9.0.5:
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/pnpm/-/pnpm-9.0.5.tgz#6db99351548f394a1d96aa1de98dec032aef8823"
+  integrity sha512-pyJXXBj9eR+e9x44fG4WzAPJDYWbmwmY0EKMoOMiCCizKpbm3nPOo07bwPUIJHcbGmnH6ja4bao7icfm2aPZEg==
+
 point-in-polygon@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/point-in-polygon/-/point-in-polygon-1.1.0.tgz#b0af2616c01bdee341cbf2894df643387ca03357"

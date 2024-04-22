@@ -6,17 +6,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Inter", ...defaultTheme.fontFamily.sans],
-        secondary: ["Georgia", ...defaultTheme.fontFamily.serif],
+        primary: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        secondary: ["Barlow Condensed", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        violet1: "#8390f2",
-        rose1: "#fda4af",
-        rose2: "#ffd5d5",
-        orange1: "#ff3636",
-        orange2: "#FF7E36",
         purple1: "#3b0764",
-        darkblue1: "#001E3A",
+        red1: "#F34620",
+        yellow1: "#EBF97B",
+        pink1: "#FEEAE9",
+        brown1: "#F3E8D8",
+        darkblue1: "#13176F",
         lightblue1: "#A7F6F6",
         lightblue2: "#D6E0EA",
         primary: {

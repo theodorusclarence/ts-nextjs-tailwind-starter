@@ -1,7 +1,7 @@
 import clsx from "clsx";
+import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import { ReactNode } from "react";
-import dynamic from "next/dynamic";
 
 import { fetchData } from "@/pages/api/chart";
 const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {

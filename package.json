@@ -52,6 +52,7 @@
     "lint-staged": "^12.5.0",
     "next-router-mock": "^0.9.0",
     "next-sitemap": "^2.5.28",
+    "pnpm": "^9.0.5",
     "postcss": "^8.4.32",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.0",

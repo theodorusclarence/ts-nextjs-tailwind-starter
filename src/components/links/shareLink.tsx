@@ -1,19 +1,18 @@
 import clsx from "clsx";
 import React from "react";
-import Image from "next/image";
 
-const social: Record<string, { name: string; icon: string }> = {
+const social: Record<string, { name: string }> = {
   twitter: {
     name: "Twitter",
-    icon: "x-logo",
   },
   linkedin: {
     name: "Linkedin",
-    icon: "linkedin-logo",
   },
   website: {
     name: "Website",
-    icon: "globe",
+  },
+  email: {
+    name: "Email",
   },
 };
 
@@ -37,20 +36,24 @@ const ShareLink = ({
 
   return (
     <a
-      className={clsx(
-        "flex mt-2 gap-2 items-center hover:underline",
-        className,
-      )}
-      href={href}
+      className={clsx("mt-2 hover:underline lg:text-xl", className)}
+      href={(type === "email" ? "mailto:" : "") + href}
       target="_blank"
       rel="noopener noreferrer"
       title={`${social[type].name} ${name} (new tab)`}
       {...rest}
     >
-      <img src={`/svg/${social[type].icon}.svg`} alt="" className="w-4" />
       {social[type].name}
       <span className="sr-only">{name}</span>
-      <img src="/svg/new-tab.svg" alt="" className="w-4" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="16"
+        className="inline-block ml-2 align-baseline fill-yellow1"
+        viewBox="0 -960 960 960"
+        width="16"
+      >
+        <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+      </svg>
     </a>
   );
 };

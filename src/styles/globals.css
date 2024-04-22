@@ -41,23 +41,17 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
-  .cursor-newtab {
-    cursor:
-      url("/images/new-tab.png") 10 10,
-      pointer;
-  }
-
   /* #region  /**=========== Typography =========== */
   .h1 {
-    @apply font-primary text-2xl md:text-4xl lg:text-7xl/tight font-bold uppercase;
+    @apply font-secondary text-4xl md:text-6xl lg:text-7xl xl:text-[6.375rem]/none font-extrabold uppercase;
   }
 
   .h2 {
-    @apply font-primary text-2xl md:text-4xl lg:text-7xl/tight font-bold uppercase;
+    @apply font-secondary text-4xl md:text-6xl lg:text-7xl/tight font-bold uppercase;
   }
 
   .h3 {
-    @apply font-primary text-2xl md:text-4xl lg:text-7xl/tight font-bold uppercase;
+    @apply font-secondary text-2xl md:text-4xl lg:text-6xl/tight font-bold uppercase;
   }
 
   body,
@@ -65,6 +59,14 @@
     @apply font-primary text-sm md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
+
+  /* #region  /**=========== HEADER =========== */
+  .navbar-active {
+    @apply relative;
+
+    @apply after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-1 after:bg-red1;
+  }
+  /* #endregion  /**======== HEADER =========== */
 }
 
 @layer utilities {
