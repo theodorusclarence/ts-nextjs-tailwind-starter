@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Montserrat", ...defaultTheme.fontFamily.sans],
-        secondary: ["Barlow Condensed", ...defaultTheme.fontFamily.sans],
+        primary: ["var(--font-montserrat)", ...defaultTheme.fontFamily.sans],
+        secondary: ["var(--font-barlow)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         purple1: "#3b0764",

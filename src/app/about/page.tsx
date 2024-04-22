@@ -20,10 +20,6 @@ const IntroSection = () => {
         <h1 className="text-5xl md:text-7xl lg:text-9xl">About</h1>
         <p className="uppercase md:text-2xl">Pinkbombs</p>
       </div>
-      <img
-        src="/images/saumon.jpg"
-        className="size-20 lg:size-44 lg:mr-10"
-      ></img>
     </section>
   );
 };

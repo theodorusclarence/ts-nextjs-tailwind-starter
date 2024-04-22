@@ -8,7 +8,7 @@ const IconCard = ({
   title,
   image,
   content,
-  link,
+  link = "/",
   imagePosition = "left",
 }: {
   className?: string;
@@ -28,7 +28,7 @@ const IconCard = ({
           <p className="mt-3 lg:mt-6 lg:text-xl text-white">{content}</p>
           <Link
             className="inline-flex gap-4 mt-3 lg:mt-6 p-4 lg:px-10 lg:text-xl text-red1 font-secondary uppercase rounded-md tracking-widest font-black border-2 border-red1 hover:bg-red1 hover:text-darkblue1"
-            href="/"
+            href={link}
           >
             <svg
               width="46"

@@ -10,18 +10,13 @@ export const fetchData = async (chartType: string) => {
         accept: "application/json",
       } as HeadersInit,
     });
-    if (response.ok) {
-      const data = await response.json();
-      return JSON.parse(data.graph);
-    } else {
-      console.error(
-        "Erreur lors de la récupération des données:",
-        response.status,
-      );
+    if (!response.ok) {
       return null;
     }
+
+    const data = await response.json();
+    return JSON.parse(data.graph);
   } catch (error) {
-    console.error("Erreur lors de la récupération des données:", error);
     return null;
   }
 };

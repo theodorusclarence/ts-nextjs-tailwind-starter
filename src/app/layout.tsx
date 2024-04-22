@@ -1,5 +1,20 @@
 import { Metadata } from "next";
+import { Barlow_Condensed, Montserrat } from "next/font/google";
 import * as React from "react";
+
+const barlow = Barlow_Condensed({
+  weight: ["700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-barlow",
+});
+
+const montserrat = Montserrat({
+  weight: "500",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
 import "@/styles/globals.css";
 
@@ -45,15 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Montserrat:wght@500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${barlow.variable} ${montserrat.variable}`}>
       <body>
         <Navbar />
         <main>{children}</main>
