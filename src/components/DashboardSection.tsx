@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import { ReactNode } from "react";
@@ -9,15 +8,11 @@ const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
 });
 
 const DashboardSection = ({
-  chartOrder,
-  textOrder,
   title,
   id,
   content,
   cta,
 }: {
-  chartOrder?: string | undefined;
-  textOrder?: string | undefined;
   title?: string | undefined;
   content?: string | undefined;
   id: string;
@@ -42,10 +37,14 @@ const DashboardSection = ({
   }
 
   return (
-    <div className="h-full items-center">
-      <div className="text-2xl font-semibold">{title}</div>
-      <div className="flex pt-12 items-center">
-        <div className={clsx("w-2/3 h-full", chartOrder)}>
+    <div className="h-full">
+      <div className="flex pt-12">
+        <div className="w-1/3">
+          <h3 className="h3 text-red1 py-8">{title}</h3>
+          <p className="text-left">{content}</p>
+          <div className="text-center py-8">{cta}</div>
+        </div>
+        <div className="w-2/3 h-full text-right">
           {id && isLoading ? (
             <p className="text-center">Chargement en cours...</p>
           ) : (
@@ -55,10 +54,6 @@ const DashboardSection = ({
               id={id}
             />
           )}
-        </div>
-        <div className={clsx("w-1/3", textOrder)}>
-          <p className="text-center">{content}</p>
-          <div className="text-center py-8">{cta}</div>
         </div>
       </div>
     </div>
