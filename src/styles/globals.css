@@ -47,11 +47,15 @@
   }
 
   .h2 {
-    @apply font-secondary text-4xl md:text-6xl lg:text-7xl/tight font-bold uppercase;
+    @apply font-secondary text-4xl md:text-6xl lg:text-7xl/none font-bold uppercase;
   }
 
   .h3 {
-    @apply font-secondary text-2xl md:text-4xl lg:text-6xl/tight font-bold uppercase;
+    @apply font-secondary text-2xl md:text-4xl lg:text-6xl/none font-bold uppercase;
+  }
+
+  .h4 {
+    @apply font-secondary text-2xl lg:text-[2.4rem]/none font-bold uppercase;
   }
 
   body,

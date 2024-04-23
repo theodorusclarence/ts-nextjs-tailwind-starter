@@ -37,16 +37,17 @@ const DashboardSection = ({
   }
 
   return (
-    <div className="h-full">
-      <div className="flex pt-12">
+    <div className="p-6 md:p-12">
+      <div className="flex flex-wrap max-w-[1500px] mx-auto">
         <div className="w-1/3 items-right">
-          <h3 className="h3 text-red1 py-8">{title}</h3>
-          <p className="text-left">{content}</p>
-          <div className="text-center py-8">{cta}</div>
+          <h3 className="h3 text-red1">{title}</h3>
+          <p className="py-7">{content}</p>
+
+          {cta && <div className="text-center py-8">{cta}</div>}
         </div>
-        <div className="w-2/3 h-full text-right">
+        <div className="w-2/3 self-center h-full text-center">
           {id && isLoading ? (
-            <p className="text-center">Chargement en cours...</p>
+            <p className="text-xl text-center">Loading...</p>
           ) : (
             <DashboardChart
               data={chartData.data}

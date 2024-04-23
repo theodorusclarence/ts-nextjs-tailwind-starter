@@ -19,7 +19,8 @@ const IntroBlock = ({
     <header
       className={clsx(
         className,
-        "flex p-6 lg:p-12 min-h-[300px] h-screen max-h-[900px] text-red1 bg-pink1",
+        "flex p-6 lg:p-12 text-red1 bg-pink1",
+        image ? "h-screen min-h-[300px]" : "min-h-[660px]",
       )}
     >
       <div className="grid grid-rows-[1fr, auto, 1fr] w-full max-w-[1500px] mx-auto">

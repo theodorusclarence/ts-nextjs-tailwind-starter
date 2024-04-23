@@ -109,7 +109,7 @@ const EditoSection = () => {
       title: "Biodiversity",
       content:
         "Intensive salmon farming has significant impacts on marine biodiversity, including escapees, water pollution from waste discharge, parasites affecting wild populations, and increased pressure on wild fish stocks due to the demand for fishmeal, thereby contributing to overexploitation and declining biodiversity.",
-      link: "/",
+      link: "/dashboard#",
       image: {
         small: "/images/storytelling/biodiversity-400.jpg",
         medium: "/images/storytelling/biodiversity-600.jpg",
@@ -120,7 +120,7 @@ const EditoSection = () => {
       title: "Health",
       content:
         "The high concentration of fish in aquaculture farms promotes the spread of diseases, necessitating the use of pathogens or medications, which can have consequences for human health. Additionally, the increasing presence of microplastics in salmon raises concerns for human health.",
-      link: "/",
+      link: "/dashboard#human-health",
       image: {
         small: "/images/storytelling/health-400.jpg",
         medium: "/images/storytelling/health-600.jpg",
@@ -131,7 +131,7 @@ const EditoSection = () => {
       title: "Climate",
       content:
         "Intensive salmon farming generates greenhouse gas emissions, primarily carbon dioxide (CO2) from energy used in facilities, feed production, and transportation, as well as methane resulting from the decomposition of organic waste.",
-      link: "/",
+      link: "/dashboard#",
       image: {
         small: "/images/storytelling/climat-400.jpg",
         medium: "/images/storytelling/climat-600.jpg",
@@ -142,7 +142,7 @@ const EditoSection = () => {
       title: "Social",
       content:
         "Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities.",
-      link: "/",
+      link: "/dashboard#",
       image: {
         small: "/images/storytelling/social-400.jpg",
         medium: "/images/storytelling/social-600.jpg",
@@ -153,7 +153,7 @@ const EditoSection = () => {
       title: "Animal condition",
       content:
         "The very high density of salmon in cages leads to illness and stress. Sea lice eat the flesh of disfigured fish. Mortality rates within cages are very abnormally high.",
-      link: "/",
+      link: "/dashboard#",
       image: {
         small: "/images/storytelling/animals-400.jpg",
         medium: "/images/storytelling/animals-600.jpg",

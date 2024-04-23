@@ -4,14 +4,30 @@ import React from "react";
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 
-const IntroBlock = ({ className }: { className?: string }) => {
+const IntroBlock = ({
+  className,
+  headDark = true,
+}: {
+  className?: string;
+  headDark?: boolean;
+}) => {
   return (
     <div className={className}>
-      <div className="text-darkblue1 lg:text-brown1 bg-brown1 lg:bg-darkblue1 lg:bg-[url('/images/wave.svg')] bg-no-repeat bg-center bg-[length:3200px_275px]">
+      <div
+        className={clsx(
+          "lg:bg-[url('/images/wave.svg')] bg-no-repeat bg-center bg-[length:3200px_275px]",
+          headDark
+            ? "text-darkblue1 lg:text-brown1 bg-brown1 lg:bg-darkblue1"
+            : "text-red1",
+        )}
+      >
         <h2
           className={clsx(
             "h1",
-            "p-6 lg:px-12 lg:pt-28 lg:pb-12 max-w-[1500px] mx-auto lg:bg-clip-text lg:text-transparent lg:bg-[url('/images/wave-text.svg')] bg-no-repeat bg-center bg-[length:3200px_275px]",
+            "p-6 lg:px-12 lg:pt-[120px] lg:pb-12 max-w-[1500px] mx-auto lg:bg-clip-text lg:text-transparent bg-no-repeat bg-center bg-[length:3200px_275px]",
+            headDark
+              ? "lg:bg-[url('/images/wave-text.svg')]"
+              : "lg:bg-[url('/images/wave-text-light.svg')]",
           )}
         >
           Be the change.
@@ -28,9 +44,9 @@ const IntroBlock = ({ className }: { className?: string }) => {
             the world, bears a particular responsibility in guiding practices.
           </p>
           <Image
-            src="/images/saumon.jpg"
+            src="/images/bethechange.svg"
             alt=""
-            className="w-full h-96 xl:h-[690px] object-cover"
+            className="w-full h-96 xl:h-[690px] object-contain"
             width={1000}
             height={600}
             loading="lazy"
