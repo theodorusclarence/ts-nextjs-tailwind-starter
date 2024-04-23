@@ -151,7 +151,7 @@ const LandPlantsSection = () => {
         title="The new threat: on land plants"
         id="top-land"
         content="In 2021, the theoretical combined production capacity of land-based salmon farms amounted to 2.5 million tons, nearly equaling the global production of salmon in marine farms (2.7 million tons).Land-based farms use RAS technology (Recirculating Aquaculture Systems) in fully enclosed tanks. Whilst, this approach to salmon farming gives control over the impact on biodiversity and the local
-environment (limited disease contamination, rejection of feces and
+          environment (limited disease contamination, rejection of feces and
           salmon escapes), it also requires large amount of fresh water and is
           very energy-hungry, as it aims to recreate very precisely the natural
           conditions found in the sea. As a result, the carbon footprint of
@@ -180,37 +180,37 @@ environment (limited disease contamination, rejection of feces and
         </p>
       </div>
       <div className="text-left flex">
-        <p className="w-1/4">
+        <div className="w-1/4">
           <h3 className="h3 text-red1 py-4">+91.1%</h3>
           <p className="py-8 px-4">
             Combined land-based farm (RAS) projects could represent an increase
             of over 91% in global salmon production.
           </p>
-        </p>
-        <p className="w-1/4">
+        </div>
+        <div className="w-1/4">
           <h3 className="h3 text-red1 py-4">291 Billion</h3>
           <p className="py-8 px-4">
             More than 290 billion wild fish, known as forage fish, will be
             harvested annually to produce the necessary meal to feed these new
             salmon.
           </p>
-        </p>
-        <p className="w-1/4">
+        </div>
+        <div className="w-1/4">
           <h3 className="h3 text-red1 py-4">1.4 Million</h3>
           <p className="py-8 px-4">
             These same meals contain soy. 975,000 hectares will be required for
             soy production, equivalent to approximately 1.4 million football
             fields.
           </p>
-        </p>
-        <p className="w-1/4">
+        </div>
+        <div className="w-1/4">
           <h3 className="h3 text-red1 py-4">15.8 Million</h3>
           <p className="py-8 px-4">
             The electricity consumption required for filtering, cooling, and
             circulating water in RAS farms is equivalent to the annual
             consumption of 15.8 million Europeans.
           </p>
-        </p>
+        </div>
       </div>
       <iframe
         title="Land plants map"

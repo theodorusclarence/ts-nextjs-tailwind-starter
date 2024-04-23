@@ -39,7 +39,7 @@ const DashboardSection = ({
   return (
     <div className="h-full">
       <div className="flex pt-12">
-        <div className="w-1/3">
+        <div className="w-1/3 items-right">
           <h3 className="h3 text-red1 py-8">{title}</h3>
           <p className="text-left">{content}</p>
           <div className="text-center py-8">{cta}</div>
