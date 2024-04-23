@@ -13,7 +13,12 @@ const IconCard = ({
 }: {
   className?: string;
   title: string;
-  image: string;
+  image?: {
+    small?: string;
+    medium?: string;
+    large: string;
+    caption?: string;
+  };
   content: string;
   link: string;
   imagePosition?: "left" | "right";
@@ -22,12 +27,12 @@ const IconCard = ({
     <div
       className={clsx("p-6 pb-14 lg:p-12 text-white bg-darkblue1", className)}
     >
-      <div className="flex flex-col md:flex-row md:items-center gap-6 xl:gap-14 max-w-[1500px] mx-auto">
-        <div className="max-w-[560px]">
+      <div className="flex flex-col md:flex-row md:items-center gap-6 lg:gap-14 2xl:gap-32 max-w-[1500px] mx-auto">
+        <div className="flex-1">
           <h2 className={clsx("h1", "text-red1")}>{title}</h2>
           <p className="mt-3 lg:mt-6 lg:text-xl text-white">{content}</p>
           <Link
-            className="inline-flex gap-4 mt-3 lg:mt-6 p-4 lg:px-10 lg:text-xl text-red1 font-secondary uppercase rounded-md tracking-widest font-black border-2 border-red1 hover:bg-red1 hover:text-darkblue1"
+            className="inline-flex gap-4 mt-6 lg:mt-12 p-4 lg:px-10 lg:text-xl text-red1 font-secondary uppercase rounded-md tracking-widest font-black border-2 border-red1 hover:bg-red1 hover:text-darkblue1"
             href={link}
           >
             <svg
@@ -56,14 +61,32 @@ const IconCard = ({
             Learn more
           </Link>
         </div>
-        <Image
-          loading="lazy"
-          src={image}
-          width={776}
-          height={901}
-          alt=""
-          className={imagePosition === "right" ? "md:-order-1" : ""}
-        />
+
+        {image ? (
+          <figure
+            className={clsx(
+              imagePosition === "right" ? "md:-order-1" : "",
+              "w-full md:w-1/2 xl:w-[600px] aspect-square",
+            )}
+          >
+            <picture>
+              {image.small && (
+                <source srcSet={image.small} media="(min-width:300px)" />
+              )}
+              {image.medium && (
+                <source srcSet={image.medium} media="(min-width:600px)" />
+              )}
+              <Image
+                loading="lazy"
+                src={image.large}
+                width={600}
+                height={600}
+                alt=""
+              />
+            </picture>
+            {image.caption && <figcaption>{image.caption}</figcaption>}
+          </figure>
+        ) : null}
       </div>
     </div>
   );

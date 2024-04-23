@@ -19,9 +19,13 @@ const IntroBlock = ({ className }: { className?: string }) => {
       </div>
       <div className="px-6 lg:px-12 pb-6 lg:pb-24 text-darkblue1 bg-brown1">
         <div className="max-w-[1500px] mx-auto">
-          <p className={clsx("h3", "pb-6 md:pb-12 xl:pb-32 max-w-3xl")}>
+          <p className={clsx("h3", "pb-6 md:pb-12 max-w-3xl")}>
             There are alternatives to salmon in our way of eating, selling, and
             producing.
+          </p>
+          <p className={"text-xl pb-6 md:pb-16 max-w-3xl"}>
+            France, located in the top 3 of the largest consumers of salmon in
+            the world, bears a particular responsibility in guiding practices.
           </p>
           <Image
             src="/images/saumon.jpg"
