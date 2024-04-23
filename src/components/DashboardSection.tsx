@@ -38,14 +38,14 @@ const DashboardSection = ({
 
   return (
     <div className="p-6 md:p-12">
-      <div className="flex flex-wrap max-w-[1500px] mx-auto">
-        <div className="w-1/3 items-right">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_2fr] max-w-[1500px] mx-auto">
+        <div>
           <h3 className="h3 text-red1">{title}</h3>
           <p className="py-7">{content}</p>
 
           {cta && <div className="text-center py-8">{cta}</div>}
         </div>
-        <div className="w-2/3 self-center h-full text-center">
+        <div className="self-center min-h-[300px] overflow-y-auto h-full text-center">
           {id && isLoading ? (
             <p className="text-xl text-center">Loading...</p>
           ) : (
