@@ -66,10 +66,17 @@ const IconCard = ({
           <figure
             className={clsx(
               imagePosition === "right" ? "md:-order-1" : "",
-              "w-full md:w-1/2 xl:w-[600px] aspect-square",
+              "w-full max-w-[600px] md:w-1/2 xl:w-[600px]",
             )}
           >
-            <picture>
+            <picture
+              className={clsx(
+                imagePosition === "right"
+                  ? "shadow-[-10px_10px_0_0_#F34620]"
+                  : "shadow-[10px_10px_0_0_#F34620]",
+                "block aspect-square",
+              )}
+            >
               {image.small && (
                 <source srcSet={image.small} media="(min-width:300px)" />
               )}
@@ -82,9 +89,12 @@ const IconCard = ({
                 width={600}
                 height={600}
                 alt=""
+                className="w-full"
               />
             </picture>
-            {image.caption && <figcaption>{image.caption}</figcaption>}
+            {image.caption && (
+              <figcaption className="mt-4 lg:mt-7">{image.caption}</figcaption>
+            )}
           </figure>
         ) : null}
       </div>

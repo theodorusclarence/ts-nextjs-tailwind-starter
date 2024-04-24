@@ -10,10 +10,12 @@ const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
 const DashboardSection = ({
   title,
   id,
+  mainContent,
   content,
   cta,
 }: {
   title?: string | undefined;
+  mainContent?: string;
   content?: string | undefined;
   id: string;
   cta?: ReactNode | undefined;
@@ -22,17 +24,20 @@ const DashboardSection = ({
     data: [],
     layout: {},
   });
+  
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchGraphData = async () => {
-      const response = await fetchData(id);
-      setChartData(response);
-      setIsLoading(false);
+      if (id.length > 0) {
+        const response = await fetchData("graphs", id);
+        setChartData(response);
+        setIsLoading(false);
+      }
     };
     fetchGraphData();
-  }, [chartData, id]);
+  }, [id]);
 
-  if (!chartData || !id) {
+  if (!chartData) {
     return <></>;
   }
 
@@ -40,7 +45,8 @@ const DashboardSection = ({
     <div className="p-6 md:p-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_2fr] max-w-[1500px] mx-auto">
         <div>
-          <h3 className="h3 text-red1">{title}</h3>
+          <h3 className="h3 text-red1 py-8">{title}</h3>
+          <p className="font-semibold">{mainContent}</p>
           <p className="py-7">{content}</p>
 
           {cta && <div className="text-center py-8">{cta}</div>}

@@ -1,18 +1,17 @@
 "use client";
 
-import clsx from "clsx";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
-import { FaEye } from "react-icons/fa";
 import "@/lib/env";
 
+import CustomDashboardSection from "@/components/CustomDashboardSection";
 import DashboardSection from "@/components/DashboardSection";
-
-import { fetchData } from "@/pages/api/chart";
 import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
-import TitleBlock from "@/components/TitleBlock";
 import Summary, { SummaryLinksProps } from "@/components/Summary";
+import TitleBlock from "@/components/TitleBlock";
+
+import { fetchData } from "@/pages/api/chart";
 
 const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
   ssr: false,
@@ -36,6 +35,76 @@ const summary: SummaryLinksProps = [
       },
     ],
   },
+  {
+    title: "Companies",
+    sublinks: [
+      {
+        label: "Main producers of open-net salmon",
+        targetId: "top-comp",
+      },
+      {
+        label: "The new threat: on land-based aquaculture farms",
+        targetId: "top-land",
+      },
+      {
+        label: "The future of land-based aquaculture farms",
+        targetId: "future-land-based",
+      },
+    ],
+  },
+  {
+    title: "Biodiversity",
+    sublinks: [
+      {
+        label: "Deforestation",
+        targetId: "deforestation",
+      },
+      {
+        label: "Escapes",
+        targetId: "escapes-rates",
+      },
+    ],
+  },
+  {
+    title: "Animal welfare",
+    sublinks: [
+      {
+        label: "Stress in land-based facilities",
+        targetId: "salmon-collapse",
+      },
+      {
+        label: "Mortality rate",
+        targetId: "hyper-growth",
+      },
+    ],
+  },
+  {
+    title: "Climate",
+    sublinks: [
+      {
+        label: "Carbon",
+        targetId: "salmon-collapse",
+      },
+    ],
+  },
+  {
+    title: "Social",
+    sublinks: [
+      {
+        label: "/",
+        targetId: "salmon-collapse",
+      },
+    ],
+  },
+  {
+    title: "Alternatives",
+    sublinks: [
+      {
+        label: "Nutrition matrix",
+        targetId: "salmon-collapse",
+      },
+    ],
+  },
 ];
 
 const DashboardPage = () => {
@@ -48,12 +117,20 @@ const DashboardPage = () => {
         <SalmonCollapseSection />
         <SalmonFarmingSection />
         <TopCountriesSection />
+        <SalmonConsumptionSection />
       </section>
 
       <section>
-        <TitleBlock id="companies" title="Compagnies" />
+        <TitleBlock id="companies" title="Companies" />
         <MainProductionSection />
         <LandPlantsSection />
+        <SalmonConsumptionBisSection />
+      </section>
+
+      <section>
+        <TitleBlock id="biodiversity" title="Biodiversity" />
+        <DeforestationSection />
+        <EscapeSection />
       </section>
 
       <section>
@@ -73,15 +150,6 @@ const SalmonCollapseSection = () => {
     <DashboardSection
       title="Wild Altantic salmon collapse"
       id="salmon-collapse"
-      /*cta={
-        <a
-          href="https://atlanticsalmontrust.org/donate/"
-          target="_blank"
-          className="inline-flex items-center justify-center rounded-full bg-black w-12 h-12 text-white"
-        >
-          <FaEye className="w-6 h-6" />
-        </a>
-      }*/
       content="The Atlantic salmon was added to the IUCN Red List of Threatened Species in December 2023. This is largely due to overfishing, habitat degradation, particularly caused by dams blocking migratory routes, as well as climate change altering their environments, impacting their growth and survival rates."
     />
   );
@@ -102,13 +170,13 @@ const TopCountriesSection = () => {
     data: [],
     layout: {},
   });
+  const fetchGraphData = async () => {
+    const mapResponse = await fetchData("graphs", "evolution-map");
+    setMapData(mapResponse);
+  };
   useEffect(() => {
-    const fetchGraphData = async () => {
-      const mapResponse = await fetchData("evolution-map");
-      setMapData(mapResponse);
-    };
     fetchGraphData();
-  }, [mapData]);
+  }, []);
 
   if (!mapData) {
     return <></>;
@@ -137,16 +205,21 @@ const TopCountriesSection = () => {
   );
 };
 
+const SalmonConsumptionSection = () => {
+  return (
+    <DashboardSection
+      id=""
+      title="Salmon Consumption"
+      content="The United States is the largest consumer of salmon, followed by Japan and Russia. European countries are also significant consumers of salmon, with France leading the pack with a high consumption rate of 4.4kg per person per year."
+    />
+  );
+};
+
 const MainProductionSection = () => {
   return (
     <DashboardSection
       title="Main producers of open-net salmon"
       id="top-comp"
-      /*cta={
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full">
-          CTA
-        </button>
-      }*/
       content="Small artisanal salmon farms have given way to industrial aquaculture. In a few decades, the market has become dominated by a handful of multinational corporations. Mowi, formerly known as Marine Harvest, is the leader in the sector. The company operates in 25 countries."
     />
   );
@@ -158,7 +231,14 @@ const LandPlantsSection = () => {
       <DashboardSection
         title="The new threat: on land plants"
         id="top-land"
-        content="In 2021, the theoretical combined production capacity of land-based salmon farms amounted to 2.5 million tons, nearly equaling the global production of salmon in marine farms (2.7 million tons).Land-based farms use RAS technology (Recirculating Aquaculture Systems) in fully enclosed tanks. Whilst, this approach to salmon farming gives control over the impact on biodiversity and the local
+        mainContent="
+          In 2021, the theoretical combined production capacity of 
+          land-based salmon farms amounted to 2.5 million tons, nearly equaling 
+          the global production of salmon in marine farms (2.7 million tons)."
+        content="
+          Land-based farms use RAS technology (Recirculating Aquaculture Systems) 
+          in fully enclosed tanks. Whilst, this approach to salmon farming gives
+          control over the impact on biodiversity and the local
           environment (limited disease contamination, rejection of feces and
           salmon escapes), it also requires large amount of fresh water and is
           very energy-hungry, as it aims to recreate very precisely the natural
@@ -169,7 +249,10 @@ const LandPlantsSection = () => {
           of accidents where large number of fish died as a result of inadequate
           water conditions and a fire at a plant in Denmark."
       />
-      <div className="p-6 md:p-12 max-w-[1500px] mx-auto">
+      <div
+        id="future-land-based"
+        className="p-6 md:p-12 max-w-[1500px] mx-auto"
+      >
         <div className="lg:w-2/4">
           <h3 className="h3 text-red1">
             The future of land-based aquaculture farms
@@ -231,6 +314,37 @@ const LandPlantsSection = () => {
         ></iframe>
       </div>
     </>
+  );
+};
+const SalmonConsumptionBisSection = () => {
+  return (
+    <DashboardSection
+      title="Salmon Consumption"
+      id=""
+      mainContent="The United States are by far the largest consumers of salmon, followed by Japan and Russia. European countries are also significant consumers of this fish. Salmon consumption per capita for these major countries is approximately 2 kg/person/year and can reach values exceeding 5 kg/person/year."
+      content="Apparent salmon consumption (all species combined) is calculated as production, including aquaculture and capture, plus imports minus exports. All data is provided by the FAO. Conversion factors between product weight and live weight are approximated using FAO documentation: https://www.fao.org/3/bt963e/bt963e.pdf These approximations may lead to erroneous indicators, especially in sparsely populated and/or high-production countries. This is why per capita consumption is not included in the graph."
+    />
+  );
+};
+
+const DeforestationSection = () => {
+  return (
+    <CustomDashboardSection
+      title="Deforestation"
+      src="/images/deforestation.webp"
+      id="deforestation"
+      content="The ambition of the Norwegian government was to increase salmon production by 500% by 2050. This will require the importation of 11,000 km2 of soybean production from Brazil. This is equivalent to the legal deforestation of the Amazon in 2022."
+    />
+  );
+};
+
+const EscapeSection = () => {
+  return (
+    <DashboardSection
+      title="Escapes"
+      id="escapes-rates"
+      content="From 2018 to 2022, over 4,000,000 salmon escaped from the farms of the 11 largest producers. These escaped salmon pose a threat to wildlife as they... [source]. *No data from Cooke was found."
+    />
   );
 };
 

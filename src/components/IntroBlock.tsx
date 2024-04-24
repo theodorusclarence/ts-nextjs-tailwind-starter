@@ -23,7 +23,7 @@ const IntroBlock = ({
         image ? "h-screen min-h-[300px]" : "min-h-[660px]",
       )}
     >
-      <div className="grid grid-rows-[1fr, auto, 1fr] w-full max-w-[1500px] mx-auto">
+      <div className="grid grid-rows-[1fr, auto, 1fr] w-full">
         {image && (
           <Image
             src="/images/salmon.svg"

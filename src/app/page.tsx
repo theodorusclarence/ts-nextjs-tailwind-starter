@@ -4,6 +4,8 @@ import clsx from "clsx";
 import Image from "next/image";
 import * as React from "react";
 import "@/lib/env";
+import dynamic from "next/dynamic";
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
 
 import "../styles/page.css";
 
@@ -11,6 +13,9 @@ import Edito from "@/components/Edito";
 import IconCard from "@/components/IconCard";
 import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
+import { useState, useEffect } from "react";
+import { fetchData } from "@/pages/api/chart";
+
 
 const HomePage = () => {
   return (
@@ -34,8 +39,8 @@ export default HomePage;
 
 const BombSection = () => {
   return (
-    <section className="flex p-6 lg:p-12 min-h-[300px] h-screen max-h-[900px] text-red1 bg-darkblue1">
-      <div className="grid grid-rows-[1fr, auto, 1fr] w-full max-w-[1500px] mx-auto">
+    <section className="flex p-6 lg:p-12 min-h-[300px] h-screen text-red1 bg-darkblue1">
+      <div className="grid grid-rows-[1fr, auto, 1fr] w-full">
         <Image
           src="/images/bombs.svg"
           alt=""
@@ -54,51 +59,56 @@ const BombSection = () => {
 
 const ExplodeSection = () => {
   return (
-    <section className="flex items-center justify-center p-6 lg:p-12 lg:py-24 text-red1 bg-darkblue1 min-h-screen">
-      <ul
-        className="
-        relative grid grid-cols-1 xs:grid-cols-2 gap-8 list-none bg-no-repeat bg-center
+    <section className="flex items-center justify-center p-6 lg:p-12 lg:pt-24 lg:pb-48 2xl:py-24 text-red1 bg-darkblue1 min-h-screen">
+      <div className="relative">
+        <p className="mb-6 md:mb-12 mx-auto text-xl lg:absolute 2xl:left-[600px] 2xl:bottom-[260px] lg:max-w-96 text-center text-white">
+          The salmon industry is a bomb with multiple impacts
+        </p>
+        <ul
+          className="
+        grid grid-cols-1 xs:grid-cols-2 gap-8 list-none bg-no-repeat bg-center
         xs:bg-[url(/images/explose-small.svg)] xs:bg-[length:438px_320px]
         lg:bg-[url(/images/explose.svg)]
         lg:w-[969px] lg:h-[829px] lg:bg-[length:727px_662px]
         2xl:w-[1515px] 2xl:h-[1190px] 2xl:bg-[length:969px_829px]
       "
-      >
-        <li className="lg:absolute lg:-left-[40px] lg:top-[180px] 2xl:left-[112px] 2xl:top-[430px]">
-          <IconCard
-            icon={{ src: "/images/people.svg", width: 130, height: 114 }}
-            title="Social"
-            content="Diverts food from West African communities"
-          />
-        </li>
-        <li className="lg:absolute lg:left-[80px] lg:-bottom-[20px] 2xl:left-[242px] 2xl:bottom-0">
-          <IconCard
-            icon={{ src: "/images/climat.svg", width: 94, height: 153 }}
-            title="Climate"
-            content="Generates a carbon footprint equivalent to that of 10,000 inhabitants"
-          />
-        </li>
-        <li className="lg:absolute lg:-right-[185px] lg:top-[45px] 2xl:right-[70px] 2xl:top-[250px]">
-          <IconCard
-            icon={{ src: "/images/hearth.svg", width: 95, height: 99 }}
-            title="Health"
-            content="Raises concerns about human health due to diseases requiring medication and microplastics"
-          />
-        </li>
-        <li className="lg:absolute lg:-right-[110px] lg:bottom-[90px] 2xl:right-[140px] 2xl:bottom-[120px]">
-          <IconCard
-            icon={{ src: "/images/butterfly.svg", width: 120, height: 116 }}
-            title="Biodiversity"
-            content="Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks"
-          />
-        </li>
-        <li className="lg:absolute lg:right-[240px] lg:-bottom-[160px] 2xl:right-[140px] 2xl:bottom-[120px]">
-          <IconCard
-            title="animal condition"
-            content="Stress, diseases, excess mortality as consequences of intensive breeding."
-          />
-        </li>
-      </ul>
+        >
+          <li className="lg:absolute lg:-left-[20px] lg:top-[180px] 2xl:left-[112px] 2xl:top-[330px]">
+            <IconCard
+              icon={{ src: "/images/people.svg", width: 130, height: 114 }}
+              title="Social"
+              content="Diverts food from West African communities"
+            />
+          </li>
+          <li className="lg:absolute lg:left-[80px] lg:bottom-[20px] 2xl:left-[242px] 2xl:bottom-[180px]">
+            <IconCard
+              icon={{ src: "/images/climat.svg", width: 94, height: 153 }}
+              title="Climate"
+              content="Generates a carbon footprint equivalent to that of 10,000 inhabitants"
+            />
+          </li>
+          <li className="lg:absolute lg:-right-[100px] lg:top-[45px] 2xl:-right-[100px] 2xl:top-[160px]">
+            <IconCard
+              icon={{ src: "/images/hearth.svg", width: 95, height: 99 }}
+              title="Health"
+              content="Raises concerns about human health due to diseases requiring medication and microplastics"
+            />
+          </li>
+          <li className="lg:absolute lg:-right-[140px] lg:bottom-[120px] 2xl:-right-[80px] 2xl:bottom-[360px]">
+            <IconCard
+              icon={{ src: "/images/butterfly.svg", width: 120, height: 116 }}
+              title="Biodiversity"
+              content="Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks"
+            />
+          </li>
+          <li className="lg:absolute lg:right-[240px] lg:-bottom-[140px] 2xl:right-[340px] 2xl:bottom-[40px]">
+            <IconCard
+              title="animal condition"
+              content="Stress, diseases, excess mortality as consequences of intensive breeding."
+            />
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };
@@ -125,6 +135,7 @@ const EditoSection = () => {
         small: "/images/storytelling/health-400.jpg",
         medium: "/images/storytelling/health-600.jpg",
         large: "/images/storytelling/health-1200.jpg",
+        caption: "Photo credit: Ramji / Bob Brown Foundation",
       },
     },
     {
@@ -176,6 +187,22 @@ const EditoSection = () => {
 };
 
 const BusinessSection = () => {
+  const [plot, setPlot] = useState({
+    data: [],
+    layout: {},
+  });
+  const fetchGraphData = async () => {
+    const response = await fetchData("graphs", "hyper-growth-grouped");
+    setPlot(response);
+  };
+  useEffect(() => {
+    fetchGraphData();
+  }, []);
+
+  if (!plot) {
+    return <></>;
+  }
+
   return (
     <section className="p-6 lg:px-12 lg:pt-36 lg:pb-64 text-red1 bg-darkblue1">
       <div className="max-w-[1500px] mx-auto">
@@ -186,15 +213,9 @@ const BusinessSection = () => {
           Salmon production, dominated by a handful of multinationals, has
           experienced hyper-growth on a global scale for several decades.
         </p>
-
-        <Image
-          src="/images/storytelling/business-full.jpg"
-          alt=""
-          className="w-full h-96 xl:h-[690px] object-contain"
-          width={1000}
-          height={600}
-          loading="lazy"
-        />
+        <div className="flex justify-center">
+          <Plot data={plot.data} layout={plot.layout} />
+        </div>
       </div>
     </section>
   );

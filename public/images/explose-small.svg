@@ -3,16 +3,17 @@
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 437.9 320" style="enable-background:new 0 0 437.9 320;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#F34620;stroke-width:11;stroke-miterlimit:16;}
-	.st1{fill:#EBF97B;}
-	.st2{fill:#F34620;}
+	.st0{opacity:0.25;}
+	.st1{fill:none;stroke:#F34620;stroke-width:11;stroke-miterlimit:16;}
+	.st2{fill:#EBF97B;}
+	.st3{fill:#F34620;}
 </style>
-<g>
-	<path class="st0" d="M54.6,300.4l73.4-24.9l-94-76.8l109.5,29.2L94.7,96.7l97.2,94l31.6-150.2l32.4,147l95-85.9l-44.2,121.3
+<g class="st0">
+	<path class="st1" d="M54.6,300.4l73.4-24.9l-94-76.8l109.5,29.2L94.7,96.7l97.2,94l31.6-150.2l32.4,147l95-85.9l-44.2,121.3
 		l97.2-18.7l-77.6,71.5l64.5,24.9"/>
-	<path class="st1" d="M281.9,285.7l47.4,14.7H123.4l46-14.7l-46-38l58.4,12.6L160,198.7l48.5,45.2l17.4-65.3l15,65.3l48.5-45.2
+	<path class="st2" d="M281.9,285.7l47.4,14.7H123.4l46-14.7l-46-38l58.4,12.6L160,198.7l48.5,45.2l17.4-65.3l15,65.3l48.5-45.2
 		L269,260.3l57.3-12.6L281.9,285.7z"/>
-	<path class="st2" d="M244.8,293.5l16.1,7h-70l15.7-7l-15.7-18.1l19.8,6l-7.4-29.3l16.5,21.5l5.9-31.1l5.1,31.1l16.5-21.5l-6.9,29.3
+	<path class="st3" d="M244.8,293.5l16.1,7h-70l15.7-7l-15.7-18.1l19.8,6l-7.4-29.3l16.5,21.5l5.9-31.1l5.1,31.1l16.5-21.5l-6.9,29.3
 		l19.5-6L244.8,293.5z"/>
 </g>
 </svg>

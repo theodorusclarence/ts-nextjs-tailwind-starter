@@ -1,6 +1,12 @@
 import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
+// import Plot from "react-plotly.js";
+import dynamic from "next/dynamic";
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
+
+import { useState, useEffect } from "react";
+import { fetchData } from "@/pages/api/chart";
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 
@@ -11,6 +17,22 @@ const IntroBlock = ({
   className?: string;
   headDark?: boolean;
 }) => {
+
+  const [plot, setPlot] = useState({
+    data: [],
+    layout: {},
+  });
+  const fetchGraphData = async () => {
+    const response = await fetchData("graphs", "alternatives");
+    setPlot(response);
+  };
+  useEffect(() => {
+    fetchGraphData();
+  }, []);
+
+  if (!plot) {
+    return <></>;
+  }
   return (
     <div className={className}>
       <div
@@ -24,7 +46,7 @@ const IntroBlock = ({
         <h2
           className={clsx(
             "h1",
-            "p-6 lg:px-12 lg:pt-[120px] lg:pb-12 max-w-[1500px] mx-auto lg:bg-clip-text lg:text-transparent bg-no-repeat bg-center bg-[length:3200px_275px]",
+            "p-6 lg:px-12 lg:pt-[120px] lg:pb-12 max-w-[1596px] mx-auto lg:bg-clip-text lg:text-transparent bg-no-repeat bg-center bg-[length:3200px_275px]",
             headDark
               ? "lg:bg-[url('/images/wave-text.svg')]"
               : "lg:bg-[url('/images/wave-text-light.svg')]",
@@ -43,14 +65,9 @@ const IntroBlock = ({
             France, located in the top 3 of the largest consumers of salmon in
             the world, bears a particular responsibility in guiding practices.
           </p>
-          <Image
-            src="/images/bethechange.svg"
-            alt=""
-            className="w-full h-96 xl:h-[690px] object-contain"
-            width={1000}
-            height={600}
-            loading="lazy"
-          />
+          <div className="flex justify-center">
+            <Plot data={plot.data} layout={plot.layout}/>
+          </div>
         </div>
       </div>
 
@@ -71,8 +88,8 @@ const IntroBlock = ({
           </p>
 
           <PrimaryButton
-            href="/"
-            content="Sign the pledge"
+            href="/to-act"
+            content="I act"
             className="mt-6 xl:mt-10"
           />
         </div>

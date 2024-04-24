@@ -20,6 +20,10 @@ const navItems: NavItemsProps = [
     text: "Dashboard",
   },
   {
+    link: "/to-act",
+    text: "To act",
+  },
+  {
     link: "/about",
     text: "About",
   },
@@ -30,7 +34,7 @@ const Navbar = () => {
 
   return (
     <header className="absolute left-0 top-0 z-10 w-full">
-      <div className="flex flex-wrap items-center justify-between px-6 lg:px-9 py-3 lg:py-6">
+      <div className="flex flex-wrap items-center justify-between px-6 lg:px-12 py-3 lg:py-6">
         <Link href="/">
           <Image
             src="/images/pinkbombs.svg"
