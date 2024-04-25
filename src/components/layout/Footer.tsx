@@ -43,7 +43,7 @@ const Footer = () => (
       </div>
 
       <p className="mt-6 lg:mt-12 lg:text-xl">
-        All rights reserved <br />© {currentYear} Seastemik et Data for Good
+        Tous droits réservé <br />© {currentYear} Seastemik et Data for Good
       </p>
     </div>
   </footer>
