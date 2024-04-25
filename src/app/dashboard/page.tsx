@@ -33,6 +33,10 @@ const summary: SummaryLinksProps = [
         label: "Principaux pays producteurs de saumon d'élevage",
         targetId: "top-10",
       },
+      {
+        label: "Consommation",
+        targetId: "intro-consumption",
+      },
     ],
   },
   {
@@ -49,6 +53,10 @@ const summary: SummaryLinksProps = [
       {
         label: "Le futur des fermes aquacoles terrestres",
         targetId: "future-land-based",
+      },
+      {
+        label: "Consommation",
+        targetId: "companies-consumption",
       },
     ],
   },
@@ -69,30 +77,30 @@ const summary: SummaryLinksProps = [
     title: "Human health",
     sublinks: [
       {
-        label: "Antibiotic consumption",
+        label: "Consommation d'antibiotiques",
         targetId: "antibiotic-conso",
       },
       {
-        label: "Microplastics",
+        label: "Microplastique",
         targetId: "microplastics",
       },
     ],
   },
   {
-    title: "Animal welfare",
+    title: "Bien être animal",
     sublinks: [
       {
-        label: "Density / stress in onshore factory",
+        label: "Densité / stress dans usine à terre",
         targetId: "stress-onshore",
       },
       {
-        label: "Mortality rate",
+        label: "Taux de mortalité",
         targetId: "mortality-rates",
       },
     ],
   },
   {
-    title: "Climate",
+    title: "Climat",
     sublinks: [
       {
         label: "Carbon",
@@ -242,9 +250,9 @@ const TopCountriesSection = () => {
 
 const SalmonConsumptionSection = () => {
   return (
-    <DashboardSection
-      id=""
+    <CustomDashboardSection
       title="Consommation de saumon"
+      id="intro-consumption"
       content="Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne. "
     />
   );
@@ -356,7 +364,7 @@ const LandPlantsSection = () => {
           </div>
         </div>
         <iframe
-          title="Land plants map"
+          title="Carte des fermes terrestres"
           id="ras-map"
           srcDoc={mapData}
           width={1000}
@@ -369,12 +377,12 @@ const LandPlantsSection = () => {
 };
 const SalmonConsumptionBisSection = () => {
   return (
-    <DashboardSection
-      title="Salmon Consumption"
-      id=""
+    <CustomDashboardSection
+      title="Consommation"
+      id="companies-consumption"
       mainContent="Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an."
       content="La consommation apparente de saumon (toutes espèces confondues) est calculée comme la production, y compris l'aquaculture et la capture, plus les importations moins les exportations. Toutes les données sont fournies par la FAO. Les facteurs de conversion entre le poids du produit et le poids vif sont approximés à l'aide de la documentation de la FAO : https://www.fao.org/3/bt963e/bt963e.pdf
-      Ces approximations peuvent conduire à des indicateurs erronés, surtout dans les pays peu peuplés et/ou à forte production. C’est pour cette raison que la consommation par habitant n’est pas incluse dans le graphique."
+    Ces approximations peuvent conduire à des indicateurs erronés, surtout dans les pays peu peuplés et/ou à forte production. C’est pour cette raison que la consommation par habitant n’est pas incluse dans le graphique."
     />
   );
 };
@@ -416,7 +424,7 @@ const AntibioticSection = () => {
 const MicroplasticSection = () => {
   return (
     <CustomDashboardSection
-      title="Microplastics"
+      title="Microplastique"
       src="/images/microplastics.webp"
       id="microplastics"
       content="A 5 kg salmon contains approximately 575 microplastics.
@@ -430,12 +438,12 @@ const MicroplasticSection = () => {
 const StressOnshoreSection = () => {
   return (
     <CustomDashboardSection
-      title="Density / stress in onshore factory"
+      title="Densité / stress dans usine à terre"
       src="/images/stress.webp"
       id="stress-onshore"
-      content="The density of salmon is three times higher in onshore factories compared to already dense sea farms, for reasons of profitability.
-      The consequences can be numerous:
-      mass mortality linked to pathogens, higher levels of stress."
+      content="La densité de saumons est trois fois plus élevée dans des usines à terre par rapport à des élevages en mer déjà trop denses, pour des raisons de rentabilité.
+      Les conséquences peuvent être nombreuses :
+      mortalité de masse liées à des pathogènes, plus hauts niveaux de stress."
     />
   );
 };
@@ -443,10 +451,10 @@ const StressOnshoreSection = () => {
 const MortalityRateSection = () => {
   return (
     <DashboardSection
-      title="Mortality Rate"
+      title="Taux de mortalité"
       id="mortality-rates"
-      mainContent="Mortality rates vary considerably from one producer to another and from year to year. Exceptionally high rates are observed, reaching 20% in some years."
-      content="If Norway is claiming to have less than 99% of its aquaculture antibiotics-free, other countries are not as vertuous. In Chile, the use of antibiotics has increased by 1/3 since covid-crisis.  In Chile: 421 tonnes of atb used for the 17 major producers, i.e. 0.04% (tonnes of atb /tonne of fish produced) on average. Rates diminished in 2018, but because of the covid crisis, they have risen again in 2021 to reach a rate of tonnes atb/tonnes fish i.e., 1/3 higher than in 2018."
+      mainContent="Les taux de mortalité varient considérablement d'un producteur à l'autre et d'une année à l'autre. Des taux exceptionnellement élevés sont observés, atteignant 20 % certaines années."
+      content="Certains producteurs atteignent des taux de mortalité bien inférieurs grâce à de meilleures pratiques mais aussi à la législation locale. Attention : ces chiffres ne prennent en compte que la mortalité en mer. La mortalité dans les plans d'eau douce est proche de 30% (rapports Multiexport)"
     />
   );
 };
@@ -457,9 +465,9 @@ const CarbonSection = () => {
       title="Carbon"
       id="carbon-bomb"
       content="
-      The salmon industry emitted approximately 16 million tonnes of CO2 in 2021, similar to a country like Slovenia or the emissions target of 8 million humans by 2050.
-      About 90% of the total emissions come from the value chain, mainly from fish feed and transportation.
-      This figure is extrapolated from the emissions of 9 of the largest salmon producers."
+      L'industrie du saumon a émis environ 16 millions de tonnes de CO2 en 2021, tout comme un pays comme la Slovénie ou l'objectif d'émissions de 8 millions d'êtres humains en 2050.
+Environ 90 % des émissions totales proviennent de la chaîne de valeur, principalement de l'alimentation du poisson et du transport.
+Cette valeur est extrapolée à partir des émissions de 9 des plus grands producteurs de saumon."
     />
   );
 };
@@ -470,11 +478,11 @@ const SocialCarbonSection = () => {
       title="Carbon"
       src="/images/social-carbon.webp"
       id="social-carbon"
-      mainContent="In 2020, 3% of all fish caught worldwide were raised for Atlantic salmon (2.72 million tonnes)."
-      content="
-      As salmon are carnivorous, they need to be fed with fishmeal. On average, farmed salmon consume the equivalent of 5 times their own weight in fish sourced from industrial fishing. This kind of overfishing has had numerous negative social impacts, as seen in Mauritania and Gambia, where the quantity of fish in the sea has diminished, and the few fish caught are bought by industries for an insignificant price, limiting employment opportunities and the local community's access to one of their main sources of food.
-      [Article on the impact of industrial fishing] -> [here] (or another)
-      Global annual catches of fish, shellfish, and crustaceans are projected to reach around 90 million tonnes by 2020. The vast majority of this volume is intended for human consumption (about 70 million tonnes). Then, nearly half of what remains (42%) is used for global fishmeal production, supplying the aquaculture sector (for fish farming)."
+      mainContent="En 2020, 3 % de tous les poissons capturés dans le monde sont élevés pour le saumon de l'Atlantique (2,72 millions de tonnes)."
+      content="Le saumon étant carnivore, il est nécessaire de le nourrir avec des farines à base de poissons. Le saumon d'élevage moyen consomme l'équivalent de 5 fois son propre poids en poisson, issu de la pêche industrielle.
+      Et ce type de surpêche a eu de nombreux impacts sociaux négatifs, comme en Mauritanie et en Gambie, où la quantité de poisson dans la mer a été réduite et où les quelques poissons pêchés sont achetés par les industriels pour un prix insignifiant, limitant l'emploi et la vie de la communauté locale. accès à l’une des principales sources de leur approvisionnement alimentaire.
+      [Article sur l'impact de la pêche industrielle] -> ici (ou un autre)
+      Les captures annuelles mondiales de poissons, coquillages et crustacés devraient atteindre environ 90 millions de tonnes d'ici 2020. La grande majorité de ce volume est destinée à la consommation humaine (environ 70 millions). Et puis, près de la moitié de ce qui reste (42 %) est utilisée pour la production mondiale de farine de poisson, approvisionnant le secteur aquacole (pour la pisciculture)."
     />
   );
 };
@@ -482,12 +490,11 @@ const SocialCarbonSection = () => {
 const NutritionMatrixSection = () => {
   return (
     <DashboardSection
-      title="Nutrition matrix / ethical alternative"
+      title="Matrices de nutrition"
       id="alternatives"
-      mainContent="Despite some nutritional advantages, which are nonetheless replaceable, the negative environmental and social impacts of salmon should prompt us to consider alternatives in our diet."
-      content="As you can see, there are many reasons why salmon consumption is problematic. So why do we eat so much of it? Firstly, the storytelling surrounding salmon conveys a very positive image (for special occasions, desirable...), but we also hear a lot of good things about its nutritional benefits.
-      It seems interesting to put these nutritional benefits into perspective, taking into account the various impacts on health, the environment, and society. This will give us a comprehensive view of the consequences of salmon consumption, but will also help us discover alternatives to this product,
-      which could be as good for us as they are for the environment and the rest of humanity."
+      mainContent="Malgré certains avantages nutritionnels néanmoins remplaçables, les impacts environnementaux et sociaux négatifs du saumon devraient nous inciter à envisager des alternatives dans notre alimentation."
+      content="Comme vous pouvez le constater, il existe de nombreuses raisons pour lesquelles la consommation de saumon est problématique. Alors pourquoi en mangeons-nous autant ? Tout d’abord, le storytelling autour du saumon véhicule une image très positive (pour les grandes occasions, désirable…), mais on entend aussi beaucoup de bonnes choses sur ses bienfaits nutritionnels.
+      Il nous semble intéressant de relativiser ces bénéfices nutritionnels, en tenant compte des différents impacts sur la santé, l’environnement et la société. Cela nous donnera une vision globale des conséquences de la consommation de saumon, mais nous aidera également à découvrir des alternatives à ce produit, qui pourraient être aussi bonnes pour nous que pour l'environnement et le reste de l'humanité."
     />
   );
 };

@@ -12,7 +12,7 @@ const CustomDashboardSection = ({
   mainContent?: string;
   content?: string | undefined;
   id: string;
-  src: string;
+  src?: string | undefined;
 }) => {
   return (
     <div id={id} className="p-6 md:p-12">
@@ -23,7 +23,7 @@ const CustomDashboardSection = ({
           <p className="py-7">{content}</p>
         </div>
         <div className="self-center px-24 min-h-[300px] overflow-y-auto h-full text-center">
-          <Image src={src} alt={id} width={700} height={300} />
+          {src && <Image src={src} alt={id} width={700} height={300} />}
         </div>
       </div>
     </div>
