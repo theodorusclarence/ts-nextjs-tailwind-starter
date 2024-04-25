@@ -22,7 +22,7 @@ const HomePage = () => {
   return (
     <>
       <IntroBlock
-        title="Le saumon que vous 
+        title="Le saumon que vous
         mangez, vendez, produisez..."
         image="/images/salmon.svg"
       />
@@ -63,7 +63,7 @@ const ExplodeSection = () => {
   return (
     <section className="flex items-center justify-center p-6 lg:p-12 lg:pt-24 lg:pb-48 2xl:py-24 text-red1 bg-darkblue1 min-h-screen">
       <div className="relative">
-        <p className="mb-6 md:mb-12 mx-auto text-xl lg:absolute 2xl:left-[600px] 2xl:bottom-[260px] lg:max-w-96 text-center text-white">
+        <p className="mb-6 md:mb-12 mx-auto text-xl lg:absolute lg:left-[310px] lg:bottom-[100px] 2xl:left-[600px] 2xl:bottom-[200px] lg:max-w-96 text-center text-white">
           L’industrie du saumon est une bombe écologique et sociale
         </p>
         <ul
