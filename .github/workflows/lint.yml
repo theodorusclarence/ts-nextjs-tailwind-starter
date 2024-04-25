@@ -17,28 +17,24 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v2
 
-      - name: 🤌 Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
-          cache: 'pnpm'
+          node-version: 18
 
       - name: 📥 Download deps
-        run: pnpm install --frozen-lockfile
+        uses: u0reo/npm-install@fix/restore-failure
+        with:
+          useRollingCache: true
 
       - name: 🔬 Lint
-        run: pnpm run lint:strict
+        run: yarn lint:strict
 
       - name: 🔎 Type check
-        run: pnpm run typecheck
+        run: yarn typecheck
 
       - name: 💅 Prettier check
-        run: pnpm run format:check
+        run: yarn format:check
 
       - name: 🃏 Run jest
-        run: pnpm run test
+        run: yarn test

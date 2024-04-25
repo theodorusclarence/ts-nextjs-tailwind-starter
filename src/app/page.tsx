@@ -1,217 +1,226 @@
-'use client';
+"use client";
 
-import clsx from 'clsx';
-import Image from 'next/image';
-import Link from 'next/link';
-import * as React from 'react';
-import '@/lib/env';
+import clsx from "clsx";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import * as React from "react";
+import "@/lib/env";
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
-import '../styles/page.css';
+import { useEffect, useState } from "react";
 
-import Edito from '@/components/Edito';
-import IconCard from '@/components/IconCard';
+import "../styles/page.css";
 
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
+import Edito from "@/components/Edito";
+import IconCard from "@/components/IconCard";
+import IntroBlock from "@/components/IntroBlock";
+import JoinBlock from "@/components/JoinBlock";
 
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
+import { fetchData } from "@/pages/api/chart";
 
 const HomePage = () => {
   return (
     <>
-        <IntroSection />
-        <BombSection />
-        <ExplodeSection />
-        <BioSection />
-        <HealthSection />
-        <ClimateSection />
-        <SocialSection />
-        <BeTheChangeSection />
-        <ActionSection />
+      <IntroBlock
+        title="Le saumon que vous
+        mangez, vendez, produisez..."
+        image="/images/salmon.svg"
+      />
+
+      <BombSection />
+      <ExplodeSection />
+      <EditoSection />
+      <BusinessSection />
+
+      <JoinBlock />
     </>
   );
-}
+};
 
 export default HomePage;
 
-const IntroSection = () => {
-  return (
-    <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange2 bg-rose2'>
-      <Image
-        src='/svg/fish.svg'
-        alt=''
-        width={490}
-        height={203}
-        className='row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]'
-      />
-      <h1 className={clsx('h1', 'row-start-3 self-end items-left')}>
-        The salmon you eat, sell, produce...
-        <span className='sr-only'>kills wild salmon, starves people, contaminates food.</span>
-      </h1>
-    </section>
-  )
-};
-
 const BombSection = () => {
   return (
-    <section className='grid grid-rows-[1fr, auto, 1fr] px-6 lg:px-12 py-3 lg:py-7 h-screen min-h-96 text-orange1 bg-darkblue1'>
-      <Image
-        src='/svg/bomb.svg'
-        alt=''
-        width={207}
-        height={467}
-        className='row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[207px] max-h-full object-contain'
-      />
-      <p className='row-start-3 self-end text-2xl md:text-4xl lg:text-7xl/tight lg:max-w-[45rem] items-left font-bold uppercase' aria-hidden='true'>
-      kills wild salmon, starves people, contaminates food.
-      </p>
+    <section className="flex p-6 lg:p-12 min-h-[300px] h-screen text-red1 bg-darkblue1">
+      <div className="grid grid-rows-[1fr, auto, 1fr] w-full">
+        <Image
+          src="/images/bombs.svg"
+          alt=""
+          width={766}
+          height={616}
+          className="row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[450px] 2xl:w-[766px] max-h-full object-contain"
+        />
+        <div className="row-start-3 self-end items-left flex gap-2 items-end">
+          <p className={clsx("h1", "w-full")}>Tue, affame et contamine.</p>
+          <Image src="/images/bottom.svg" alt="" width="50" height="37" />
+        </div>
+      </div>
     </section>
   );
-}
+};
 
 const ExplodeSection = () => {
   return (
-    <section className='flex items-center justify-center p-6 lg:p-12 text-orange1 bg-darkblue1 min-h-screen'>
-    <ul className='
-        relative grid grid-cols-1 xs:grid-cols-2 gap-8 list-none bg-no-repeat bg-center
-        xs:bg-[url(/svg/explose-small.svg)] xs:bg-[length:438px_320px]
-        lg:bg-[url(/svg/explose.svg)]
+    <section className="flex items-center justify-center p-6 lg:p-12 lg:pt-24 lg:pb-48 2xl:py-24 text-red1 bg-darkblue1 min-h-screen">
+      <div className="relative">
+        <p className="mb-6 md:mb-12 mx-auto text-xl lg:absolute lg:left-[310px] lg:bottom-[100px] 2xl:left-[600px] 2xl:bottom-[200px] lg:max-w-96 text-center text-white">
+          L’industrie du saumon est une bombe écologique et sociale
+        </p>
+        <ul
+          className="
+        grid grid-cols-1 xs:grid-cols-2 gap-8 list-none bg-no-repeat bg-center
+        xs:bg-[url(/images/explose-small.svg)] xs:bg-[length:438px_320px]
+        lg:bg-[url(/images/explose.svg)]
         lg:w-[969px] lg:h-[829px] lg:bg-[length:727px_662px]
         2xl:w-[1515px] 2xl:h-[1190px] 2xl:bg-[length:969px_829px]
-      '>
-        <li className='lg:absolute lg:-left-[9px] lg:top-[280px] 2xl:left-[112px] 2xl:top-[430px]'>
+      "
+        >
+          <li className="lg:absolute lg:-left-[20px] lg:top-[180px] 2xl:left-[112px] 2xl:top-[330px]">
             <IconCard
-            icon={{src: '/svg/people.svg', width: 130, height:114}}
-            title='Social'
-            content='Diverts food from West African communities'
-          />
-        </li>
-        <li className='lg:absolute lg:left-[92px] lg:-bottom-[40px] 2xl:left-[242px] 2xl:bottom-0'>
+              icon={{ src: "/images/people.svg", width: 130, height: 114 }}
+              title="Social"
+              content="Détourne la nourriture des communautés d'Afrique de l'Ouest"
+            />
+          </li>
+          <li className="lg:absolute lg:left-[80px] lg:bottom-[20px] 2xl:left-[242px] 2xl:bottom-[180px]">
             <IconCard
-            icon={{src: '/svg/climat.svg', width: 94, height:153}}
-            title='Climate'
-            content='Generates a carbon footprint equivalent to that of 10,000 inhabitants'
-          />
-        </li>
-        <li className='lg:absolute lg:-right-[95px] lg:top-[116px] 2xl:-right-5 2xl:top-[236px]'>
+              icon={{ src: "/images/climat.svg", width: 94, height: 153 }}
+              title="Climat"
+              content="Génère une empreinte carbone collossale"
+            />
+          </li>
+          <li className="lg:absolute lg:-right-[100px] lg:top-[45px] 2xl:-right-[100px] 2xl:top-[160px]">
             <IconCard
-            icon={{src: '/svg/hearth.svg', width: 108, height:99}}
-            title='Health'
-            content='Raises concerns about human health due to diseases requiring medication and microplastics'
-          />
-        </li>
-        <li className='lg:absolute lg:right-[20px] lg:bottom-[90px] 2xl:right-[90px] 2xl:bottom-[220px]'>
+              icon={{ src: "/images/hearth.svg", width: 95, height: 99 }}
+              title="Santé"
+              content="Impacte la santé humaine à cause des polluants éternels et des microplastiques."
+            />
+          </li>
+          <li className="lg:absolute lg:-right-[140px] lg:bottom-[120px] 2xl:-right-[80px] 2xl:bottom-[360px]">
             <IconCard
-            icon={{src: '/svg/butterfly.svg', width: 164, height:116}}
-            title='Biodiversity'
-            content='Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks'
-          />
-        </li>
-      </ul>
+              icon={{ src: "/images/butterfly.svg", width: 120, height: 116 }}
+              title="Biodiversité"
+              content="Dégrade la biodiversité marine (échappées de saumons d’élevage, pollutions, parasites et déclin des espèces sauvages) et terrestre (déforestation)"
+            />
+          </li>
+          <li className="lg:absolute lg:right-[240px] lg:-bottom-[140px] 2xl:right-[340px] 2xl:bottom-[40px]">
+            <IconCard
+              title="Condition animale"
+              content="Provoque stress, maladies et mortalités de masse dans les élevages intensifs."
+            />
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };
 
-const BioSection = () => {
+const EditoSection = () => {
+  const editosContent = [
+    {
+      title: "Biodiversité",
+      content:
+        "L'élevage intensif de saumons a des répercussions significatives sur la biodiversité marine et les ressources planétaires : pollutions diverses, parasites affectant les espèces locales, pression accrue sur les populations de poissons sauvages, exploitation du krill d’Antarctique, déforestation, etc.",
+      link: "/dashboard#biodiversity",
+      image: {
+        small: "/images/storytelling/biodiversity-400.jpg",
+        medium: "/images/storytelling/biodiversity-600.jpg",
+        large: "/images/storytelling/biodiversity-1200.jpg",
+      },
+    },
+    {
+      title: "Santé",
+      content:
+        "La présence dans la chair des saumons de polluants organiques persistants (POP) et de microplastiques soulève des préoccupations pour la santé humaine.La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, nécessitant l'utilisation d'agents pathogènes ou de médicaments.",
+      link: "/dashboard#human-health",
+      image: {
+        small: "/images/storytelling/health-400.jpg",
+        medium: "/images/storytelling/health-600.jpg",
+        large: "/images/storytelling/health-1200.jpg",
+        caption: "Photo credit: Ramji / Bob Brown Foundation",
+      },
+    },
+    {
+      title: "Climat",
+      content:
+        "L'élevage intensif de saumons génère des émissions de gaz à effet de serre, principalement du dioxyde de carbone (CO2) provenant de l'énergie utilisée dans les installations, de la production d'aliments et du transport, ainsi que du méthane résultant de la décomposition des déchets organiques.",
+      link: "/dashboard#climate",
+      image: {
+        small: "/images/storytelling/climat-400.jpg",
+        medium: "/images/storytelling/climat-600.jpg",
+        large: "/images/storytelling/climat-1200.jpg",
+      },
+    },
+    {
+      title: "justice Sociale",
+      content:
+        "Chaque année 500 000+ tonnes de poissons sauvages sont prélevés aux larges des côtes de l’Afrique de l’Ouest pour nourrir des poissons d'élevage mettant en péril la sécurité alimentaire des communautés locales.",
+      link: "/dashboard#social",
+      image: {
+        small: "/images/storytelling/social-400.jpg",
+        medium: "/images/storytelling/social-600.jpg",
+        large: "/images/storytelling/social-1200.jpg",
+      },
+    },
+    {
+      title: "Condition animale",
+      content:
+        "La très forte densité des saumons en cages entraine maladies et stress. Les poux de mer rongent la chair des poissons défigurés. Les taux de mortalité au sein des cages sont très anormalement élevés.",
+      link: "/dashboard#animal-welfare",
+      image: {
+        small: "/images/storytelling/animals-400.jpg",
+        medium: "/images/storytelling/animals-600.jpg",
+        large: "/images/storytelling/animals-1200.jpg",
+      },
+    },
+  ];
+
   return (
-    <Edito
-      title='Biodiversity'
-      content='Intensive salmon farming has significant impacts on marine biodiversity, including escapees, water pollution from waste discharge, parasites affecting wild populations, and increased pressure on wild fish stocks due to the demand for fishmeal, thereby contributing to overexploitation and declining biodiversity.'
-      link='/'
-      image='/images/mosaic-biodiversite.jpg'
-      imagePosition='right'
-    />
+    <>
+      {editosContent.map((edito, key) => (
+        <Edito
+          key={`edito-${key}`}
+          {...edito}
+          imagePosition={key % 2 ? "left" : "right"}
+        />
+      ))}
+    </>
   );
 };
 
-const HealthSection = () => {
-  return (
-    <Edito
-      title='Health'
-      content='The high concentration of fish in aquaculture farms promotes the spread of diseases, necessitating the use of pathogens or medications, which can have consequences for human health. Additionally, the increasing presence of microplastics in salmon raises concerns for human health.'
-      link='/'
-      image='/images/mosaic-sante.jpg'
-    />
-  );
-};
+const BusinessSection = () => {
+  const [plot, setPlot] = useState({
+    data: [],
+    layout: {},
+  });
+  const fetchGraphData = async () => {
+    const response = await fetchData("graphs", "hyper-growth-grouped");
+    setPlot(response);
+  };
+  useEffect(() => {
+    fetchGraphData();
+  }, []);
 
-const ClimateSection = () => {
-  return (
-    <Edito
-      title='Climate'
-      content='Intensive salmon farming generates greenhouse gas emissions, primarily carbon dioxide (CO2) from energy used in facilities, feed production, and transportation, as well as methane resulting from the decomposition of organic waste.'
-      link='/'
-      image='/images/mosaic-climat.jpg'
-      imagePosition='right'
-    />
-  );
-};
-
-const SocialSection = () => {
-  return (
-    <Edito
-      title='Social'
-      content='Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities.'
-      link='/'
-      image='/images/mosaic-social.jpg'
-    />
-  );
-};
-
-
-
-const BeTheChangeSection = () => {
-  return (
-    <div className= 'relative grid grid-cols-1 grid-rows-[repeat (3, 1fr)] list-none bg-darkblue1 text-lightblue1 px-6 pb-6 md:pb-16 lg:px-12 md:pt-8 lg:pt-28 2xl:pt-[10rem]'>
-      <div className='relative pt-10 pl-10 pb-12 md:py-18 md:pl-36 md:pt-2 2xl:pt-10 z-10 mix-blend-difference'>
-        <h2 className='uppercase text-2xl md:text-6xl lg:text-7xl'>Be the change .</h2>
-        </div>
-      <div className='relative pb-6 md:pb-16 z-10 mix-blend-difference justify-self-center md:right-52 '><p className='max-w-64 md:max-w-[30rem] md:text-xl lg:text-2xl font-secondary'>There are alternatives to salmon in our way of eating, selling, and producing.</p></div>
-      <div className='relative justify-self-center z-10'><img src='/images/saumon.jpg' alt='' className='max-w-64 md:max-w-[68rem]'></img></div>
-      <div className='absolute z-0'><img src='/svg/wave.svg' alt=''></img></div>
-    </div>
-  );
+  if (!plot) {
+    return <></>;
   }
 
-const ActionSection = () => {
   return (
-    <div className='relative z-10 bg-orange2 px-6 md:px-12 py-6 md:py-7'>
-      <div>
-        <h2 className='flex justify-center md:justify-start bg-orange2 text-darkblue1 text-4xl md:text-6xl uppercase font-bold mb-10'>
-          Let's talk!
-        </h2>
-      </div>
-      <div className='flex justify-center px-6 md:px-12 py-3 md:py-7'>
-        <img src='/svg/fish_eye.svg' alt='' />
-      </div>
-      <div className='flex flex-col px-8 md:px-20 pb-20 pt-16'>
-        <div className='flex flex-col gap-5'>
-          <p className='text-center md:text-left '>
-            Description de Seastemik et Data4Good
-          </p>
-          <div className={clsx('footer__cta-wrapper', 'flex flex-col gap-4 pb-10 md:grid md:grid-cols-2 md:gap-32' )}>
-            <Link
-              className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-1 uppercase font-bold'
-              href="/"
-            >
-              Action 1
-            </Link>
-            <Link
-              className='block rounded bg-white px-4 py-2 text-center text-black transition duration-100 hover:bg-gray-300 md:col-start-2 uppercase font-bold'
-              href="/"
-            >
-              Action 2
-            </Link>
-          </div>
+    <section className="p-6 lg:px-12 lg:pt-36 lg:pb-64 text-red1 bg-darkblue1">
+      <div className="max-w-[1500px] mx-auto">
+        <h3 className={clsx("h3", "mb-4 lg:mb-6 max-w-5xl m-auto text-center")}>
+          Et tout ça dans l’impunité d’une industrie en croissance
+          exponentielle.
+        </h3>
+        <p className="mb-6 lg:mb-14 max-w-xl text-xl text-white m-auto text-center">
+          La production de saumons, dominée par une poignée de multinationales,
+          connaît depuis quelques décennies une hyper-croissance à l’échelle
+          globale.
+        </p>
+        <div className="flex justify-center">
+          <Plot data={plot.data} layout={plot.layout} />
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};

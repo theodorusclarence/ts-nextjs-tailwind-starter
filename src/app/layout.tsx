@@ -1,12 +1,27 @@
-import { Metadata } from 'next';
-import * as React from 'react';
+import { Metadata } from "next";
+import { Barlow_Condensed, Montserrat } from "next/font/google";
+import * as React from "react";
 
-import '@/styles/globals.css';
+const barlow = Barlow_Condensed({
+  weight: ["700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-barlow",
+});
 
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
+const montserrat = Montserrat({
+  weight: "500",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
 
-import { siteConfig } from '@/constant/config';
+import "@/styles/globals.css";
+
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+
+import { siteConfig } from "@/constant/config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -17,9 +32,9 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   robots: { index: true, follow: true },
   icons: {
-    icon: '/favicon/favicon.ico',
-    shortcut: '/favicon/favicon.ico',
-    apple: '/favicon/apple-touch-icon.png',
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
   },
   manifest: `/favicon/site.webmanifest`,
   openGraph: {
@@ -28,11 +43,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.title,
     images: [`${siteConfig.url}/images/og.jpg`],
-    type: 'website',
-    locale: 'en',
+    type: "website",
+    locale: "fr",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.jpg`],
@@ -45,12 +60,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang="fr" className={`${barlow.variable} ${montserrat.variable}`}>
       <body>
         <Navbar />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

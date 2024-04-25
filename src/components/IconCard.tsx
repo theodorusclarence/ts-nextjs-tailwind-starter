@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import React, { ReactNode } from 'react'
-import Image from 'next/image';
+import clsx from "clsx";
+import Image from "next/image";
+import React from "react";
 
 const IconCard = ({
   className,
@@ -10,7 +10,7 @@ const IconCard = ({
 }: {
   className?: string;
   title: string;
-  icon: {
+  icon?: {
     src: string;
     width: number;
     height: number;
@@ -18,11 +18,22 @@ const IconCard = ({
   content: string;
 }) => {
   return (
-    <div className={clsx('space-y-3 lg:space-y-6 lg:max-w-72', className)}>
-      <Image loading='lazy' src={icon.src} width={icon.width} height={icon.height} alt='' className='max-[767px]:w-12 max-[767px]:h-12 max-[1023px]:w-24 max-[1023px]:h-24 object-contain' />
-      <p className='text-2xl md:text-4xl 2xl:text-5xl uppercase font-bold'>{title}</p>
-      <p className='2xl:text-xl font-secondary'>{content}</p>
+    <div className={clsx("space-y-3", className)}>
+      {icon ? (
+        <Image
+          loading="lazy"
+          src={icon.src}
+          width={icon.width}
+          height={icon.height}
+          alt=""
+          className="max-[767px]:w-12 max-[767px]:h-12 max-[1023px]:w-24 max-[1023px]:h-24 object-contain"
+        />
+      ) : null}
+      <p className="h3 lg:max-w-[300px] 2xl:max-w-[600px]">{title}</p>
+      <p className="lg:text-xl text-white lg:max-w-56 2xl:max-w-96">
+        {content}
+      </p>
     </div>
   );
 };
-export default IconCard
+export default IconCard;

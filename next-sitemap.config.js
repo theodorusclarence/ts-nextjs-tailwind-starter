@@ -8,6 +8,6 @@ module.exports = {
   siteUrl: "https://pinkbombs-app.vercel.app",
   generateRobotsTxt: true,
   robotsTxtOptions: {
-    policies: [{ userAgent: '*', allow: '/' }],
+    policies: [{ userAgent: "*", allow: "/" }],
   },
 };

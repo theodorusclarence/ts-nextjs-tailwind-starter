@@ -31,31 +31,31 @@
 @layer base {
   /* inter var - latin */
   @font-face {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 100 900;
     font-display: optional;
-    src: url('/fonts/inter-var-latin.woff2') format('woff2');
+    src: url("/fonts/inter-var-latin.woff2") format("woff2");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
       U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
       U+2215, U+FEFF, U+FFFD;
   }
 
-  .cursor-newtab {
-    cursor: url('/images/new-tab.png') 10 10, pointer;
-  }
-
   /* #region  /**=========== Typography =========== */
   .h1 {
-    @apply font-primary text-2xl md:text-4xl lg:text-7xl/tight font-bold uppercase;
+    @apply font-secondary text-4xl md:text-6xl lg:text-7xl xl:text-[6.375rem]/none font-extrabold uppercase;
   }
 
   .h2 {
-    @apply font-primary text-2xl md:text-4xl lg:text-7xl/tight font-bold uppercase;
+    @apply font-secondary text-4xl md:text-6xl lg:text-7xl/none font-bold uppercase;
   }
 
   .h3 {
-    @apply font-primary text-2xl md:text-4xl lg:text-7xl/tight font-bold uppercase;
+    @apply font-secondary text-2xl md:text-4xl lg:text-6xl/none font-bold uppercase;
+  }
+
+  .h4 {
+    @apply font-secondary text-2xl lg:text-[2.4rem]/none font-bold uppercase;
   }
 
   body,
@@ -63,8 +63,15 @@
     @apply font-primary text-sm md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
+
+  /* #region  /**=========== HEADER =========== */
+  .navbar-active {
+    @apply relative;
+
+    @apply after:content-[''] after:absolute after:left-0 after:-bottom-px after:w-full after:h-1 after:bg-red1;
+  }
+  /* #endregion  /**======== HEADER =========== */
 }
 
 @layer utilities {
-
 }
