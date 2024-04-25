@@ -121,7 +121,7 @@ const EditoSection = () => {
       title: "Biodiversité",
       content:
         "L'élevage intensif de saumons a des répercussions significatives sur la biodiversité marine et les ressources planétaires : pollutions diverses, parasites affectant les espèces locales, pression accrue sur les populations de poissons sauvages, exploitation du krill d’Antarctique, déforestation, etc.",
-      link: "/dashboard#",
+      link: "/dashboard#biodiversity",
       image: {
         small: "/images/storytelling/biodiversity-400.jpg",
         medium: "/images/storytelling/biodiversity-600.jpg",
@@ -144,7 +144,7 @@ const EditoSection = () => {
       title: "Climat",
       content:
         "L'élevage intensif de saumons génère des émissions de gaz à effet de serre, principalement du dioxyde de carbone (CO2) provenant de l'énergie utilisée dans les installations, de la production d'aliments et du transport, ainsi que du méthane résultant de la décomposition des déchets organiques.",
-      link: "/dashboard#",
+      link: "/dashboard#climate",
       image: {
         small: "/images/storytelling/climat-400.jpg",
         medium: "/images/storytelling/climat-600.jpg",
@@ -155,7 +155,7 @@ const EditoSection = () => {
       title: "justice Sociale",
       content:
         "Chaque année 500 000+ tonnes de poissons sauvages sont prélevés aux larges des côtes de l’Afrique de l’Ouest pour nourrir des poissons d'élevage mettant en péril la sécurité alimentaire des communautés locales.",
-      link: "/dashboard#",
+      link: "/dashboard#social",
       image: {
         small: "/images/storytelling/social-400.jpg",
         medium: "/images/storytelling/social-600.jpg",
@@ -166,7 +166,7 @@ const EditoSection = () => {
       title: "Condition animale",
       content:
         "La très forte densité des saumons en cages entraine maladies et stress. Les poux de mer rongent la chair des poissons défigurés. Les taux de mortalité au sein des cages sont très anormalement élevés.",
-      link: "/dashboard#",
+      link: "/dashboard#animal-welfare",
       image: {
         small: "/images/storytelling/animals-400.jpg",
         medium: "/images/storytelling/animals-600.jpg",

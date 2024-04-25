@@ -58,7 +58,7 @@ const IconCard = ({
                 className="stroke-current"
               />
             </svg>
-            Learn more
+            En savoir plus
           </Link>
         </div>
 
