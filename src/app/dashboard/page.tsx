@@ -43,7 +43,7 @@ const summary: SummaryLinksProps = [
         targetId: "top-comp",
       },
       {
-        label: "La nouvelle menace : sur fermes aquacoles terrestres",
+        label: "La nouvelle menace: sur fermes aquacoles terrestres",
         targetId: "top-land",
       },
       {
@@ -229,7 +229,7 @@ const LandPlantsSection = () => {
   return (
     <>
       <DashboardSection
-        title="La nouvelle menace : LES fermes aquacoles terrestres"
+        title="La nouvelle menace: Les fermes aquacoles terrestres"
         id="top-land"
         mainContent="
         En 2021, la capacité de production théorique combinée des élevages terrestres 
