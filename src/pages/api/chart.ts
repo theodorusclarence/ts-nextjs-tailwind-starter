@@ -1,5 +1,9 @@
 "use server";
-export const fetchData = async (apiPath: string, chartName: string) => {
+export const fetchData = async (
+  apiPath: string,
+  chartName: string,
+  parse = true,
+) => {
   const dataUrl = process.env.PINKBOMBS_DATA_URL;
   const apiKey = process.env.PINKBOMBS_DATA_API_KEY;
   try {
@@ -15,6 +19,9 @@ export const fetchData = async (apiPath: string, chartName: string) => {
     }
 
     const data = await response.json();
+    if (!parse) {
+      return data.graph;
+    }
     return JSON.parse(data.graph);
   } catch (error) {
     return null;
