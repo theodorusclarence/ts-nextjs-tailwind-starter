@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.title,
     images: [`${siteConfig.url}/images/og.jpg`],
     type: "website",
-    locale: "en",
+    locale: "fr",
   },
   twitter: {
     card: "summary_large_image",
@@ -60,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${barlow.variable} ${montserrat.variable}`}>
+    <html lang="fr" className={`${barlow.variable} ${montserrat.variable}`}>
       <body>
         <Navbar />
         <main>{children}</main>

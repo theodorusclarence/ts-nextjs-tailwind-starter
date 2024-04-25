@@ -1,9 +1,8 @@
-import { Data } from "plotly.js-dist-min";
-import React from "react";
 // import Plot from "react-plotly.js";
 import dynamic from "next/dynamic";
-const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
-
+import { Data } from "plotly.js-dist-min";
+import React from "react";
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
 const DashboardChart = ({
   data,

@@ -22,67 +22,67 @@ const summary: SummaryLinksProps = [
     title: "Intro",
     sublinks: [
       {
-        label: "Wild Altantic salmon collapse",
+        label: "Effondrement du saumon sauvage de l'Atlantique",
         targetId: "salmon-collapse",
       },
       {
-        label: "Hyper-growth in salmon farming",
+        label: "Hyper-croissance de l’élevage du saumon",
         targetId: "hyper-growth",
       },
       {
-        label: "Main countries producing farmed salmon",
+        label: "Principaux pays producteurs de saumon d'élevage",
         targetId: "top-10",
       },
     ],
   },
   {
-    title: "Companies",
+    title: "Entreprises",
     sublinks: [
       {
-        label: "Main producers of open-net salmon",
+        label: "Principaux producteurs de saumon en filet ouvert",
         targetId: "top-comp",
       },
       {
-        label: "The new threat: on land-based aquaculture farms",
+        label: "La nouvelle menace: sur fermes aquacoles terrestres",
         targetId: "top-land",
       },
       {
-        label: "The future of land-based aquaculture farms",
+        label: "Le futur des fermes aquacoles terrestres",
         targetId: "future-land-based",
       },
     ],
   },
   {
-    title: "Biodiversity",
+    title: "Biodiversité",
     sublinks: [
       {
         label: "Deforestation",
         targetId: "deforestation",
       },
       {
-        label: "Escapes",
+        label: "Les évasions",
         targetId: "escapes-rates",
       },
     ],
   },
   {
-    title: "Animal welfare",
+    title: "Condition animale",
     sublinks: [
       {
-        label: "Stress in land-based facilities",
+        label: "Stress dans usine à terre",
         targetId: "salmon-collapse",
       },
       {
-        label: "Mortality rate",
+        label: "Taux de mortalité",
         targetId: "hyper-growth",
       },
     ],
   },
   {
-    title: "Climate",
+    title: "Climat",
     sublinks: [
       {
-        label: "Carbon",
+        label: "Carbone",
         targetId: "salmon-collapse",
       },
     ],
@@ -91,7 +91,7 @@ const summary: SummaryLinksProps = [
     title: "Social",
     sublinks: [
       {
-        label: "/",
+        label: "Social",
         targetId: "salmon-collapse",
       },
     ],
@@ -100,8 +100,8 @@ const summary: SummaryLinksProps = [
     title: "Alternatives",
     sublinks: [
       {
-        label: "Nutrition matrix",
-        targetId: "salmon-collapse",
+        label: "Matrice de nutrition",
+        targetId: "alternatives",
       },
     ],
   },
@@ -110,10 +110,10 @@ const summary: SummaryLinksProps = [
 const DashboardPage = () => {
   return (
     <>
-      <IntroBlock title="The numbers behind the story" />
+      <IntroBlock title="Les chiffres derrière l’histoire" />
       <Summary links={summary} />
       <section>
-        <TitleBlock id="intro" title="Introduction" />
+        <TitleBlock id="intro" title="Intro" />
         <SalmonCollapseSection />
         <SalmonFarmingSection />
         <TopCountriesSection />
@@ -121,20 +121,20 @@ const DashboardPage = () => {
       </section>
 
       <section>
-        <TitleBlock id="companies" title="Companies" />
+        <TitleBlock id="companies" title="Entreprises" />
         <MainProductionSection />
         <LandPlantsSection />
         <SalmonConsumptionBisSection />
       </section>
 
       <section>
-        <TitleBlock id="biodiversity" title="Biodiversity" />
+        <TitleBlock id="biodiversity" title="Biodiversité" />
         <DeforestationSection />
         <EscapeSection />
       </section>
 
       <section>
-        <TitleBlock id="human-health" title="Human health" />
+        <TitleBlock id="human-health" title="Santé humaine" />
         <AntibioticSection />
       </section>
 
@@ -148,9 +148,9 @@ export default DashboardPage;
 const SalmonCollapseSection = () => {
   return (
     <DashboardSection
-      title="Wild Altantic salmon collapse"
+      title="Effondrement du saumon sauvage de l'Atlantique"
       id="salmon-collapse"
-      content="The Atlantic salmon was added to the IUCN Red List of Threatened Species in December 2023. This is largely due to overfishing, habitat degradation, particularly caused by dams blocking migratory routes, as well as climate change altering their environments, impacting their growth and survival rates."
+      content="Le saumon atlantique est inscrit sur la Liste rouge de l'UICN des espèces menacées en décembre 2023 . Cela est dû en grande partie à la surpêche, à la dégradation de l'habitat, notamment due aux barrages bloquant les routes migratoires, mais aussi au changement climatique qui modifie leurs environnements, impactant leurs taux de croissance et de survie."
     />
   );
 };
@@ -158,9 +158,9 @@ const SalmonCollapseSection = () => {
 const SalmonFarmingSection = () => {
   return (
     <DashboardSection
-      title="Hyper-growth in salmon farming"
+      title="Hyper-croissance de l’élevage du saumon"
       id="hyper-growth"
-      content="Salmon production has experienced unprecedented growth. Nearly nonexistent 30 years ago, it surged to three million tons of salmon in 2021, equivalent to the farming and slaughtering of one billion salmon."
+      content="La production de saumon a connu une croissance sans précédent. Quasi inexistante il y a 30 ans, elle a bondi à trois millions de tonnes de saumon en 2021, soit l’équivalent de l’élevage et de l’abattage d’un milliard de saumons."
     />
   );
 };
@@ -185,14 +185,14 @@ const TopCountriesSection = () => {
   return (
     <>
       <DashboardSection
-        title="Main countries producing farmed salmon"
+        title="Principaux pays producteurs de saumon d'élevage"
         id="top-10"
-        content="Salmon require cold waters to grow, and thus production is concentrated in a few countries located far to the North or far to the South. Today, four countries alone account for 90% of the world's salmon production."
+        content="Le saumon a besoin d'eaux froides pour croître et la production est donc concentrée dans quelques pays situés loin au nord ou au sud. Aujourd'hui, quatre pays représentent à eux seuls 90 % de la production mondiale de saumon."
       />
 
       <div className="p-6 md:p-12 max-w-[1500px] mx-auto text-center">
         <h3 className="h3 text-red1 text-center">
-          Salmon farming evolution by country
+          Evolution de l'élevage du saumon par pays
         </h3>
 
         <DashboardChart
@@ -209,8 +209,8 @@ const SalmonConsumptionSection = () => {
   return (
     <DashboardSection
       id=""
-      title="Salmon Consumption"
-      content="The United States is the largest consumer of salmon, followed by Japan and Russia. European countries are also significant consumers of salmon, with France leading the pack with a high consumption rate of 4.4kg per person per year."
+      title="Consommation de saumon"
+      content="Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne. "
     />
   );
 };
@@ -218,9 +218,9 @@ const SalmonConsumptionSection = () => {
 const MainProductionSection = () => {
   return (
     <DashboardSection
-      title="Main producers of open-net salmon"
+      title="Principaux producteurs de saumon en CAGES MARINES"
       id="top-comp"
-      content="Small artisanal salmon farms have given way to industrial aquaculture. In a few decades, the market has become dominated by a handful of multinational corporations. Mowi, formerly known as Marine Harvest, is the leader in the sector. The company operates in 25 countries."
+      content="Les petites fermes salmonicoles artisanales ont cédé la place à l’aquaculture industrielle. En quelques décennies, le marché est devenu dominé par une poignée de multinationales. Mowi, anciennement Marine Harvest, est leader du secteur. L'entreprise est présente dans 25 pays."
     />
   );
 };
@@ -229,25 +229,26 @@ const LandPlantsSection = () => {
   return (
     <>
       <DashboardSection
-        title="The new threat: on land plants"
+        title="La nouvelle menace: Les fermes aquacoles terrestres"
         id="top-land"
         mainContent="
-          In 2021, the theoretical combined production capacity of 
-          land-based salmon farms amounted to 2.5 million tons, nearly equaling 
-          the global production of salmon in marine farms (2.7 million tons)."
+        En 2021, la capacité de production théorique combinée des élevages terrestres 
+        de saumon s’élève à 2,5 millions de tonnes, soit presque autant que la production 
+        mondiale de saumon dans les élevages marins (2,7 millions de tonnes)."
         content="
-          Land-based farms use RAS technology (Recirculating Aquaculture Systems) 
-          in fully enclosed tanks. Whilst, this approach to salmon farming gives
-          control over the impact on biodiversity and the local
-          environment (limited disease contamination, rejection of feces and
-          salmon escapes), it also requires large amount of fresh water and is
-          very energy-hungry, as it aims to recreate very precisely the natural
-          conditions found in the sea. As a result, the carbon footprint of
-          salmon produced on land is higher than salmon produced in marine
-          farms. In order to make such farms profitable, the fish density can be
-          3 times higher than in marine farms. And there has been a small number
-          of accidents where large number of fish died as a result of inadequate
-          water conditions and a fire at a plant in Denmark."
+        Les fermes terrestres utilisent la technologie RAS (Recycled Aquaculture Systems) 
+        dans des réservoirs entièrement fermés. Si cette approche de l'élevage du saumon permet de 
+        limiter l'impact sur la biodiversité et l'environnement local (contamination limitée par les maladies, 
+        rejet des excréments et des évasions de saumons), elle nécessite également de grandes quantités 
+        d'eau douce et est très gourmande en énergie, car elle vise à recréer très précisément 
+        les conditions de l’habitat naturel des saumons.
+        En conséquence, l’empreinte carbone du saumon produit sur terre est plus élevée que celle 
+        du saumon produit dans les fermes marines. Afin de rentabiliser de telles fermes, 
+        la densité de poissons peut être 3 fois plus élevée que dans les fermes marines. 
+        La technologie n’est pas encore totalement maîtrisée : actuellement, aucune usine en 
+        fonctionnement ne produit plus de 5 000 tonnes et les incidents techniques sont fréquents. 
+        Une usine au Danemark en a subi cinq, résultant de défaillances techniques 
+        (pollution au chlorure de fer dans le fjord, incendie complet de son usine, engendrant pollution de l’air et de l’eau)."
       />
       <div
         id="future-land-based"
@@ -255,53 +256,55 @@ const LandPlantsSection = () => {
       >
         <div className="lg:w-2/4">
           <h3 className="h3 text-red1">
-            The future of land-based aquaculture farms
+            Le futur des fermes aquacoles terrestres
           </h3>
           <p className="text-xl font-bold py-4">
-            A land-based farm producing 10,000 tons of salmon per year - if
-            built - would require as much electricity as a city of 45,000
-            inhabitants (to be confirmed). Currently, there are several projects
-            in Europe, including mega-farms aiming to produce 100,000 tons or
-            more per year.
+            Une ferme terrestre produisant 10 000 tonnes de saumon par an - si
+            elle était construite - nécessiterait autant d'électricité qu'une
+            ville de 39 215 habitant·e·s. Il existe actuellement plusieurs
+            projets en Europe, dont des méga-fermes visant à produire 100 000
+            tonnes ou plus par an.
           </p>
           <p className="text-xl">
-            Despite technological and profitability challenges, the industry is
-            investing heavily in land-based farms, with a large number of
-            projects announced over the past 5 years. Many farms are being
-            planned or are under construction in Europe, Asia, the Middle East,
-            and the United States to supply their local markets.
+            Malgré les défis technologiques et de rentabilité, l'industrie
+            investit massivement dans les fermes terrestres, avec un grand
+            nombre de projets annoncés au cours des 5 dernières années. De
+            nombreuses fermes envisagent d'être construites ou sont déjà en
+            cours de construction en Europe, en Asie, au Moyen-Orient et aux
+            États-Unis pour approvisionner leurs marchés locaux.
           </p>
         </div>
         <div className="flex flex-wrap gap-y-6 md:gap-y-12 py-20">
           <div className="w-full md:w-1/2 lg:w-1/4 md:pr-10">
             <h3 className="h3 pb-4 text-red1">+91.1%</h3>
             <p className="text-xl">
-              Combined land-based farm (RAS) projects could represent an
-              increase of over 91% in global salmon production.
+              Les projets combinés de fermes terrestres (RAS) pourraient
+              représenter une augmentation de plus de 91 % de la production
+              mondiale de saumon.
             </p>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 md:pr-10">
-            <h3 className="h3 pb-4 text-red1">291 Billion</h3>
+            <h3 className="h3 pb-4 text-red1">291 Milliards</h3>
             <p className="text-xl">
-              More than 290 billion wild fish, known as forage fish, will be
-              harvested annually to produce the necessary meal to feed these new
-              salmon.
+              Plus de 290 milliards de poissons sauvages, appelés poissons
+              fourrage, seront pêchés pour produire la farine nécessaire chaque
+              année à nourrir ces nouveaux saumons.
             </p>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 md:pr-10">
-            <h3 className="h3 pb-4 text-red1">1.4 Million</h3>
+            <h3 className="h3 pb-4 text-red1">1.4 Millions</h3>
             <p className="text-xl">
-              These same meals contain soy. 975,000 hectares will be required
-              for soy production, equivalent to approximately 1.4 million
-              football fields.
+              Ces mêmes farines contiennent du soja. 975 000 hectares seront
+              nécessaires à la production de ce soja, l'équivalent d'environ 1,4
+              millions de terrains de football.
             </p>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/4 md:pr-10">
-            <h3 className="h3 pb-4 text-red1">15.8 Million</h3>
+            <h3 className="h3 pb-4 text-red1">15.8 Millions</h3>
             <p className="text-xl">
-              The electricity consumption required for filtering, cooling, and
-              circulating water in RAS farms is equivalent to the annual
-              consumption of 15.8 million Europeans.
+              La consommation électrique nécessaire pour filtrer, refroidir et
+              faire circuler l'eau des fermes RAS représente l'équivalent de la
+              consommation annuelle de 15,8 millions d'européens.
             </p>
           </div>
         </div>
@@ -321,8 +324,9 @@ const SalmonConsumptionBisSection = () => {
     <DashboardSection
       title="Salmon Consumption"
       id=""
-      mainContent="The United States are by far the largest consumers of salmon, followed by Japan and Russia. European countries are also significant consumers of this fish. Salmon consumption per capita for these major countries is approximately 2 kg/person/year and can reach values exceeding 5 kg/person/year."
-      content="Apparent salmon consumption (all species combined) is calculated as production, including aquaculture and capture, plus imports minus exports. All data is provided by the FAO. Conversion factors between product weight and live weight are approximated using FAO documentation: https://www.fao.org/3/bt963e/bt963e.pdf These approximations may lead to erroneous indicators, especially in sparsely populated and/or high-production countries. This is why per capita consumption is not included in the graph."
+      mainContent="Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an."
+      content="La consommation apparente de saumon (toutes espèces confondues) est calculée comme la production, y compris l'aquaculture et la capture, plus les importations moins les exportations. Toutes les données sont fournies par la FAO. Les facteurs de conversion entre le poids du produit et le poids vif sont approximés à l'aide de la documentation de la FAO : https://www.fao.org/3/bt963e/bt963e.pdf
+      Ces approximations peuvent conduire à des indicateurs erronés, surtout dans les pays peu peuplés et/ou à forte production. C’est pour cette raison que la consommation par habitant n’est pas incluse dans le graphique."
     />
   );
 };
@@ -330,10 +334,10 @@ const SalmonConsumptionBisSection = () => {
 const DeforestationSection = () => {
   return (
     <CustomDashboardSection
-      title="Deforestation"
+      title="Déforestation"
       src="/images/deforestation.webp"
       id="deforestation"
-      content="The ambition of the Norwegian government was to increase salmon production by 500% by 2050. This will require the importation of 11,000 km2 of soybean production from Brazil. This is equivalent to the legal deforestation of the Amazon in 2022."
+      content="L'ambition du gouvernement norvégien prévoyait d'augmenter la production de 500 % d'ici 2050. Cela nécessitera l'importation de 11 000 km2 de production de soja du Brésil. Cela équivaut à la déforestation légale de l’Amazonie en 2022."
     />
   );
 };
@@ -341,9 +345,11 @@ const DeforestationSection = () => {
 const EscapeSection = () => {
   return (
     <DashboardSection
-      title="Escapes"
+      title="Les évasions"
       id="escapes-rates"
-      content="From 2018 to 2022, over 4,000,000 salmon escaped from the farms of the 11 largest producers. These escaped salmon pose a threat to wildlife as they... [source]. *No data from Cooke was found."
+      content="De 2018 à 2022, plus de 4 000 000 de saumons se sont échappés des élevages des 11 plus grands producteurs*. Ces saumons menacent la faune car ils... [source].
+      
+      *Aucune donnée de Cooke n’a été trouvée."
     />
   );
 };
@@ -351,9 +357,10 @@ const EscapeSection = () => {
 const AntibioticSection = () => {
   return (
     <DashboardSection
-      title="Antibiotic consumption"
+      title="Consommation d'antibiotiques"
       id="antibiotic-conso"
-      content="If Norway is claiming to have less than 99% of its aquaculture antibiotics-free, other countries are not as vertuous. In Chile, the use of antibiotics has increased by 1/3 since covid-crisis.  In Chile: 421 tonnes of atb used for the 17 major producers, i.e. 0.04% (tonnes of atb /tonne of fish produced) on average. Rates diminished in 2018, but because of the covid crisis, they have risen again in 2021 to reach a rate of tonnes atb/tonnes fish i.e., 1/3 higher than in 2018."
+      mainContent="Si la Norvège prétend que moins de 99 % de son aquaculture est exempte d'antibiotiques, d'autres pays ne sont pas aussi vertueux. Au Chili, l'utilisation d'antibiotiques a augmenté d'un tiers depuis la crise du covid."
+      content="Au Chili : 421 tonnes d'atb utilisées pour les 17 principaux producteurs, soit 0,04% (tonnes d'atb/tonne de poisson produit) en moyenne. Les taux ont diminué en 2018, mais du fait de la crise covid, ils ont de nouveau augmenté en 2021 pour atteindre un taux en tonnes atb/tonne de poisson soit 1/3 supérieur à celui de 2018."
     />
   );
 };

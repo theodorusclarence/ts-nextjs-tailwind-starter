@@ -21,11 +21,11 @@ const navItems: NavItemsProps = [
   },
   {
     link: "/to-act",
-    text: "To act",
+    text: "agir",
   },
   {
     link: "/about",
-    text: "About",
+    text: "à propos",
   },
 ];
 

@@ -1,14 +1,15 @@
 import clsx from "clsx";
-import Image from "next/image";
-import React from "react";
 // import Plot from "react-plotly.js";
 import dynamic from "next/dynamic";
-const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
+import Image from "next/image";
+import React from "react";
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
-import { useState, useEffect } from "react";
-import { fetchData } from "@/pages/api/chart";
+import { useEffect, useState } from "react";
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+
+import { fetchData } from "@/pages/api/chart";
 
 const IntroBlock = ({
   className,
@@ -17,7 +18,6 @@ const IntroBlock = ({
   className?: string;
   headDark?: boolean;
 }) => {
-
   const [plot, setPlot] = useState({
     data: [],
     layout: {},
@@ -51,6 +51,7 @@ const IntroBlock = ({
               ? "lg:bg-[url('/images/wave-text.svg')]"
               : "lg:bg-[url('/images/wave-text-light.svg')]",
           )}
+          lang="en"
         >
           Be the change.
         </h2>
@@ -58,15 +59,16 @@ const IntroBlock = ({
       <div className="px-6 lg:px-12 pb-6 lg:pb-24 text-darkblue1 bg-brown1">
         <div className="max-w-[1500px] mx-auto">
           <p className={clsx("h3", "pb-6 md:pb-12 max-w-3xl")}>
-            There are alternatives to salmon in our way of eating, selling, and
-            producing.
+            Il existe des alternatives au saumon dans notre manière de manger,
+            de vendre et de produire.
           </p>
-          <p className={"text-xl pb-6 md:pb-16 max-w-3xl"}>
-            France, located in the top 3 of the largest consumers of salmon in
-            the world, bears a particular responsibility in guiding practices.
+          <p className="text-xl pb-6 md:pb-16 max-w-3xl">
+            La France, située dans le top 3 des plus gros consommateurs de
+            saumon au monde, porte une responsabilité particulière dans
+            l'orientation des pratiques.
           </p>
           <div className="flex justify-center">
-            <Plot data={plot.data} layout={plot.layout}/>
+            <Plot data={plot.data} layout={plot.layout} />
           </div>
         </div>
       </div>
@@ -83,13 +85,13 @@ const IntroBlock = ({
           />
 
           <p className="mt-6 xl:mt-10 text-xl//tight md:text-3xl//tight xl:text-6xl/tight font-bold">
-            Join the collective effort against salmon farming by Signing the
-            pledge below
+            Pour inverser la tendance et stopper le désastre, il est urgent
+            d’agir. On a des leviers d’action !
           </p>
 
           <PrimaryButton
             href="/to-act"
-            content="I act"
+            content="on agit"
             className="mt-6 xl:mt-10"
           />
         </div>

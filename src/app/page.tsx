@@ -1,11 +1,13 @@
 "use client";
 
 import clsx from "clsx";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import * as React from "react";
 import "@/lib/env";
-import dynamic from "next/dynamic";
-const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
+
+import { useEffect, useState } from "react";
 
 import "../styles/page.css";
 
@@ -13,15 +15,15 @@ import Edito from "@/components/Edito";
 import IconCard from "@/components/IconCard";
 import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
-import { useState, useEffect } from "react";
-import { fetchData } from "@/pages/api/chart";
 
+import { fetchData } from "@/pages/api/chart";
 
 const HomePage = () => {
   return (
     <>
       <IntroBlock
-        title="The salmon you eat, sell, produce"
+        title="Le saumon que vous 
+        mangez, vendez, produisez..."
         image="/images/salmon.svg"
       />
 
@@ -49,7 +51,7 @@ const BombSection = () => {
           className="row-start-2 self-center justify-self-center w-24 md:w-36 lg:w-[450px] 2xl:w-[766px] max-h-full object-contain"
         />
         <div className="row-start-3 self-end items-left flex gap-2 items-end">
-          <p className={clsx("h1", "w-full")}>kills, starves, contaminates.</p>
+          <p className={clsx("h1", "w-full")}>Tue, affame et contamine.</p>
           <Image src="/images/bottom.svg" alt="" width="50" height="37" />
         </div>
       </div>
@@ -62,7 +64,7 @@ const ExplodeSection = () => {
     <section className="flex items-center justify-center p-6 lg:p-12 lg:pt-24 lg:pb-48 2xl:py-24 text-red1 bg-darkblue1 min-h-screen">
       <div className="relative">
         <p className="mb-6 md:mb-12 mx-auto text-xl lg:absolute 2xl:left-[600px] 2xl:bottom-[260px] lg:max-w-96 text-center text-white">
-          The salmon industry is a bomb with multiple impacts
+          L’industrie du saumon est une bombe écologique et sociale
         </p>
         <ul
           className="
@@ -77,34 +79,34 @@ const ExplodeSection = () => {
             <IconCard
               icon={{ src: "/images/people.svg", width: 130, height: 114 }}
               title="Social"
-              content="Diverts food from West African communities"
+              content="Détourne la nourriture des communautés d'Afrique de l'Ouest"
             />
           </li>
           <li className="lg:absolute lg:left-[80px] lg:bottom-[20px] 2xl:left-[242px] 2xl:bottom-[180px]">
             <IconCard
               icon={{ src: "/images/climat.svg", width: 94, height: 153 }}
-              title="Climate"
-              content="Generates a carbon footprint equivalent to that of 10,000 inhabitants"
+              title="Climat"
+              content="Génère une empreinte carbone collossale"
             />
           </li>
           <li className="lg:absolute lg:-right-[100px] lg:top-[45px] 2xl:-right-[100px] 2xl:top-[160px]">
             <IconCard
               icon={{ src: "/images/hearth.svg", width: 95, height: 99 }}
-              title="Health"
-              content="Raises concerns about human health due to diseases requiring medication and microplastics"
+              title="Santé"
+              content="Impacte la santé humaine à cause des polluants éternels et des microplastiques."
             />
           </li>
           <li className="lg:absolute lg:-right-[140px] lg:bottom-[120px] 2xl:-right-[80px] 2xl:bottom-[360px]">
             <IconCard
               icon={{ src: "/images/butterfly.svg", width: 120, height: 116 }}
-              title="Biodiversity"
-              content="Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks"
+              title="Biodiversité"
+              content="Dégrade la biodiversité marine (échappées de saumons d’élevage, pollutions, parasites et déclin des espèces sauvages) et terrestre (déforestation)"
             />
           </li>
           <li className="lg:absolute lg:right-[240px] lg:-bottom-[140px] 2xl:right-[340px] 2xl:bottom-[40px]">
             <IconCard
-              title="animal condition"
-              content="Stress, diseases, excess mortality as consequences of intensive breeding."
+              title="Condition animale"
+              content="Provoque stress, maladies et mortalités de masse dans les élevages intensifs."
             />
           </li>
         </ul>
@@ -116,9 +118,9 @@ const ExplodeSection = () => {
 const EditoSection = () => {
   const editosContent = [
     {
-      title: "Biodiversity",
+      title: "Biodiversité",
       content:
-        "Intensive salmon farming has significant impacts on marine biodiversity, including escapees, water pollution from waste discharge, parasites affecting wild populations, and increased pressure on wild fish stocks due to the demand for fishmeal, thereby contributing to overexploitation and declining biodiversity.",
+        "L'élevage intensif de saumons a des répercussions significatives sur la biodiversité marine et les ressources planétaires : pollutions diverses, parasites affectant les espèces locales, pression accrue sur les populations de poissons sauvages, exploitation du krill d’Antarctique, déforestation, etc.",
       link: "/dashboard#",
       image: {
         small: "/images/storytelling/biodiversity-400.jpg",
@@ -127,9 +129,9 @@ const EditoSection = () => {
       },
     },
     {
-      title: "Health",
+      title: "Santé",
       content:
-        "The high concentration of fish in aquaculture farms promotes the spread of diseases, necessitating the use of pathogens or medications, which can have consequences for human health. Additionally, the increasing presence of microplastics in salmon raises concerns for human health.",
+        "La présence dans la chair des saumons de polluants organiques persistants (POP) et de microplastiques soulève des préoccupations pour la santé humaine.La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, nécessitant l'utilisation d'agents pathogènes ou de médicaments.",
       link: "/dashboard#human-health",
       image: {
         small: "/images/storytelling/health-400.jpg",
@@ -139,9 +141,9 @@ const EditoSection = () => {
       },
     },
     {
-      title: "Climate",
+      title: "Climat",
       content:
-        "Intensive salmon farming generates greenhouse gas emissions, primarily carbon dioxide (CO2) from energy used in facilities, feed production, and transportation, as well as methane resulting from the decomposition of organic waste.",
+        "L'élevage intensif de saumons génère des émissions de gaz à effet de serre, principalement du dioxyde de carbone (CO2) provenant de l'énergie utilisée dans les installations, de la production d'aliments et du transport, ainsi que du méthane résultant de la décomposition des déchets organiques.",
       link: "/dashboard#",
       image: {
         small: "/images/storytelling/climat-400.jpg",
@@ -150,9 +152,9 @@ const EditoSection = () => {
       },
     },
     {
-      title: "Social",
+      title: "justice Sociale",
       content:
-        "Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities.",
+        "Chaque année 500 000+ tonnes de poissons sauvages sont prélevés aux larges des côtes de l’Afrique de l’Ouest pour nourrir des poissons d'élevage mettant en péril la sécurité alimentaire des communautés locales.",
       link: "/dashboard#",
       image: {
         small: "/images/storytelling/social-400.jpg",
@@ -161,9 +163,9 @@ const EditoSection = () => {
       },
     },
     {
-      title: "Animal condition",
+      title: "Condition animale",
       content:
-        "The very high density of salmon in cages leads to illness and stress. Sea lice eat the flesh of disfigured fish. Mortality rates within cages are very abnormally high.",
+        "La très forte densité des saumons en cages entraine maladies et stress. Les poux de mer rongent la chair des poissons défigurés. Les taux de mortalité au sein des cages sont très anormalement élevés.",
       link: "/dashboard#",
       image: {
         small: "/images/storytelling/animals-400.jpg",
@@ -207,11 +209,13 @@ const BusinessSection = () => {
     <section className="p-6 lg:px-12 lg:pt-36 lg:pb-64 text-red1 bg-darkblue1">
       <div className="max-w-[1500px] mx-auto">
         <h3 className={clsx("h3", "mb-4 lg:mb-6 max-w-5xl m-auto text-center")}>
-          And all this with the impunity of an exponentially growing industry.
+          Et tout ça dans l’impunité d’une industrie en croissance
+          exponentielle.
         </h3>
         <p className="mb-6 lg:mb-14 max-w-xl text-xl text-white m-auto text-center">
-          Salmon production, dominated by a handful of multinationals, has
-          experienced hyper-growth on a global scale for several decades.
+          La production de saumons, dominée par une poignée de multinationales,
+          connaît depuis quelques décennies une hyper-croissance à l’échelle
+          globale.
         </p>
         <div className="flex justify-center">
           <Plot data={plot.data} layout={plot.layout} />

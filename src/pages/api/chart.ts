@@ -1,6 +1,5 @@
 "use server";
 export const fetchData = async (apiPath: string, chartName: string) => {
-
   const dataUrl = process.env.PINKBOMBS_DATA_URL;
   const apiKey = process.env.PINKBOMBS_DATA_API_KEY;
   try {
