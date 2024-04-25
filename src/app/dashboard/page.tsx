@@ -427,10 +427,10 @@ const MicroplasticSection = () => {
       title="Microplastique"
       src="/images/microplastics.webp"
       id="microplastics"
-      content="A 5 kg salmon contains approximately 575 microplastics.
-      An average French person consuming 4.4 kg of salmon per year will ingest around 575 microplastics per year out of a total of 97,500 from various sources.
-      Microplastics are particularly prevalent in salmon due to bioaccumulation in the food chain and the affinity of plastics for fats.
-      This affects mainly farmed salmon, which are significantly fattier and live in environments rich in plastics."
+      content="Un saumon de 5 kg contient environ 575 microplastiques.
+      Une personne française moyenne consommant 4,4 kg de saumon par an ingérera environ 575 microplastiques par an sur un total de 97.500 provenant de différentes sources.
+      Les microplastiques sont particulièrement présents dans le saumon en raison de la bioaccumulation dans la chaîne alimentaire et de l'affinité des plastiques pour les graisses.
+      Cela affecte surtout les saumons d'élevage, qui sont nettement plus gras et vivent dans des environnements riches en plastiques."
     />
   );
 };
