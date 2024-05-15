@@ -67,7 +67,7 @@ const IntroBlock = ({
             saumon au monde, porte une responsabilité particulière dans
             l'orientation des pratiques.
           </p>
-          <div className="flex justify-center">
+          <div className="flex lg:justify-center min-h-[300px] overflow-y-auto bg-white">
             <Plot data={plot.data} layout={plot.layout} />
           </div>
         </div>

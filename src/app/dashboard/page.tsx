@@ -238,11 +238,13 @@ const TopCountriesSection = () => {
           Evolution de l'élevage du saumon par pays
         </h3>
 
-        <DashboardChart
-          data={mapData.data}
-          layout={mapData.layout}
-          id="evolution-map"
-        />
+        <div className="flex md:justify-center min-h-[450px] overflow-y-auto">
+          <DashboardChart
+            data={mapData.data}
+            layout={mapData.layout}
+            id="evolution-map"
+          />
+        </div>
       </div>
     </>
   );
