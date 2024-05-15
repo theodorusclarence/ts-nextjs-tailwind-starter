@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const IconCard = ({
+const Edito = ({
   className,
   title,
   image,
@@ -101,4 +101,4 @@ const IconCard = ({
     </div>
   );
 };
-export default IconCard;
+export default Edito;

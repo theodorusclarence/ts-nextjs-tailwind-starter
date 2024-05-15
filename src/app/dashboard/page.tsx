@@ -12,6 +12,7 @@ import Summary, { SummaryLinksProps } from "@/components/Summary";
 import TitleBlock from "@/components/TitleBlock";
 
 import { fetchData } from "@/pages/api/chart";
+import Calculator from "@/components/Calculator";
 
 const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
   ssr: false,
@@ -133,6 +134,9 @@ const DashboardPage = () => {
     <>
       <IntroBlock title="Les chiffres derrière l’histoire" />
       <Summary links={summary} />
+
+      <Calculator />
+
       <section>
         <TitleBlock id="intro" title="Intro" />
         <SalmonCollapseSection />
