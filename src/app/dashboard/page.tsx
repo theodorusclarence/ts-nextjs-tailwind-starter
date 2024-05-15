@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import "@/lib/env";
 
+import Calculator from "@/components/Calculator";
 import CustomDashboardSection from "@/components/CustomDashboardSection";
 import DashboardSection from "@/components/DashboardSection";
 import IntroBlock from "@/components/IntroBlock";
@@ -12,7 +13,6 @@ import Summary, { SummaryLinksProps } from "@/components/Summary";
 import TitleBlock from "@/components/TitleBlock";
 
 import { fetchData } from "@/pages/api/chart";
-import Calculator from "@/components/Calculator";
 
 const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
   ssr: false,
