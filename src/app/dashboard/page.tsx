@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import "@/lib/env";
 
+import Calculator from "@/components/Calculator";
 import CustomDashboardSection from "@/components/CustomDashboardSection";
 import DashboardSection from "@/components/DashboardSection";
 import IntroBlock from "@/components/IntroBlock";
@@ -133,6 +134,23 @@ const DashboardPage = () => {
     <>
       <IntroBlock title="Les chiffres derrière l’histoire" />
       <Summary links={summary} />
+
+      <Calculator
+        data={[
+          { multiplicator: 18, label: "saumons abattus" },
+          {
+            multiplicator: 8107,
+            label: "poissons fourrages pêchés pour alimenter les saumons",
+          },
+          { multiplicator: 0.5, label: "tonnes de CO2 émis par l'industrie" },
+          {
+            multiplicator: 618,
+            label:
+              "Euros de chiffre d'affaire pour les entreprises leadeurs du marché",
+          },
+        ]}
+      />
+
       <section>
         <TitleBlock id="intro" title="Intro" />
         <SalmonCollapseSection />

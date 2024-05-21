@@ -20,13 +20,15 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
 
-### 4. Change defaults
+### 4. Build and test
 
-There are some things you need to change including title, urls, favicons, etc.
+Run the followed command:
 
-Find all comments with !STARTERCONF, then follow the guide.
-
-Don't forget to change the package name in package.json
+- Build the project: `yarn build`
+- Launch linter: `yarn lint:strict`
+- Launch Typecheck: `yarn typecheck`
+- Launch Prettier: `yarn format:check`
+- Launch Jest: `yarn test`
 
 ### 5. Commit Message Convention
 
