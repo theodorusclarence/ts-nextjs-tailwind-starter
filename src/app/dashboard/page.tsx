@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import "@/lib/env";
 
 import Calculator from "@/components/Calculator";
-import CustomDashboardSection from "@/components/CustomDashboardSection";
 import DashboardSection from "@/components/DashboardSection";
 import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
@@ -265,7 +264,7 @@ const TopCountriesSection = () => {
 
 // const SalmonConsumptionSection = () => {
 //   return (
-//     <CustomDashboardSection
+//     <DashboardSection
 //       title="Consommation de saumon"
 //       id="intro-consumption"
 //       content="Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne. "
@@ -393,7 +392,7 @@ const LandPlantsSection = () => {
 
 // const SalmonConsumptionBisSection = () => {
 //   return (
-//     <CustomDashboardSection
+//     <DashboardSection
 //       title="Consommation"
 //       id="companies-consumption"
 //       mainContent="Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an."
@@ -405,7 +404,7 @@ const LandPlantsSection = () => {
 
 const DeforestationSection = () => {
   return (
-    <CustomDashboardSection
+    <DashboardSection
       title="Déforestation"
       src="/images/deforestation.webp"
       id="deforestation"
@@ -439,7 +438,7 @@ const AntibioticSection = () => {
 
 const MicroplasticSection = () => {
   return (
-    <CustomDashboardSection
+    <DashboardSection
       title="Microplastique"
       src="/images/microplastics.webp"
       id="microplastics"
@@ -453,7 +452,7 @@ const MicroplasticSection = () => {
 
 const StressOnshoreSection = () => {
   return (
-    <CustomDashboardSection
+    <DashboardSection
       title="Densité / stress dans usine à terre"
       src="/images/stress.webp"
       id="stress-onshore"
@@ -490,7 +489,7 @@ Cette valeur est extrapolée à partir des émissions de 9 des plus grands produ
 
 const SocialCarbonSection = () => {
   return (
-    <CustomDashboardSection
+    <DashboardSection
       title="Impact carbone"
       src="/images/social-carbon.webp"
       id="social-carbon"
