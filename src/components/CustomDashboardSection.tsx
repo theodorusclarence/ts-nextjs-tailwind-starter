@@ -15,10 +15,10 @@ const CustomDashboardSection = ({
   src?: string | undefined;
 }) => {
   return (
-    <div id={id} className="p-6 md:p-12">
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_2fr] max-w-[1500px] mx-auto">
+    <div id={id} className="p-6 md:p-12 max-w-[1596px] mx-auto">
+      <h3 className="h3 text-red1 mb-4 lg:mb-8 max-w-screen-md">{title}</h3>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_2fr]">
         <div>
-          <h3 className="h3 text-red1 py-8">{title}</h3>
           <p className="font-semibold">{mainContent}</p>
           <p className="py-7">{content}</p>
         </div>
