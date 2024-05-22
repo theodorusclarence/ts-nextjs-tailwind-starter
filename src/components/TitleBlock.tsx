@@ -21,7 +21,7 @@ const TitleBlock = ({
       id={id}
       className={clsx(
         className,
-        "flex items-end p-6 md:p-12 xl:p-[60px] min-h-48 lg:min-h-[400px] text-red1 bg-pink1",
+        "flex items-end p-6 md:p-12 xl:p-[60px] text-red1 bg-pink1",
       )}
     >
       <h2 className="h2 max-w-[1500px] mx-auto w-full">{title}</h2>

@@ -104,7 +104,7 @@ const summary: SummaryLinksProps = [
     title: "Climat",
     sublinks: [
       {
-        label: "Carbon",
+        label: "Impact carbone",
         targetId: "carbon-bomb",
       },
     ],
@@ -113,7 +113,7 @@ const summary: SummaryLinksProps = [
     title: "Social",
     sublinks: [
       {
-        label: "Carbon",
+        label: "Impact carbone",
         targetId: "social-carbon",
       },
     ],
@@ -156,14 +156,14 @@ const DashboardPage = () => {
         <SalmonCollapseSection />
         <SalmonFarmingSection />
         <TopCountriesSection />
-        <SalmonConsumptionSection />
+        {/* <SalmonConsumptionSection /> */}
       </section>
 
       <section>
         <TitleBlock id="companies" title="Entreprises" />
         <MainProductionSection />
         <LandPlantsSection />
-        <SalmonConsumptionBisSection />
+        {/* <SalmonConsumptionBisSection /> */}
       </section>
 
       <section>
@@ -179,24 +179,19 @@ const DashboardPage = () => {
       </section>
 
       <section>
-        <TitleBlock id="animal-welfare" title="Animal welfare" />
+        <TitleBlock id="animal-welfare" title="Santé animale" />
         <StressOnshoreSection />
         <MortalityRateSection />
       </section>
 
       <section>
-        <TitleBlock id="climate" title="Climate" />
+        <TitleBlock id="climate" title="Climat" />
         <CarbonSection />
       </section>
 
       <section>
         <TitleBlock id="social" title="Social" />
         <SocialCarbonSection />
-      </section>
-
-      <section>
-        <TitleBlock id="alternatives" title="Alternatives" />
-        <NutritionMatrixSection />
       </section>
 
       <JoinBlock headDark={false} />
@@ -268,15 +263,15 @@ const TopCountriesSection = () => {
   );
 };
 
-const SalmonConsumptionSection = () => {
-  return (
-    <CustomDashboardSection
-      title="Consommation de saumon"
-      id="intro-consumption"
-      content="Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne. "
-    />
-  );
-};
+// const SalmonConsumptionSection = () => {
+//   return (
+//     <CustomDashboardSection
+//       title="Consommation de saumon"
+//       id="intro-consumption"
+//       content="Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne. "
+//     />
+//   );
+// };
 
 const MainProductionSection = () => {
   return (
@@ -395,17 +390,18 @@ const LandPlantsSection = () => {
     </>
   );
 };
-const SalmonConsumptionBisSection = () => {
-  return (
-    <CustomDashboardSection
-      title="Consommation"
-      id="companies-consumption"
-      mainContent="Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an."
-      content="La consommation apparente de saumon (toutes espèces confondues) est calculée comme la production, y compris l'aquaculture et la capture, plus les importations moins les exportations. Toutes les données sont fournies par la FAO. Les facteurs de conversion entre le poids du produit et le poids vif sont approximés à l'aide de la documentation de la FAO : https://www.fao.org/3/bt963e/bt963e.pdf
-    Ces approximations peuvent conduire à des indicateurs erronés, surtout dans les pays peu peuplés et/ou à forte production. C’est pour cette raison que la consommation par habitant n’est pas incluse dans le graphique."
-    />
-  );
-};
+
+// const SalmonConsumptionBisSection = () => {
+//   return (
+//     <CustomDashboardSection
+//       title="Consommation"
+//       id="companies-consumption"
+//       mainContent="Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an."
+//       content="La consommation apparente de saumon (toutes espèces confondues) est calculée comme la production, y compris l'aquaculture et la capture, plus les importations moins les exportations. Toutes les données sont fournies par la FAO. Les facteurs de conversion entre le poids du produit et le poids vif sont approximés à l'aide de la documentation de la FAO : https://www.fao.org/3/bt963e/bt963e.pdf
+//     Ces approximations peuvent conduire à des indicateurs erronés, surtout dans les pays peu peuplés et/ou à forte production. C’est pour cette raison que la consommation par habitant n’est pas incluse dans le graphique."
+//     />
+//   );
+// };
 
 const DeforestationSection = () => {
   return (
@@ -482,7 +478,7 @@ const MortalityRateSection = () => {
 const CarbonSection = () => {
   return (
     <DashboardSection
-      title="Carbon"
+      title="Impact carbone"
       id="carbon-bomb"
       content="
       L'industrie du saumon a émis environ 16 millions de tonnes de CO2 en 2021, tout comme un pays comme la Slovénie ou l'objectif d'émissions de 8 millions d'êtres humains en 2050.
@@ -495,7 +491,7 @@ Cette valeur est extrapolée à partir des émissions de 9 des plus grands produ
 const SocialCarbonSection = () => {
   return (
     <CustomDashboardSection
-      title="Carbon"
+      title="Impact carbone"
       src="/images/social-carbon.webp"
       id="social-carbon"
       mainContent="En 2020, 3 % de tous les poissons capturés dans le monde sont élevés pour le saumon de l'Atlantique (2,72 millions de tonnes)."
@@ -503,18 +499,6 @@ const SocialCarbonSection = () => {
       Et ce type de surpêche a eu de nombreux impacts sociaux négatifs, comme en Mauritanie et en Gambie, où la quantité de poisson dans la mer a été réduite et où les quelques poissons pêchés sont achetés par les industriels pour un prix insignifiant, limitant l'emploi et la vie de la communauté locale. accès à l’une des principales sources de leur approvisionnement alimentaire.
       [Article sur l'impact de la pêche industrielle] -> ici (ou un autre)
       Les captures annuelles mondiales de poissons, coquillages et crustacés devraient atteindre environ 90 millions de tonnes d'ici 2020. La grande majorité de ce volume est destinée à la consommation humaine (environ 70 millions). Et puis, près de la moitié de ce qui reste (42 %) est utilisée pour la production mondiale de farine de poisson, approvisionnant le secteur aquacole (pour la pisciculture)."
-    />
-  );
-};
-
-const NutritionMatrixSection = () => {
-  return (
-    <DashboardSection
-      title="Matrices de nutrition"
-      id="alternatives"
-      mainContent="Malgré certains avantages nutritionnels néanmoins remplaçables, les impacts environnementaux et sociaux négatifs du saumon devraient nous inciter à envisager des alternatives dans notre alimentation."
-      content="Comme vous pouvez le constater, il existe de nombreuses raisons pour lesquelles la consommation de saumon est problématique. Alors pourquoi en mangeons-nous autant ? Tout d’abord, le storytelling autour du saumon véhicule une image très positive (pour les grandes occasions, désirable…), mais on entend aussi beaucoup de bonnes choses sur ses bienfaits nutritionnels.
-      Il nous semble intéressant de relativiser ces bénéfices nutritionnels, en tenant compte des différents impacts sur la santé, l’environnement et la société. Cela nous donnera une vision globale des conséquences de la consommation de saumon, mais nous aidera également à découvrir des alternatives à ce produit, qui pourraient être aussi bonnes pour nous que pour l'environnement et le reste de l'humanité."
     />
   );
 };
