@@ -17,6 +17,8 @@ import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
 
 import { fetchData } from "@/pages/api/chart";
+import PrimaryButton from "@/components/buttons/PrimaryButton";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -219,6 +221,14 @@ const BusinessSection = () => {
         </p>
         <div className="flex md:justify-center min-h-[450px] overflow-y-auto bg-white">
           <Plot data={plot.data} layout={plot.layout} />
+        </div>
+        <div className="flex justify-center">
+          <Link
+            className="inline-flex gap-4 mt-6 lg:mt-12 p-4 lg:px-10 lg:text-xl text-red1 font-secondary uppercase rounded-md tracking-widest font-black border-2 border-red1 hover:bg-red1 hover:text-darkblue1"
+            href="/to-act"
+          >
+            On agit
+          </Link>
         </div>
       </div>
     </section>
