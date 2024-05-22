@@ -7,6 +7,7 @@ import * as React from "react";
 import "@/lib/env";
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import "../styles/page.css";
@@ -17,8 +18,6 @@ import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
 
 import { fetchData } from "@/pages/api/chart";
-import PrimaryButton from "@/components/buttons/PrimaryButton";
-import Link from "next/link";
 
 const HomePage = () => {
   return (
