@@ -19,11 +19,11 @@ const IntroBlock = ({
     <header
       className={clsx(
         className,
-        "flex p-6 lg:p-12 text-red1 bg-pink1",
-        image ? "h-screen min-h-[300px]" : "min-h-[660px]",
+        "flex p-6 lg:p-12 text-red1 bg-pink1 min-h-[300px]",
+        image ? "h-screen min-h-[300px]" : "lg:pt-60",
       )}
     >
-      <div className="grid grid-rows-[1fr, auto, 1fr] w-full">
+      <div className="grid grid-rows-[1fr, auto, 1fr] w-full max-w-[1500px] mx-auto">
         {image && (
           <Image
             src="/images/salmon.svg"

@@ -1,7 +1,9 @@
 import clsx from "clsx";
-import React from "react";
+import Image from "next/image";
+import React, { useState } from "react";
 
 export type SummaryLinksProps = {
+  id: string;
   title: string;
   sublinks: {
     label: string;
@@ -16,35 +18,78 @@ const Summary = ({
   className?: string;
   links: SummaryLinksProps;
 }) => {
+  const [openMenu, setOpenMenu] = useState("");
+  const handleClickLink = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    id: string,
+  ) => {
+    e.preventDefault();
+    setOpenMenu(openMenu === id ? "" : id);
+  };
+
   if (!links) {
     return <></>;
   }
 
   return (
-    <div className={clsx(className, "bg-darkblue1 p-6 md:p-12 lg:py-20")}>
-      <div className="max-w-[1500px] mx-auto">
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-8 lg:gap-y-14">
-          {links.map((link, keyLink) => (
-            <li key={`link-${keyLink}`}>
-              <p className="h4 pb-6 text-red1">{link.title}</p>
+    <nav
+      className={clsx(className, "p-6 lg:p-12 text-red1 bg-pink1")}
+      aria-label="page"
+    >
+      <ul
+        role="menubar"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-8 max-w-[1500px] mx-auto bg-white text-darkblue1 rounded-md"
+      >
+        {links.map((link, keyLink) => (
+          <li role="none" className="flex-1 relative" key={`link-${keyLink}`}>
+            <a
+              role="menuitem"
+              aria-haspopup="true"
+              aria-expanded={openMenu === link.id}
+              href={`#${link.sublinks[0].targetId}`}
+              onClick={(e) => handleClickLink(e, link.id)}
+              className={clsx(
+                "min-w-max flex justify-between p-4 hover:bg-red1 hover:text-white",
+                openMenu === link.id ? "bg-red1 text-white" : "",
+              )}
+            >
+              {link.title}
+              <Image
+                src="/images/bottom-dark.svg"
+                alt=""
+                width="10"
+                height="7"
+                className="ml-2"
+              />
+            </a>
 
-              <ul className="space-y-4">
-                {link.sublinks.map((sublink, keySubLink) => (
-                  <li key={`link-${keyLink}-${keySubLink}`}>
-                    <a
-                      href={`#${sublink.targetId}`}
-                      className="block p-4 md:px-8 md:py-5 bg-white text-darkblue1 font-bold text-xl hover:bg-red1"
-                    >
-                      {sublink.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+            <ul
+              role="menu"
+              className={clsx(
+                "sm:absolute z-10 w-full bg-white",
+                openMenu === link.id ? "block" : "hidden",
+              )}
+              aria-label={link.title}
+            >
+              {link.sublinks.map((sublink, keySubLink) => (
+                <li key={`link-${keyLink}-${keySubLink}`}>
+                  <a
+                    href={`#${sublink.targetId}`}
+                    role="menuitem"
+                    className="block p-2 hover:text-red1"
+                    onClick={() => {
+                      setOpenMenu("");
+                    }}
+                  >
+                    {sublink.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 export default Summary;

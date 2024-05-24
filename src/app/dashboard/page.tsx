@@ -19,6 +19,7 @@ const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
 
 const summary: SummaryLinksProps = [
   {
+    id: "intro",
     title: "Intro",
     sublinks: [
       {
@@ -40,6 +41,7 @@ const summary: SummaryLinksProps = [
     ],
   },
   {
+    id: "company",
     title: "Entreprises",
     sublinks: [
       {
@@ -61,6 +63,7 @@ const summary: SummaryLinksProps = [
     ],
   },
   {
+    id: "biondiversity",
     title: "Biodiversité",
     sublinks: [
       {
@@ -74,6 +77,7 @@ const summary: SummaryLinksProps = [
     ],
   },
   {
+    id: "health",
     title: "Human health",
     sublinks: [
       {
@@ -87,6 +91,7 @@ const summary: SummaryLinksProps = [
     ],
   },
   {
+    id: "animals",
     title: "Bien être animal",
     sublinks: [
       {
@@ -100,6 +105,7 @@ const summary: SummaryLinksProps = [
     ],
   },
   {
+    id: "climate",
     title: "Climat",
     sublinks: [
       {
@@ -109,6 +115,7 @@ const summary: SummaryLinksProps = [
     ],
   },
   {
+    id: "social",
     title: "Social",
     sublinks: [
       {
@@ -118,6 +125,7 @@ const summary: SummaryLinksProps = [
     ],
   },
   {
+    id: "alternative",
     title: "Alternatives",
     sublinks: [
       {

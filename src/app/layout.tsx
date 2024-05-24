@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Metadata } from "next";
 import { Barlow_Condensed, Montserrat } from "next/font/google";
 import * as React from "react";
@@ -60,7 +61,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${barlow.variable} ${montserrat.variable}`}>
+    <html
+      lang="fr"
+      className={clsx(barlow.variable, montserrat.variable, "scroll-smooth")}
+    >
       <body>
         <Navbar />
         <main>{children}</main>
