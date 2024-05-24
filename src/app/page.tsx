@@ -97,7 +97,7 @@ const ExplodeSection = () => {
               content="Impacte la santé humaine à cause des polluants éternels et des microplastiques."
             />
           </li>
-          <li className="lg:absolute lg:-right-[140px] lg:bottom-[120px] 2xl:-right-[80px] 2xl:bottom-[360px]">
+          <li className="lg:absolute lg:-right-[140px] lg:bottom-[60px] 2xl:-right-[80px] 2xl:bottom-[360px]">
             <IconCard
               icon={{ src: "/images/butterfly.svg", width: 120, height: 116 }}
               title="Biodiversité"
@@ -124,9 +124,9 @@ const EditoSection = () => {
         "L'élevage intensif de saumons a des répercussions significatives sur la biodiversité marine et les ressources planétaires : pollutions diverses, parasites affectant les espèces locales, pression accrue sur les populations de poissons sauvages, exploitation du krill d’Antarctique, déforestation, etc.",
       link: "/dashboard#biodiversity",
       image: {
-        small: "/images/storytelling/biodiversity-400.jpg",
-        medium: "/images/storytelling/biodiversity-600.jpg",
-        large: "/images/storytelling/biodiversity-1200.jpg",
+        small: "/images/storytelling/biodiversity-hd.webp",
+        medium: "/images/storytelling/biodiversity-hd.webp",
+        large: "/images/storytelling/biodiversity-hd.webp",
       },
     },
     {
@@ -135,9 +135,9 @@ const EditoSection = () => {
         "La présence dans la chair des saumons de polluants organiques persistants (POP) et de microplastiques soulève des préoccupations pour la santé humaine.La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, nécessitant l'utilisation d'agents pathogènes ou de médicaments.",
       link: "/dashboard#human-health",
       image: {
-        small: "/images/storytelling/health-400.jpg",
-        medium: "/images/storytelling/health-600.jpg",
-        large: "/images/storytelling/health-1200.jpg",
+        small: "/images/storytelling/health-hd.webp",
+        medium: "/images/storytelling/health-hd.webp",
+        large: "/images/storytelling/health-hd.webp",
         caption: "Photo credit: Ramji / Bob Brown Foundation",
       },
     },
@@ -169,9 +169,9 @@ const EditoSection = () => {
         "La très forte densité des saumons en cages entraine maladies et stress. Les poux de mer rongent la chair des poissons défigurés. Les taux de mortalité au sein des cages sont très anormalement élevés.",
       link: "/dashboard#animal-welfare",
       image: {
-        small: "/images/storytelling/animals-400.jpg",
-        medium: "/images/storytelling/animals-600.jpg",
-        large: "/images/storytelling/animals-1200.jpg",
+        small: "/images/storytelling/animals-hd.webp",
+        medium: "/images/storytelling/animals-hd.webp",
+        large: "/images/storytelling/animals-hd.webp",
       },
     },
   ];

@@ -49,7 +49,7 @@ const Navbar = () => {
           {navItems.map((item, key) => (
             <Link
               className={clsx(
-                "font-secondary uppercase font-bold text-darkblue1 hover:text-red1 focus:text-red1 lg:text-xl",
+                "font-secondary uppercase font-bold text-darkblue1 hover:text-red1 focus:text-red1 lg:text-2xl",
                 item.link === pathName ? "navbar-active" : "",
               )}
               href={item.link}
