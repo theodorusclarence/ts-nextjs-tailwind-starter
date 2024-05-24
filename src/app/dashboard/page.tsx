@@ -8,12 +8,12 @@ import Calculator from "@/components/Calculator";
 import DashboardSection from "@/components/DashboardSection";
 import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
-import Summary, { SummaryLinksProps } from "@/components/Summary";
+import { SummaryLinksProps } from "@/components/Summary";
 import TitleBlock from "@/components/TitleBlock";
 
 import { fetchData } from "@/pages/api/chart";
 
-const DashboardChart = dynamic(() => import("@/components/DashboardChart"), {
+const Chart = dynamic(() => import("@/components/Chart"), {
   ssr: false,
 });
 
@@ -24,19 +24,19 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Effondrement du saumon sauvage de l'Atlantique",
-        targetId: "salmon-collapse",
+        targetId: "salmon-collapse-block",
       },
       {
         label: "Hyper-croissance de l’élevage du saumon",
-        targetId: "hyper-growth",
+        targetId: "hyper-growth-block",
       },
       {
         label: "Principaux pays producteurs de saumon d'élevage",
-        targetId: "top-10",
+        targetId: "top-10-block",
       },
       {
         label: "Consommation",
-        targetId: "intro-consumption",
+        targetId: "intro-consumption-block",
       },
     ],
   },
@@ -46,19 +46,19 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Principaux producteurs de saumon en filet ouvert",
-        targetId: "top-comp",
+        targetId: "top-comp-block",
       },
       {
         label: "La nouvelle menace: sur fermes aquacoles terrestres",
-        targetId: "top-land",
+        targetId: "top-land-block",
       },
       {
         label: "Le futur des fermes aquacoles terrestres",
-        targetId: "future-land-based",
+        targetId: "future-land-based-block",
       },
       {
         label: "Consommation",
-        targetId: "companies-consumption",
+        targetId: "companies-consumption-block",
       },
     ],
   },
@@ -68,11 +68,11 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Deforestation",
-        targetId: "deforestation",
+        targetId: "deforestation-block",
       },
       {
         label: "Les évasions",
-        targetId: "escapes-rates",
+        targetId: "escapes-rates-block",
       },
     ],
   },
@@ -82,11 +82,11 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Consommation d'antibiotiques",
-        targetId: "antibiotic-conso",
+        targetId: "antibiotic-conso-block",
       },
       {
         label: "Microplastique",
-        targetId: "microplastics",
+        targetId: "microplastics-block",
       },
     ],
   },
@@ -96,11 +96,11 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Densité / stress dans usine à terre",
-        targetId: "stress-onshore",
+        targetId: "stress-onshore-block",
       },
       {
         label: "Taux de mortalité",
-        targetId: "mortality-rates",
+        targetId: "mortality-rates-block",
       },
     ],
   },
@@ -110,7 +110,7 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Impact carbone",
-        targetId: "carbon-bomb",
+        targetId: "carbon-bomb-block",
       },
     ],
   },
@@ -120,7 +120,7 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Impact carbone",
-        targetId: "social-carbon",
+        targetId: "social-carbon-block",
       },
     ],
   },
@@ -130,7 +130,7 @@ const summary: SummaryLinksProps = [
     sublinks: [
       {
         label: "Matrice de nutrition",
-        targetId: "alternatives",
+        targetId: "alternatives-block",
       },
     ],
   },
@@ -139,8 +139,7 @@ const summary: SummaryLinksProps = [
 const DashboardPage = () => {
   return (
     <>
-      <IntroBlock title="Les chiffres derrière l’histoire" />
-      <Summary links={summary} />
+      <IntroBlock title="Les chiffres derrière l’histoire" summary={summary} />
 
       <Calculator
         data={[
@@ -214,6 +213,7 @@ const SalmonCollapseSection = () => {
       title="Effondrement du saumon sauvage de l'Atlantique"
       id="salmon-collapse"
       content="Le saumon atlantique est inscrit sur la Liste rouge de l'UICN des espèces menacées en décembre 2023 . Cela est dû en grande partie à la surpêche, à la dégradation de l'habitat, notamment due aux barrages bloquant les routes migratoires, mais aussi au changement climatique qui modifie leurs environnements, impactant leurs taux de croissance et de survie."
+      hasChart
     />
   );
 };
@@ -224,33 +224,19 @@ const SalmonFarmingSection = () => {
       title="Hyper-croissance de l’élevage du saumon"
       id="hyper-growth"
       content="La production de saumon a connu une croissance sans précédent. Quasi inexistante il y a 30 ans, elle a bondi à trois millions de tonnes de saumon en 2021, soit l’équivalent de l’élevage et de l’abattage d’un milliard de saumons."
+      hasChart
     />
   );
 };
 
 const TopCountriesSection = () => {
-  const [mapData, setMapData] = useState({
-    data: [],
-    layout: {},
-  });
-  const fetchGraphData = async () => {
-    const mapResponse = await fetchData("graphs", "evolution-map");
-    setMapData(mapResponse);
-  };
-  useEffect(() => {
-    fetchGraphData();
-  }, []);
-
-  if (!mapData) {
-    return <></>;
-  }
-
   return (
     <>
       <DashboardSection
         title="Principaux pays producteurs de saumon d'élevage"
         id="top-10"
         content="Le saumon a besoin d'eaux froides pour croître et la production est donc concentrée dans quelques pays situés loin au nord ou au sud. Aujourd'hui, quatre pays représentent à eux seuls 90 % de la production mondiale de saumon."
+        hasChart
       />
 
       <div className="p-6 md:p-12 max-w-[1500px] mx-auto text-center">
@@ -259,11 +245,7 @@ const TopCountriesSection = () => {
         </h3>
 
         <div className="flex md:justify-center min-h-[450px] overflow-y-auto">
-          <DashboardChart
-            data={mapData.data}
-            layout={mapData.layout}
-            id="evolution-map"
-          />
+          <Chart id="evolution-map" />
         </div>
       </div>
     </>
@@ -276,6 +258,7 @@ const TopCountriesSection = () => {
 //       title="Consommation de saumon"
 //       id="intro-consumption"
 //       content="Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne. "
+//       hasChart
 //     />
 //   );
 // };
@@ -286,6 +269,7 @@ const MainProductionSection = () => {
       title="Principaux producteurs de saumon en CAGES MARINES"
       id="top-comp"
       content="Les petites fermes salmonicoles artisanales ont cédé la place à l’aquaculture industrielle. En quelques décennies, le marché est devenu dominé par une poignée de multinationales. Mowi, anciennement Marine Harvest, est leader du secteur. L'entreprise est présente dans 25 pays."
+      hasChart
     />
   );
 };
@@ -306,7 +290,7 @@ const LandPlantsSection = () => {
   return (
     <>
       <DashboardSection
-        title="La nouvelle menace: Les fermes aquacoles terrestres"
+        title="La nouvelle menace : Les fermes aquacoles terrestres"
         id="top-land"
         mainContent="
     En 2021, la capacité de production théorique combinée des élevages terrestres
@@ -326,10 +310,11 @@ const LandPlantsSection = () => {
     fonctionnement ne produit plus de 5 000 tonnes et les incidents techniques sont fréquents.
     Une usine au Danemark en a subi cinq, résultant de défaillances techniques
     (pollution au chlorure de fer dans le fjord, incendie complet de son usine, engendrant pollution de l’air et de l’eau)."
+        hasChart
       />
       <div
         id="future-land-based"
-        className="p-6 md:p-12 max-w-[1500px] mx-auto"
+        className="p-6 md:p-12 max-w-[1596px] mx-auto"
       >
         <div className="lg:w-2/4">
           <h3 className="h3 text-red1">
@@ -402,6 +387,7 @@ const LandPlantsSection = () => {
 //   return (
 //     <DashboardSection
 //       title="Consommation"
+//       hasChart
 //       id="companies-consumption"
 //       mainContent="Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an."
 //       content="La consommation apparente de saumon (toutes espèces confondues) est calculée comme la production, y compris l'aquaculture et la capture, plus les importations moins les exportations. Toutes les données sont fournies par la FAO. Les facteurs de conversion entre le poids du produit et le poids vif sont approximés à l'aide de la documentation de la FAO : https://www.fao.org/3/bt963e/bt963e.pdf
@@ -429,6 +415,7 @@ const EscapeSection = () => {
       content="De 2018 à 2022, plus de 4 000 000 de saumons se sont échappés des élevages des 11 plus grands producteurs*. Ces saumons menacent la faune car ils... [source].
 
       *Aucune donnée de Cooke n’a été trouvée."
+      hasChart
     />
   );
 };
@@ -440,6 +427,7 @@ const AntibioticSection = () => {
       id="antibiotic-conso"
       mainContent="Si la Norvège prétend que moins de 99 % de son aquaculture est exempte d'antibiotiques, d'autres pays ne sont pas aussi vertueux. Au Chili, l'utilisation d'antibiotiques a augmenté d'un tiers depuis la crise du covid."
       content="Au Chili : 421 tonnes d'atb utilisées pour les 17 principaux producteurs, soit 0,04% (tonnes d'atb/tonne de poisson produit) en moyenne. Les taux ont diminué en 2018, mais du fait de la crise covid, ils ont de nouveau augmenté en 2021 pour atteindre un taux en tonnes atb/tonne de poisson soit 1/3 supérieur à celui de 2018."
+      hasChart
     />
   );
 };
@@ -478,6 +466,7 @@ const MortalityRateSection = () => {
       id="mortality-rates"
       mainContent="Les taux de mortalité varient considérablement d'un producteur à l'autre et d'une année à l'autre. Des taux exceptionnellement élevés sont observés, atteignant 20 % certaines années."
       content="Certains producteurs atteignent des taux de mortalité bien inférieurs grâce à de meilleures pratiques mais aussi à la législation locale. Attention : ces chiffres ne prennent en compte que la mortalité en mer. La mortalité dans les plans d'eau douce est proche de 30% (rapports Multiexport)"
+      hasChart
     />
   );
 };
@@ -491,6 +480,7 @@ const CarbonSection = () => {
       L'industrie du saumon a émis environ 16 millions de tonnes de CO2 en 2021, tout comme un pays comme la Slovénie ou l'objectif d'émissions de 8 millions d'êtres humains en 2050.
 Environ 90 % des émissions totales proviennent de la chaîne de valeur, principalement de l'alimentation du poisson et du transport.
 Cette valeur est extrapolée à partir des émissions de 9 des plus grands producteurs de saumon."
+      hasChart
     />
   );
 };

@@ -27,7 +27,7 @@ const Calculator = ({ data, className, ...rest }: CalculatorProps) => {
   return (
     <div
       className={clsx(
-        "p-6 md:p-12 max-w-[1500px] mx-auto text-center",
+        "p-6 md:px-12 md:py-32 max-w-[1500px] mx-auto text-center",
         className,
       )}
       {...rest}

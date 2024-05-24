@@ -2,14 +2,18 @@ import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 
+import Summary, { SummaryLinksProps } from "@/components/Summary";
+
 const IntroBlock = ({
   className,
   title,
   image,
+  summary,
 }: {
   className?: string;
   title: string;
   image?: string;
+  summary?: SummaryLinksProps;
 }) => {
   if (!title) {
     return <></>;
@@ -33,9 +37,13 @@ const IntroBlock = ({
             className="row-start-2 self-center justify-self-center w-24 sm:w-60 md:w-72 lg:w-[490px]"
           />
         )}
-        <div className="row-start-3 self-end items-left flex gap-2 items-end">
-          <h1 className={clsx("h1", "w-full")}>{title}</h1>
-          <Image src="/images/bottom.svg" alt="" width="50" height="37" />
+        <div className="row-start-3 self-end items-left flex flex-wrap gap-2 items-end">
+          <h1 className={clsx("h1", "flex-1")}>{title}</h1>
+          {image ? (
+            <Image src="/images/bottom.svg" alt="" width="50" height="37" />
+          ) : null}
+
+          {summary ? <Summary className="w-full" links={summary} /> : null}
         </div>
       </div>
     </header>

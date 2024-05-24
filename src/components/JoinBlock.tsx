@@ -3,13 +3,12 @@ import clsx from "clsx";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import React from "react";
-const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
-import { useEffect, useState } from "react";
+const Chart = dynamic(() => import("@/components/Chart"), {
+  ssr: false,
+});
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
-
-import { fetchData } from "@/pages/api/chart";
 
 const IntroBlock = ({
   className,
@@ -18,23 +17,8 @@ const IntroBlock = ({
   className?: string;
   headDark?: boolean;
 }) => {
-  const [plot, setPlot] = useState({
-    data: [],
-    layout: {},
-  });
-  const fetchGraphData = async () => {
-    const response = await fetchData("graphs", "alternatives");
-    setPlot(response);
-  };
-  useEffect(() => {
-    fetchGraphData();
-  }, []);
-
-  if (!plot) {
-    return <></>;
-  }
   return (
-    <div className={className}>
+    <div id="alternatives-block" className={className}>
       <div
         className={clsx(
           "lg:bg-[url('/images/wave.svg')] bg-no-repeat bg-center bg-[length:3200px_275px]",
@@ -67,9 +51,7 @@ const IntroBlock = ({
             saumon au monde, porte une responsabilité particulière dans
             l'orientation des pratiques.
           </p>
-          <div className="flex lg:justify-center min-h-[300px] overflow-y-auto bg-white">
-            <Plot data={plot.data} layout={plot.layout} />
-          </div>
+          <Chart id="alternatives" />
         </div>
       </div>
 

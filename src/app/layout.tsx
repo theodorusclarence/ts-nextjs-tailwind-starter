@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Metadata } from "next";
 import { Barlow_Condensed, Montserrat } from "next/font/google";
+import Image from "next/image";
 import * as React from "react";
 
 const barlow = Barlow_Condensed({
@@ -67,7 +68,21 @@ export default function RootLayout({
     >
       <body>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          {children}
+          <a
+            href="#"
+            className="hidden md:flex items-center justify-center bg-white hover:bg-black w-14 h-14 rounded-full fixed bottom-4 right-4 hover:-translate-y-1 transition-all ease-in duration-75"
+          >
+            <Image
+              src="/images/bottom.svg"
+              alt="Haut de page"
+              width="40"
+              height="20"
+              className="w-8 aspect-square rotate-180"
+            />
+          </a>
+        </main>
         <Footer />
       </body>
     </html>

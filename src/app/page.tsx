@@ -218,12 +218,12 @@ const BusinessSection = () => {
           connaît depuis quelques décennies une hyper-croissance à l’échelle
           globale.
         </p>
-        <div className="flex md:justify-center min-h-[450px] overflow-y-auto bg-white">
+        <div className="flex md:justify-center min-h-[450px] overflow-y-auto">
           <Plot data={plot.data} layout={plot.layout} />
         </div>
         <div className="flex justify-center">
           <Link
-            className="inline-flex gap-4 mt-6 lg:mt-12 p-4 lg:px-10 lg:text-xl text-red1 font-secondary uppercase rounded-md tracking-widest font-black border-2 border-red1 hover:bg-red1 hover:text-darkblue1"
+            className="inline-flex justify-center gap-4 mt-6 lg:mt-12 p-4 min-w-40 lg:text-2xl text-red1 bg-darkblue1 font-secondary uppercase rounded-xl tracking-widest border-2 font-bold border-red1 hover:bg-red1 hover:text-darkblue1 transition-all ease-in-out duration-100"
             href="/to-act"
           >
             On agit

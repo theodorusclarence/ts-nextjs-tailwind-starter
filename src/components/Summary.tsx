@@ -33,7 +33,7 @@ const Summary = ({
 
   return (
     <nav
-      className={clsx(className, "p-6 lg:p-12 text-red1 bg-pink1")}
+      className={clsx(className, "pt-6 lg:pt-12 text-red1 bg-pink1")}
       aria-label="page"
     >
       <ul
