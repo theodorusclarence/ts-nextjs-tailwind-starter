@@ -1,7 +1,7 @@
 import clsx from "clsx";
-// import Plot from "react-plotly.js";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const Chart = dynamic(() => import("@/components/Chart"), {
@@ -17,6 +17,8 @@ const IntroBlock = ({
   className?: string;
   headDark?: boolean;
 }) => {
+  const t = useTranslations("components");
+
   return (
     <div id="alternatives-block" className={className}>
       <div
@@ -37,21 +39,16 @@ const IntroBlock = ({
           )}
           lang="en"
         >
-          Be the change.
+          {t("join.title")}
         </h2>
       </div>
       <div className="px-6 lg:px-12 pb-6 lg:pb-24 text-darkblue1 bg-brown1">
         <div className="max-w-[1500px] mx-auto">
-          <p className={clsx("h3", "pb-6 md:pb-12 max-w-3xl")}>
-            Il existe des alternatives au saumon dans notre manière de manger,
-            de vendre et de produire.
+          <p className={clsx("h3", "pb-4 md:pb-8 max-w-3xl")}>
+            {t("join.intro")}
           </p>
-          <p className="text-xl pb-6 md:pb-16 max-w-3xl">
-            La France, située dans le top 3 des plus gros consommateurs de
-            saumon au monde, porte une responsabilité particulière dans
-            l'orientation des pratiques.
-          </p>
-          <Chart id="alternatives" />
+          <p className="pb-4 md:pb-16 max-w-3xl">{t("join.content")}</p>
+          <Chart id="alternatives" height={700} />
         </div>
       </div>
 
@@ -66,14 +63,11 @@ const IntroBlock = ({
             height={134}
           />
 
-          <p className="mt-6 xl:mt-10 text-xl//tight md:text-3xl//tight xl:text-6xl/tight font-bold">
-            Pour inverser la tendance et stopper le désastre, il est urgent
-            d’agir. On a des leviers d’action !
-          </p>
+          <p className="h3 mt-6 xl:mt-10">{t("join.act")}</p>
 
           <PrimaryButton
             href="/to-act"
-            content="on agit"
+            content={t("join.link")}
             className="mt-6 xl:mt-10"
           />
         </div>

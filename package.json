@@ -20,6 +20,7 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.321.0",
     "next": "^14.0.4",
+    "next-intl": "^3.14.1",
     "plotly.js": "^2.31.1",
     "plotly.js-dist-min": "^2.31.1",
     "react": "^18.2.0",

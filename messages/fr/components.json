@@ -1,0 +1,32 @@
+{
+  "components": {
+    "summary": {
+      "title": "page"
+    },
+    "edito": {
+      "link": "En savoir plus"
+    },
+    "shareLink": {
+      "blank": "nouvel onglet",
+      "twitter": "Twitter",
+      "linkedin": "Linkedin",
+      "website": "Site internet",
+      "email": "E-mail"
+    },
+    "chart": {
+      "loading": "Chargement des données en cours..."
+    },
+    "calculator": {
+      "intro": "Voici les impacts de l'industrie du saumon dans le monde depuis que vous avez ouvert cette page web.",
+      "seconds": "secondes",
+      "second": "seconde"
+    },
+    "join": {
+      "title": "Be the change.",
+      "intro": "Il existe des alternatives au saumon dans notre manière de manger, de vendre et de produire.",
+      "content": "La France, située dans le top 3 des plus gros consommateurs de saumon au monde, porte une responsabilité particulière dans l'orientation des pratiques.",
+      "act": "Pour inverser la tendance et stopper le désastre, il est urgent d’agir. On a des leviers d’action !",
+      "link": "On agit"
+    }
+  }
+}

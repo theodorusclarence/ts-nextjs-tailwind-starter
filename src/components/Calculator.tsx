@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useLocale, useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 
 type CalculatorProps = {
@@ -11,6 +12,8 @@ type CalculatorProps = {
 
 const Calculator = ({ data, className, ...rest }: CalculatorProps) => {
   const [seconds, setSeconds] = useState(0);
+  const locale = useLocale();
+  const t = useTranslations("components");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,23 +35,21 @@ const Calculator = ({ data, className, ...rest }: CalculatorProps) => {
       )}
       {...rest}
     >
-      <h2>
-        Voici les impacts de l'industrie du saumon dans le monde depuis que vous
-        avez ouvert cette page web.
-      </h2>
+      <h2>{t("calculator.intro")}</h2>
       <div className="h4 pb-6 md:pb-12 text-red1">
-        {seconds} {seconds > 1 ? "secondes" : "seconde"}
+        {seconds}{" "}
+        {seconds > 1 ? t("calculator.seconds") : t("calculator.second")}
       </div>
 
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-12">
         {data.map((element, key) => (
           <li key={key}>
             <span className="h3 block p-2 md:p-4 text-red1">
-              {new Intl.NumberFormat("fr").format(
+              {new Intl.NumberFormat(locale).format(
                 element.multiplicator * (seconds + 1),
               )}
             </span>
-            <span className="">{element.label}</span>
+            <span>{element.label}</span>
           </li>
         ))}
       </ul>

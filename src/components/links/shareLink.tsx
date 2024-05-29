@@ -1,24 +1,10 @@
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import React from "react";
-
-const social: Record<string, { name: string }> = {
-  twitter: {
-    name: "Twitter",
-  },
-  linkedin: {
-    name: "Linkedin",
-  },
-  website: {
-    name: "Website",
-  },
-  email: {
-    name: "Email",
-  },
-};
 
 type ShareLinkProps = {
   className?: string;
-  type?: keyof typeof social;
+  type?: "twitter" | "linkedin" | "website" | "email";
   href: string;
   name: string;
 };
@@ -30,20 +16,22 @@ const ShareLink = ({
   name,
   ...rest
 }: ShareLinkProps) => {
+  const t = useTranslations("components");
+
   if (!href || !name) {
     return <></>;
   }
 
   return (
     <a
-      className={clsx("mt-2 hover:underline lg:text-xl", className)}
+      className={clsx("mt-2 hover:underline", className)}
       href={(type === "email" ? "mailto:" : "") + href}
       target="_blank"
       rel="noopener noreferrer"
-      title={`${social[type].name} ${name} (new tab)`}
+      title={`${t(`shareLink.${type}`)} ${name} (${t("shareLink.blank")})`}
       {...rest}
     >
-      {social[type].name}
+      {t(`shareLink.${type}`)}
       <span className="sr-only">{name}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

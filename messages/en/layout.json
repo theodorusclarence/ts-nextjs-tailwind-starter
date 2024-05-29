@@ -1,0 +1,21 @@
+{
+  "layout": {
+    "top": "Back to top",
+    "nav": {
+      "title": "main",
+      "story": "Story",
+      "dashboard": "Dashboard",
+      "act": "To act",
+      "about": "About"
+    },
+    "footer": {
+      "allRight": "All rights reserved",
+      "and": "and"
+    }
+  },
+  "siteConfig": {
+    "title": "Pinkbombs",
+    "description": "Analyzing the impact of Salmon on the Environment, Ecosystem, Health and Communities.",
+    "url": "https://pinkbombs-app.vercel.app"
+  }
+}

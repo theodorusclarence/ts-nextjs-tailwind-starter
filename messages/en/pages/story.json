@@ -1,0 +1,57 @@
+{
+  "story": {
+    "title": "The salmon you eat, sell, produce...",
+    "bomb": "kills, starves, contaminates.",
+    "explode": {
+      "intro": "The salmon industry is a bomb with multiple impacts",
+      "social": {
+        "title": "Social",
+        "content": "Diverts food from West African communities."
+      },
+      "climat": {
+        "title": "Climate",
+        "content": "Generates a carbon footprint equivalent to that of 10,000 inhabitants."
+      },
+      "health": {
+        "title": "Health",
+        "content": "Raises concerns about human health due to diseases requiring medication and microplastics."
+      },
+      "biodiversity": {
+        "title": "Biodiversity",
+        "content": "Degrades marine biodiversity, including escapees, pollution, parasites, and overexploitation of wild stocks."
+      },
+      "animals": {
+        "title": "Animal condition",
+        "content": "Stress, diseases, excess mortality as consequences of intensive breeding."
+      }
+    },
+    "edito": {
+      "social": {
+        "title": "Social",
+        "content": "Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities."
+      },
+      "climat": {
+        "title": "Climate",
+        "content": "Intensive salmon farming generates greenhouse gas emissions, primarily carbon dioxide (CO2) from energy used in facilities, feed production, and transportation, as well as methane resulting from the decomposition of organic waste."
+      },
+      "health": {
+        "title": "Health",
+        "content": "The high concentration of fish in aquaculture farms promotes the spread of diseases, necessitating the use of pathogens or medications, which can have consequences for human health. Additionally, the increasing presence of microplastics in salmon raises concerns for human health.",
+        "credit": "Photo credit: Ramji / Bob Brown Foundation"
+      },
+      "biodiversity": {
+        "title": "Biodiversity",
+        "content": "Intensive salmon farming has significant impacts on marine biodiversity, including escapees, water pollution from waste discharge, parasites affecting wild populations, and increased pressure on wild fish stocks due to the demand for fishmeal, thereby contributing to overexploitation and declining biodiversity."
+      },
+      "animals": {
+        "title": "Animal condition",
+        "content": "The very high density of salmon in cages leads to illness and stress. Sea lice eat the flesh of disfigured fish. Mortality rates within cages are very abnormally high."
+      }
+    },
+    "industry": {
+      "title": "And all this with the impunity of an exponentially growing industry.",
+      "content": "Salmon production, dominated by a handful of multinationals, has experienced hyper-growth on a global scale for several dec",
+      "link": "We act"
+    }
+  }
+}

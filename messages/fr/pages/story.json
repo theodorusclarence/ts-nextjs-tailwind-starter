@@ -1,0 +1,57 @@
+{
+  "story": {
+    "title": "Le saumon que vous mangez, vendez, produisez...",
+    "bomb": "Tue, affame et contamine.",
+    "explode": {
+      "intro": "L’industrie du saumon est une bombe écologique et sociale",
+      "social": {
+        "title": "Social",
+        "content": "Détourne la nourriture des communautés d'Afrique de l'Ouest."
+      },
+      "climat": {
+        "title": "Climat",
+        "content": "Génère une empreinte carbone collossale."
+      },
+      "health": {
+        "title": "Santé",
+        "content": "Impacte la santé humaine à cause des polluants éternels et des microplastiques."
+      },
+      "biodiversity": {
+        "title": "Biodiversité",
+        "content": "Dégrade la biodiversité marine (échappées de saumons d’élevage, pollutions, parasites et déclin des espèces sauvages) et terrestre (déforestation)"
+      },
+      "animals": {
+        "title": "Condition animale",
+        "content": "Provoque stress, maladies et mortalités de masse dans les élevages intensifs."
+      }
+    },
+    "edito": {
+      "social": {
+        "title": "justice Sociale",
+        "content": "Chaque année 500 000+ tonnes de poissons sauvages sont prélevés aux larges des côtes de l’Afrique de l’Ouest pour nourrir des poissons d'élevage mettant en péril la sécurité alimentaire des communautés locales."
+      },
+      "climat": {
+        "title": "Climat",
+        "content": "L'élevage intensif de saumons génère des émissions de gaz à effet de serre, principalement du dioxyde de carbone (CO2) provenant de l'énergie utilisée dans les installations, de la production d'aliments et du transport, ainsi que du méthane résultant de la décomposition des déchets organiques."
+      },
+      "health": {
+        "title": "Santé",
+        "content": "La présence dans la chair des saumons de polluants organiques persistants (POP) et de microplastiques soulève des préoccupations pour la santé humaine.La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, nécessitant l'utilisation d'agents pathogènes ou de médicaments.",
+        "credit": "Crédit photo : Ramji / Bob Brown Foundation"
+      },
+      "biodiversity": {
+        "title": "Biodiversité",
+        "content": "L'élevage intensif de saumons a des répercussions significatives sur la biodiversité marine et les ressources planétaires : pollutions diverses, parasites affectant les espèces locales, pression accrue sur les populations de poissons sauvages, exploitation du krill d’Antarctique, déforestation, etc."
+      },
+      "animals": {
+        "title": "Condition animale",
+        "content": "La très forte densité des saumons en cages entraine maladies et stress. Les poux de mer rongent la chair des poissons défigurés. Les taux de mortalité au sein des cages sont très anormalement élevés."
+      }
+    },
+    "industry": {
+      "title": "Et tout ça dans l’impunité d’une industrie en croissance exponentielle.",
+      "content": "La production de saumons, dominée par une poignée de multinationales, connaît depuis quelques décennies une hyper-croissance à l’échelle globale.",
+      "link": "On agit"
+    }
+  }
+}

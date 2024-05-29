@@ -3,6 +3,8 @@ import clsx from "clsx";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
+import { useLocale, useTranslations } from "next-intl";
+
 import { fetchData } from "@/pages/api/chart";
 
 type ChartProps = {
@@ -24,34 +26,72 @@ const Chart = ({
     data: [],
     layout: {},
   });
+  const [mapData, setMapData] = useState("");
+  const locale = useLocale();
+  const t = useTranslations("components");
 
   useEffect(() => {
     if (!id) return;
 
-    const fetchGraphData = async () => {
+    (async () => {
       if (id.length > 0) {
-        const response = await fetchData(type, id);
-        setChartData(response);
-      }
-    };
-    fetchGraphData();
-  }, [id, type]);
+        const response = await fetchData(
+          (locale === "fr" ? "fr/" : "") + type,
+          id,
+          type === "graphs",
+        );
 
-  if (!chartData)
+        if (!response) {
+          return;
+        }
+
+        if (type === "maps") {
+          setMapData(response);
+        } else {
+          setChartData(response);
+        }
+      }
+    })();
+  }, [id, type, locale]);
+
+  if (!chartData.data?.length && !mapData) {
     return (
-      <p className="flex items-center justify-center text-md text-center bg-gray-50 min-h-[300px]">
-        Chargement des données en cours...
+      <p
+        className={clsx(
+          "flex items-center justify-center p-caption text-center bg-gray-50 min-h-[300px]",
+          className,
+        )}
+      >
+        {t("chart.loading")}
       </p>
     );
+  }
 
   return (
-    <Plot
-      divId={id}
-      data={chartData.data}
-      layout={{ ...chartData.layout, ...(width ? { width } : null), height }}
-      config={{ responsive: true }}
-      className={clsx("!block min-h-[300px]", className)}
-    />
+    <>
+      {type === "maps" ? (
+        <iframe
+          title="Carte des fermes terrestres"
+          id="ras-map"
+          srcDoc={mapData}
+          width={1000}
+          height={900}
+          className="w-full"
+        />
+      ) : (
+        <Plot
+          divId={id}
+          data={chartData.data}
+          layout={{
+            ...chartData.layout,
+            ...(width ? { width } : null),
+            height,
+          }}
+          config={{ responsive: true }}
+          className={clsx("!block min-h-[300px]", className)}
+        />
+      )}
+    </>
   );
 };
 

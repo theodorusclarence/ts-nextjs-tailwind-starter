@@ -1,0 +1,139 @@
+{
+  "dashboard": {
+    "meta": {
+      "title": "Dashboard"
+    },
+    "title": "The numbers behind the story",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "blocks": {
+          "salmon-collapse": {
+            "title": "Wild Altantic salmon collapse",
+            "content": "<p>The Atlantic salmon was added to the IUCN Red List of Threatened Species in December 2023.</p><p>This is largely due to overfishing, habitat degradation, particularly caused by dams blocking migratory routes, as well as climate change altering their environments, impacting their growth and survival rates.</p>"
+          },
+          "hyper-growth": {
+            "title": "Hyper-growth in salmon farming",
+            "content": "<p>Salmon production has experienced unprecedented growth.</p><p>Nearly nonexistent 30 years ago, it surged to three million tons of salmon in 2021, equivalent to the farming and slaughtering of one billion salmon.</p>"
+          },
+          "top-10": {
+            "title": "Main countries producing farmed salmon",
+            "content": "<p>Salmon require cold waters to grow, and thus production is concentrated in a few countries located far to the North or far to the South. Today, four countries alone account for 90% of the world's salmon production.</p>",
+            "subblock": {
+              "title": "Salmon farming evolution by country"
+            }
+          },
+          "intro-consumption": {
+            "title": "Salmon Consumption",
+            "content": "<p>The United States is the largest consumer of salmon, followed by Japan and Russia. European countries are also significant consumers of salmon, with France leading the pack with a high consumption rate of 4.4kg per person per year.</p>"
+          }
+        }
+      },
+      "company": {
+        "title": "Entreprises",
+        "blocks": {
+          "top-comp": {
+            "title": "Main producers of open-net salmon",
+            "content": "<p>Small artisanal salmon farms have given way to industrial aquaculture.</p><p>In a few decades, the market has become dominated by a handful of multinational corporations.</p><p>Mowi, formerly known as Marine Harvest, is the leader in the sector. The company operates in 25 countries.</p>"
+          },
+          "top-land": {
+            "title": "The new threat: on land plants",
+            "mainContent": "<p>In 2021, the theoretical combined production capacity of land-based salmon farms amounted to 2.5 million tons, nearly equaling the global production of salmon in marine farms (2.7 million tons).</p>",
+            "content": "<p>Land-based farms use RAS technology (Recirculating Aquaculture Systems) in fully enclosed tanks. Whilst, this approach to salmon farming gives control over the impact on biodiversity and the local environment (limited disease contamination, rejection of feces and salmon escapes), it also requires large amount of fresh water and is very energy-hungry, as it aims to recreate very precisely the natural conditions found in the sea.</p><p>As a result, the carbon footprint of salmon produced on land is higher than salmon produced in marine farms.</p><p>In order to make such farms profitable, the fish density can be 3 times higher than in marine farms. And there has been a small number of accidents where large number of fish died as a result of inadequate water conditions and a fire at a plant in Denmark.</p>"
+          },
+          "future-land-based": {
+            "title": "The future of land-based aquaculture farms",
+            "mainContent": "<p>A land-based farm producing 10,000 tons of salmon per year - if built - would require as much electricity as a city of 45,000 inhabitants (to be confirmed). Currently, there are several projects in Europe, including mega-farms aiming to produce 100,000 tons or more per year.</p>",
+            "content": "<p>Despite technological and profitability challenges, the industry is investing heavily in land-based farms, with a large number of projects announced over the past 5 years. Many farms are being planned or are under construction in Europe, Asia, the Middle East, and the United States to supply their local markets.</p>",
+            "data": [
+              {
+                "title": "+91.1",
+                "content": "Combined land-based farm (RAS) projects could represent an increase of over 91% in global salmon production."
+              },
+              {
+                "title": "291 Billion",
+                "content": "More than 290 billion wild fish, known as forage fish, will be harvested annually to produce the necessary meal to feed these new salmon."
+              },
+              {
+                "title": "1.4 Million",
+                "content": "These same meals contain soy. 975,000 hectares will be required for soy production, equivalent to approximately 1.4 million football fields."
+              },
+              {
+                "title": "15.8 Million",
+                "content": "The electricity consumption required for filtering, cooling, and circulating water in RAS farms is equivalent to the annual consumption of 15.8 million Europeans."
+              }
+            ]
+          },
+          "companies-consumption": {
+            "title": "",
+            "mainContent": "<p>Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an.</p>",
+            "content": "<p>La consommation apparente de saumon (toutes espèces confondues) est calculée comme la production, y compris l'aquaculture et la capture, plus les importations moins les exportations. Toutes les données sont fournies par la FAO. Les facteurs de conversion entre le poids du produit et le poids vif sont approximés à l'aide de la <a href=\"https://www.fao.org/3/bt963e/bt963e.pdf\">documentation de la FAQ</a></p><p>Ces approximations peuvent conduire à des indicateurs erronés, surtout dans les pays peu peuplés et/ou à forte production. C’est pour cette raison que la consommation par habitant n’est pas incluse dans le graphique.</p>"
+          }
+        }
+      },
+      "biodiversity": {
+        "title": "Biodiversity",
+        "blocks": {
+          "deforestation": {
+            "title": "Deforestation"
+          },
+          "escapes-rates": {
+            "title": "Escapes"
+          }
+        }
+      },
+      "health": {
+        "title": "Human health",
+        "blocks": {
+          "antibiotic-conso": {
+            "title": "Antibiotic consumption"
+          },
+          "microplastics": {
+            "title": "Microplastic"
+          }
+        }
+      },
+      "animals": {
+        "title": "Animal welfare",
+        "blocks": {
+          "stress-onshore": {
+            "title": "Stress in land-based facilities"
+          },
+          "mortality-rates": {
+            "title": "Mortality rate"
+          }
+        }
+      },
+      "climate": {
+        "title": "Climate",
+        "blocks": {
+          "carbon-bomb": {
+            "title": "Carbon impact"
+          }
+        }
+      },
+      "social": {
+        "title": "Social",
+        "blocks": {
+          "social-carbon": {
+            "title": "Carbon impact"
+          }
+        }
+      },
+      "alternative": {
+        "title": "Alternatives",
+        "blocks": {
+          "alternatives": {
+            "title": "Nutrition matrix"
+          }
+        }
+      }
+    },
+    "calculator": {
+      "salmon": "slaughtered salmon",
+      "fish": "forage fish caught to feed salmon",
+      "companies": "tonnes of CO2 emitted by industry",
+      "money": "Euros of turnover for market leading companies"
+    }
+  }
+}

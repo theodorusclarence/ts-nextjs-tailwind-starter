@@ -1,0 +1,30 @@
+{
+  "act": {
+    "meta": {
+      "title": "To act"
+    },
+    "title": "Good news: defusing Pinkbombs is just a click away",
+    "company": {
+      "title": "I call on responsible companies",
+      "content": "by sharing a pre-written information post that identifies them on Linkedin.",
+      "link": "Post on Linkedin",
+      "target": "#"
+    },
+    "territory": {
+      "title": "I say no to the salmon factory project on my territory",
+      "content": "The onshore salmon factory project called “Pure Salmon”, an initiative of the Singaporean investment fund 8F Asset Management, is under discussion near Bordeaux. Thanks to petitions signed by citizens, it was notably rejected in Pas-de-Calais and Brittany. Let's go on !",
+      "link": "Sign the petition",
+      "target": "#"
+    },
+    "seastemik": {
+      "title": "I support Seastemik",
+      "content": "Seastemik is an association created in 2023 with the objective of accelerating our transition to a healthy ocean.<br />To mobilize on the ground, it works to raise community awareness, accessibility of information and proposal of solutions.",
+      "link": "Contribute on HelloAsso",
+      "target": "#"
+    },
+    "eat": {
+      "title": "I leave the salmon off my plate",
+      "content": "Ready to set out to leave salmon in the oceans and rivers? “Together, we are an immense force”.<br />What objective seems achievable to you? Leave it to us in our intention box to help the community grow!"
+    }
+  }
+}

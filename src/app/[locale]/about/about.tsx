@@ -5,12 +5,12 @@ import "@/lib/env";
 
 import IntroBlock from "@/components/IntroBlock";
 
-const ToActPage = () => {
+const About = () => {
   return (
     <>
-      <IntroBlock title="Agir" />
+      <IntroBlock title="À propos" />
     </>
   );
 };
 
-export default ToActPage;
+export default About;

@@ -18,7 +18,7 @@ const PrimaryButton = ({
     <Link
       className={clsx(
         className,
-        "inline-block p-4 lg:px-10 text-xl xl:text-[2.5rem] border-2 border-red1 rounded-md tracking-widest font-black text-yellow1 bg-red1 hover:text-red1 hover:bg-yellow1",
+        "inline-block p-4 lg:px-10 h4 border-2 border-red1 rounded-md tracking-widest text-yellow1 bg-red1 hover:text-red1 hover:bg-yellow1",
       )}
       href={href}
     >

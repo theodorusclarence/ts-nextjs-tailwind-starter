@@ -1,0 +1,121 @@
+{
+  "dashboard": {
+    "meta": {
+      "title": "Dashboard"
+    },
+    "title": "Les chiffres derrière l’histoire",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "blocks": {
+          "salmon-collapse": {
+            "title": "Effondrement du saumon sauvage de l'Atlantique",
+            "content": "<p>Le saumon atlantique est inscrit sur la Liste rouge de l'UICN des espèces menacées en décembre 2023.</p><p>Cela est dû en grande partie à la surpêche, à la dégradation de l'habitat, notamment due aux barrages bloquant les routes migratoires, mais aussi au changement climatique qui modifie leurs environnements, impactant leurs taux de croissance et de survie.</p>"
+          },
+          "hyper-growth": {
+            "title": "Hyper-croissance de l’élevage du saumon",
+            "content": "<p>La production de saumon a connu une croissance sans précédent.</p><p>Quasi inexistante il y a 30 ans, elle a bondi à trois millions de tonnes de saumon en 2021, soit l’équivalent de l’élevage et de l’abattage d’un milliard de saumons.</p>"
+          },
+          "top-10": {
+            "title": "Principaux pays producteurs de saumon d'élevage",
+            "content": "<p>Le saumon a besoin d'eaux froides pour croître et la production est donc concentrée dans quelques pays situés loin au nord ou au sud.</p><p>Aujourd'hui, quatre pays représentent à eux seuls 90 % de la production mondiale de saumon.</p>",
+            "subblock": {
+              "title": "Evolution de l'élevage du saumon par pays"
+            }
+          },
+          "intro-consumption": {
+            "title": "Consommation de saumon",
+            "content": "<p>Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne.<p>"
+          }
+        }
+      },
+      "company": {
+        "title": "Entreprises",
+        "blocks": {
+          "top-comp": {
+            "title": "Principaux producteurs de saumon en filet ouvert",
+            "content": "<p>Les petites fermes salmonicoles artisanales ont cédé la place à l’aquaculture industrielle.</p><p>En quelques décennies, le marché est devenu dominé par une poignée de multinationales.</p><p>Mowi, anciennement Marine Harvest, est leader du secteur. L'entreprise est présente dans 25 pays.</p>"
+          },
+          "top-land": {
+            "title": "La nouvelle menace : sur fermes aquacoles terrestres",
+            "mainContent": "<p>En 2021, la capacité de production théorique combinée des élevages terrestres de saumon s’élève à 2,5 millions de tonnes, soit presque autant que la production mondiale de saumon dans les élevages marins (2,7 millions de tonnes).</p>",
+            "content": "<p>Les fermes terrestres utilisent la technologie RAS (Recycled Aquaculture Systems) dans des réservoirs entièrement fermés. Si cette approche de l'élevage du saumon permet de limiter l'impact sur la biodiversité et l'environnement local (contamination limitée par les maladies, rejet des excréments et des évasions de saumons), elle nécessite également de grandes quantités d'eau douce et est très gourmande en énergie, car elle vise à recréer très précisément les conditions de l’habitat naturel des saumons.</p><p>En conséquence, l’empreinte carbone du saumon produit sur terre est plus élevée que celle du saumon produit dans les fermes marines. Afin de rentabiliser de telles fermes, la densité de poissons peut être 3 fois plus élevée que dans les fermes marines.</p><p>La technologie n’est pas encore totalement maîtrisée : actuellement, aucune usine en fonctionnement ne produit plus de 5 000 tonnes et les incidents techniques sont fréquents.</p><p>Une usine au Danemark en a subi cinq, résultant de défaillances techniques (pollution au chlorure de fer dans le fjord, incendie complet de son usine, engendrant pollution de l’air et de l’eau).</p>"
+          },
+          "future-land-based": {
+            "title": "Le futur des fermes aquacoles terrestres",
+            "mainContent": "<p>Une ferme terrestre produisant 10 000 tonnes de saumon par an - si elle était construite - nécessiterait autant d'électricité qu'une ville de 39 215 habitant·e·s. Il existe actuellement plusieurs projets en Europe, dont des méga-fermes visant à produire 100 000 tonnes ou plus par an.</p>",
+            "content": "<p>Malgré les défis technologiques et de rentabilité, l'industrie investit massivement dans les fermes terrestres, avec un grand nombre de projets annoncés au cours des 5 dernières années. De nombreuses fermes envisagent d'être construites ou sont déjà en cours de construction en Europe, en Asie, au Moyen-Orient et aux États-Unis pour approvisionner leurs marchés locaux.</p>",
+            "data": [
+              {
+                "title": "+91.1%",
+                "content": "Les projets combinés de fermes terrestres (RAS) pourraient représenter une augmentation de plus de 91 % de la production mondiale de saumon."
+              },
+              {
+                "title": "291 Milliards",
+                "content": "Plus de 290 milliards de poissons sauvages, appelés poissons fourrage, seront pêchés pour produire la farine nécessaire chaque année à nourrir ces nouveaux saumons."
+              },
+              {
+                "title": "1.4 Millions",
+                "content": "Ces mêmes farines contiennent du soja. 975 000 hectares seront nécessaires à la production de ce soja, l'équivalent d'environ 1,4 millions de terrains de football."
+              },
+              {
+                "title": "15.8 Millions",
+                "content": "La consommation électrique nécessaire pour filtrer, refroidir et faire circuler l'eau des fermes RAS représente l'équivalent de la consommation annuelle de 15,8 millions d'européens."
+              }
+            ]
+          },
+          "companies-consumption": {
+            "title": "Consommation",
+            "mainContent": "<p>Les États-Unis sont de loin les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont également d’importants consommateurs de ce poisson. La consommation de saumon par habitant pour ces grands pays est d'environ 2 kg/personne/an et peut atteindre des valeurs supérieures à 5 kg/personne/an.</p>",
+            "content": "<p>La consommation apparente de saumon (toutes espèces confondues) est calculée comme la production, y compris l'aquaculture et la capture, plus les importations moins les exportations. Toutes les données sont fournies par la FAO. Les facteurs de conversion entre le poids du produit et le poids vif sont approximés à l'aide de la <a href=\"https://www.fao.org/3/bt963e/bt963e.pdf\">documentation de la FAQ</a></p><p>Ces approximations peuvent conduire à des indicateurs erronés, surtout dans les pays peu peuplés et/ou à forte production. C’est pour cette raison que la consommation par habitant n’est pas incluse dans le graphique.</p>"
+          }
+        }
+      },
+      "biodiversity": {
+        "title": "Biodiversité",
+        "blocks": {
+          "deforestation": { "title": "Déforestation" },
+          "escapes-rates": { "title": "Les évasions" }
+        }
+      },
+      "health": {
+        "title": "Human health",
+        "blocks": {
+          "antibiotic-conso": { "title": "Consommation d'antibiotiques" },
+          "microplastics": { "title": "Microplastique" }
+        }
+      },
+      "animals": {
+        "title": "Bien être animal",
+        "blocks": {
+          "stress-onshore": { "title": "Densité / stress dans usine à terre" },
+          "mortality-rates": { "title": "Taux de mortalité" }
+        }
+      },
+      "climate": {
+        "title": "Climat",
+        "blocks": {
+          "carbon-bomb": { "title": "Impact carbone" }
+        }
+      },
+      "social": {
+        "title": "Social",
+        "blocks": {
+          "social-carbon": { "title": "Impact carbone" }
+        }
+      },
+      "alternative": {
+        "title": "Alternatives",
+        "blocks": {
+          "alternatives": { "title": "Matrice de nutrition" }
+        }
+      }
+    },
+    "calculator": {
+      "salmon": "saumons abattus",
+      "fish": "poissons fourrages pêchés pour alimenter les saumons",
+      "companies": "tonnes de CO2 émis par l'industrie",
+      "money": "Euros de chiffre d'affaire pour les entreprises leadeurs du marché"
+    }
+  }
+}

@@ -110,8 +110,19 @@ const DashboardSection = ({
       <h3 className="h3 text-red1 mb-4 lg:mb-8 max-w-screen-md">{title}</h3>
       <div className="grid gap-4 xl:gap-24 grid-cols-1 lg:grid-cols-2 xl:grid-cols-[1fr_2fr]">
         <div>
-          <p className="font-semibold">{mainContent}</p>
-          <p className="py-7">{content}</p>
+          {mainContent && (
+            <div
+              className="p-leavy prose mb-4"
+              dangerouslySetInnerHTML={{ __html: mainContent }}
+            />
+          )}
+
+          {content && (
+            <div
+              className="prose"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          )}
 
           {cta && <div className="text-center py-8">{cta}</div>}
         </div>
@@ -129,7 +140,7 @@ const DashboardSection = ({
           {hasChart ? <Chart id={id} className="min-h-[300px]" /> : null}
 
           {meta ? (
-            <ul className="flex flex-wrap gap-4 mt-4 p-2 text-sm rounded-sm bg-gray-50">
+            <ul className="flex flex-wrap gap-4 mt-4 p-2 p-caption rounded-sm bg-gray-50">
               {Object.keys(meta).map((data, key) => (
                 <li key={`meta-${key}`}>
                   <MetaDataItem data={data} {...meta[data]} />

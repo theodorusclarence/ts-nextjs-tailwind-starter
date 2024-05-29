@@ -36,8 +36,7 @@ export default {
       },
       screens: {
         xs: "500px",
-        "2xl": "1530px",
-        "3xl": "2000px",
+        "3xl": "1736px",
       },
       keyframes: {
         flicker: {

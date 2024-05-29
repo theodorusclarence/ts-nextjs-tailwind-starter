@@ -43,24 +43,39 @@
 
   /* #region  /**=========== Typography =========== */
   .h1 {
-    @apply font-secondary text-4xl md:text-6xl lg:text-7xl xl:text-[6.375rem]/none font-extrabold uppercase;
+    @apply font-secondary text-4xl md:text-6xl/none lg:text-[5.625rem]/none font-extrabold uppercase;
   }
 
   .h2 {
-    @apply font-secondary text-4xl md:text-6xl lg:text-7xl/none font-bold uppercase;
+    @apply font-secondary text-3xl md:text-5xl/none lg:text-[4.375rem]/none font-extrabold uppercase;
   }
 
   .h3 {
-    @apply font-secondary text-2xl md:text-4xl lg:text-6xl/none font-bold uppercase;
+    @apply font-secondary text-2xl md:text-3xl/none lg:text-[3.125rem]/none font-bold uppercase;
   }
 
   .h4 {
-    @apply font-secondary text-2xl lg:text-[2.4rem]/none font-bold uppercase;
+    @apply font-secondary text-xl md:text-2xl/none lg:text-4xl/none font-bold uppercase;
   }
 
   body,
   .p {
+    @apply font-primary text-base md:text-lg;
+  }
+
+  .p-leavy {
+    @apply font-primary font-bold text-base md:text-xl;
+  }
+
+  .p-caption {
     @apply font-primary text-sm md:text-base;
+  }
+
+  .prose p {
+    @apply mb-2;
+  }
+  .prose a {
+    @apply underline;
   }
   /* #endregion  /**======== Typography =========== */
 

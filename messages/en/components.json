@@ -1,0 +1,32 @@
+{
+  "components": {
+    "summary": {
+      "title": "page"
+    },
+    "edito": {
+      "link": "See more"
+    },
+    "shareLink": {
+      "blank": "new tab",
+      "twitter": "Twitter",
+      "linkedin": "Linkedin",
+      "website": "Website",
+      "email": "Email"
+    },
+    "chart": {
+      "loading": "Loading data.."
+    },
+    "calculator": {
+      "intro": "Here are the impacts of the salmon industry around the world since you opened this web page.",
+      "seconds": "seconds",
+      "second": "second"
+    },
+    "join": {
+      "title": "Be the change.",
+      "intro": "There are alternatives to salmon in our way of eating, selling, and producing.",
+      "content": "France, located in the top 3 of the largest consumers of salmon in the world, bears a particular responsibility in guiding practices.",
+      "act": "To reverse the trend and stop the disaster, urgent action is needed. We have levers for action!",
+      "link": "We act"
+    }
+  }
+}
