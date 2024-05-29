@@ -74,8 +74,13 @@
   .prose p {
     @apply mb-2;
   }
+
   .prose a {
     @apply underline;
+  }
+
+  .prose em {
+    @apply italic;
   }
   /* #endregion  /**======== Typography =========== */
 

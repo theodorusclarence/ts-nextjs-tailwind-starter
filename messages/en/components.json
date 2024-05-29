@@ -26,7 +26,17 @@
       "intro": "There are alternatives to salmon in our way of eating, selling, and producing.",
       "content": "France, located in the top 3 of the largest consumers of salmon in the world, bears a particular responsibility in guiding practices.",
       "act": "To reverse the trend and stop the disaster, urgent action is needed. We have levers for action!",
-      "link": "We act"
+      "link": "We act",
+      "source": "",
+      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/numbers_salmons_farmed_1.0.csv",
+      "artifact": "numbers_salmons_farmed_1.0.csv"
+    },
+    "metaItem": {
+      "source": "Main source",
+      "methodology": "Methodology",
+      "image": "Image",
+      "data": "Data",
+      "document": "PDF"
     }
   }
 }

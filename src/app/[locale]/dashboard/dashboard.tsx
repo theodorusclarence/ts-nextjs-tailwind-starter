@@ -9,6 +9,7 @@ import Calculator from "@/components/Calculator";
 import DashboardSection from "@/components/DashboardSection";
 import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
+import MetaItem from "@/components/MetaItem";
 import { SummaryLinksProps } from "@/components/Summary";
 import TitleBlock from "@/components/TitleBlock";
 
@@ -214,6 +215,17 @@ const SalmonCollapseSection = () => {
       title={t("sections.intro.blocks.salmon-collapse.title")}
       id="salmon-collapse"
       content={t.raw("sections.intro.blocks.salmon-collapse.content")}
+      meta={{
+        source: {
+          link: "https://nasco.int/ices-2/statistics/",
+          moreInfo: t("sections.intro.blocks.salmon-collapse.source"),
+        },
+        methodology: { link: "/to-act#" },
+        data: {
+          link: t("sections.intro.blocks.salmon-collapse.data"),
+          artifact: t("sections.intro.blocks.salmon-collapse.artifact"),
+        },
+      }}
       hasChart
     />
   );
@@ -227,6 +239,17 @@ const SalmonFarmingSection = () => {
       title={t("sections.intro.blocks.hyper-growth.title")}
       id="hyper-growth"
       content={t.raw("sections.intro.blocks.hyper-growth.content")}
+      meta={{
+        source: {
+          link: "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
+          moreInfo: t("sections.intro.blocks.hyper-growth.source"),
+        },
+        methodology: { link: "/to-act#" },
+        data: {
+          link: t("sections.intro.blocks.hyper-growth.data"),
+          artifact: t("sections.intro.blocks.hyper-growth.artifact"),
+        },
+      }}
       hasChart
     />
   );
@@ -241,6 +264,17 @@ const TopCountriesSection = () => {
         title={t("sections.intro.blocks.top-10.title")}
         id="top-10"
         content={t.raw("sections.intro.blocks.top-10.content")}
+        meta={{
+          source: {
+            link: "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
+            moreInfo: t("sections.intro.blocks.top-10.source"),
+          },
+          methodology: { link: "/to-act#" },
+          data: {
+            link: t("sections.intro.blocks.top-10.data"),
+            artifact: t("sections.intro.blocks.top-10.artifact"),
+          },
+        }}
         hasChart
       />
 
@@ -250,6 +284,25 @@ const TopCountriesSection = () => {
         </h3>
 
         <Chart id="evolution-map" type="maps" className="min-h-[700px]" />
+        <ul className="flex flex-wrap gap-4 mt-4 p-2 p-caption rounded-sm bg-gray-50">
+          <li>
+            <MetaItem
+              data="source"
+              link="https://www.fao.org/fishery/en/collection/aquaculture?lang=en"
+              moreInfo={t("sections.intro.blocks.top-10.subblock.source")}
+            />
+          </li>
+          <li>
+            <MetaItem data="methodology" link="/to-act#tendances" />
+          </li>
+          <li>
+            <MetaItem
+              data="data"
+              link={t("sections.intro.blocks.top-10.subblock.data")}
+              artifact={t("sections.intro.blocks.top-10.subblock.artifact")}
+            />
+          </li>
+        </ul>
       </div>
     </>
   );
@@ -278,6 +331,17 @@ const MainProductionSection = () => {
       title={t("sections.company.blocks.top-comp.title")}
       id="top-comp"
       content={t.raw("sections.company.blocks.top-comp.content")}
+      meta={{
+        source: {
+          link: "https://mowi.com/wp-content/uploads/2023/06/2023-Salmon-Farming-Industry-Handbook-2023.pdf",
+          moreInfo: t("sections.company.blocks.top-comp.source"),
+        },
+        methodology: { link: "/to-act#" },
+        data: {
+          link: t("sections.company.blocks.top-comp.data"),
+          artifact: t("sections.company.blocks.top-comp.artifact"),
+        },
+      }}
       hasChart
     />
   );
@@ -300,6 +364,13 @@ const LandPlantsSection = () => {
         id="top-land"
         mainContent={t.raw("sections.company.blocks.top-land.mainContent")}
         content={t.raw("sections.company.blocks.top-land.content")}
+        meta={{
+          methodology: { link: "/to-act#" },
+          data: {
+            link: t("sections.company.blocks.top-comp.data"),
+            artifact: t("sections.company.blocks.top-comp.artifact"),
+          },
+        }}
         hasChart
       />
 
@@ -328,7 +399,7 @@ const LandPlantsSection = () => {
             }}
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mt-20">
           {data.map((d, key) => (
             <div key={`data-${key}`}>
               <h4 className="h4 pb-4 text-red1">{d.title}</h4>
@@ -336,6 +407,11 @@ const LandPlantsSection = () => {
             </div>
           ))}
         </div>
+        <ul className="flex flex-wrap gap-4 mt-4 mb-20 p-2 p-caption rounded-sm bg-gray-50">
+          <li>
+            <MetaItem data="methodology" link="/to-act#tendances" />
+          </li>
+        </ul>
         <Chart id="ras-map" type="maps" className="min-h-[900px]" />
       </div>
     </>
@@ -359,105 +435,108 @@ const SalmonConsumptionBisSection = () => {
 */
 
 const DeforestationSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Déforestation"
+      title={t("sections.biodiversity.blocks.deforestation.title")}
       src="/images/deforestation.webp"
       id="deforestation"
-      content="L'ambition du gouvernement norvégien prévoyait d'augmenter la production de 500 % d'ici 2050. Cela nécessitera l'importation de 11 000 km2 de production de soja du Brésil. Cela équivaut à la déforestation légale de l’Amazonie en 2022."
+      content={t.raw("sections.biodiversity.blocks.deforestation.content")}
     />
   );
 };
 
 const EscapeSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Les évasions"
+      title={t("sections.biodiversity.blocks.escapes-rates.title")}
       id="escapes-rates"
-      content="De 2018 à 2022, plus de 4 000 000 de saumons se sont échappés des élevages des 11 plus grands producteurs*. Ces saumons menacent la faune car ils... [source].
-
-      *Aucune donnée de Cooke n’a été trouvée."
+      content={t.raw("sections.biodiversity.blocks.escapes-rates.content")}
       hasChart
     />
   );
 };
 
 const AntibioticSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Consommation d'antibiotiques"
+      title={t("sections.health.blocks.antibiotic-conso.title")}
       id="antibiotic-conso"
-      mainContent="Si la Norvège prétend que moins de 99 % de son aquaculture est exempte d'antibiotiques, d'autres pays ne sont pas aussi vertueux. Au Chili, l'utilisation d'antibiotiques a augmenté d'un tiers depuis la crise du covid."
-      content="Au Chili : 421 tonnes d'atb utilisées pour les 17 principaux producteurs, soit 0,04% (tonnes d'atb/tonne de poisson produit) en moyenne. Les taux ont diminué en 2018, mais du fait de la crise covid, ils ont de nouveau augmenté en 2021 pour atteindre un taux en tonnes atb/tonne de poisson soit 1/3 supérieur à celui de 2018."
+      mainContent={t.raw("sections.health.blocks.antibiotic-conso.mainContent")}
+      content={t.raw("sections.health.blocks.antibiotic-conso.content")}
       hasChart
     />
   );
 };
 
 const MicroplasticSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Microplastique"
+      title={t("sections.health.blocks.microplastics.title")}
       src="/images/microplastics.webp"
       id="microplastics"
-      content="Un saumon de 5 kg contient environ 575 microplastiques.
-      Une personne française moyenne consommant 4,4 kg de saumon par an ingérera environ 575 microplastiques par an sur un total de 97.500 provenant de différentes sources.
-      Les microplastiques sont particulièrement présents dans le saumon en raison de la bioaccumulation dans la chaîne alimentaire et de l'affinité des plastiques pour les graisses.
-      Cela affecte surtout les saumons d'élevage, qui sont nettement plus gras et vivent dans des environnements riches en plastiques."
+      content={t.raw("sections.health.blocks.microplastics.content")}
     />
   );
 };
 
 const StressOnshoreSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Densité / stress dans usine à terre"
+      title={t("sections.animals.blocks.stress-onshore.title")}
       src="/images/stress.webp"
       id="stress-onshore"
-      content="La densité de saumons est trois fois plus élevée dans des usines à terre par rapport à des élevages en mer déjà trop denses, pour des raisons de rentabilité.
-      Les conséquences peuvent être nombreuses :
-      mortalité de masse liées à des pathogènes, plus hauts niveaux de stress."
+      content={t.raw("sections.animals.blocks.stress-onshore.content")}
     />
   );
 };
 
 const MortalityRateSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Taux de mortalité"
+      title={t("sections.animals.blocks.mortality-rates.title")}
       id="mortality-rates"
-      mainContent="Les taux de mortalité varient considérablement d'un producteur à l'autre et d'une année à l'autre. Des taux exceptionnellement élevés sont observés, atteignant 20 % certaines années."
-      content="Certains producteurs atteignent des taux de mortalité bien inférieurs grâce à de meilleures pratiques mais aussi à la législation locale. Attention : ces chiffres ne prennent en compte que la mortalité en mer. La mortalité dans les plans d'eau douce est proche de 30% (rapports Multiexport)"
+      mainContent={t.raw("sections.animals.blocks.mortality-rates.mainContent")}
+      content={t.raw("sections.animals.blocks.mortality-rates.content")}
       hasChart
     />
   );
 };
 
 const CarbonSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Impact carbone"
+      title={t("sections.climate.blocks.carbon-bomb.title")}
       id="carbon-bomb"
-      content="
-      L'industrie du saumon a émis environ 16 millions de tonnes de CO2 en 2021, tout comme un pays comme la Slovénie ou l'objectif d'émissions de 8 millions d'êtres humains en 2050.
-Environ 90 % des émissions totales proviennent de la chaîne de valeur, principalement de l'alimentation du poisson et du transport.
-Cette valeur est extrapolée à partir des émissions de 9 des plus grands producteurs de saumon."
+      content={t.raw("sections.climate.blocks.carbon-bomb.content")}
       hasChart
     />
   );
 };
 
 const SocialCarbonSection = () => {
+  const t = useTranslations("dashboard");
+
   return (
     <DashboardSection
-      title="Impact carbone"
+      title={t("sections.social.blocks.social-carbon.title")}
       src="/images/social-carbon.webp"
       id="social-carbon"
-      mainContent="En 2020, 3 % de tous les poissons capturés dans le monde sont élevés pour le saumon de l'Atlantique (2,72 millions de tonnes)."
-      content="Le saumon étant carnivore, il est nécessaire de le nourrir avec des farines à base de poissons. Le saumon d'élevage moyen consomme l'équivalent de 5 fois son propre poids en poisson, issu de la pêche industrielle.
-      Et ce type de surpêche a eu de nombreux impacts sociaux négatifs, comme en Mauritanie et en Gambie, où la quantité de poisson dans la mer a été réduite et où les quelques poissons pêchés sont achetés par les industriels pour un prix insignifiant, limitant l'emploi et la vie de la communauté locale. accès à l’une des principales sources de leur approvisionnement alimentaire.
-      [Article sur l'impact de la pêche industrielle] -> ici (ou un autre)
-      Les captures annuelles mondiales de poissons, coquillages et crustacés devraient atteindre environ 90 millions de tonnes d'ici 2020. La grande majorité de ce volume est destinée à la consommation humaine (environ 70 millions). Et puis, près de la moitié de ce qui reste (42 %) est utilisée pour la production mondiale de farine de poisson, approvisionnant le secteur aquacole (pour la pisciculture)."
+      mainContent={t.raw("sections.social.blocks.social-carbon.mainContent")}
+      content={t.raw("sections.social.blocks.social-carbon.content")}
     />
   );
 };

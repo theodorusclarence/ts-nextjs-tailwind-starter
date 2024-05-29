@@ -26,7 +26,17 @@
       "intro": "Il existe des alternatives au saumon dans notre manière de manger, de vendre et de produire.",
       "content": "La France, située dans le top 3 des plus gros consommateurs de saumon au monde, porte une responsabilité particulière dans l'orientation des pratiques.",
       "act": "Pour inverser la tendance et stopper le désastre, il est urgent d’agir. On a des leviers d’action !",
-      "link": "On agit"
+      "link": "On agit",
+      "source": "anglais",
+      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/numbers_salmons_farmed_1.0_fr.csv",
+      "artifact": "numbers_salmons_farmed_1.0_fr.csv"
+    },
+    "metaItem": {
+      "source": "Source principale",
+      "methodology": "Méthodologie",
+      "image": "Image",
+      "data": "Données",
+      "document": "PDF"
     }
   }
 }

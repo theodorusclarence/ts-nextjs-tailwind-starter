@@ -9,6 +9,7 @@ const Chart = dynamic(() => import("@/components/Chart"), {
 });
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
+import MetaItem from "@/components/MetaItem";
 
 const IntroBlock = ({
   className,
@@ -49,6 +50,25 @@ const IntroBlock = ({
           </p>
           <p className="pb-4 md:pb-16 max-w-3xl">{t("join.content")}</p>
           <Chart id="alternatives" height={700} />
+          <ul className="flex flex-wrap justify-center gap-4 p-caption">
+            <li>
+              <MetaItem
+                data="source"
+                link="https://www.fao.org/fishery/en/collection/aquaculture?lang=en"
+                moreInfo={t("join.source")}
+              />
+            </li>
+            <li>
+              <MetaItem data="methodology" link="/to-act#tendances" />
+            </li>
+            <li>
+              <MetaItem
+                data="data"
+                link={t("join.data")}
+                artifact={t("join.artifact")}
+              />
+            </li>
+          </ul>
         </div>
       </div>
 

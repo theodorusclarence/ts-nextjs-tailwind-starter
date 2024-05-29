@@ -6,21 +6,33 @@
     "title": "The numbers behind the story",
     "sections": {
       "intro": {
-        "title": "Introduction",
+        "title": "Macro trends",
         "blocks": {
           "salmon-collapse": {
             "title": "Wild Altantic salmon collapse",
-            "content": "<p>The Atlantic salmon was added to the IUCN Red List of Threatened Species in December 2023.</p><p>This is largely due to overfishing, habitat degradation, particularly caused by dams blocking migratory routes, as well as climate change altering their environments, impacting their growth and survival rates.</p>"
+            "content": "<p>The Atlantic salmon was added to the IUCN Red List of Threatened Species in December 2023.</p><p>This is largely due to overfishing, habitat degradation, particularly caused by dams blocking migratory routes, as well as climate change altering their environments, impacting their growth and survival rates.</p>",
+            "source": "",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/discrease_wild_salmon_1.1.csv",
+            "artifact": "discrease_wild_salmon_1.1.csv"
           },
           "hyper-growth": {
             "title": "Hyper-growth in salmon farming",
-            "content": "<p>Salmon production has experienced unprecedented growth.</p><p>Nearly nonexistent 30 years ago, it surged to three million tons of salmon in 2021, equivalent to the farming and slaughtering of one billion salmon.</p>"
+            "content": "<p>Salmon production has experienced unprecedented growth.</p><p>Nearly nonexistent 30 years ago, it surged to three million tons of salmon in 2021, equivalent to the farming and slaughtering of one billion salmon.</p>",
+            "source": "",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/hyper_growth_salmon_farming_1.2.csv",
+            "artifact": "hyper_growth_salmon_farming_1.2.csv"
           },
           "top-10": {
             "title": "Main countries producing farmed salmon",
             "content": "<p>Salmon require cold waters to grow, and thus production is concentrated in a few countries located far to the North or far to the South. Today, four countries alone account for 90% of the world's salmon production.</p>",
+            "source": "",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_countries_producing_1.3.csv",
+            "artifact": "top_10_countries_producing_1.3.csv",
             "subblock": {
-              "title": "Salmon farming evolution by country"
+              "title": "Salmon farming evolution by country",
+              "source": "",
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/evolution_salmon_farming_country_iso_1.4.csv",
+              "artifact": "evolution_salmon_farming_country_iso_1.4.csv"
             }
           },
           "intro-consumption": {
@@ -34,12 +46,17 @@
         "blocks": {
           "top-comp": {
             "title": "Main producers of open-net salmon",
-            "content": "<p>Small artisanal salmon farms have given way to industrial aquaculture.</p><p>In a few decades, the market has become dominated by a handful of multinational corporations.</p><p>Mowi, formerly known as Marine Harvest, is the leader in the sector. The company operates in 25 countries.</p>"
+            "content": "<p>Small artisanal salmon farms have given way to industrial aquaculture.</p><p>In a few decades, the market has become dominated by a handful of multinational corporations.</p><p>Mowi, formerly known as Marine Harvest, is the leader in the sector. The company operates in 25 countries.</p>",
+            "source": "",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_companies_producing_2.1.csv",
+            "artifact": "top_10_companies_producing_2.1.csv"
           },
           "top-land": {
             "title": "The new threat: on land plants",
             "mainContent": "<p>In 2021, the theoretical combined production capacity of land-based salmon farms amounted to 2.5 million tons, nearly equaling the global production of salmon in marine farms (2.7 million tons).</p>",
-            "content": "<p>Land-based farms use RAS technology (Recirculating Aquaculture Systems) in fully enclosed tanks. Whilst, this approach to salmon farming gives control over the impact on biodiversity and the local environment (limited disease contamination, rejection of feces and salmon escapes), it also requires large amount of fresh water and is very energy-hungry, as it aims to recreate very precisely the natural conditions found in the sea.</p><p>As a result, the carbon footprint of salmon produced on land is higher than salmon produced in marine farms.</p><p>In order to make such farms profitable, the fish density can be 3 times higher than in marine farms. And there has been a small number of accidents where large number of fish died as a result of inadequate water conditions and a fire at a plant in Denmark.</p>"
+            "content": "<p>Land-based farms use RAS technology (Recirculating Aquaculture Systems) in fully enclosed tanks. Whilst, this approach to salmon farming gives control over the impact on biodiversity and the local environment (limited disease contamination, rejection of feces and salmon escapes), it also requires large amount of fresh water and is very energy-hungry, as it aims to recreate very precisely the natural conditions found in the sea.</p><p>As a result, the carbon footprint of salmon produced on land is higher than salmon produced in marine farms.</p><p>In order to make such farms profitable, the fish density can be 3 times higher than in marine farms. And there has been a small number of accidents where large number of fish died as a result of inadequate water conditions and a fire at a plant in Denmark.</p>",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_ras_companies_2.3.csv",
+            "artifact": "top_10_ras_companies_2.3.csv"
           },
           "future-land-based": {
             "title": "The future of land-based aquaculture farms",
@@ -75,10 +92,12 @@
         "title": "Biodiversity",
         "blocks": {
           "deforestation": {
-            "title": "Deforestation"
+            "title": "Deforestation",
+            "content": "<p>The ambition of the Norwegian government was to increase salmon production by 500% by 2050. This will require the importation of 11,000 km2 of soybean production from Brazil. This is equivalent to the legal deforestation of the Amazon in 2022.</p>"
           },
           "escapes-rates": {
-            "title": "Escapes"
+            "title": "Escapes",
+            "content": "<p>From 2018 to 2022, over 4,000,000 salmon escaped from the farms of the 11 largest producers. These escaped salmon pose a threat to wildlife as they... [source].</p><p><em>*No data from Cooke was found.</em></p>"
           }
         }
       },
@@ -86,10 +105,13 @@
         "title": "Human health",
         "blocks": {
           "antibiotic-conso": {
-            "title": "Antibiotic consumption"
+            "title": "Antibiotic consumption",
+            "mainContent": "<p>While Norway claims that less than 99% of its aquaculture is antibiotic-free, other countries are not so virtuous. In Chile, the use of antibiotics has increased by a third since the covid crisis.</p>",
+            "content": "<p>In Chile: 421 tonnes of ATB used for the 17 main producers, or 0.04% (tons of ATB/tonne of fish produced) on average. The rates decreased in 2018, but due to the covid crisis, they increased again in 2021 to reach a rate in tonnes atb/tonne of fish which is 1/3 higher than that of 2018.</p>"
           },
           "microplastics": {
-            "title": "Microplastic"
+            "title": "Microplastic",
+            "content": "<p>A 5 kg salmon contains around 575 microplastics.</p><p>An average French person consuming 4.4 kg of salmon per year will ingest around 575 microplastics per year out of a total of 97,500 from different sources.</p> <p>Microplastics are particularly present in salmon due to bioaccumulation in the food chain and the affinity of plastics for fats.</p><p>This especially affects farmed salmon, which are significantly fatter and live in environments rich in plastics.</p>"
           }
         }
       },
@@ -97,10 +119,13 @@
         "title": "Animal welfare",
         "blocks": {
           "stress-onshore": {
-            "title": "Stress in land-based facilities"
+            "title": "Stress in land-based facilities",
+            "content": "<p>The density of salmon is three times higher in factories on land compared to farms at sea which are already too dense, for reasons of profitability.</p><p>The consequences can be numerous: mass mortality linked to pathogens, higher levels of stress.</p>"
           },
           "mortality-rates": {
-            "title": "Mortality rate"
+            "title": "Mortality rate",
+            "mainContent": "<p>Mortality rates vary considerably from grower to grower and from year to year. Exceptionally high rates are observed, reaching 20% ​​in some years.</p>",
+            "content": "<p>Some producers achieve much lower mortality rates thanks to better practices but also local legislation. Please note: these figures only take into account mortality at sea. Mortality in fresh water bodies is close to 30% (Multiexport reports)</p>"
           }
         }
       },
@@ -108,7 +133,8 @@
         "title": "Climate",
         "blocks": {
           "carbon-bomb": {
-            "title": "Carbon impact"
+            "title": "Carbon impact",
+            "content": "<p>The salmon industry emitted around 16 million tonnes of CO2 in 2021, just like a country like Slovenia or the emissions target of 8 million humans in 2050.</p><p>About 90 % of total emissions come from the value chain, mainly from fish feed and transport.</p><p>This value is extrapolated from the emissions of 9 of the largest salmon producers.</p>"
           }
         }
       },
@@ -116,7 +142,9 @@
         "title": "Social",
         "blocks": {
           "social-carbon": {
-            "title": "Carbon impact"
+            "title": "Carbon impact",
+            "mainContent": "<p>In 2020, 3% of all fish caught worldwide are farmed for Atlantic salmon (2.72 million tonnes).</p>",
+            "content": "<p>Salmon being carnivorous, it is necessary to feed it with fish-based meals. The average farmed salmon consumes the equivalent of 5 times its own weight in fish, from industrial fishing.</p><p>And this type of overfishing has had many negative social impacts, as in Mauritania and in Gambia, where the quantity of fish in the sea has been reduced and where the few fish caught are bought by industrialists for an insignificant price, limiting employment and the life of the local community. access to one of the main sources of their food supply.</p><p>[Article on the impact of industrial fishing] -> here (or another)</p><p>World annual catches of fish, shellfish and crustaceans are expected to reach around 90 million tonnes by 2020. The vast majority of this volume is intended for human consumption (around 70 million). And then, almost half of what remains (42%) is used for the global production of fishmeal, supplying the aquaculture sector (for fish farming).</p>"
           }
         }
       },
