@@ -30,7 +30,7 @@
             "artifact": "top_10_countries_producing_1.3_fr.csv",
             "subblock": {
               "title": "Evolution de l'élevage du saumon par pays",
-              "source": "anglais",
+              "source": "https://www.fao.org/fishery/fr/collection/aquaculture?lang=fr",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/evolution_salmon_farming_country_iso_1.4_fr.csv",
               "artifact": "evolution_salmon_farming_country_iso_1.4_fr.csv"
             }

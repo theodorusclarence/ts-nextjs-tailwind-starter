@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import React, { ReactNode } from "react";
 
-import MetaItem, { chartMeta } from "@/components/MetaItem";
+import MetaChart, { MetaChartProps } from "@/components/MetaChart";
 
 const Chart = dynamic(() => import("@/components/Chart"), {
   ssr: false,
@@ -18,14 +18,7 @@ type DashboardSectionProps = {
   cta?: ReactNode;
   src?: string;
   hasChart?: boolean;
-  meta?: Record<
-    (typeof chartMeta)[number],
-    {
-      link: string;
-      moreInfo?: string;
-      artifact?: string;
-    }
-  >;
+  meta?: MetaChartProps;
 };
 
 const DashboardSection = ({
@@ -81,15 +74,7 @@ const DashboardSection = ({
 
           {hasChart ? <Chart id={id} className="min-h-[300px]" /> : null}
 
-          {meta ? (
-            <ul className="flex flex-wrap gap-4 mt-4 p-2 p-caption rounded-sm bg-gray-50">
-              {Object.keys(meta).map((data, key) => (
-                <li key={`meta-${key}`}>
-                  <MetaItem data={data} {...meta[data]} />
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          {meta ? <MetaChart {...meta} /> : null}
         </div>
       </div>
     </div>

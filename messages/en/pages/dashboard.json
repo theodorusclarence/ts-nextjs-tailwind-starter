@@ -30,7 +30,7 @@
             "artifact": "top_10_countries_producing_1.3.csv",
             "subblock": {
               "title": "Salmon farming evolution by country",
-              "source": "",
+              "source": "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/evolution_salmon_farming_country_iso_1.4.csv",
               "artifact": "evolution_salmon_farming_country_iso_1.4.csv"
             }

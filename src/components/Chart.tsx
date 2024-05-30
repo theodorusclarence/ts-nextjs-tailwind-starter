@@ -58,7 +58,7 @@ const Chart = ({
     return (
       <p
         className={clsx(
-          "flex items-center justify-center p-caption text-center bg-gray-50 min-h-[300px]",
+          "flex items-center justify-center p-caption text-center bg-gray-50 min-h-[450px]",
           className,
         )}
       >
@@ -88,7 +88,7 @@ const Chart = ({
             height,
           }}
           config={{ responsive: true }}
-          className={clsx("!block min-h-[300px]", className)}
+          className={clsx("!block min-h-[450px]", className)}
         />
       )}
     </>

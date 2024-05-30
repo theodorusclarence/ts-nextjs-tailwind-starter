@@ -9,7 +9,7 @@ import Calculator from "@/components/Calculator";
 import DashboardSection from "@/components/DashboardSection";
 import IntroBlock from "@/components/IntroBlock";
 import JoinBlock from "@/components/JoinBlock";
-import MetaItem from "@/components/MetaItem";
+import MetaChart from "@/components/MetaChart";
 import { SummaryLinksProps } from "@/components/Summary";
 import TitleBlock from "@/components/TitleBlock";
 
@@ -173,7 +173,10 @@ const Dashboard = () => {
       </section>
 
       <section>
-        <TitleBlock id="biodiversity-section" title={t("sections.biodiversity.title")} />
+        <TitleBlock
+          id="biodiversity-section"
+          title={t("sections.biodiversity.title")}
+        />
         <DeforestationSection />
         <EscapeSection />
       </section>
@@ -216,15 +219,23 @@ const SalmonCollapseSection = () => {
       id="salmon-collapse"
       content={t.raw("sections.intro.blocks.salmon-collapse.content")}
       meta={{
-        source: {
-          link: "https://nasco.int/ices-2/statistics/",
-          moreInfo: t("sections.intro.blocks.salmon-collapse.source"),
-        },
-        methodology: { link: "/to-act#" },
-        data: {
-          link: t("sections.intro.blocks.salmon-collapse.data"),
-          artifact: t("sections.intro.blocks.salmon-collapse.artifact"),
-        },
+        data: [
+          {
+            type: "source",
+            isBlank: true,
+            link: "https://nasco.int/ices-2/statistics/",
+            moreInfo: t("sections.intro.blocks.salmon-collapse.source"),
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "data",
+            link: t("sections.intro.blocks.salmon-collapse.data"),
+            artifact: t("sections.intro.blocks.salmon-collapse.artifact"),
+          },
+        ],
       }}
       hasChart
     />
@@ -240,15 +251,23 @@ const SalmonFarmingSection = () => {
       id="hyper-growth"
       content={t.raw("sections.intro.blocks.hyper-growth.content")}
       meta={{
-        source: {
-          link: "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
-          moreInfo: t("sections.intro.blocks.hyper-growth.source"),
-        },
-        methodology: { link: "/to-act#" },
-        data: {
-          link: t("sections.intro.blocks.hyper-growth.data"),
-          artifact: t("sections.intro.blocks.hyper-growth.artifact"),
-        },
+        data: [
+          {
+            type: "source",
+            isBlank: true,
+            link: "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
+            moreInfo: t("sections.intro.blocks.hyper-growth.source"),
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "data",
+            link: t("sections.intro.blocks.hyper-growth.data"),
+            artifact: t("sections.intro.blocks.hyper-growth.artifact"),
+          },
+        ],
       }}
       hasChart
     />
@@ -265,15 +284,23 @@ const TopCountriesSection = () => {
         id="top-10"
         content={t.raw("sections.intro.blocks.top-10.content")}
         meta={{
-          source: {
-            link: "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
-            moreInfo: t("sections.intro.blocks.top-10.source"),
-          },
-          methodology: { link: "/to-act#" },
-          data: {
-            link: t("sections.intro.blocks.top-10.data"),
-            artifact: t("sections.intro.blocks.top-10.artifact"),
-          },
+          data: [
+            {
+              type: "source",
+              isBlank: true,
+              link: "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
+              moreInfo: t("sections.intro.blocks.top-10.source"),
+            },
+            {
+              type: "methodology",
+              link: "/to-act#",
+            },
+            {
+              type: "data",
+              link: t("sections.intro.blocks.top-10.data"),
+              artifact: t("sections.intro.blocks.top-10.artifact"),
+            },
+          ],
         }}
         hasChart
       />
@@ -283,26 +310,25 @@ const TopCountriesSection = () => {
           {t("sections.intro.blocks.top-10.subblock.title")}
         </h3>
 
-        <Chart id="evolution-map" type="maps" className="min-h-[700px]" />
-        <ul className="flex flex-wrap gap-4 mt-4 p-2 p-caption rounded-sm bg-gray-50">
-          <li>
-            <MetaItem
-              data="source"
-              link="https://www.fao.org/fishery/en/collection/aquaculture?lang=en"
-              moreInfo={t("sections.intro.blocks.top-10.subblock.source")}
-            />
-          </li>
-          <li>
-            <MetaItem data="methodology" link="/to-act#tendances" />
-          </li>
-          <li>
-            <MetaItem
-              data="data"
-              link={t("sections.intro.blocks.top-10.subblock.data")}
-              artifact={t("sections.intro.blocks.top-10.subblock.artifact")}
-            />
-          </li>
-        </ul>
+        <Chart id="evolution-map" className="min-h-[700px]" />
+        <MetaChart
+          data={[
+            {
+              type: "source",
+              link: t("sections.intro.blocks.top-10.subblock.source"),
+              isBlank: true,
+            },
+            {
+              type: "methodology",
+              link: "/to-act#tendances",
+            },
+            {
+              type: "data",
+              link: t("sections.intro.blocks.top-10.subblock.data"),
+              artifact: t("sections.intro.blocks.top-10.subblock.artifact"),
+            },
+          ]}
+        />
       </div>
     </>
   );
@@ -332,15 +358,23 @@ const MainProductionSection = () => {
       id="top-comp"
       content={t.raw("sections.company.blocks.top-comp.content")}
       meta={{
-        source: {
-          link: "https://mowi.com/wp-content/uploads/2023/06/2023-Salmon-Farming-Industry-Handbook-2023.pdf",
-          moreInfo: t("sections.company.blocks.top-comp.source"),
-        },
-        methodology: { link: "/to-act#" },
-        data: {
-          link: t("sections.company.blocks.top-comp.data"),
-          artifact: t("sections.company.blocks.top-comp.artifact"),
-        },
+        data: [
+          {
+            type: "source",
+            artifact: "2023-Salmon-Farming-Industry-Handbook-2023.pdf",
+            link: "https://mowi.com/wp-content/uploads/2023/06/2023-Salmon-Farming-Industry-Handbook-2023.pdf",
+            moreInfo: t("sections.company.blocks.top-comp.source"),
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "data",
+            link: t("sections.company.blocks.top-comp.data"),
+            artifact: t("sections.company.blocks.top-comp.artifact"),
+          },
+        ],
       }}
       hasChart
     />
@@ -365,11 +399,17 @@ const LandPlantsSection = () => {
         mainContent={t.raw("sections.company.blocks.top-land.mainContent")}
         content={t.raw("sections.company.blocks.top-land.content")}
         meta={{
-          methodology: { link: "/to-act#" },
-          data: {
-            link: t("sections.company.blocks.top-comp.data"),
-            artifact: t("sections.company.blocks.top-comp.artifact"),
-          },
+          data: [
+            {
+              type: "methodology",
+              link: "/to-act#",
+            },
+            {
+              type: "data",
+              link: t("sections.company.blocks.top-comp.data"),
+              artifact: t("sections.company.blocks.top-comp.artifact"),
+            },
+          ],
         }}
         hasChart
       />
@@ -407,11 +447,15 @@ const LandPlantsSection = () => {
             </div>
           ))}
         </div>
-        <ul className="flex flex-wrap gap-4 mt-4 mb-20 p-2 p-caption rounded-sm bg-gray-50">
-          <li>
-            <MetaItem data="methodology" link="/to-act#tendances" />
-          </li>
-        </ul>
+        <MetaChart
+          data={[
+            {
+              type: "methodology",
+              link: "/to-act#tendances",
+            },
+          ]}
+        />
+
         <Chart id="ras-map" type="maps" className="min-h-[900px]" />
       </div>
     </>
