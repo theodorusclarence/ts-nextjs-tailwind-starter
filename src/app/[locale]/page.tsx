@@ -114,7 +114,7 @@ const EditoSection = () => {
     {
       title: t("edito.biodiversity.title"),
       content: t("edito.biodiversity.content"),
-      link: "/dashboard#biodiversity",
+      link: "/dashboard#biodiversity-section",
       image: {
         small: "/images/storytelling/biodiversity-hd.webp",
         medium: "/images/storytelling/biodiversity-hd.webp",
@@ -124,7 +124,7 @@ const EditoSection = () => {
     {
       title: t("edito.health.title"),
       content: t("edito.health.content"),
-      link: "/dashboard#human-health",
+      link: "/dashboard#health-section",
       image: {
         small: "/images/storytelling/health-hd.webp",
         medium: "/images/storytelling/health-hd.webp",
@@ -135,7 +135,7 @@ const EditoSection = () => {
     {
       title: t("edito.climat.title"),
       content: t("edito.climat.content"),
-      link: "/dashboard#climate",
+      link: "/dashboard#climate-section",
       image: {
         small: "/images/storytelling/climat-400.jpg",
         medium: "/images/storytelling/climat-600.jpg",
@@ -145,7 +145,7 @@ const EditoSection = () => {
     {
       title: t("edito.social.title"),
       content: t("edito.social.content"),
-      link: "/dashboard#social",
+      link: "/dashboard#social-section",
       image: {
         small: "/images/storytelling/social-400.jpg",
         medium: "/images/storytelling/social-600.jpg",
@@ -155,7 +155,7 @@ const EditoSection = () => {
     {
       title: t("edito.animals.title"),
       content: t("edito.animals.content"),
-      link: "/dashboard#animal-welfare",
+      link: "/dashboard#animals-section",
       image: {
         small: "/images/storytelling/animals-hd.webp",
         medium: "/images/storytelling/animals-hd.webp",

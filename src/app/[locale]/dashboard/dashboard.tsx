@@ -173,30 +173,30 @@ const Dashboard = () => {
       </section>
 
       <section>
-        <TitleBlock title={t("sections.biodiversity.title")} />
+        <TitleBlock id="biodiversity-section" title={t("sections.biodiversity.title")} />
         <DeforestationSection />
         <EscapeSection />
       </section>
 
       <section>
-        <TitleBlock title={t("sections.health.title")} />
+        <TitleBlock id="health-section" title={t("sections.health.title")} />
         <AntibioticSection />
         <MicroplasticSection />
       </section>
 
       <section>
-        <TitleBlock title={t("sections.animals.title")} />
+        <TitleBlock id="animals-section" title={t("sections.animals.title")} />
         <StressOnshoreSection />
         <MortalityRateSection />
       </section>
 
       <section>
-        <TitleBlock title={t("sections.climate.title")} />
+        <TitleBlock id="climate-section" title={t("sections.climate.title")} />
         <CarbonSection />
       </section>
 
       <section>
-        <TitleBlock title={t("sections.social.title")} />
+        <TitleBlock id="social-section" title={t("sections.social.title")} />
         <SocialCarbonSection />
       </section>
 
