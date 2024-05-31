@@ -1,28 +1,29 @@
-"use server";
 export const fetchData = async (
-  apiPath: string,
+  lang: string,
+  type: "graphs" | "maps",
   chartName: string,
-  parse = true,
 ) => {
-  const dataUrl = process.env.PINKBOMBS_DATA_URL;
-  const apiKey = process.env.PINKBOMBS_DATA_API_KEY;
+  const url = `/dashboard/${type}/${lang}/${chartName}.${type === "graphs" ? "json" : "html"}`;
+
+  if (type === "maps") {
+    return url;
+  }
+
   try {
-    const response = await fetch(`${dataUrl}/${apiPath}/${chartName}`, {
+    const response = await fetch(url, {
       method: "GET",
       headers: {
-        "X-API-Key": apiKey,
         accept: "application/json",
       } as HeadersInit,
     });
-    if (!response.ok) {
+
+    if (!response) {
       return null;
     }
 
     const data = await response.json();
-    if (!parse) {
-      return data.graph;
-    }
-    return JSON.parse(data.graph);
+
+    return JSON.parse(data);
   } catch (error) {
     return null;
   }

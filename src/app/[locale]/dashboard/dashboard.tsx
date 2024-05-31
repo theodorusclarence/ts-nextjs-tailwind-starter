@@ -447,16 +447,34 @@ const LandPlantsSection = () => {
             </div>
           ))}
         </div>
+
+        <Chart id="ras-map" type="maps" className="min-h-[900px]" />
+
         <MetaChart
           data={[
             {
               type: "methodology",
               link: "/to-act#tendances",
             },
+            {
+              type: "image",
+              link: t("sections.company.blocks.future-land-based.meta.image1"),
+              moreInfo: t("sections.company.blocks.future-land-based.meta.infoImage1"),
+              isBlank: true,
+            },
+            {
+              type: "image",
+              link: t("sections.company.blocks.future-land-based.meta.image2"),
+              moreInfo: t("sections.company.blocks.future-land-based.meta.infoImage2"),
+              isBlank: true,
+            },
+            {
+              type: "data",
+              link: t("sections.company.blocks.future-land-based.meta.data"),
+              artifact: t("sections.company.blocks.future-land-based.meta.dataArtifact")
+            },
           ]}
         />
-
-        <Chart id="ras-map" type="maps" className="min-h-[900px]" />
       </div>
     </>
   );
@@ -485,8 +503,27 @@ const DeforestationSection = () => {
     <DashboardSection
       title={t("sections.biodiversity.blocks.deforestation.title")}
       image={{
-        src: `/images/dashboard/${t("sections.biodiversity.blocks.deforestation.image")}`,
+        src: `/dashboard/images/${t("sections.biodiversity.blocks.deforestation.image")}`,
         alt: t("sections.biodiversity.blocks.deforestation.altImage"),
+      }}
+      meta={{
+        data: [
+          {
+            type: "source",
+            link: t("sections.biodiversity.blocks.deforestation.meta.source"),
+            moreInfo: t("sections.biodiversity.blocks.deforestation.meta.infoSource"),
+            isBlank: true,
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "image",
+            isBlank: true,
+            link: t("sections.biodiversity.blocks.deforestation.meta.image"),
+          },
+        ],
       }}
       id="deforestation"
       content={t.raw("sections.biodiversity.blocks.deforestation.content")}
@@ -503,8 +540,26 @@ const EscapeSection = () => {
       id="escapes-rates"
       content={t.raw("sections.biodiversity.blocks.escapes-rates.content")}
       image={{
-        src: `/images/dashboard/${t("sections.biodiversity.blocks.escapes-rates.image")}`,
+        src: `/dashboard/images/${t("sections.biodiversity.blocks.escapes-rates.image")}`,
         alt: t("sections.biodiversity.blocks.escapes-rates.altImage"),
+      }}
+      meta={{
+        data: [
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "image",
+            isBlank: true,
+            link: t("sections.biodiversity.blocks.escapes-rates.meta.image"),
+          },
+          {
+            type: "data",
+            artifact: t("sections.biodiversity.blocks.escapes-rates.meta.data"),
+            link: t("sections.biodiversity.blocks.escapes-rates.meta.dataArtifact"),
+          }
+        ],
       }}
     />
   );
@@ -520,8 +575,27 @@ const AntibioticSection = () => {
       mainContent={t.raw("sections.health.blocks.antibiotic-conso.mainContent")}
       content={t.raw("sections.health.blocks.antibiotic-conso.content")}
       image={{
-        src: `/images/dashboard/${t("sections.health.blocks.antibiotic-conso.image")}`,
+        src: `/dashboard/images/${t("sections.health.blocks.antibiotic-conso.image")}`,
         alt: t("sections.health.blocks.antibiotic-conso.altImage"),
+      }}
+      meta={{
+        data: [
+          {
+            type: "source",
+            link: t("sections.health.blocks.antibiotic-conso.meta.source"),
+            moreInfo: t("sections.health.blocks.antibiotic-conso.meta.infoSource"),
+            isBlank: true,
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "image",
+            isBlank: true,
+            link: t("sections.health.blocks.antibiotic-conso.meta.image"),
+          },
+        ],
       }}
     />
   );
@@ -534,10 +608,29 @@ const MicroplasticSection = () => {
     <DashboardSection
       title={t("sections.health.blocks.microplastics.title")}
       image={{
-        src: `/images/dashboard/${t("sections.health.blocks.microplastics.image")}`,
+        src: `/dashboard/images/${t("sections.health.blocks.microplastics.image")}`,
       }}
       id="microplastics"
       content={t.raw("sections.health.blocks.microplastics.content")}
+      meta={{
+        data: [
+          {
+            type: "source",
+            link: t("sections.health.blocks.microplastics.meta.source"),
+            moreInfo: t("sections.health.blocks.microplastics.meta.infoSource"),
+            isBlank: true,
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "image",
+            isBlank: true,
+            link: t("sections.health.blocks.microplastics.meta.image"),
+          },
+        ],
+      }}
     />
   );
 };
@@ -549,11 +642,30 @@ const StressOnshoreSection = () => {
     <DashboardSection
       title={t("sections.animals.blocks.stress-onshore.title")}
       image={{
-        src: `/images/dashboard/${t("sections.animals.blocks.stress-onshore.image")}`,
+        src: `/dashboard/images/${t("sections.animals.blocks.stress-onshore.image")}`,
         alt: t("sections.animals.blocks.stress-onshore.altImage"),
       }}
       id="stress-onshore"
       content={t.raw("sections.animals.blocks.stress-onshore.content")}
+      meta={{
+        data: [
+          {
+            type: "source",
+            link: t("sections.animals.blocks.stress-onshore.meta.source"),
+            moreInfo: t("sections.animals.blocks.stress-onshore.meta.infoSource"),
+            isBlank: true,
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "image",
+            isBlank: true,
+            link: t("sections.animals.blocks.stress-onshore.meta.image"),
+          },
+        ],
+      }}
     />
   );
 };
@@ -568,6 +680,19 @@ const MortalityRateSection = () => {
       mainContent={t.raw("sections.animals.blocks.mortality-rates.mainContent")}
       content={t.raw("sections.animals.blocks.mortality-rates.content")}
       hasChart
+      meta={{
+        data: [
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "data",
+            link: t("sections.animals.blocks.mortality-rates.meta.data"),
+            artifact: t("sections.animals.blocks.mortality-rates.meta.dataArtifact"),
+          },
+        ],
+      }}
     />
   );
 };
@@ -579,8 +704,21 @@ const CarbonSection = () => {
     <DashboardSection
       title={t("sections.climate.blocks.carbon-bomb.title")}
       id="carbon-bomb"
+      image={{ src: "/images/social-carbon.webp" }}
       content={t.raw("sections.climate.blocks.carbon-bomb.content")}
-      hasChart
+      meta={{
+        data: [
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "image",
+            isBlank: true,
+            link: t("sections.climate.blocks.carbon-bomb.meta.image"),
+          },
+        ],
+      }}
     />
   );
 };
@@ -595,6 +733,30 @@ const SocialCarbonSection = () => {
       id="social-carbon"
       mainContent={t.raw("sections.social.blocks.social-carbon.mainContent")}
       content={t.raw("sections.social.blocks.social-carbon.content")}
+      meta={{
+        data: [
+          {
+            type: "source",
+            link: t("sections.social.blocks.social-carbon.meta.source"),
+            moreInfo: t("sections.social.blocks.social-carbon.meta.infoSource"),
+            isBlank: true,
+          },
+          {
+            type: "methodology",
+            link: "/to-act#",
+          },
+          {
+            type: "image",
+            isBlank: true,
+            link: t("sections.social.blocks.social-carbon.meta.image"),
+          },
+          {
+            type: "data",
+            link: t("sections.social.blocks.social-carbon.meta.data"),
+            artifact: t("sections.social.blocks.social-carbon.meta.dataArtifact"),
+          },
+        ],
+      }}
     />
   );
 };

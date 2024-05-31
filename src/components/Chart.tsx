@@ -35,11 +35,7 @@ const Chart = ({
 
     (async () => {
       if (id.length > 0) {
-        const response = await fetchData(
-          (locale === "fr" ? "fr/" : "") + type,
-          id,
-          type === "graphs",
-        );
+        const response = await fetchData(locale, type, id);
 
         if (!response) {
           return;
@@ -73,23 +69,25 @@ const Chart = ({
         <iframe
           title="Carte des fermes terrestres"
           id="ras-map"
-          srcDoc={mapData}
+          src={mapData}
           width={1000}
           height={900}
           className="w-full"
         />
       ) : (
-        <Plot
-          divId={id}
-          data={chartData.data}
-          layout={{
-            ...chartData.layout,
-            ...(width ? { width } : null),
-            height,
-          }}
-          config={{ responsive: true }}
-          className={clsx("!block min-h-[450px]", className)}
-        />
+        <div className="overflow-x-auto">
+          <Plot
+            divId={id}
+            data={chartData.data}
+            layout={{
+              ...chartData.layout,
+              ...(width ? { width } : null),
+              height,
+            }}
+            config={{ responsive: true }}
+            className={clsx("!block min-h-[450px] min-w-[500px]", className)}
+          />
+        </div>
       )}
     </>
   );

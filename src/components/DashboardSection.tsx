@@ -65,7 +65,7 @@ const DashboardSection = ({
           {image?.src ? (
             <Image
               src={image.src}
-              className="block mx-auto object-contain max-w-full min-h-[300px]"
+              className="block mx-auto object-contain max-w-full min-h-[300px] h-auto w-auto"
               alt={image.alt || ""}
               width={700}
               height={300}

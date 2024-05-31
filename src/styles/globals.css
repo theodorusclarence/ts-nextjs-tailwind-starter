@@ -51,7 +51,7 @@
   }
 
   .h3 {
-    @apply font-secondary text-2xl md:text-3xl/none lg:text-[3.125rem]/none font-bold uppercase;
+    @apply font-secondary text-2xl md:text-3xl/none lg:text-[3.125rem]/none font-bold;
   }
 
   .h4 {
