@@ -12,27 +12,27 @@
             "title": "Wild Altantic salmon collapse",
             "content": "<p>The Atlantic salmon was added to the IUCN Red List of Threatened Species in December 2023.</p><p>This is largely due to overfishing, habitat degradation, particularly caused by dams blocking migratory routes, as well as climate change altering their environments, impacting their growth and survival rates.</p>",
             "source": "",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/discrease_wild_salmon_1.1.csv",
-            "artifact": "discrease_wild_salmon_1.1.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/discrease_wild_salmon_1.1.csv.zip",
+            "artifact": "discrease_wild_salmon_1.1.csv.zip"
           },
           "hyper-growth": {
             "title": "Hyper-growth in salmon farming",
             "content": "<p>Salmon production has experienced unprecedented growth.</p><p>Nearly nonexistent 30 years ago, it surged to three million tons of salmon in 2021, equivalent to the farming and slaughtering of one billion salmon.</p>",
             "source": "",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/hyper_growth_salmon_farming_1.2.csv",
-            "artifact": "hyper_growth_salmon_farming_1.2.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/hyper_growth_salmon_farming_1.2.csv.zip",
+            "artifact": "hyper_growth_salmon_farming_1.2.csv.zip"
           },
           "top-10": {
             "title": "Main countries producing farmed salmon",
             "content": "<p>Salmon require cold waters to grow, and thus production is concentrated in a few countries located far to the North or far to the South. Today, four countries alone account for 90% of the world's salmon production.</p>",
             "source": "",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_countries_producing_1.3.csv",
-            "artifact": "top_10_countries_producing_1.3.csv",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_10_countries_producing_1.3.csv.zip",
+            "artifact": "top_10_countries_producing_1.3.csv.zip",
             "subblock": {
               "title": "Salmon farming evolution by country",
               "source": "https://www.fao.org/fisheryen/collection/aquaculture?lang=en",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/evolution_salmon_farming_country_iso_1.4.csv",
-              "artifact": "evolution_salmon_farming_country_iso_1.4.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/evolution_salmon_farming_country_iso_1.4.csv.zip",
+              "artifact": "evolution_salmon_farming_country_iso_1.4.csv.zip"
             }
           },
           "intro-consumption": {
@@ -48,15 +48,15 @@
             "title": "Main producers of open-net salmon",
             "content": "<p>Small artisanal salmon farms have given way to industrial aquaculture.</p><p>In a few decades, the market has become dominated by a handful of multinational corporations.</p><p>Mowi, formerly known as Marine Harvest, is the leader in the sector. The company operates in 25 countries.</p>",
             "source": "",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_companies_producing_2.1.csv",
-            "artifact": "top_10_companies_producing_2.1.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_10_companies_producing_2.1.csv.zip",
+            "artifact": "top_10_companies_producing_2.1.csv.zip"
           },
           "top-land": {
             "title": "The new threat: on land plants",
             "mainContent": "<p>In 2021, the theoretical combined production capacity of land-based salmon farms amounted to 2.5 million tons, nearly equaling the global production of salmon in marine farms (2.7 million tons).</p>",
             "content": "<p>Land-based farms use RAS technology (Recirculating Aquaculture Systems) in fully enclosed tanks. Whilst, this approach to salmon farming gives control over the impact on biodiversity and the local environment (limited disease contamination, rejection of feces and salmon escapes), it also requires large amount of fresh water and is very energy-hungry, as it aims to recreate very precisely the natural conditions found in the sea.</p><p>As a result, the carbon footprint of salmon produced on land is higher than salmon produced in marine farms.</p><p>In order to make such farms profitable, the fish density can be 3 times higher than in marine farms. And there has been a small number of accidents where large number of fish died as a result of inadequate water conditions and a fire at a plant in Denmark.</p>",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_ras_companies_2.3.csv",
-            "artifact": "top_10_ras_companies_2.3.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_10_ras_companies_2.3.csv.zip",
+            "artifact": "top_10_ras_companies_2.3.csv.zip"
           },
           "future-land-based": {
             "title": "The future of land-based aquaculture farms",
@@ -85,8 +85,8 @@
               "infoImage1": "consumption of electricity",
               "image2": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/land_based_farms_carbon_en.png",
               "infoImage2": "carbon footprint",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/ras_projects_for_map_2.4.csv",
-              "dataArtifact": "ras_projects_for_map_2.4.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/ras_projects_for_map_2.4.csv.zip",
+              "dataArtifact": "ras_projects_for_map_2.4.csv.zip"
             }
           },
           "companies-consumption": {
@@ -117,8 +117,8 @@
             "altImage": "More than 4 million fish have escaped from sea cages (SalMar, Mowi, Bakkarfrost and others) since 2018",
             "meta": {
               "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/evasions_en.png",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/escapes_marine_cages_3.5.csv",
-              "dataArtifact": "escapes_marine_cages_3.5.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/escapes_marine_cages_3.5.csv.zip",
+              "dataArtifact": "escapes_marine_cages_3.5.csv.zip"
             }
           }
         }
@@ -169,8 +169,8 @@
             "mainContent": "<p>Mortality rates vary considerably from grower to grower and from year to year. Exceptionally high rates are observed, reaching 20% ​​in some years.</p>",
             "content": "<p>Some producers achieve much lower mortality rates thanks to better practices but also local legislation. Please note: these figures only take into account mortality at sea. Mortality in fresh water bodies is close to 30% (Multiexport reports)</p>",
             "meta": {
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/mortality_rates_4.4.csv",
-              "dataArtifact": "mortality_rates_4.4.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/mortality_rates_4.4.csv.zip",
+              "dataArtifact": "mortality_rates_4.4.csv.zip"
             }
           }
         }
@@ -198,8 +198,8 @@
               "source": "https://eumofa.eu/documents/20178/432372/Fishmeal+and+fish+oil.pdf",
               "infoSource": "anglais",
               "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/social_fishing_en.png",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/social_mill_fishing_6.csv",
-              "dataArtifact": "social_mill_fishing_6.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/social_mill_fishing_6.csv.zip",
+              "dataArtifact": "social_mill_fishing_6.csv.zip"
             }
           }
         }

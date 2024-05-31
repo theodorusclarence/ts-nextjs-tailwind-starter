@@ -52,8 +52,8 @@
       "title": "Et tout ça dans l’impunité d’une industrie en croissance exponentielle.",
       "content": "La production de saumons, dominée par une poignée de multinationales, connaît depuis quelques décennies une hyper-croissance à l’échelle globale.",
       "source": "https://www.fao.org/fishery/fr/collection/aquaculture",
-      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/numbers_salmons_farmed_1.0_fr.csv",
-      "artifact": "numbers_salmons_farmed_1.0_fr.csv",
+      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/numbers_salmons_farmed_1.0_fr.csv.zip",
+      "artifact": "numbers_salmons_farmed_1.0_fr.csv.zip",
       "link": "On agit"
     }
   }

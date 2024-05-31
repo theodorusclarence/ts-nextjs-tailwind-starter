@@ -28,8 +28,8 @@
       "act": "Pour inverser la tendance et stopper le désastre, il est urgent d’agir. On a des leviers d’action !",
       "link": "On agit",
       "pdf": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/Alternatives_Methodogie_fr.pdf",
-      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/alternatives_text_7_fr.csv",
-      "artifact": "alternatives_text_7_fr.csv"
+      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/alternatives_text_7_fr.csv.zip",
+      "artifact": "alternatives_text_7_fr.csv.zip"
     },
     "metaChart": {
       "source": "Source principale",

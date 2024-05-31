@@ -12,27 +12,27 @@
             "title": "Effondrement du saumon sauvage de l'Atlantique",
             "content": "<p>Le saumon atlantique est inscrit sur la Liste rouge de l'UICN des espèces menacées en décembre 2023.</p><p>Cela est dû en grande partie à la surpêche, à la dégradation de l'habitat, notamment due aux barrages bloquant les routes migratoires, mais aussi au changement climatique qui modifie leurs environnements, impactant leurs taux de croissance et de survie.</p>",
             "source": "anglais",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/discrease_wild_salmon_1.1_fr.csv",
-            "artifact": "discrease_wild_salmon_1.1_fr.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/discrease_wild_salmon_1.1_fr.csv.zip",
+            "artifact": "discrease_wild_salmon_1.1_fr.csv.zip"
           },
           "hyper-growth": {
             "title": "Hyper-croissance de l’élevage du saumon",
             "content": "<p>La production de saumon a connu une croissance sans précédent.</p><p>Quasi inexistante il y a 30 ans, elle a bondi à trois millions de tonnes de saumon en 2021, soit l’équivalent de l’élevage et de l’abattage d’un milliard de saumons.</p>",
             "source": "anglais",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/hyper_growth_salmon_farming_1.2_fr.csv",
-            "artifact": "hyper_growth_salmon_farming_1.2_fr.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/hyper_growth_salmon_farming_1.2_fr.csv.zip",
+            "artifact": "hyper_growth_salmon_farming_1.2_fr.csv.zip"
           },
           "top-10": {
             "title": "Principaux pays producteurs de saumon d'élevage",
             "content": "<p>Le saumon a besoin d'eaux froides pour croître et la production est donc concentrée dans quelques pays situés loin au nord ou au sud.</p><p>Aujourd'hui, quatre pays représentent à eux seuls 90 % de la production mondiale de saumon.</p>",
             "source": "anglais",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_countries_producing_1.3_fr.csv",
-            "artifact": "top_10_countries_producing_1.3_fr.csv",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_10_countries_producing_1.3_fr.csv.zip",
+            "artifact": "top_10_countries_producing_1.3_fr.csv.zip",
             "subblock": {
               "title": "Evolution de l'élevage du saumon par pays",
               "source": "https://www.fao.org/fishery/fr/collection/aquaculture?lang=fr",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/evolution_salmon_farming_country_iso_1.4_fr.csv",
-              "artifact": "evolution_salmon_farming_country_iso_1.4_fr.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/evolution_salmon_farming_country_iso_1.4_fr.csv.zip",
+              "artifact": "evolution_salmon_farming_country_iso_1.4_fr.csv.zip"
             }
           },
           "intro-consumption": {
@@ -48,15 +48,15 @@
             "title": "Principaux producteurs de saumon en cages marines",
             "content": "<p>Les petites fermes salmonicoles artisanales ont cédé la place à l’aquaculture industrielle.</p><p>En quelques décennies, le marché est devenu dominé par une poignée de multinationales.</p><p>Mowi, anciennement Marine Harvest, est leader du secteur. L'entreprise est présente dans 25 pays.</p>",
             "source": "anglais",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_companies_producing_2.1_fr.csv",
-            "artifact": "top_10_companies_producing_2.1_fr.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_10_companies_producing_2.1_fr.csv.zip",
+            "artifact": "top_10_companies_producing_2.1_fr.csv.zip"
           },
           "top-land": {
             "title": "La nouvelle menace : sur fermes aquacoles terrestres",
             "mainContent": "<p>En 2021, la capacité de production théorique combinée des élevages terrestres de saumon s’élève à 2,5 millions de tonnes, soit presque autant que la production mondiale de saumon dans les élevages marins (2,7 millions de tonnes).</p>",
             "content": "<p>Les fermes terrestres utilisent la technologie RAS (Recycled Aquaculture Systems) dans des réservoirs entièrement fermés. Si cette approche de l'élevage du saumon permet de limiter l'impact sur la biodiversité et l'environnement local (contamination limitée par les maladies, rejet des excréments et des évasions de saumons), elle nécessite également de grandes quantités d'eau douce et est très gourmande en énergie, car elle vise à recréer très précisément les conditions de l’habitat naturel des saumons.</p><p>En conséquence, l’empreinte carbone du saumon produit sur terre est plus élevée que celle du saumon produit dans les fermes marines. Afin de rentabiliser de telles fermes, la densité de poissons peut être 3 fois plus élevée que dans les fermes marines.</p><p>La technologie n’est pas encore totalement maîtrisée : actuellement, aucune usine en fonctionnement ne produit plus de 5 000 tonnes et les incidents techniques sont fréquents.</p><p>Une usine au Danemark en a subi cinq, résultant de défaillances techniques (pollution au chlorure de fer dans le fjord, incendie complet de son usine, engendrant pollution de l’air et de l’eau).</p>",
-            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/top_10_ras_companies_2.3_fr.csv",
-            "artifact": "top_10_ras_companies_2.3_fr.csv"
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_10_ras_companies_2.3_fr.csv.zip",
+            "artifact": "top_10_ras_companies_2.3_fr.csv.zip"
           },
           "future-land-based": {
             "title": "Le futur des fermes aquacoles terrestres",
@@ -85,8 +85,8 @@
               "infoImage1": "consommation d’électricité",
               "image2": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/fermes_usines_terrestres_carbon_fr.png",
               "infoImage2": "empreinte carbone",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/ras_projects_for_map_2.4_fr.csv",
-              "dataArtifact": "ras_projects_for_map_2.4_fr.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/ras_projects_for_map_2.4_fr.csv.zip",
+              "dataArtifact": "ras_projects_for_map_2.4_fr.csv.zip"
             }
           },
           "companies-consumption": {
@@ -117,8 +117,8 @@
             "altImage": "Plus de 4 millions de poissons se sont échapés des cages marines (SalMar, Mowi, Bakkarfrost et autres) depuis 2018",
             "meta": {
               "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/evasions_fr.png",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/escapes_marine_cages_3.5_fr.csv",
-              "dataArtifact": "escapes_marine_cages_3.5_fr.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/escapes_marine_cages_3.5_fr.csv.zip",
+              "dataArtifact": "escapes_marine_cages_3.5_fr.csv.zip"
             }
           }
         }
@@ -169,8 +169,8 @@
             "mainContent": "<p>Les taux de mortalité varient considérablement d'un producteur à l'autre et d'une année à l'autre. Des taux exceptionnellement élevés sont observés, atteignant 20 % certaines années.</p>",
             "content": "<p>Certains producteurs atteignent des taux de mortalité bien inférieurs grâce à de meilleures pratiques mais aussi à la législation locale. Attention : ces chiffres ne prennent en compte que la mortalité en mer. La mortalité dans les plans d'eau douce est proche de 30% (rapports Multiexport)</p>",
             "meta": {
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/mortality_rates_4.4_fr.csv",
-              "dataArtifact": "mortality_rates_4.4_fr.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/mortality_rates_4.4_fr.csv.zip",
+              "dataArtifact": "mortality_rates_4.4_fr.csv.zip"
             }
           }
         }
@@ -198,8 +198,8 @@
               "source": "https://eumofa.eu/documents/20178/432372/Fishmeal+and+fish+oil.pdf",
               "infoSource": "anglais",
               "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/social_fishing_fr.png",
-              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/social_mill_fishing_6_fr.csv",
-              "dataArtifact": "social_mill_fishing_6_fr.csv"
+              "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/social_mill_fishing_6_fr.csv.zip",
+              "dataArtifact": "social_mill_fishing_6_fr.csv.zip"
             }
           }
         }
