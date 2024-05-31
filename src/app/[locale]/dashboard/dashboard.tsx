@@ -484,7 +484,10 @@ const DeforestationSection = () => {
   return (
     <DashboardSection
       title={t("sections.biodiversity.blocks.deforestation.title")}
-      src="/images/deforestation.webp"
+      image={{
+        src: `/images/dashboard/${t("sections.biodiversity.blocks.deforestation.image")}`,
+        alt: t("sections.biodiversity.blocks.deforestation.altImage"),
+      }}
       id="deforestation"
       content={t.raw("sections.biodiversity.blocks.deforestation.content")}
     />
@@ -499,7 +502,10 @@ const EscapeSection = () => {
       title={t("sections.biodiversity.blocks.escapes-rates.title")}
       id="escapes-rates"
       content={t.raw("sections.biodiversity.blocks.escapes-rates.content")}
-      hasChart
+      image={{
+        src: `/images/dashboard/${t("sections.biodiversity.blocks.escapes-rates.image")}`,
+        alt: t("sections.biodiversity.blocks.escapes-rates.altImage"),
+      }}
     />
   );
 };
@@ -513,7 +519,10 @@ const AntibioticSection = () => {
       id="antibiotic-conso"
       mainContent={t.raw("sections.health.blocks.antibiotic-conso.mainContent")}
       content={t.raw("sections.health.blocks.antibiotic-conso.content")}
-      hasChart
+      image={{
+        src: `/images/dashboard/${t("sections.health.blocks.antibiotic-conso.image")}`,
+        alt: t("sections.health.blocks.antibiotic-conso.altImage"),
+      }}
     />
   );
 };
@@ -524,7 +533,9 @@ const MicroplasticSection = () => {
   return (
     <DashboardSection
       title={t("sections.health.blocks.microplastics.title")}
-      src="/images/microplastics.webp"
+      image={{
+        src: `/images/dashboard/${t("sections.health.blocks.microplastics.image")}`,
+      }}
       id="microplastics"
       content={t.raw("sections.health.blocks.microplastics.content")}
     />
@@ -537,7 +548,10 @@ const StressOnshoreSection = () => {
   return (
     <DashboardSection
       title={t("sections.animals.blocks.stress-onshore.title")}
-      src="/images/stress.webp"
+      image={{
+        src: `/images/dashboard/${t("sections.animals.blocks.stress-onshore.image")}`,
+        alt: t("sections.animals.blocks.stress-onshore.altImage"),
+      }}
       id="stress-onshore"
       content={t.raw("sections.animals.blocks.stress-onshore.content")}
     />
@@ -577,7 +591,7 @@ const SocialCarbonSection = () => {
   return (
     <DashboardSection
       title={t("sections.social.blocks.social-carbon.title")}
-      src="/images/social-carbon.webp"
+      image={{ src: "/images/social-carbon.webp" }}
       id="social-carbon"
       mainContent={t.raw("sections.social.blocks.social-carbon.mainContent")}
       content={t.raw("sections.social.blocks.social-carbon.content")}

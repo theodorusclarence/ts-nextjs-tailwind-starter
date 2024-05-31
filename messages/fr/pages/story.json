@@ -28,7 +28,7 @@
     "edito": {
       "social": {
         "title": "justice Sociale",
-        "content": "Chaque année 500 000+ tonnes de poissons sauvages sont prélevés aux larges des côtes de l’Afrique de l’Ouest pour nourrir des poissons d'élevage mettant en péril la sécurité alimentaire des communautés locales."
+        "content": "Chaque année, 123 000 à 144 000 tonnes de poissons sauvages sont pêchés dans les eaux d’Afrique de l’Ouest pour nourrir les saumons d’élevage de Norvège, mettant en péril la sécurité alimentaire des communautés locales."
       },
       "climat": {
         "title": "Climat",
@@ -36,7 +36,7 @@
       },
       "health": {
         "title": "Santé",
-        "content": "La présence dans la chair des saumons de polluants organiques persistants (POP) et de microplastiques soulève des préoccupations pour la santé humaine.La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, nécessitant l'utilisation d'agents pathogènes ou de médicaments.",
+        "content": "La présence dans la chair des saumons de polluants organiques persistants (POP) et de microplastiques soulève des préoccupations pour la santé humaine. La concentration élevée de poissons dans les fermes aquacoles favorise la propagation de maladies, nécessitant l'utilisation d'agents pathogènes ou de médicaments.",
         "credit": "Crédit photo : Ramji / Bob Brown Foundation"
       },
       "biodiversity": {
@@ -45,12 +45,15 @@
       },
       "animals": {
         "title": "Condition animale",
-        "content": "La très forte densité des saumons en cages entraine maladies et stress. Les poux de mer rongent la chair des poissons défigurés. Les taux de mortalité au sein des cages sont très anormalement élevés."
+        "content": "La très forte densité des saumons en cages entraine maladies et stress. Les poux de mer rongent la chair des poissons défigurés. Les taux de mortalité au sein des cages sont anormalement élevés."
       }
     },
     "industry": {
       "title": "Et tout ça dans l’impunité d’une industrie en croissance exponentielle.",
       "content": "La production de saumons, dominée par une poignée de multinationales, connaît depuis quelques décennies une hyper-croissance à l’échelle globale.",
+      "source": "https://www.fao.org/fishery/fr/collection/aquaculture",
+      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/numbers_salmons_farmed_1.0_fr.csv",
+      "artifact": "numbers_salmons_farmed_1.0_fr.csv",
       "link": "On agit"
     }
   }

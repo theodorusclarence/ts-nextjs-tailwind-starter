@@ -93,11 +93,15 @@
         "blocks": {
           "deforestation": {
             "title": "Déforestation",
-            "content": "<p>L'ambition du gouvernement norvégien prévoyait d'augmenter la production de 500 % d'ici 2050. Cela nécessitera l'importation de 11 000 km2 de production de soja du Brésil. Cela équivaut à la déforestation légale de l’Amazonie en 2022.</p>"
+            "content": "<p>L'ambition du gouvernement norvégien prévoyait d'augmenter la production de 500 % d'ici 2050. Cela nécessitera l'importation de 11 000 km2 de production de soja du Brésil. Cela équivaut à la déforestation légale de l’Amazonie en 2022.</p>",
+            "image": "deforestation-fr.svg",
+            "altImage": "En 2020 en Norvège, il faut l’équivalent de 2154km2 de plantation de Soja, soit 20 fois Paris pour produire 1562415 tonnes de saumon"
           },
           "escapes-rates": {
             "title": "Les évasions",
-            "content": "<p>De 2018 à 2022, plus de 4 000 000 de saumons se sont échappés des élevages des 11 plus grands producteurs*. Ces saumons menacent la faune car ils... [source].</p><p><em>*Aucune donnée de Cooke n’a été trouvée.</em></p>"
+            "content": "<p>De 2018 à 2022, plus de 4 000 000 de saumons se sont échappés des élevages des 11 plus grands producteurs*. Ces saumons menacent la faune car ils... [source].</p><p><em>*Aucune donnée de Cooke n’a été trouvée.</em></p>",
+            "image": "escape-fr.svg",
+            "altImage": "Plus de 4 millions de poissons se sont échapés des cages marines (SalMar, Mowi, Bakkarfrost et autres) depuis 2018"
           }
         }
       },
@@ -107,11 +111,14 @@
           "antibiotic-conso": {
             "title": "Consommation d'antibiotiques",
             "mainContent": "<p>Si la Norvège prétend que moins de 99 % de son aquaculture est exempte d'antibiotiques, d'autres pays ne sont pas aussi vertueux. Au Chili, l'utilisation d'antibiotiques a augmenté d'un tiers depuis la crise du covid.</p>",
-            "content": "<p>Au Chili : 421 tonnes d'atb utilisées pour les 17 principaux producteurs, soit 0,04% (tonnes d'atb/tonne de poisson produit) en moyenne. Les taux ont diminué en 2018, mais du fait de la crise covid, ils ont de nouveau augmenté en 2021 pour atteindre un taux en tonnes atb/tonne de poisson soit 1/3 supérieur à celui de 2018.</p>"
+            "content": "<p>Au Chili : 421 tonnes d'atb utilisées pour les 17 principaux producteurs, soit 0,04% (tonnes d'atb/tonne de poisson produit) en moyenne. Les taux ont diminué en 2018, mais du fait de la crise covid, ils ont de nouveau augmenté en 2021 pour atteindre un taux en tonnes atb/tonne de poisson soit 1/3 supérieur à celui de 2018.</p>",
+            "image": "microplastic-1-fr.svg",
+            "altImage": "Les principaux producteurs du Chili ont utilisé 460 tonnes d’antibiotiques dans les cages marines en 2021 soit l’équivalent de 35g pour un humain de 74kg"
           },
           "microplastics": {
             "title": "Microplastique",
-            "content": "<p>Un saumon de 5 kg contient environ 575 microplastiques.</p><p>Une personne française moyenne consommant 4,4 kg de saumon par an ingérera environ 575 microplastiques par an sur un total de 97.500 provenant de différentes sources.</p><p>Les microplastiques sont particulièrement présents dans le saumon en raison de la bioaccumulation dans la chaîne alimentaire et de l'affinité des plastiques pour les graisses.</p><p>Cela affecte surtout les saumons d'élevage, qui sont nettement plus gras et vivent dans des environnements riches en plastiques.</p>"
+            "content": "<p>Un saumon de 5 kg contient environ 575 microplastiques.</p><p>Une personne française moyenne consommant 4,4 kg de saumon par an ingérera environ 575 microplastiques par an sur un total de 97.500 provenant de différentes sources.</p><p>Les microplastiques sont particulièrement présents dans le saumon en raison de la bioaccumulation dans la chaîne alimentaire et de l'affinité des plastiques pour les graisses.</p><p>Cela affecte surtout les saumons d'élevage, qui sont nettement plus gras et vivent dans des environnements riches en plastiques.</p>",
+            "image": "microplastic-fr.svg"
           }
         }
       },
@@ -120,7 +127,9 @@
         "blocks": {
           "stress-onshore": {
             "title": "Densité / stress dans usine à terre",
-            "content": "<p>La densité de saumons est trois fois plus élevée dans des usines à terre par rapport à des élevages en mer déjà trop denses, pour des raisons de rentabilité.</p><p>Les conséquences peuvent être nombreuses : mortalité de masse liées à des pathogènes, plus hauts niveaux de stress.</p>"
+            "content": "<p>La densité de saumons est trois fois plus élevée dans des usines à terre par rapport à des élevages en mer déjà trop denses, pour des raisons de rentabilité.</p><p>Les conséquences peuvent être nombreuses : mortalité de masse liées à des pathogènes, plus hauts niveaux de stress.</p>",
+            "image": "density-fr.svg",
+            "altImage": "3 saumons dans l’équivalent d’une baignoire d’eau. C’est la densité requise pour que les usines à terre soient rentable"
           },
           "mortality-rates": {
             "title": "Taux de mortalité",

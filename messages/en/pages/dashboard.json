@@ -93,11 +93,15 @@
         "blocks": {
           "deforestation": {
             "title": "Deforestation",
-            "content": "<p>The ambition of the Norwegian government was to increase salmon production by 500% by 2050. This will require the importation of 11,000 km2 of soybean production from Brazil. This is equivalent to the legal deforestation of the Amazon in 2022.</p>"
+            "content": "<p>The ambition of the Norwegian government was to increase salmon production by 500% by 2050. This will require the importation of 11,000 km2 of soybean production from Brazil. This is equivalent to the legal deforestation of the Amazon in 2022.</p>",
+            "image": "deforestation-en.svg",
+            "altImage": "In 2020 in Norway, the equivalent of 2154km2 of soya plantation is needed, or 20 times Paris, to produce 1562415 tonnes of salmon."
           },
           "escapes-rates": {
             "title": "Escapes",
-            "content": "<p>From 2018 to 2022, over 4,000,000 salmon escaped from the farms of the 11 largest producers. These escaped salmon pose a threat to wildlife as they... [source].</p><p><em>*No data from Cooke was found.</em></p>"
+            "content": "<p>From 2018 to 2022, over 4,000,000 salmon escaped from the farms of the 11 largest producers. These escaped salmon pose a threat to wildlife as they... [source].</p><p><em>*No data from Cooke was found.</em></p>",
+            "image": "escape-en.svg",
+            "altImage": "More than 4 million fish have escaped from sea cages (SalMar, Mowi, Bakkarfrost and others) since 2018"
           }
         }
       },
@@ -107,11 +111,14 @@
           "antibiotic-conso": {
             "title": "Antibiotic consumption",
             "mainContent": "<p>While Norway claims that less than 99% of its aquaculture is antibiotic-free, other countries are not so virtuous. In Chile, the use of antibiotics has increased by a third since the covid crisis.</p>",
-            "content": "<p>In Chile: 421 tonnes of ATB used for the 17 main producers, or 0.04% (tons of ATB/tonne of fish produced) on average. The rates decreased in 2018, but due to the covid crisis, they increased again in 2021 to reach a rate in tonnes atb/tonne of fish which is 1/3 higher than that of 2018.</p>"
+            "content": "<p>In Chile: 421 tonnes of ATB used for the 17 main producers, or 0.04% (tons of ATB/tonne of fish produced) on average. The rates decreased in 2018, but due to the covid crisis, they increased again in 2021 to reach a rate in tonnes atb/tonne of fish which is 1/3 higher than that of 2018.</p>",
+            "image": "microplastic-1-en.svg",
+            "altImage": "Chile's main producers used 460 tonnes of antibiotics in sea cages in 2021, the equivalent of 35g for a 74kg human"
           },
           "microplastics": {
             "title": "Microplastic",
-            "content": "<p>A 5 kg salmon contains around 575 microplastics.</p><p>An average French person consuming 4.4 kg of salmon per year will ingest around 575 microplastics per year out of a total of 97,500 from different sources.</p> <p>Microplastics are particularly present in salmon due to bioaccumulation in the food chain and the affinity of plastics for fats.</p><p>This especially affects farmed salmon, which are significantly fatter and live in environments rich in plastics.</p>"
+            "content": "<p>A 5 kg salmon contains around 575 microplastics.</p><p>An average French person consuming 4.4 kg of salmon per year will ingest around 575 microplastics per year out of a total of 97,500 from different sources.</p> <p>Microplastics are particularly present in salmon due to bioaccumulation in the food chain and the affinity of plastics for fats.</p><p>This especially affects farmed salmon, which are significantly fatter and live in environments rich in plastics.</p>",
+            "image": "microplastic-en.svg"
           }
         }
       },
@@ -120,7 +127,9 @@
         "blocks": {
           "stress-onshore": {
             "title": "Stress in land-based facilities",
-            "content": "<p>The density of salmon is three times higher in factories on land compared to farms at sea which are already too dense, for reasons of profitability.</p><p>The consequences can be numerous: mass mortality linked to pathogens, higher levels of stress.</p>"
+            "content": "<p>The density of salmon is three times higher in factories on land compared to farms at sea which are already too dense, for reasons of profitability.</p><p>The consequences can be numerous: mass mortality linked to pathogens, higher levels of stress.</p>",
+            "image": "density-en.svg",
+            "altImage": "3 salmon in the equivalent of a bathtub of water. This is the density required for onshore factories to be profitable"
           },
           "mortality-rates": {
             "title": "Mortality rate",

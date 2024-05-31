@@ -24,7 +24,7 @@ const IntroBlock = ({
     <div id="alternatives-block" className={className}>
       <div
         className={clsx(
-          "lg:bg-[url('/images/wave.svg')] bg-no-repeat bg-center bg-[length:3200px_275px]",
+          "lg:bg-[url('/images/wave.svg')] bg-no-repeat bg-center bg-[length:3200px_272px]",
           headDark
             ? "text-darkblue1 lg:text-brown1 bg-brown1 lg:bg-darkblue1"
             : "text-red1",
@@ -33,7 +33,7 @@ const IntroBlock = ({
         <h2
           className={clsx(
             "h1",
-            "p-6 lg:px-12 lg:pt-[120px] lg:pb-12 max-w-[1596px] mx-auto lg:bg-clip-text lg:text-transparent bg-no-repeat bg-center bg-[length:3200px_275px]",
+            "p-6 lg:px-12 lg:pt-[130px] lg:pb-12 max-w-[1596px] mx-auto lg:bg-clip-text lg:text-transparent bg-no-repeat bg-center bg-[length:3200px_272px]",
             headDark
               ? "lg:bg-[url('/images/wave-text.svg')]"
               : "lg:bg-[url('/images/wave-text-light.svg')]",
@@ -54,8 +54,8 @@ const IntroBlock = ({
             hasBackground={false}
             data={[
               {
-                type: "source",
-                link: t("join.source"),
+                type: "document",
+                link: t("join.pdf"),
                 isBlank: true,
               },
               {

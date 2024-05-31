@@ -16,7 +16,7 @@ type DashboardSectionProps = {
   content?: string;
   id: string;
   cta?: ReactNode;
-  src?: string;
+  image?: { src: string; alt?: string };
   hasChart?: boolean;
   meta?: MetaChartProps;
 };
@@ -28,7 +28,7 @@ const DashboardSection = ({
   className,
   content,
   cta,
-  src,
+  image,
   hasChart = false,
   meta,
   ...rest
@@ -62,11 +62,11 @@ const DashboardSection = ({
           {cta && <div className="text-center py-8">{cta}</div>}
         </div>
         <div className="self-center min-h-full overflow-x-auto text-center">
-          {src ? (
+          {image?.src ? (
             <Image
-              src={src}
+              src={image.src}
               className="block mx-auto object-contain max-w-full min-h-[300px]"
-              alt=""
+              alt={image.alt || ""}
               width={700}
               height={300}
             />

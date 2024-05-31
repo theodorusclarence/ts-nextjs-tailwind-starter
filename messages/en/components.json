@@ -27,11 +27,11 @@
       "content": "France, located in the top 3 of the largest consumers of salmon in the world, bears a particular responsibility in guiding practices.",
       "act": "To reverse the trend and stop the disaster, urgent action is needed. We have levers for action!",
       "link": "We act",
-      "source": "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
-      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/numbers_salmons_farmed_1.0.csv",
-      "artifact": "numbers_salmons_farmed_1.0.csv"
+      "pdf": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/Alternatives_Methodogy_en.pdf",
+      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/alternatives_text_7.csv",
+      "artifact": "alternatives_text_7.csv"
     },
-    "metaItem": {
+    "metaChart": {
       "source": "Main source",
       "methodology": "Methodology",
       "image": "Image",

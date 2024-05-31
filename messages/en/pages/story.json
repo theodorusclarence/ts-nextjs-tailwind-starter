@@ -28,7 +28,7 @@
     "edito": {
       "social": {
         "title": "Social",
-        "content": "Each year, over 500,000 tonnes of wild fish are harvested off the coast of West Africa to feed farmed fish, jeopardizing the food security of local communities."
+        "content": "Every year, 123,000 to 144,000 tonnes of wild fish are harvested from West African waters to feed Norway's farmed salmon, putting the food security of local communities at risk."
       },
       "climat": {
         "title": "Climate",
@@ -45,12 +45,15 @@
       },
       "animals": {
         "title": "Animal condition",
-        "content": "The very high density of salmon in cages leads to illness and stress. Sea lice eat the flesh of disfigured fish. Mortality rates within cages are very abnormally high."
+        "content": "The very high density of salmon in cages leads to illness and stress. Sea lice eat the flesh of disfigured fish. Mortality rates within cages are abnormally high."
       }
     },
     "industry": {
       "title": "And all this with the impunity of an exponentially growing industry.",
       "content": "Salmon production, dominated by a handful of multinationals, has experienced hyper-growth on a global scale for several dec",
+      "source": "https://www.fao.org/fishery/en/collection/aquaculture?lang=en",
+      "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/data/numbers_salmons_farmed_1.0.csv",
+      "artifact": "numbers_salmons_farmed_1.0_fr.csv",
       "link": "We act"
     }
   }
