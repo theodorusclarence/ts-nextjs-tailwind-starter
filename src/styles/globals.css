@@ -42,11 +42,13 @@
   }
 
   /* #region  /**=========== Typography =========== */
-  .h1 {
+  .h1,
+  .prose h1 {
     @apply font-secondary text-4xl md:text-6xl/none lg:text-[5.625rem]/none font-extrabold uppercase;
   }
 
-  .h2 {
+  .h2,
+  .prose h2 {
     @apply font-secondary text-3xl md:text-5xl/none lg:text-[4.375rem]/none font-extrabold uppercase;
   }
 
@@ -54,8 +56,14 @@
     @apply font-secondary text-2xl md:text-3xl/none lg:text-[3.125rem]/none font-bold;
   }
 
-  .h4 {
-    @apply font-secondary text-xl md:text-2xl/none lg:text-4xl/none font-bold uppercase;
+  .h4,
+  .prose h4 {
+    @apply font-secondary text-xl md:text-2xl/none lg:text-4xl/none font-bold;
+  }
+
+  .h5,
+  .prose h5 {
+    @apply font-secondary text-lg md:text-xl/none lg:text-2xl/none font-bold;
   }
 
   body,
@@ -79,9 +87,37 @@
     @apply underline;
   }
 
+  .prose a:hover {
+    @apply no-underline;
+  }
+
   .prose em {
     @apply italic;
   }
+  .prose h3 {
+    @apply text-red1 mt-6 lg:mt-12 mb-4;
+  }
+
+  .prose h4 {
+    @apply text-red1 mt-4 lg:mt-8 mb-2;
+  }
+
+  .prose h5 {
+    @apply mt-4 mb-2;
+  }
+
+  .prose ul {
+    @apply list-disc mb-2;
+  }
+
+  .prose ol {
+    @apply list-decimal mb-2;
+  }
+
+  .prose li {
+    @apply pl-2 list-inside;
+  }
+
   /* #endregion  /**======== Typography =========== */
 
   /* #region  /**=========== HEADER =========== */
