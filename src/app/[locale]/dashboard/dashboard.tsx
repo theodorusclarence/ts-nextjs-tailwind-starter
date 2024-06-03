@@ -228,7 +228,7 @@ const SalmonCollapseSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#macro-salmon-collapse-section",
           },
           {
             type: "data",
@@ -260,7 +260,7 @@ const SalmonFarmingSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#macro-hyper-growth-section",
           },
           {
             type: "data",
@@ -293,7 +293,7 @@ const TopCountriesSection = () => {
             },
             {
               type: "methodology",
-              link: "/to-act#",
+              link: "/about#macro-hyper-growth-section",
             },
             {
               type: "data",
@@ -320,7 +320,7 @@ const TopCountriesSection = () => {
             },
             {
               type: "methodology",
-              link: "/to-act#tendances",
+              link: "/about#macro-hyper-growth-section",
             },
             {
               type: "data",
@@ -367,7 +367,7 @@ const MainProductionSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "data",
@@ -402,7 +402,7 @@ const LandPlantsSection = () => {
           data: [
             {
               type: "methodology",
-              link: "/to-act#",
+              link: "/about#",
             },
             {
               type: "data",
@@ -454,7 +454,7 @@ const LandPlantsSection = () => {
           data={[
             {
               type: "methodology",
-              link: "/to-act#tendances",
+              link: "/about#tendances",
             },
             {
               type: "image",
@@ -516,7 +516,7 @@ const DeforestationSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "image",
@@ -547,7 +547,7 @@ const EscapeSection = () => {
         data: [
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "image",
@@ -588,7 +588,7 @@ const AntibioticSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "image",
@@ -622,7 +622,7 @@ const MicroplasticSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "image",
@@ -657,7 +657,7 @@ const StressOnshoreSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "image",
@@ -684,7 +684,7 @@ const MortalityRateSection = () => {
         data: [
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "data",
@@ -710,7 +710,7 @@ const CarbonSection = () => {
         data: [
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "image",
@@ -743,7 +743,7 @@ const SocialCarbonSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#",
           },
           {
             type: "image",

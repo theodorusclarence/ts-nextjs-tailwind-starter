@@ -203,7 +203,7 @@ const BusinessSection = () => {
             },
             {
               type: "methodology",
-              link: "/to-act#tendances",
+              link: "/about#macro-section",
             },
             {
               type: "data",

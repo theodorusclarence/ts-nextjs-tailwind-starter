@@ -14,13 +14,9 @@ const About = () => {
   return (
     <>
       <IntroBlock title={t("title")} />
-
-      <WhySection />
-      <WhoSection />
-      <MethodsSection />
+      <ExplainSection />
 
       <TitleBlock title={t("sources")} />
-
       <MacroSection />
       <AlternativesSection />
       <CompaniesSection />
@@ -35,34 +31,30 @@ const About = () => {
 
 export default About;
 
-const WhySection = () => {
+const ExplainSection = () => {
   const t = useTranslations("about");
 
   return (
     <>
-      <TitleBlock id="why-section-title" title={t("why.title")} />
+      <TitleBlock
+        spaceY="mb-4 lg:mb-8"
+        id="why-section-title"
+        title={t("why.title")}
+      />
       <AboutSection content={t("why.content")} />
-    </>
-  );
-};
 
-const WhoSection = () => {
-  const t = useTranslations("about");
-
-  return (
-    <>
-      <TitleBlock id="who-section-title" title={t("who.title")} />
+      <TitleBlock
+        spaceY="mt-12 lg:mt-24 mb-4 lg:mb-8"
+        id="who-section-title"
+        title={t("who.title")}
+      />
       <AboutSection content={t("who.content")} />
-    </>
-  );
-};
 
-const MethodsSection = () => {
-  const t = useTranslations("about");
-
-  return (
-    <>
-      <TitleBlock id="methods-section-title" title={t("methods.title")} />
+      <TitleBlock
+        spaceY="mt-12 lg:mt-24 mb-4 lg:mb-8"
+        id="methods-section-title"
+        title={t("methods.title")}
+      />
       <AboutSection content={t("methods.content")} />
     </>
   );
@@ -74,9 +66,24 @@ const MacroSection = () => {
   return (
     <>
       <AboutSection
-        content={t("macro.content")}
         title={t("macro.title")}
-        id="macro-section-title"
+        content={t("macro.content")}
+        id="macro-section"
+      />
+      <AboutSection
+        subtitle={t("macro.calculator.title")}
+        content={t("macro.calculator.content")}
+        id="macro-calculator-section"
+      />
+      <AboutSection
+        subtitle={t("macro.salmon-collapse.title")}
+        content={t("macro.salmon-collapse.content")}
+        id="macro-salmon-collapse-section"
+      />
+      <AboutSection
+        subtitle={t("macro.hyper-growth.title")}
+        content={t("macro.hyper-growth.content")}
+        id="macro-hyper-growth-section"
       />
     </>
   );
@@ -90,7 +97,7 @@ const AlternativesSection = () => {
       <AboutSection
         content={t("alternatives.content")}
         title={t("alternatives.title")}
-        id="alternatives-section-title"
+        id="alternatives-section"
       />
     </>
   );
