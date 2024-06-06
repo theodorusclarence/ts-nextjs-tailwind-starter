@@ -11,7 +11,7 @@ const Edito = ({
   image,
   content,
   mode = "dark",
-  link = "/",
+  link,
   linkLabel,
   contentPosition = "left",
 }: {
@@ -98,19 +98,13 @@ const Edito = ({
                 "block aspect-square",
               )}
             >
-              {image.small && (
-                <source srcSet={image.small} media="(min-width:300px)" />
-              )}
-              {image.medium && (
-                <source srcSet={image.medium} media="(min-width:600px)" />
-              )}
               <Image
                 loading="lazy"
                 src={image.large}
                 width={600}
                 height={600}
                 alt=""
-                className="w-full"
+                className="w-full h-full object-cover"
               />
             </picture>
             {image.caption && (

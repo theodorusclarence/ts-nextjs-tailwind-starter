@@ -24,7 +24,7 @@ const Act = () => {
         contentPosition="right"
         mode="light"
         image={{
-          large: "/images/storytelling/biodiversity-hd.webp",
+          large: "/images/act/call-companies.jpg",
         }}
       />
 
@@ -38,7 +38,7 @@ const Act = () => {
         contentPosition="right"
         mode="light"
         image={{
-          large: "/images/storytelling/biodiversity-hd.webp",
+          large: "/images/act/stop-industry.jpg",
         }}
       />
 
@@ -52,7 +52,7 @@ const Act = () => {
         contentPosition="right"
         mode="light"
         image={{
-          large: "/images/storytelling/biodiversity-hd.webp",
+          large: "/images/act/support-seastemik.jpg",
         }}
       />
 
@@ -64,7 +64,7 @@ const Act = () => {
         contentPosition="right"
         mode="light"
         image={{
-          large: "/images/storytelling/biodiversity-hd.webp",
+          large: "/images/act/no-eat-salmon.jpeg",
         }}
       />
     </>
