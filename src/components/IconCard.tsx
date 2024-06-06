@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 
@@ -10,27 +9,23 @@ const IconCard = ({
 }: {
   className?: string;
   title: string;
-  icon?: {
-    src: string;
-    width: number;
-    height: number;
-  };
+  icon?: string;
   content: string;
 }) => {
   return (
-    <div className={clsx("space-y-3", className)}>
+    <div className={className}>
       {icon ? (
         <Image
           loading="lazy"
-          src={icon.src}
-          width={icon.width}
-          height={icon.height}
+          src={icon}
+          width={100}
+          height={100}
           alt=""
           className="max-[767px]:w-12 max-[767px]:h-12 max-[1023px]:w-24 max-[1023px]:h-24 object-contain"
         />
       ) : null}
       <p className="h3 xl:max-w-[380px] 3xl:max-w-[600px]">{title}</p>
-      <p className="text-white xl:max-w-72 3xl:max-w-96">{content}</p>
+      <p className="mt-4 text-white xl:max-w-72 3xl:max-w-96">{content}</p>
     </div>
   );
 };

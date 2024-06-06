@@ -72,34 +72,35 @@ const ExplodeSection = () => {
         >
           <li className="xl:absolute xl:-left-[20px] xl:top-[180px] 3xl:left-[112px] 3xl:top-[330px]">
             <IconCard
-              icon={{ src: "/images/people.svg", width: 130, height: 114 }}
+              icon="/images/storytelling/icon-social.svg"
               title={t("explode.social.title")}
               content={t("explode.social.content")}
             />
           </li>
           <li className="xl:absolute xl:left-[120px] xl:bottom-[20px] 3xl:left-[242px] 3xl:bottom-[180px]">
             <IconCard
-              icon={{ src: "/images/climat.svg", width: 94, height: 153 }}
+              icon="/images/storytelling/icon-climate.svg"
               title={t("explode.climat.title")}
               content={t("explode.climat.content")}
             />
           </li>
           <li className="xl:absolute xl:-right-[150px] xl:top-[50px] 3xl:-right-[100px] 3xl:top-[160px]">
             <IconCard
-              icon={{ src: "/images/hearth.svg", width: 95, height: 99 }}
+              icon="/images/storytelling/icon-health.svg"
               title={t("explode.health.title")}
               content={t("explode.health.content")}
             />
           </li>
           <li className="xl:absolute xl:-right-[140px] xl:bottom-[140px] 3xl:-right-[80px] 3xl:bottom-[360px]">
             <IconCard
-              icon={{ src: "/images/butterfly.svg", width: 120, height: 116 }}
+              icon="/images/storytelling/icon-biodiversity.svg"
               title={t("explode.biodiversity.title")}
               content={t("explode.biodiversity.content")}
             />
           </li>
-          <li className="xl:absolute xl:right-[100px] xl:-bottom-[60px] 3xl:right-[340px] 3xl:bottom-[40px]">
+          <li className="xl:absolute xl:right-[100px] xl:-bottom-[120px] 3xl:right-[340px] 3xl:bottom-[10px]">
             <IconCard
+              icon="/images/storytelling/icon-animals.svg"
               title={t("explode.animals.title")}
               content={t("explode.animals.content")}
             />
