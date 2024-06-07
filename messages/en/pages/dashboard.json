@@ -36,8 +36,10 @@
             }
           },
           "intro-consumption": {
-            "title": "Salmon Consumption",
-            "content": "<p>The United States is the largest consumer of salmon, followed by Japan and Russia. European countries are also significant consumers of salmon, with France leading the pack with a high consumption rate of 4.4kg per person per year.</p>"
+            "title": "Main countries consuming salmon",
+            "content": "<p>The increase in salmon production results from an increase in the consumption of this fish, whose flesh is highly valued. In 2019, the United States were the largest consumers of salmon, with an <a href=\"/about#macro-consumption-section\">apparent consumption approaching one million tons</a>, followed by Russia and Japan, with consumption around 460,000 tons. European countries follow, with France being the 4th largest consumer of salmon in 2019. Consumption in Western countries is around 3 kilos per capita, while emerging countries such as Brazil and China have very low per capita consumption.<p>",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_15_countries_consuming_1.5.csv.zip",
+            "artifact": "top_15_countries_consuming_1.5.csv.zip"
           }
         }
       },

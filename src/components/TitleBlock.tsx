@@ -5,9 +5,11 @@ const TitleBlock = ({
   className,
   title,
   id,
+  spaceY = "mt-12 lg:mt-24",
   ...rest
 }: {
   className?: string;
+  spaceY?: string;
   id?: string;
   title: string;
 }) => {
@@ -19,10 +21,7 @@ const TitleBlock = ({
     <div
       {...rest}
       id={id}
-      className={clsx(
-        className,
-        "mt-12 lg:mt-24 p-6 md:p-12 text-red1 bg-pink1",
-      )}
+      className={clsx(className, "p-6 md:p-12 text-red1 bg-pink1", spaceY)}
     >
       <h2 className="h2 max-w-[1500px] mx-auto w-full">{title}</h2>
     </div>

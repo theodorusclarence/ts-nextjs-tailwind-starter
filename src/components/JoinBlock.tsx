@@ -60,7 +60,7 @@ const IntroBlock = ({
               },
               {
                 type: "methodology",
-                link: "/to-act#tendances",
+                link: "/about#alternatives-section",
               },
               {
                 type: "data",

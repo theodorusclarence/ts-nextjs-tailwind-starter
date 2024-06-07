@@ -36,8 +36,10 @@
             }
           },
           "intro-consumption": {
-            "title": "Consommation de saumon",
-            "content": "<p>Les États-Unis sont les plus gros consommateurs de saumon, suivis par le Japon et la Russie. Les pays européens sont aussi d’importants consommateurs saumon, la France étant en tête de proue avec une consommation élevée qui atteint 4,4kg/an/personne.<p>"
+            "title": "Les plus gros consommateurs de saumon",
+            "content": "<p>La hausse de la production de saumons résulte d’une augmentation de la consommation de ce poisson, dont la chair est très appréciée. En 2019, les États-unis étaient les plus gros consommateurs de saumon, avec une <a href=\"/about#macro-consumption-section\">consommation apparente s’approchant du million de tonnes</a>, suivis par la Russie et le Japon dont la consommation est d’environ 460,000 tonnes. Les pays européens suivent ensuite, la France étant en 2019 le 4ème pays le plus consommateur de saumon. La consommation des pays occidentaux se situe aux alentours de 3 kilos par habitant, tandis que des pays émergents comme le Brésil ou la Chine présentent des consommations par habitant très faibles.<p>",
+            "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/top_15_countries_consuming_1.5_fr.csv.zip",
+            "artifact": "top_15_countries_consuming_1.5_fr.csv.zip"
           }
         }
       },

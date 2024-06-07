@@ -46,7 +46,7 @@ const Calculator = ({ data, className, ...rest }: CalculatorProps) => {
           <li key={key}>
             <span className="h3 block p-2 md:p-4 text-red1">
               {new Intl.NumberFormat(locale).format(
-                element.multiplicator * (seconds + 1),
+                element.multiplicator * seconds,
               )}
             </span>
             <span>{element.label}</span>

@@ -14,13 +14,9 @@ const About = () => {
   return (
     <>
       <IntroBlock title={t("title")} />
-
-      <WhySection />
-      <WhoSection />
-      <MethodsSection />
+      <ExplainSection />
 
       <TitleBlock title={t("sources")} />
-
       <MacroSection />
       <AlternativesSection />
       <CompaniesSection />
@@ -35,35 +31,30 @@ const About = () => {
 
 export default About;
 
-const WhySection = () => {
+const ExplainSection = () => {
   const t = useTranslations("about");
 
   return (
     <>
-      <TitleBlock id="why-section-title" title={t("why.title")} />
-      <AboutSection content={t("why.content")} />
-    </>
-  );
-};
+      <TitleBlock
+        spaceY="mb-4 lg:mb-8"
+        id="why-section-title"
+        title={t("why.title")}
+      />
+      <AboutSection content={t.raw("why.content")} />
+      <TitleBlock
+        spaceY="mt-12 lg:mt-24 mb-4 lg:mb-8"
+        id="who-section-title"
+        title={t("who.title")}
+      />
+      <AboutSection content={t.raw("who.content")} />
 
-const WhoSection = () => {
-  const t = useTranslations("about");
-
-  return (
-    <>
-      <TitleBlock id="who-section-title" title={t("who.title")} />
-      <AboutSection content={t("who.content")} />
-    </>
-  );
-};
-
-const MethodsSection = () => {
-  const t = useTranslations("about");
-
-  return (
-    <>
-      <TitleBlock id="methods-section-title" title={t("methods.title")} />
-      <AboutSection content={t("methods.content")} />
+      <TitleBlock
+        spaceY="mt-12 lg:mt-24 mb-4 lg:mb-8"
+        id="methods-section-title"
+        title={t("methods.title")}
+      />
+      <AboutSection content={t.raw("methods.content")} />
     </>
   );
 };
@@ -74,9 +65,30 @@ const MacroSection = () => {
   return (
     <>
       <AboutSection
-        content={t("macro.content")}
         title={t("macro.title")}
-        id="macro-section-title"
+        content={t.raw("macro.content")}
+        id="macro-section"
+      />
+      <AboutSection
+        subtitle={t("macro.calculator.title")}
+        content={t.raw("macro.calculator.content")}
+        id="macro-calculator-section"
+      />
+      <AboutSection
+        subtitle={t("macro.salmon-collapse.title")}
+        content={t.raw("macro.salmon-collapse.content")}
+        id="macro-salmon-collapse-section"
+      />
+      <AboutSection
+        subtitle={t("macro.hyper-growth.title")}
+        content={t.raw("macro.hyper-growth.content")}
+        id="macro-hyper-growth-section"
+      />
+
+      <AboutSection
+        subtitle={t("macro.consumption.title")}
+        content={t.raw("macro.consumption.content")}
+        id="macro-consumption-section"
       />
     </>
   );
@@ -86,13 +98,11 @@ const AlternativesSection = () => {
   const t = useTranslations("about");
 
   return (
-    <>
-      <AboutSection
-        content={t("alternatives.content")}
-        title={t("alternatives.title")}
-        id="alternatives-section-title"
-      />
-    </>
+    <AboutSection
+      id="alternatives-section"
+      title={t("alternatives.title")}
+      content={t.raw("alternatives.content")}
+    />
   );
 };
 
@@ -101,10 +111,26 @@ const CompaniesSection = () => {
 
   return (
     <>
+      <AboutSection id="companies-section" title={t("companies.title")} />
       <AboutSection
-        content={t("companies.content")}
-        title={t("companies.title")}
-        id="companies-section-title"
+        id="companies-top-comp-section"
+        subtitle={t("companies.top-comp.title")}
+        content={t.raw("companies.top-comp.content")}
+      />
+      <AboutSection
+        id="companies-top-land-section"
+        subtitle={t("companies.top-land.title")}
+        content={t.raw("companies.top-land.content")}
+      />
+      <AboutSection
+        id="companies-future-land-based-section"
+        subtitle={t("companies.future-land-based.title")}
+        content={t.raw("companies.future-land-based.content")}
+      />
+      <AboutSection
+        id="companies-future-land-keys-section"
+        subtitle={t("companies.future-land-keys.title")}
+        content={t.raw("companies.future-land-keys.content")}
       />
     </>
   );
@@ -115,10 +141,16 @@ const BiodiversitySection = () => {
 
   return (
     <>
+      <AboutSection id="biodiversity-section" title={t("biodiversity.title")} />
       <AboutSection
-        content={t("biodiversity.content")}
-        title={t("biodiversity.title")}
-        id="biodiversity-section-title"
+        id="biodiversity-deforestation-section"
+        subtitle={t("biodiversity.deforestation.title")}
+        content={t.raw("biodiversity.deforestation.content")}
+      />
+      <AboutSection
+        id="biodiversity-escapes-section"
+        subtitle={t("biodiversity.escapes.title")}
+        content={t.raw("biodiversity.escapes.content")}
       />
     </>
   );
@@ -129,10 +161,16 @@ const HumanSection = () => {
 
   return (
     <>
+      <AboutSection id="human-health-section" title={t("human-health.title")} />
       <AboutSection
-        content={t("human_health.content")}
-        title={t("human_health.title")}
-        id="human-health-section-title"
+        id="human-health-antibiotic-section"
+        subtitle={t("human-health.antibiotic.title")}
+        content={t.raw("human-health.antibiotic.content")}
+      />
+      <AboutSection
+        id="human-health-microplastics-section"
+        subtitle={t("human-health.microplastics.title")}
+        content={t.raw("human-health.microplastics.content")}
       />
     </>
   );
@@ -144,9 +182,19 @@ const AnimalSection = () => {
   return (
     <>
       <AboutSection
-        content={t("animal_welfare.content")}
-        title={t("animal_welfare.title")}
-        id="animal-welfare-section-title"
+        id="animal-welfare-section"
+        title={t("animal-welfare.title")}
+      />
+
+      <AboutSection
+        id="animal-welfare-density-section"
+        subtitle={t("animal-welfare.density.title")}
+        content={t.raw("animal-welfare.density.content")}
+      />
+      <AboutSection
+        id="animal-welfare-mortality-section"
+        subtitle={t("animal-welfare.mortality.title")}
+        content={t.raw("animal-welfare.mortality.content")}
       />
     </>
   );
@@ -157,10 +205,11 @@ const ClimateSection = () => {
 
   return (
     <>
+      <AboutSection id="climat-section" title={t("climate.title")} />
       <AboutSection
-        content={t("climate.content")}
-        title={t("climate.title")}
-        id="climate-section-title"
+        id="climat-emissions-section"
+        subtitle={t("climate.emissions.title")}
+        content={t.raw("climate.emissions.content")}
       />
     </>
   );
@@ -168,12 +217,14 @@ const ClimateSection = () => {
 
 const SocialSection = () => {
   const t = useTranslations("about");
+
   return (
     <>
+      <AboutSection id="social-section" title={t("social.title")} />
       <AboutSection
-        content={t("social.content")}
-        title={t("social.title")}
-        id="social-section-title"
+        id="social-resources-section"
+        subtitle={t("social.resources.title")}
+        content={t.raw("social.resources.content")}
       />
     </>
   );

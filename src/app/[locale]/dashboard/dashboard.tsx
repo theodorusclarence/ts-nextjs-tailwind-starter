@@ -36,10 +36,10 @@ const Dashboard = () => {
           label: t("sections.intro.blocks.top-10.title"),
           targetId: "top-10-block",
         },
-        /*{
+        {
           label: t("sections.intro.blocks.intro-consumption.title"),
           targetId: "intro-consumption-block",
-        },*/
+        },
       ],
     },
     {
@@ -162,7 +162,7 @@ const Dashboard = () => {
         <SalmonCollapseSection />
         <SalmonFarmingSection />
         <TopCountriesSection />
-        {/* <SalmonConsumptionSection /> */}
+        <SalmonConsumptionSection />
       </section>
 
       <section>
@@ -228,7 +228,7 @@ const SalmonCollapseSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#macro-salmon-collapse-section",
           },
           {
             type: "data",
@@ -260,7 +260,7 @@ const SalmonFarmingSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#macro-hyper-growth-section",
           },
           {
             type: "data",
@@ -293,7 +293,7 @@ const TopCountriesSection = () => {
             },
             {
               type: "methodology",
-              link: "/to-act#",
+              link: "/about#macro-hyper-growth-section",
             },
             {
               type: "data",
@@ -320,7 +320,7 @@ const TopCountriesSection = () => {
             },
             {
               type: "methodology",
-              link: "/to-act#tendances",
+              link: "/about#macro-consumption-section",
             },
             {
               type: "data",
@@ -334,20 +334,31 @@ const TopCountriesSection = () => {
   );
 };
 
-/*
+
 const SalmonConsumptionSection = () => {
   const t = useTranslations("dashboard");
-
   return (
     <DashboardSection
       title={t("sections.intro.blocks.intro-consumption.title")}
       id="intro-consumption"
-      content={t("sections.intro.blocks.intro-consumption.content")}
+      content={t.raw("sections.intro.blocks.intro-consumption.content")}
+      meta={{
+        data: [
+          {
+            type: "methodology",
+            link: "/about#macro-consumption-section",
+          },
+          {
+            type: "data",
+            link: t("sections.intro.blocks.intro-consumption.data"),
+            artifact: t("sections.intro.blocks.intro-consumption.artifact"),
+          },
+        ],
+      }}
       hasChart
     />
   );
 };
-*/
 
 const MainProductionSection = () => {
   const t = useTranslations("dashboard");
@@ -367,7 +378,7 @@ const MainProductionSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#companies-top-comp-section",
           },
           {
             type: "data",
@@ -402,7 +413,7 @@ const LandPlantsSection = () => {
           data: [
             {
               type: "methodology",
-              link: "/to-act#",
+              link: "/about#companies-top-land-section",
             },
             {
               type: "data",
@@ -454,7 +465,7 @@ const LandPlantsSection = () => {
           data={[
             {
               type: "methodology",
-              link: "/to-act#tendances",
+              link: "/about#companies-future-land-based-section",
             },
             {
               type: "image",
@@ -516,7 +527,7 @@ const DeforestationSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#biodiversity-deforestation-section",
           },
           {
             type: "image",
@@ -547,7 +558,7 @@ const EscapeSection = () => {
         data: [
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#biodiversity-escapes-section",
           },
           {
             type: "image",
@@ -588,7 +599,7 @@ const AntibioticSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#human-health-antibiotic-section",
           },
           {
             type: "image",
@@ -622,7 +633,7 @@ const MicroplasticSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#human-health-microplastics-section",
           },
           {
             type: "image",
@@ -657,7 +668,7 @@ const StressOnshoreSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#animal-welfare-density-section",
           },
           {
             type: "image",
@@ -684,7 +695,7 @@ const MortalityRateSection = () => {
         data: [
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#animal-welfare-mortality-section",
           },
           {
             type: "data",
@@ -710,7 +721,7 @@ const CarbonSection = () => {
         data: [
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#climat-emissions-section",
           },
           {
             type: "image",
@@ -743,7 +754,7 @@ const SocialCarbonSection = () => {
           },
           {
             type: "methodology",
-            link: "/to-act#",
+            link: "/about#social-resources-section",
           },
           {
             type: "image",

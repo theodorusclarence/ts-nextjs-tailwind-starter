@@ -52,7 +52,8 @@
     @apply font-secondary text-3xl md:text-5xl/none lg:text-[4.375rem]/none font-extrabold uppercase;
   }
 
-  .h3 {
+  .h3,
+  .prose h3 {
     @apply font-secondary text-2xl md:text-3xl/none lg:text-[3.125rem]/none font-bold;
   }
 
@@ -80,11 +81,11 @@
   }
 
   .prose p {
-    @apply mb-2;
+    @apply mb-6;
   }
 
   .prose a {
-    @apply underline;
+    @apply underline text-red1;
   }
 
   .prose a:hover {
@@ -95,27 +96,31 @@
     @apply italic;
   }
   .prose h3 {
-    @apply text-red1 mt-6 lg:mt-12 mb-4;
+    @apply text-red1 mt-16 lg:mt-20 mb-8;
   }
 
   .prose h4 {
-    @apply text-red1 mt-4 lg:mt-8 mb-2;
+    @apply text-red1 mt-12 lg:mt-16 mb-6;
   }
 
   .prose h5 {
-    @apply mt-4 mb-2;
+    @apply mt-8 lg:mt-10 mb-4 lg:mb-6;
   }
 
   .prose ul {
-    @apply list-disc mb-2;
+    @apply list-disc mb-6;
   }
 
   .prose ol {
-    @apply list-decimal mb-2;
+    @apply list-decimal mb-6;
   }
 
   .prose li {
-    @apply pl-2 list-inside;
+    @apply ml-6 mb-2 list-outside;
+  }
+
+  .prose li li {
+    @apply ml-8;
   }
 
   /* #endregion  /**======== Typography =========== */
