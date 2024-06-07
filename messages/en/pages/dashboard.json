@@ -83,9 +83,9 @@
               }
             ],
             "meta": {
-              "image1": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/land_based_farms_electricity_en.png",
+              "image1": "/dashboard/images/en/land_based_farms_electricity.png",
               "infoImage1": "consumption of electricity",
-              "image2": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/land_based_farms_carbon_en.png",
+              "image2": "/dashboard/images/en/land_based_farms_carbon.png",
               "infoImage2": "carbon footprint",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/ras_projects_for_map_2.4.csv.zip",
               "dataArtifact": "ras_projects_for_map_2.4.csv.zip"
@@ -107,7 +107,7 @@
             "image": "en/deforestation.svg",
             "altImage": "In 2020 in Norway, the equivalent of 2154km2 of soya plantation is needed, or 20 times Paris, to produce 1562415 tonnes of salmon.",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/deforestation_en.png",
+              "image": "/dashboard/images/en/deforestation.png",
               "source": "https://dv719tqmsuwvb.cloudfront.net/documents/Publikasjoner/Andre-rapporter/Rapport_Soya_eng.pdf",
               "infoSource": ""
             }
@@ -118,7 +118,7 @@
             "image": "en/escape.svg",
             "altImage": "More than 4 million fish have escaped from sea cages (SalMar, Mowi, Bakkarfrost and others) since 2018",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/evasions_en.png",
+              "image": "/dashboard/images/en/evasions.png",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/escapes_marine_cages_3.5.csv.zip",
               "dataArtifact": "escapes_marine_cages_3.5.csv.zip"
             }
@@ -135,7 +135,7 @@
             "image": "en/microplastic-1.svg",
             "altImage": "Chile's main producers used 460 tonnes of antibiotics in sea cages in 2021, the equivalent of 35g for a 74kg human",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/antibiotics_en.png",
+              "image": "/dashboard/images/en/antibiotics.png",
               "source": "https://www.sernapesca.cl/app/uploads/2023/11/informe_sobre_uso_de_antimicrobianos_en_la_salmonicultura_nacional_ano_2021.pdf",
               "infoSource": "spanish"
             }
@@ -145,7 +145,7 @@
             "content": "<p>A 5 kg salmon contains around 575 microplastics.</p><p>An average French person consuming 4.4 kg of salmon per year will ingest around 575 microplastics per year out of a total of 97,500 from different sources.</p> <p>Microplastics are particularly present in salmon due to bioaccumulation in the food chain and the affinity of plastics for fats.</p><p>This especially affects farmed salmon, which are significantly fatter and live in environments rich in plastics.</p>",
             "image": "en/microplastic.svg",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/microplastic_en.png",
+              "image": "/dashboard/images/en/microplastic.png",
               "source": "https://norceresearch.brage.unit.no/norceresearch-xmlui/bitstream/handle/11250/2687619/NORCE%20Report%208_2020%20SalmoDetect%20project.pdf?sequence=1&isAllowed=y",
               "infoSource": ""
             }
@@ -161,7 +161,7 @@
             "image": "en/density.svg",
             "altImage": "3 salmon in the equivalent of a bathtub of water. This is the density required for onshore factories to be profitable",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/density_fr.png",
+              "image": "/dashboard/images/en/density.png",
               "source": "https://static1.squarespace.com/static/56c20b66e707eb013dc65bab/t/582cf4ee29687f90c2f3c500/1479341303532/ISFA_LandFarmingreport_web.pdf",
               "infoSource": "anglais"
             }
@@ -184,7 +184,7 @@
             "title": "Carbon impact",
             "content": "<p>The salmon industry emitted around 16 million tonnes of CO2 in 2021, just like a country like Slovenia or the emissions target of 8 million humans in 2050.</p><p>About 90 % of total emissions come from the value chain, mainly from fish feed and transport.</p><p>This value is extrapolated from the emissions of 9 of the largest salmon producers.</p>",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/carbon_emissions_en.png"
+              "image": "/dashboard/images/en/carbon_emissions.png"
             }
           }
         }
@@ -199,7 +199,7 @@
             "meta": {
               "source": "https://eumofa.eu/documents/20178/432372/Fishmeal+and+fish+oil.pdf",
               "infoSource": "anglais",
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/social_fishing_en.png",
+              "image": "/dashboard/images/en/social_fishing.png",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/social_mill_fishing_6.csv.zip",
               "dataArtifact": "social_mill_fishing_6.csv.zip"
             }

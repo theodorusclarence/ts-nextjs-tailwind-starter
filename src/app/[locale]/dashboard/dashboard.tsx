@@ -310,7 +310,7 @@ const TopCountriesSection = () => {
           {t("sections.intro.blocks.top-10.subblock.title")}
         </h3>
 
-        <Chart id="evolution-map" className="min-h-[700px]" />
+        <Chart id="evolution-map" type="maps" className="min-h-[700px]" />
         <MetaChart
           data={[
             {
@@ -340,7 +340,7 @@ const SalmonConsumptionSection = () => {
   return (
     <DashboardSection
       title={t("sections.intro.blocks.intro-consumption.title")}
-      id="intro-consumption"
+      id="top-conso"
       content={t.raw("sections.intro.blocks.intro-consumption.content")}
       meta={{
         data: [

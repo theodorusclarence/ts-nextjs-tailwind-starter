@@ -83,9 +83,9 @@
               }
             ],
             "meta": {
-              "image1": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/fermes_usines_terrestres_electricite_fr.png",
+              "image1": "/dashboard/images/fr/fermes_usines_terrestres_electricite.png",
               "infoImage1": "consommation d’électricité",
-              "image2": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/fermes_usines_terrestres_carbon_fr.png",
+              "image2": "/dashboard/images/fr/fermes_usines_terrestres_carbon.png",
               "infoImage2": "empreinte carbone",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/ras_projects_for_map_2.4_fr.csv.zip",
               "dataArtifact": "ras_projects_for_map_2.4_fr.csv.zip"
@@ -107,7 +107,7 @@
             "image": "fr/deforestation.svg",
             "altImage": "En 2020 en Norvège, il faut l’équivalent de 2154km2 de plantation de Soja, soit 20 fois Paris pour produire 1562415 tonnes de saumon",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/deforestation_fr.png",
+              "image": "/dashboard/images/fr/deforestation.png",
               "source": "https://dv719tqmsuwvb.cloudfront.net/documents/Publikasjoner/Andre-rapporter/Rapport_Soya_eng.pdf",
               "infoSource": "anglais"
             }
@@ -118,7 +118,7 @@
             "image": "fr/escape.svg",
             "altImage": "Plus de 4 millions de poissons se sont échapés des cages marines (SalMar, Mowi, Bakkarfrost et autres) depuis 2018",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/evasions_fr.png",
+              "image": "/dashboard/images/fr/evasions.png",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/escapes_marine_cages_3.5_fr.csv.zip",
               "dataArtifact": "escapes_marine_cages_3.5_fr.csv.zip"
             }
@@ -135,7 +135,7 @@
             "image": "fr/microplastic-1.svg",
             "altImage": "Les principaux producteurs du Chili ont utilisé 460 tonnes d’antibiotiques dans les cages marines en 2021 soit l’équivalent de 35g pour un humain de 74kg",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/antibiotics_fr.png",
+              "image": "/dashboard/images/fr/antibiotics.png",
               "source": "https://www.sernapesca.cl/app/uploads/2023/11/informe_sobre_uso_de_antimicrobianos_en_la_salmonicultura_nacional_ano_2021.pdf",
               "infoSource": "espagnol"
             }
@@ -145,7 +145,7 @@
             "content": "<p>Un saumon de 5 kg contient environ 575 microplastiques.</p><p>Une personne française moyenne consommant 4,4 kg de saumon par an ingérera environ 575 microplastiques par an sur un total de 97.500 provenant de différentes sources.</p><p>Les microplastiques sont particulièrement présents dans le saumon en raison de la bioaccumulation dans la chaîne alimentaire et de l'affinité des plastiques pour les graisses.</p><p>Cela affecte surtout les saumons d'élevage, qui sont nettement plus gras et vivent dans des environnements riches en plastiques.</p>",
             "image": "fr/microplastic.svg",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/microplastic_fr.png",
+              "image": "/dashboard/images/fr/microplastic.png",
               "source": "https://norceresearch.brage.unit.no/norceresearch-xmlui/bitstream/handle/11250/2687619/NORCE%20Report%208_2020%20SalmoDetect%20project.pdf?sequence=1&isAllowed=y",
               "infoSource": "anglais"
             }
@@ -161,7 +161,7 @@
             "image": "fr/density.svg",
             "altImage": "3 saumons dans l’équivalent d’une baignoire d’eau. C’est la densité requise pour que les usines à terre soient rentable",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/density_fr.png",
+              "image": "/dashboard/images/fr/density.png",
               "source": "https://static1.squarespace.com/static/56c20b66e707eb013dc65bab/t/582cf4ee29687f90c2f3c500/1479341303532/ISFA_LandFarmingreport_web.pdf",
               "infoSource": "anglais"
             }
@@ -184,7 +184,7 @@
             "title": "Impact carbone",
             "content": "<p>L'industrie du saumon a émis environ 16 millions de tonnes de CO2 en 2021, tout comme un pays comme la Slovénie ou l'objectif d'émissions de 8 millions d'êtres humains en 2050.</p><p>Environ 90 % des émissions totales proviennent de la chaîne de valeur, principalement de l'alimentation du poisson et du transport.</p><p>Cette valeur est extrapolée à partir des émissions de 9 des plus grands producteurs de saumon.</p>",
             "meta": {
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/carbon_emissions_fr.png"
+              "image": "/dashboard/images/fr/carbon_emissions.png"
             }
           }
         }
@@ -199,7 +199,7 @@
             "meta": {
               "source": "https://eumofa.eu/documents/20178/432372/Fishmeal+and+fish+oil.pdf",
               "infoSource": "anglais",
-              "image": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/social_fishing_fr.png",
+              "image": "/dashboard/images/fr/social_fishing.png",
               "data": "https://raw.githubusercontent.com/dataforgoodfr/12_pinkbombs/main/download/csv/social_mill_fishing_6_fr.csv.zip",
               "dataArtifact": "social_mill_fishing_6_fr.csv.zip"
             }
