@@ -9,9 +9,12 @@ const nextConfig = {
 
   // Uncoment to add domain whitelist
   // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'res.cloudinary.com',
+  //     },
+  //   ]
   // },
 
   webpack(config) {
