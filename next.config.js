@@ -7,6 +7,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+
+    experimental: {
+      optimizePackageImports: ["@chakra-ui/react"],
+    },
+
   // Uncoment to add domain whitelist
   // images: {
   //   remotePatterns: [
