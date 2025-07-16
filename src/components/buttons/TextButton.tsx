@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TextButtonVariant = ['primary', 'basic'] as const;
 
 type TextButtonProps = {
@@ -17,7 +18,7 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
       disabled: buttonDisabled,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <button
@@ -26,7 +27,7 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
         disabled={buttonDisabled}
         className={cn(
           'button inline-flex items-center justify-center font-semibold',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
+          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:ring-3',
           'transition duration-100',
           //#region  //*=========== Variant ===========
           variant === 'primary' && [
@@ -39,14 +40,14 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
           ],
           //#endregion  //*======== Variant ===========
           'disabled:cursor-not-allowed disabled:brightness-105 disabled:hover:underline',
-          className
+          className,
         )}
         {...rest}
       >
         {children}
       </button>
     );
-  }
+  },
 );
 
 export default TextButton;
