@@ -19,7 +19,7 @@ const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
         {...rest}
         className={cn(
           'inline-flex items-center',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:rounded focus-visible:ring focus-visible:ring-offset-2',
+          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:rounded-sm focus-visible:ring-3 focus-visible:ring-offset-2',
           'font-medium',
           //#region  //*=========== Variant ===========
           variant === 'primary' && [

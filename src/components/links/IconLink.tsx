@@ -42,9 +42,9 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
         ref={ref}
         type='button'
         className={cn(
-          'inline-flex items-center justify-center rounded font-medium',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
-          'shadow-sm',
+          'inline-flex items-center justify-center rounded-sm font-medium',
+          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:ring-3',
+          'shadow-xs',
           'transition-colors duration-75',
           'min-h-[28px] min-w-[28px] p-1 md:min-h-[34px] md:min-w-[34px] md:p-2',
           //#region  //*=========== Variants ===========

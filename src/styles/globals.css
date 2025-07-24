@@ -1,31 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
 
-:root {
-  /* #region  /**=========== Primary Color =========== */
-  /* !STARTERCONF Customize these variable, copy and paste from /styles/colors.css for list of colors */
-  --tw-color-primary-50: 240 249 255;
-  --tw-color-primary-100: 224 242 254;
-  --tw-color-primary-200: 186 230 253;
-  --tw-color-primary-300: 125 211 252;
-  --tw-color-primary-400: 56 189 248;
-  --tw-color-primary-500: 14 165 233;
-  --tw-color-primary-600: 2 132 199;
-  --tw-color-primary-700: 3 105 161;
-  --tw-color-primary-800: 7 89 133;
-  --tw-color-primary-900: 12 74 110;
-  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f0f9ff */
-  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #e0f2fe */
-  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bae6fd */
-  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #7dd3fc */
-  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #38bdf8 */
-  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #0ea5e9 */
-  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #0284c7 */
-  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #0369a1 */
-  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #075985 */
-  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0c4a6e */
-  /* #endregion  /**======== Primary Color =========== */
+@theme {
+  /* Font configuration */
+  --font-primary: 'Inter', system-ui, sans-serif;
+
+  /* Primary color palette - converted to modern oklch format */
+  --color-primary-50: oklch(0.97 0.024 213.79);
+  --color-primary-100: oklch(0.94 0.05 213.79);
+  --color-primary-200: oklch(0.86 0.1 213.79);
+  --color-primary-300: oklch(0.76 0.15 213.79);
+  --color-primary-400: oklch(0.7 0.19 213.79);
+  --color-primary-500: oklch(0.61 0.22 213.79);
+  --color-primary-600: oklch(0.52 0.2 213.79);
+  --color-primary-700: oklch(0.43 0.18 213.79);
+  --color-primary-800: oklch(0.37 0.15 213.79);
+  --color-primary-900: oklch(0.31 0.12 213.79);
+  --color-primary-950: oklch(0.18 0.07 213.79);
+
+  /* Dark color */
+  --color-dark: #222222;
+
+  /* Animation configuration */
+  --animate-flicker: flicker 3s linear infinite;
+  --animate-shimmer: shimmer 1.3s linear infinite;
+}
+
+/* Animation keyframes */
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 0.99;
+    filter: drop-shadow(0 0 1px rgba(252, 211, 77))
+      drop-shadow(0 0 15px rgba(245, 158, 11))
+      drop-shadow(0 0 1px rgba(252, 211, 77));
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.4;
+    filter: none;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -700px 0;
+  }
+  100% {
+    background-position: 700px 0;
+  }
 }
 
 @layer base {

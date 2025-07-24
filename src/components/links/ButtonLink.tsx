@@ -49,9 +49,9 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         ref={ref}
         {...rest}
         className={cn(
-          'inline-flex items-center rounded font-medium',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
-          'shadow-sm',
+          'inline-flex items-center rounded-sm font-medium',
+          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:ring-3',
+          'shadow-xs',
           'transition-colors duration-75',
           //#region  //*=========== Size ===========
           [
