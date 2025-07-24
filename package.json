@@ -51,7 +51,7 @@
     "next-router-mock": "^0.9.0",
     "next-sitemap": "^2.5.28",
     "postcss": "^8.5.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3"
