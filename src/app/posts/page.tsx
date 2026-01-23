@@ -40,15 +40,15 @@ export default function Posts() {
     <main className={clsx(mode === 'dark' ? 'bg-slate-900' : 'bg-gray-100', )}>
    <section className='min-h-screen'>
     <div className='  m-auto ' >
-      <header className={clsx(mode === 'dark' ? 'bg-slate-800 text-gray-200 flex items-center p-4 gap-2 justify-around md:justify-between   mb-4 shadow ' : 'bg-white flex items-center p-4 gap-2  justify-around  md:justify-between  mb-4 shadow  text-slate-700' )}>
+      <header className={clsx(mode === 'dark' ? 'bg-slate-800 text-gray-200 placeholder:text-slate-800 flex items-center p-4 gap-2 justify-around md:justify-between   mb-4 shadow ' : 'bg-white flex items-center p-4 gap-2  justify-around  md:justify-between  mb-4 shadow  text-slate-700' )}>
         <div className='flex items-center   gap-2 justify-around '>
         <h1 className='text-lg font-medium md:font-bold '>Найти</h1>
         <input
         value={query}
         onChange={(e)=> setQuery(e.target.value)}
+        className={clsx(mode === 'dark' ? 'bg-slate-900 placeholder:text-vite rounded-2xl h-6 md:h-8 w-[8rem] md:w-1/1  ' : 'bg-gray-100 rounded-2xl h-6 md:h-8 w-[8rem] md:w-1/1  ', )}
 
-
-        className='rounded-2xl h-6 md:h-8 w-[8rem] md:w-1/1 ' placeholder='Вводите текст'/>
+         placeholder='Вводите текст'/>
 
         </div>
         <button className='' onClick={toggleMode}>{mode === 'dark' ? <Sun/> :<Moon/>} </button>
