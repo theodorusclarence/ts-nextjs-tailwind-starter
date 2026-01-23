@@ -1,9 +1,11 @@
+/* eslint-disable no-console */
 'use client'
-import { ICardPosts } from "@/app/posts/interfacePosts";
-import { useState, useEffect } from "react";
 import clsx from 'clsx';
-import React from 'react';
 import {Moon, Sun} from 'lucide-react';
+import { useEffect,useState } from "react";
+import React from 'react';
+
+import { ICardPosts } from "@/app/posts/interfacePosts";
 export default function Posts() {
  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
 
@@ -46,7 +48,7 @@ export default function Posts() {
         <input
         value={query}
         onChange={(e)=> setQuery(e.target.value)}
-        className={clsx(mode === 'dark' ? 'bg-slate-900 placeholder:text-vite rounded-2xl h-6 md:h-8 w-[8rem] md:w-1/1  ' : 'bg-gray-100 rounded-2xl h-6 md:h-8 w-[8rem] md:w-1/1  ', )}
+        className={clsx(mode === 'dark' ? 'bg-slate-900 placeholder:text-vite rounded-2xl h-6 md:h-8 w-32 md:w-1/1  ' : 'bg-gray-100 rounded-2xl h-6 md:h-8 w-32 md:w-1/1  ', )}
 
          placeholder='Вводите текст'/>
 
