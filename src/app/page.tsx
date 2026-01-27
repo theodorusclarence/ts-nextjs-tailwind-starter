@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import '@/lib/env';
 
@@ -66,3 +64,11 @@ export default function HomePage() {
     </main>
   );
 }
+
+export const pagecofig = {
+  title: 'Main app/page.tsx',
+  description:
+    'Home page',
+  /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
+  url: 'https://tsnext-tw.thcl.dev',
+};
