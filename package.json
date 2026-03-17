@@ -20,7 +20,7 @@
   "dependencies": {
     "clsx": "^2.0.0",
     "lucide-react": "^0.438.0",
-    "next": "^15.4.3",
+    "next": "^16.1.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
@@ -41,7 +41,7 @@
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.23",
+    "eslint-config-next": "^16.1.7",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
