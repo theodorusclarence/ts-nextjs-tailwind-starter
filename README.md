@@ -73,6 +73,7 @@ You can also check all of the **details and demos** on my blog post:
 4. Deploy to Vercel
 
    [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
+   [![Deploy to PandaStack](https://dashboard.pandastack.io/deploy-button.svg)](https://dashboard.pandastack.io/deploy?repo=theodorusclarence/ts-nextjs-tailwind-starter&type=container)
 
 ### 2. Install dependencies
 
