@@ -44,7 +44,7 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
         {children}
       </a>
     );
-  }
+  },
 );
 
 export default UnstyledLink;

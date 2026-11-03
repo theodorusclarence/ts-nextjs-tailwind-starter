@@ -6,7 +6,7 @@ import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
 
-const PrimaryLinkVariant = ['primary', 'basic'] as const;
+export const PrimaryLinkVariant = ['primary', 'basic'] as const;
 type PrimaryLinkProps = {
   variant?: (typeof PrimaryLinkVariant)[number];
 } & UnstyledLinkProps;
@@ -19,7 +19,7 @@ const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
         {...rest}
         className={cn(
           'inline-flex items-center',
-          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:rounded-sm focus-visible:ring-3 focus-visible:ring-offset-2',
+          'focus:outline-hidden focus-visible:rounded-sm focus-visible:ring-3 focus-visible:ring-primary-500 focus-visible:ring-offset-2',
           'font-medium',
           //#region  //*=========== Variant ===========
           variant === 'primary' && [
@@ -31,13 +31,13 @@ const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
             'disabled:text-gray-300',
           ],
           //#endregion  //*======== Variant ===========
-          className
+          className,
         )}
       >
         {children}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default PrimaryLink;

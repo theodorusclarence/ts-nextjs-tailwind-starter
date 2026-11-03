@@ -69,13 +69,16 @@
     font-weight: 100 900;
     font-display: block;
     src: url('/fonts/inter-var-latin.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
-      U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+      U+FEFF, U+FFFD;
   }
 
   .cursor-newtab {
-    cursor: url('/images/new-tab.png') 10 10, pointer;
+    cursor:
+      url('/images/new-tab.png') 10 10,
+      pointer;
   }
 
   /* #region  /**=========== Typography =========== */
@@ -127,25 +130,32 @@
 
 @layer utilities {
   .animated-underline {
-    background-image: linear-gradient(#33333300, #33333300),
+    background-image:
+      linear-gradient(#33333300, #33333300),
       linear-gradient(
         to right,
         var(--color-primary-400),
         var(--color-primary-500)
       );
-    background-size: 100% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
+    background-size:
+      100% 2px,
+      0 2px;
+    background-position:
+      100% 100%,
+      0 100%;
     background-repeat: no-repeat;
   }
   @media (prefers-reduced-motion: no-preference) {
     .animated-underline {
       transition: 0.3s ease;
-      transition-property: background-size, color, background-color,
-        border-color;
+      transition-property:
+        background-size, color, background-color, border-color;
     }
   }
   .animated-underline:hover,
   .animated-underline:focus-visible {
-    background-size: 0 2px, 100% 2px;
+    background-size:
+      0 2px,
+      100% 2px;
   }
 }
